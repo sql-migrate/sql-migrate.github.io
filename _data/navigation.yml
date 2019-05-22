@@ -7,14 +7,14 @@
   new_window: false
   highlight: false
 - name: Blog
-  link: /blog/
+  link: /articles
   new_window: false
   highlight: false
 - name: About
-  link: /about/
+  link: /about
   new_window: false
   highlight: false
 - name: Contact
-  link: /contact/
+  link: /contact
   new_window: false
   highlight: false
