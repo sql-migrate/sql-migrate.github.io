@@ -1,37 +1,35 @@
 - links:
+  - name: Download
+    link: /downloads
   - name: Pricing
-    link: /pricing/
+    link: /pricing
   - name: Blog
-    link: /blog/
+    link: /articles
   - name: About
-    link: /about/
+    link: /about
   - name: Contact
-    link: /contact/
+    link: /contact
 - links:
-  - name: Login
-    link: /
-    new_window: true
-  - name: Sign Up
-    link: /
-    new_window: true
-  - name: Docs
-    link: /
-    new_window: true
-  - name: Status
-    link: /
-    new_window: true
+  - name: Roadmap
+    link: https://trello.com/b/uApHpejD/postgres-compare-dev
+  - name: EULA
+    link: /eula
 - links:
   - name: Facebook
-    link: https://facebook.com
+    link: https://www.facebook.com/postgrescompare
     new_window: true
     social_icon: Facebook
   - name: Twitter
-    link: https://twitter.com
+    link: https://www.twitter.com/postgrescompare
     social_icon: Twitter
     new_window: true
   - name: YouTube
-    link: https://youtube.com
+    link: https://www.youtube.com/channel/UCRuo5SO6qXM48WUg3YNP-NQ
     social_icon: YouTube
+    new_window: true
+  - name: Linkedin
+    link: https://www.linkedin.com/company/postgres-compare
+    social_icon: LinkedIn
     new_window: true
   - name: RSS
     link: /feed.xml

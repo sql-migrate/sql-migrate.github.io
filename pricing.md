@@ -1,63 +1,40 @@
 ---
 title: Pricing
-heading: Find the perfect plan for your business
-description: All plans include our award winning sales optimization solution to track your sales in real time.
+heading: Purchase your PostgresCompare licence
 pricing_table:
-  - name: Basic
+  - name: Monthly
     color: "#8e8e8e"
     features:
-      - text: $25 per month
+      - text: $10 per month
         highlight: true
-      - text: Up to 5 users
+      - text: Access to the latest version of PostgresCompare
         highlight: false
-      - text: Basic lead scoring
+      - text: 2 active installs per user
         highlight: false
-      - text: CRM
+      - text: Support via email
         highlight: false
-      - text: Basic reporting
-        highlight: false
-      - text: Sales map
+      - text: 30 day money back guarantee
         highlight: false
     call_to_action:
       link: http://mysite.com?plan=basic
       text: Get started
-  - name: Pro
+  - name: Annual
     color: "#4a4a4a"
     features:
-      - text: $99 per month
+      - text: $100 per year
         highlight: true
-      - text: Everything in Basic
+      - text: Access to the latest version of PostgresCompare
         highlight: false
-      - text: Up to 25 users
+      - text: 2 active installs per user
         highlight: false
-      - text: Advanced lead scoring
+      - text: Support via email
         highlight: false
-      - text: Pipeline management
-        highlight: false
-      - text: Advanced reporting
+      - text: 30 day money back guarantee
         highlight: false
     call_to_action:
       link: http://mysite.com?plan=pro
       text: Get started
-  - name: Professional
-    color: "#000000"
-    features:
-      - text: $299 per month
-        highlight: true
-      - text: Everything in Basic and Pro
-        highlight: false
-      - text: Up to 100 users
-        highlight: false
-      - text: Campaign builder
-        highlight: false
-      - text: Machine learning
-        highlight: false
-      - text: Calendar
-        highlight: false
-    call_to_action:
-      link: http://mysite.com?plan=professional
-      text: Get started
-faq:
+<!-- faq:
   - question: What types of payment do you accept?
     answer: Credit cards including MasterCard, Visa or American Express.
   - question: Can I change my plan at a later time?
@@ -65,8 +42,9 @@ faq:
   - question: Do you offer pricing for nonprofit organizations?
     answer: Yes, send us a message and we'll set you up on our nonprofit pricing.
   - question: Questions?
-    answer: Contact us for any further questions at <a href="#">john@business.com</a>.
+    answer: Contact us for any further questions at <a href="#">john@business.com</a>. -->
 ---
+<script src="https://js.stripe.com/v3"></script>
 <div class="plans">
 	{% for plan in page.pricing_table %}
 		<ul class="plan">
