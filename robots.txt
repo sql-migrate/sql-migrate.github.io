@@ -3,4 +3,5 @@ layout: null
 sitemap: false
 ---
 User-agent: *
+Disallow: /blog/
 Sitemap: {{ site.url }}/sitemap.xml
