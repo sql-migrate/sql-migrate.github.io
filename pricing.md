@@ -3,10 +3,10 @@ title: Pricing
 heading: Purchase your PostgresCompare licence
 description: After checkout is complete you'll receive your licence key via email.
 pricing_table:
-  - name: Monthly user
+  - name: Monthly subscription
     color: "#8e8e8e"
     features:
-      - text: $10 per month
+      - text: $10 per user per month
         highlight: true
       - text: Access to the latest version of PostgresCompare
         highlight: false
@@ -20,10 +20,10 @@ pricing_table:
       link: http://mysite.com?plan=basic
       text: Get started
     plan: plan_F7LHPebph3tpfU
-  - name: Annual user
+  - name: Annual subscription
     color: "#4a4a4a"
     features:
-      - text: $100 per year
+      - text: $100 per user per year
         highlight: true
       - text: Access to the latest version of PostgresCompare
         highlight: false
