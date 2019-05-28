@@ -2,16 +2,21 @@
 title: Download PostgresCompare for Mac, Windows or Linux
 ---
 
-<form action="https://postgrescompare.us13.list-manage.com/subscribe/post?u=7ef8a41f90e25826ea5b3d5fc&amp;id=14d2217fd9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
-            <div class="row uniform 50%">
-              <div class="8u 12u(mobilep)">
-                <input type="email" value="" name="EMAIL" class="email" placeholder="Email Address" required>
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7ef8a41f90e25826ea5b3d5fc_14d2217fd9" tabindex="-1" value=""></div>
-              </div>
-              <div class="4u 12u(mobilep)">
-                  <input type="submit" value="Download free trial" name="subscribe" class="fit">
-                </div>
- </div></form>
+<h2>
+          <a
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.0.50',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.0.50.dmg">macOS</a>
+        </h2>
+ <h2>
+          <a
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.0.50',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="https://s3.amazonaws.com/pgcompare-updates/PostgresCompareSetup.exe">Windows</a>
+        </h2>
+<h2>
+          <a
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.0.50',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.0.50.zip">Linux</a>
+        </h2>
 
 
 <h3>v1.0.50 (May 19th 2019)</h3>
