@@ -1,28 +1,29 @@
 ---
-title: Download PostgresCompare for Mac, Windows or Linux
 ---
 
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.0.50',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.0.50.dmg">macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.0.51',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.0.51.dmg">Download for macOS</a>
         </h2>
  <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.0.50',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="https://s3.amazonaws.com/pgcompare-updates/PostgresCompareSetup.exe">Windows</a>
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.0.51',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="https://s3.amazonaws.com/pgcompare-updates/PostgresCompareSetup.exe">Download for Windows</a>
         </h2>
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.0.50',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.0.50.zip">Linux</a>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.0.51',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.0.51.zip">Download for Linux</a>
         </h2>
 
+
+<h3>v1.0.51 (May 29th 2019)</h3>
+  - Fix issue where scripting ui was not working when comparing single schemas
 
 <h3>v1.0.50 (May 19th 2019)</h3>
   - Add Materialized View deployment
   - Add Enum deployment
-
 
 <h3>v1.0.49 (May 12th 2019)</h3>
   - Show spinner when checking for updates

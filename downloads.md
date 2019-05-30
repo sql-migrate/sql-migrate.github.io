@@ -13,6 +13,8 @@ title: Download PostgresCompare for Mac, Windows or Linux
                 </div>
  </div></form>
 
+<h3>v1.0.51 (May 29th 2019)</h3>
+  - Fix issue where scripting ui was not working when comparing single schemas
 
 <h3>v1.0.50 (May 19th 2019)</h3>
   - Add Materialized View deployment
