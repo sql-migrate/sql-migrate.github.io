@@ -13,6 +13,11 @@ title: Download PostgresCompare for Mac, Windows or Linux
                 </div>
  </div></form>
 
+<h3>v1.0.52 (June 2nd 2019)</h3>
+  - Fix bug setting argument defaults
+  - Add resize bar to comparison details
+  - Persist default pagesize of differences list
+
 <h3>v1.0.51 (May 29th 2019)</h3>
   - Fix issue where scripting ui was not working when comparing single schemas
 
