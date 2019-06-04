@@ -2,6 +2,9 @@
 title: Download PostgresCompare for Mac, Windows or Linux
 ---
 
+
+
+<dl class="faq">
 <form action="https://postgrescompare.us13.list-manage.com/subscribe/post?u=7ef8a41f90e25826ea5b3d5fc&amp;id=14d2217fd9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
             <div class="row uniform 50%">
               <div class="8u 12u(mobilep)">
@@ -12,6 +15,11 @@ title: Download PostgresCompare for Mac, Windows or Linux
                   <input type="submit" value="Download free trial" name="subscribe" class="fit">
                 </div>
  </div></form>
+			<div>
+				<dt>What happens after I submit my email address?</dt>
+				<dd>You will be redirected to a page where you can download PostgresCompare. After a few days you will receive a survey about your experience with the tool and how we might improve it. That's it!</dd>
+			</div>
+</dl>
 
 <h3>v1.0.52 (June 2nd 2019)</h3>
   - Fix bug setting argument defaults

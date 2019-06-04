@@ -8,7 +8,7 @@ pricing_table:
     features:
       - text: $10 per user per month
         highlight: true
-      - text: Access to the latest version of PostgresCompare
+      - text: Always run the latest version of PostgresCompare
         highlight: false
       - text: 2 active installs per user
         highlight: false
@@ -18,14 +18,14 @@ pricing_table:
         highlight: false
     call_to_action:
       link: http://mysite.com?plan=basic
-      text: Get started
+      text: Purchase a licence
     plan: plan_F7LHPebph3tpfU
   - name: Annual subscription
     color: "#4a4a4a"
     features:
       - text: $100 per user per year
         highlight: true
-      - text: Access to the latest version of PostgresCompare
+      - text: Always run the latest version of PostgresCompare
         highlight: false
       - text: 2 active installs per user
         highlight: false
@@ -35,7 +35,7 @@ pricing_table:
         highlight: false
     call_to_action:
       link: http://mysite.com?plan=pro
-      text: Get started
+      text: Purchase a licence
     plan: plan_F8N7x2Jh0miMkY
 <!-- faq:
   - question: What types of payment do you accept?
