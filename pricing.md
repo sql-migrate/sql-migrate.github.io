@@ -37,16 +37,13 @@ pricing_table:
       link: http://mysite.com?plan=pro
       text: Purchase a licence
     plan: plan_F8N7x2Jh0miMkY
-<!-- faq:
-  - question: What types of payment do you accept?
-    answer: Credit cards including MasterCard, Visa or American Express.
-  - question: Can I change my plan at a later time?
-    answer: Yes, you can upgrade and downgrade your plan at anytime.
-  - question: Do you offer pricing for nonprofit organizations?
-    answer: Yes, send us a message and we'll set you up on our nonprofit pricing.
+faq:
+  - question: How do I cancel my subscription?
+    answer: Drop us an <a href="/contact">email</a> and we'll take care of your cancellation right away.
   - question: Questions?
-    answer: Contact us for any further questions at <a href="#">john@business.com</a>. -->
+    answer: For any further questions <a href="/contact">contact us</a>.
 ---
+
 <script src="https://js.stripe.com/v3"></script>
 
 
@@ -67,6 +64,19 @@ pricing_table:
 	{% endfor %}
 </div>
 
+<h2>Pricing FAQ</h2>
+<dl class="faq">
+		<div>
+			<dt>Who is processing my payment?</dt>
+			<dd>We use <a href="https://www.stripe.com">Stripe</a> to manage your subscription and payments.</dd>
+		</div>
+
+		<div>
+			<dt>How do I cancel my subscription?</dt>
+			<dd>Drop us an <a href="/contact">email</a> and we'll take care of your cancellation right away.</dd>
+		</div>
+
+</dl>
 
 <script>
   var stripe = Stripe('pk_live_WBgGhfOBShwMGAXipP1KHl7u');
@@ -96,14 +106,3 @@ pricing_table:
   });
 </script>
 
-{% if page.faq %}
-	<h2>Pricing FAQ</h2>
-	<dl class="faq">
-		{% for item in page.faq %}
-			<div>
-				<dt>{{ item.question }}</dt>
-				<dd>{{ item.answer }}</dd>
-			</div>
-		{% endfor %}
-	</dl>
-{% endif %}
