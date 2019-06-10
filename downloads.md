@@ -21,6 +21,10 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.0.53 (June 10th 2019)</h3>
+  - Fix problem scripting Materialized View refresh
+  - Fix scripting issues with sequences, types, functions and arrays
+
 <h3>v1.0.52 (June 2nd 2019)</h3>
   - Fix bug setting argument defaults
   - Add resize bar to comparison details
