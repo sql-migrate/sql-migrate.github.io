@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting started with Postgres Compare
+excerpt: Follow these steps to get up and running quickly with PostgresCompare.
 ---
 
 #### 1. Set up your environments
