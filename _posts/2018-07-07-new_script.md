@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The new create script window
+excerpt: The next release of Postgres Compare includes a new "Create Script" experience which allows you to work with and make alterations to an update script in real time. Previously this was a small modal. Now it is a seperate, resizable window to make it easier to work with and include some extra information
 ---
 #### Create an update script in real time.
 
