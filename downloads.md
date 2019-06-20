@@ -21,6 +21,9 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.0.55 (June 19th 2019)</h3>
+  - Fix comparison of single schemas
+
 <h3>v1.0.54 (June 14th 2019)</h3>
   - Fix parsing of default function arguments
 
