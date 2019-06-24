@@ -21,6 +21,10 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.0 (June 24th 2019)</h3>
+  - Replaced editor component
+  - Fixed object filters
+
 <h3>v1.0.55 (June 19th 2019)</h3>
   - Fix comparison of single schemas
 
