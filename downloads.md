@@ -17,9 +17,14 @@ title: Download PostgresCompare for Mac, Windows or Linux
  </div></form>
 			<div>
 				<dt>What happens after I submit my email address?</dt>
-				<dd>You will be redirected to a page where you can download PostgresCompare. After a few days you will receive a survey about your experience with the tool and how we might improve it. That's it!</dd>
+				<dd>You will be redirected to a page where you can download PostgresCompare. You'll receive a welcome email and a trial expiring email. That's it!</dd>
 			</div>
 </dl>
+
+<h3>v1.1.1 (June 26th 2019)</h3>
+  - Replaced editor component
+  - Fix issue creating deployment script when Foreign Tables present
+  - Fix "invalid date" issue
 
 <h3>v1.1.0 (June 24th 2019)</h3>
   - Replaced editor component
