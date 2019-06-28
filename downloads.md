@@ -21,6 +21,9 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.2 (June 28th 2019)</h3>
+  - Fix issue where deployment script would detect a dependency cycle and throw an Exception
+
 <h3>v1.1.1 (June 26th 2019)</h3>
   - Replaced editor component
   - Fix issue creating deployment script when Foreign Tables present

@@ -3,19 +3,22 @@
 
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.1',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.1.dmg">Download for macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.2',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.2.dmg">Download for macOS</a>
         </h2>
  <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.1',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.2',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://s3.amazonaws.com/pgcompare-updates/PostgresCompareSetup.exe">Download for Windows</a>
         </h2>
 <h2>
           <a
           onclick="var that=this;ga('send', 'event','Download','Linux 1.1.0',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.0.zip">Download for Linux</a>
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.2.zip">Download for Linux</a>
         </h2>
+
+<h3>v1.1.2 (June 28th 2019)</h3>
+  - Fix issue where deployment script would detect a dependency cycle and throw an Exception
 
 <h3>v1.1.1 (June 26th 2019)</h3>
   - Replaced editor component
