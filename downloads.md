@@ -21,6 +21,10 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.3 (June 30th 2019)</h3>
+  - Add deploy of dropped and altered views
+  - Exclude sequences, operators, operator families and text search objects that are internal
+
 <h3>v1.1.2 (June 28th 2019)</h3>
   - Fix issue where deployment script would detect a dependency cycle and throw an Exception
 
