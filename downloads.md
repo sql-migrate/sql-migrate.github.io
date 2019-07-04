@@ -21,6 +21,11 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.4 (July 3rd 2019)</h3>
+  - Add support for new unique constraints
+  - Fix issue re: arrays as datatypes in UDTs
+  - Add split/inline view option
+
 <h3>v1.1.3 (June 30th 2019)</h3>
   - Add deploy of dropped and altered views
   - Exclude sequences, operators, operator families and text search objects that are internal
