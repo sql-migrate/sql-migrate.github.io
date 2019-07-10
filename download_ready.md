@@ -9,7 +9,7 @@
  <h2>
           <a
           onclick="var that=this;ga('send', 'event','Download','Windows 1.1.5',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="https://s3.amazonaws.com/pgcompare-updates/PostgresCompareSetup.exe">Download for Windows</a>
+          href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
         </h2>
 <h2>
           <a
