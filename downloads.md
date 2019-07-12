@@ -21,11 +21,14 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.6 (July 11th 2019)</h3>
+  - Support adding new foreign keys
+  - Support altering table and column comments
+
 <h3>v1.1.5 (July 8th 2019)</h3>
   - Support HTTPS_PROXY and HTTP_PROXY environment variables
   - When using "ignore owner" don't output ALTER OWNER statements
   - Fix incorrectly quoted datatypes in CREATE FUNCTION
-
 
 <h3>v1.1.4 (July 3rd 2019)</h3>
   - Add support for new unique constraints
