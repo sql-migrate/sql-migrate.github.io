@@ -21,6 +21,10 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.7 (July 18th 2019)</h3>
+  - Order constraints alphabetically for a cleaner script
+  - Performance improvements when rendering the create SQL
+
 <h3>v1.1.6 (July 11th 2019)</h3>
   - Support adding new foreign keys
   - Support altering table and column comments
