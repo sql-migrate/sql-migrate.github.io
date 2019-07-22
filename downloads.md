@@ -21,6 +21,10 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.8 (July 21st 2019)</h3>
+  - Escape passwords correctly
+  - Fix issue where deployment script ui would crash
+
 <h3>v1.1.7 (July 18th 2019)</h3>
   - Order constraints alphabetically for a cleaner script
   - Performance improvements when rendering the create SQL
