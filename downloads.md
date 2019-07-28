@@ -21,6 +21,14 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.10 (July 28th 2019)</h3>
+  - Drop and create views and functions when arguments are changed
+  - Order constraints so that they are added after columns
+
+<h3>v1.1.9 (July 25th 2019)</h3>
+  - Support indexes on expressions
+  - Properly quote column names in RETURNS TABLE functions
+
 <h3>v1.1.8 (July 21st 2019)</h3>
   - Escape passwords correctly
   - Fix issue where deployment script ui would crash
