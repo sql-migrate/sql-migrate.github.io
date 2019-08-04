@@ -21,6 +21,12 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+
+<h3>v1.1.11 (August 4th 2019)</h3>
+  - Add ability to copy a project
+  - Add DROP and CREATE enum with deleted values
+  - Drop Triggers first, functions last
+
 <h3>v1.1.10 (July 28th 2019)</h3>
   - Drop and create views and functions when arguments are changed
   - Order constraints so that they are added after columns
