@@ -21,6 +21,9 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.12 (September 16th 2019)</h3>
+  - Add shared projects
+
 
 <h3>v1.1.11 (August 4th 2019)</h3>
   - Add ability to copy a project
