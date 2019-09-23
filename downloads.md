@@ -21,6 +21,16 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.13 (September 23rd 2019)</h3>
+  - Add option to ignore tablespaces
+  - Add updated at and number of comparisons to project tile
+  - Bug fix: deploy new Materialized View
+  - Bug fix: composite type owners not being ignored
+  - Bug fix: exception while comparing "failed to find type with id ..."
+  - Bug fix: failed comparison tile showed "in progress"
+  - Script fixes: partition by, trigger function, partial indexes
+
+
 <h3>v1.1.12 (September 16th 2019)</h3>
   - Add shared projects
 

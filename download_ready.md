@@ -3,19 +3,28 @@
 
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.12',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.12.dmg">Download for macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.13',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.13.dmg">Download for macOS</a>
         </h2>
  <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.12',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.13',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
         </h2>
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.12',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.12.zip">Download for Linux</a>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.13',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.13.zip">Download for Linux</a>
         </h2>
+
+<h3>v1.1.13 (September 23rd 2019)</h3>
+  - Add option to ignore tablespaces
+  - Add updated at and number of comparisons to project tile
+  - Bug fix: deploy new Materialized View
+  - Bug fix: composite type owners not being ignored
+  - Bug fix: exception while comparing "failed to find type with id ..."
+  - Bug fix: failed comparison tile showed "in progress"
+  - Script fixes: partition by, trigger function, partial indexes
 
 <h3>v1.1.12 (September 16th 2019)</h3>
   - Add shared projects
