@@ -21,6 +21,10 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.15 (September 30th 2019)</h3>
+  - Fix bug where comparing indexes threw 'sequence has no matching elements' exception
+
+
 <h3>v1.1.14 (September 30th 2019)</h3>
   - Add client ssl certificate support
   - Fix bug where attributes of composite types were not being compared
