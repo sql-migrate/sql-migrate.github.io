@@ -21,6 +21,9 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.16 (October 15th 2019)</h3>
+  - Add PostgreSQL 12 support
+
 <h3>v1.1.15 (September 30th 2019)</h3>
   - Fix bug where comparing indexes threw 'sequence has no matching elements' exception
 
