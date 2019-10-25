@@ -21,6 +21,11 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.17 (October 24th 2019)</h3>
+  - Fixed Language and FunctionVolatility display properties
+  - Fixed issue where new indexes were not being deployed
+  - Added copy button to script create screen
+
 <h3>v1.1.16 (October 15th 2019)</h3>
   - Add PostgreSQL 12 support
 
