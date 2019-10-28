@@ -17,6 +17,10 @@
           href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.17.zip">Download for Linux</a>
         </h2>
 
+
+<h3>v1.1.18 (October 27th 2019)</h3>
+  - Fixed issue where PostgresCompare was adding whitespace to functions
+
 <h3>v1.1.17 (October 24th 2019)</h3>
   - Fixed Language and FunctionVolatility display properties
   - Fixed issue where new indexes were not being deployed
