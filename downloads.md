@@ -21,6 +21,10 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.19 (October 28th 2019)</h3>
+  - Fixed scripting of precision for time and timestamp columns
+
+
 <h3>v1.1.18 (October 27th 2019)</h3>
   - Fixed issue where PostgresCompare was adding whitespace to functions
 
