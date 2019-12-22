@@ -6,6 +6,10 @@
   link: /pricing
   new_window: false
   highlight: false
+- name: Forum
+  link: https://discuss.postgrescompare.com
+  new_window: false
+  highlight: false
 - name: Blog
   link: /articles
   new_window: false

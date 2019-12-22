@@ -3,6 +3,10 @@
     link: /downloads
   - name: Pricing
     link: /pricing
+  - name: Forum
+    link: https://discuss.postgrescompare.com
+    new_window: false
+    highlight: false
   - name: Blog
     link: /articles
   - name: About
