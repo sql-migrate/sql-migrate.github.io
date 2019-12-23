@@ -17,8 +17,8 @@ pricing_table:
       - text: 30 day money back guarantee
         highlight: false
     call_to_action:
-      link: http://mysite.com?plan=basic
       text: Purchase a licence
+      link: '#'
     plan: plan_F7LHPebph3tpfU
   - name: Annual subscription
     color: "#4a4a4a"
@@ -34,9 +34,27 @@ pricing_table:
       - text: 30 day money back guarantee
         highlight: false
     call_to_action:
-      link: http://mysite.com?plan=pro
+      link: '#'
       text: Purchase a licence
     plan: plan_F8N7x2Jh0miMkY
+  - name: Need something else?
+    color: "#8e8e8e"
+    features:
+      - text: ''
+        highlight: true
+      - text: Require a quote?
+        highlight: false
+      - text: Or an invoice?
+        highlight: false
+      - text: Multiple licenses?
+        highlight: false
+      - text: ''
+        highlight: false
+      - text: ''
+        highlight: false
+    call_to_action:
+      link: mailto:neil@postgrescompare.com
+      text: Get in touch
 faq:
   - question: How do I cancel my subscription?
     answer: Drop us an <a href="/contact">email</a> and we'll take care of your cancellation right away.
@@ -58,7 +76,7 @@ faq:
 			{% endfor %}
 
 			{% if plan.call_to_action %}
-				<li class="pricing-cta"><div class="button"><a id="{{plan.plan}}" style="background: {{ plan.color }}" href="#">{{ plan.call_to_action.text }} &rarr;</a></div></li>
+				<li class="pricing-cta"><div class="button"><a id="{{plan.plan}}" style="background: {{ plan.color }}" href="{{plan.call_to_action.link}}">{{ plan.call_to_action.text }}</a></div></li>
 			{% endif %}
 		</ul>
 	{% endfor %}
