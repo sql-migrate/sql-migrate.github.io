@@ -21,6 +21,10 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.21 (December 26th 2019)</h3>
+  - New option to ignore comments in code when comparing
+  - Handle triggers on partitions
+
 
 <h3>v1.1.20 (December 16th 2019)</h3>
   - Include schema name for function return types

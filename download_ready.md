@@ -3,19 +3,24 @@
 
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.20',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.20.dmg">Download for macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.21',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.21.dmg">Download for macOS</a>
         </h2>
  <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.20',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.21',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
         </h2>
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.20',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.20.zip">Download for Linux</a>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.21',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.21.zip">Download for Linux</a>
         </h2>
+
+<h3>v1.1.21 (December 26th 2019)</h3>
+  - New option to ignore comments in code when comparing
+  - Handle triggers on partitions
+
 
 <h3>v1.1.20 (December 16th 2019)</h3>
   - Include schema name for function return types
