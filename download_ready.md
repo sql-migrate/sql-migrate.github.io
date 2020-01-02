@@ -3,19 +3,24 @@
 
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.22',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.22.dmg">Download for macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.23',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.23.dmg">Download for macOS</a>
         </h2>
  <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.22',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.23',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
         </h2>
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.22',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.22.zip">Download for Linux</a>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.23',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.23.zip">Download for Linux</a>
         </h2>
+
+<h3>v1.1.23 (January 1st 2020)</h3>
+  - Add deployment of deleted check, unique and fk constraints
+  - Fix issue where inline code comments were not being ignore correctly
+
 
 <h3>v1.1.22 (December 30th 2019)</h3>
   - Add deployment of altered check and unique constraints

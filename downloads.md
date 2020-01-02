@@ -21,6 +21,11 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.23 (January 1st 2020)</h3>
+  - Add deployment of deleted check, unique and fk constraints
+  - Fix issue where inline code comments were not being ignore correctly
+
+
 <h3>v1.1.22 (December 30th 2019)</h3>
   - Add deployment of altered check and unique constraints
   - Fix issue on Pg < 10 where regexpr_match does not exist
