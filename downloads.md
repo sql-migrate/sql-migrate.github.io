@@ -21,6 +21,11 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.24 (January 5th 2020)</h3>
+  - Add ignore case option
+  - Fix issue where column storage type was being altered before data type
+
+
 <h3>v1.1.23 (January 1st 2020)</h3>
   - Add deployment of deleted check, unique and fk constraints
   - Fix issue where inline code comments were not being ignore correctly
