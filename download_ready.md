@@ -3,19 +3,23 @@
 
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.24',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.24.dmg">Download for macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.25',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.25.dmg">Download for macOS</a>
         </h2>
  <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.24',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.25',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
         </h2>
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.24',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.24.zip">Download for Linux</a>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.25',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.25.zip">Download for Linux</a>
         </h2>
+
+<h3>v1.1.25 (January 7th 2020)</h3>
+  - Fix issue where script was appearing blank
+
 
 <h3>v1.1.24 (January 5th 2020)</h3>
   - Add ignore case option

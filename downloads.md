@@ -21,6 +21,11 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+
+<h3>v1.1.25 (January 7th 2020)</h3>
+  - Fix issue where script was appearing blank
+
+
 <h3>v1.1.24 (January 5th 2020)</h3>
   - Add ignore case option
   - Fix issue where column storage type was being altered before data type
