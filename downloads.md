@@ -21,6 +21,17 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.26 (January 13th 2020)</h3>
+  Fixes:
+  - Null exception being thrown from CheckConstraintBuilder
+  - Max length missing when altering column datatype
+  - COMMENT ON PROCEDURE using incorrect name
+
+  Improvements:
+  - Order columns and comments alphabetically for a cleaner diff
+  - Deploy new primary key constraint
+  - Alter deferrable constraint (instead of drop/create)
+  - Reset scroll when filtering
 
 <h3>v1.1.25 (January 7th 2020)</h3>
   - Fix issue where script was appearing blank
