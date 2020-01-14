@@ -21,6 +21,13 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.27 (January 14th 2020)</h3>
+  Fixes:
+  - Running comparison restarting
+
+  Improvements:
+  - Deploy identity column differences
+
 <h3>v1.1.26 (January 13th 2020)</h3>
   Fixes:
   - Null exception being thrown from CheckConstraintBuilder
