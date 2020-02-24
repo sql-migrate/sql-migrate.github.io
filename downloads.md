@@ -21,6 +21,11 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.30 (February 24th 2020)</h3>
+  - UI improvements
+  - Add  'ignore column order' option
+
+
 <h3>v1.1.28 (January 21st 2020)</h3>
   - Deploy serial datatype changes
   - Support v9.3
