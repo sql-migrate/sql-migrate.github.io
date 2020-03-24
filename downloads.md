@@ -21,6 +21,10 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.32 (March 24th 2020)</h3>
+  - Deploy precision differences
+
+
 <h3>v1.1.31 (March 10th 2020)</h3>
   - UI improvements
   - Fix column name escaping in unique constraint
