@@ -2,8 +2,6 @@
 title: Download PostgresCompare for Mac, Windows or Linux
 ---
 
-
-
 <dl class="faq">
 <form action="https://postgrescompare.us13.list-manage.com/subscribe/post?u=7ef8a41f90e25826ea5b3d5fc&amp;id=14d2217fd9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
             <div class="row uniform 50%">
@@ -21,20 +19,21 @@ title: Download PostgresCompare for Mac, Windows or Linux
 			</div>
 </dl>
 
+<h3>v1.1.33 (March 29th 2020)</h3>
+  - Fix deploying column comments
+  - Refactor options
+
 <h3>v1.1.32 (March 24th 2020)</h3>
   - Deploy precision differences
-
 
 <h3>v1.1.31 (March 10th 2020)</h3>
   - UI improvements
   - Fix column name escaping in unique constraint
   - Fix expression index parsing
 
-
 <h3>v1.1.30 (February 24th 2020)</h3>
   - UI improvements
   - Add  'ignore column order' option
-
 
 <h3>v1.1.28 (January 21st 2020)</h3>
   - Deploy serial datatype changes
@@ -44,8 +43,9 @@ title: Download PostgresCompare for Mac, Windows or Linux
   Fixes:
   - Running comparison restarting
 
-  Improvements:
-  - Deploy identity column differences
+Improvements:
+
+- Deploy identity column differences
 
 <h3>v1.1.26 (January 13th 2020)</h3>
   Fixes:
@@ -53,45 +53,39 @@ title: Download PostgresCompare for Mac, Windows or Linux
   - Max length missing when altering column datatype
   - COMMENT ON PROCEDURE using incorrect name
 
-  Improvements:
-  - Order columns and comments alphabetically for a cleaner diff
-  - Deploy new primary key constraint
-  - Alter deferrable constraint (instead of drop/create)
-  - Reset scroll when filtering
+Improvements:
+
+- Order columns and comments alphabetically for a cleaner diff
+- Deploy new primary key constraint
+- Alter deferrable constraint (instead of drop/create)
+- Reset scroll when filtering
 
 <h3>v1.1.25 (January 7th 2020)</h3>
   - Fix issue where script was appearing blank
-
 
 <h3>v1.1.24 (January 5th 2020)</h3>
   - Add ignore case option
   - Fix issue where column storage type was being altered before data type
 
-
 <h3>v1.1.23 (January 1st 2020)</h3>
   - Add deployment of deleted check, unique and fk constraints
   - Fix issue where inline code comments were not being ignore correctly
-
 
 <h3>v1.1.22 (December 30th 2019)</h3>
   - Add deployment of altered check and unique constraints
   - Fix issue on Pg < 10 where regexpr_match does not exist
 
-
 <h3>v1.1.21 (December 26th 2019)</h3>
   - New option to ignore comments in code when comparing
   - Handle triggers on partitions
-
 
 <h3>v1.1.20 (December 16th 2019)</h3>
   - Include schema name for function return types
   - Include constraints and collations for domains
   - Include schema name for domains
 
-
 <h3>v1.1.19 (October 28th 2019)</h3>
   - Fixed scripting of precision for time and timestamp columns
-
 
 <h3>v1.1.18 (October 27th 2019)</h3>
   - Fixed issue where PostgresCompare was adding whitespace to functions
@@ -107,7 +101,6 @@ title: Download PostgresCompare for Mac, Windows or Linux
 <h3>v1.1.15 (September 30th 2019)</h3>
   - Fix bug where comparing indexes threw 'sequence has no matching elements' exception
 
-
 <h3>v1.1.14 (September 30th 2019)</h3>
   - Add client ssl certificate support
   - Fix bug where attributes of composite types were not being compared
@@ -121,10 +114,8 @@ title: Download PostgresCompare for Mac, Windows or Linux
   - Bug fix: failed comparison tile showed "in progress"
   - Script fixes: partition by, trigger function, partial indexes
 
-
 <h3>v1.1.12 (September 16th 2019)</h3>
   - Add shared projects
-
 
 <h3>v1.1.11 (August 4th 2019)</h3>
   - Add ability to copy a project
@@ -183,7 +174,6 @@ title: Download PostgresCompare for Mac, Windows or Linux
 <h3>v1.0.54 (June 14th 2019)</h3>
   - Fix parsing of default function arguments
 
-
 <h3>v1.0.53 (June 10th 2019)</h3>
   - Fix problem scripting Materialized View refresh
   - Fix scripting issues with sequences, types, functions and arrays
@@ -199,7 +189,6 @@ title: Download PostgresCompare for Mac, Windows or Linux
 <h3>v1.0.50 (May 19th 2019)</h3>
   - Add Materialized View deployment
   - Add Enum deployment
-
 
 <h3>v1.0.49 (May 12th 2019)</h3>
   - Show spinner when checking for updates
@@ -220,7 +209,6 @@ title: Download PostgresCompare for Mac, Windows or Linux
 <h3>v1.0.45 (April 27th 2019)</h3>
   - Added licensing
 
-
 <h3>v1.0.44-beta (April 2nd 2019)</h3>
   - Added auto-update to the Windows build
   - Signed the Windows executables
@@ -232,7 +220,6 @@ title: Download PostgresCompare for Mac, Windows or Linux
   - Added button to check all connections at once
   - Added button to clear all previous comparisons
   - Aligned colours everywhere to have same meaning 'new, different, dropeed, identical'
-
 
 <h3>v1.0.42-beta (March 15th 2019)</h3>
   - Added overview tab to comparison view
@@ -248,7 +235,6 @@ title: Download PostgresCompare for Mac, Windows or Linux
 
 <h3>v1.0.40-beta (February 17th 2019)</h3>
   - Deployment screen now highlights errors
-
 
 <h3>v1.0.39-beta (February 10th 2019)</h3>
   - Add option to ignore object owner
@@ -267,10 +253,8 @@ title: Download PostgresCompare for Mac, Windows or Linux
   - Add option to ignore column order
   - Add option to ignore table partitions
 
-
 <h3>v1.0.35-alpha (January 8th 2019)</h3>
   - Fix null reference exception when comparing single schemas
-
 
 <h3>v1.0.34-alpha (January 6th 2019)</h3>
   - Add support for comparing single schemas
@@ -376,7 +360,6 @@ title: Download PostgresCompare for Mac, Windows or Linux
 
 <h3>v1.0.12-alpha (April 12th 2018)</h3>
   - Fixed: function comparison failing when trying to compare a function with no arguments
-
 
 <h3>v1.0.11-alpha (April 12th 2018)</h3>
   - Added: basic Function comparison and snapshotting
