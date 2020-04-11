@@ -1,23 +1,21 @@
 ---
-title: Download PostgresCompare for Mac, Windows or Linux
 ---
 
-<dl class="faq">
-<form action="https://postgrescompare.us13.list-manage.com/subscribe/post?u=7ef8a41f90e25826ea5b3d5fc&amp;id=14d2217fd9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
-            <div class="row uniform 50%">
-              <div class="8u 12u(mobilep)">
-                <input type="email" value="" name="EMAIL" class="email" placeholder="Email Address" required>
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7ef8a41f90e25826ea5b3d5fc_14d2217fd9" tabindex="-1" value=""></div>
-              </div>
-              <div class="4u 12u(mobilep)">
-                  <input type="submit" value="Download free trial" name="subscribe" class="fit">
-                </div>
- </div></form>
-			<div>
-				<dt>What happens after I submit my email address?</dt>
-				<dd>You will be redirected to a page where you can download PostgresCompare. You'll receive a welcome email and a trial expiring email. That's it!</dd>
-			</div>
-</dl>
+<h2>
+          <a
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.33',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.33.dmg">Download for macOS</a>
+        </h2>
+ <h2>
+          <a
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.33',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
+        </h2>
+<h2>
+          <a
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.33',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.33.zip">Download for Linux</a>
+        </h2>
 
 <h3>v1.1.33 (March 29th 2020)</h3>
   - Fix deploying column comments
@@ -144,7 +142,7 @@ Improvements:
 
 <h3>v1.1.5 (July 8th 2019)</h3>
   - Support HTTPS_PROXY and HTTP_PROXY environment variables
-  - When using "ignore owner" don't output ALTER OWNER statements
+  - When using "ignore owner" don't output ALTER OWNER statement
   - Fix incorrectly quoted datatypes in CREATE FUNCTION
 
 <h3>v1.1.4 (July 3rd 2019)</h3>
