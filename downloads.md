@@ -3,19 +3,22 @@
 
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.33',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.33.dmg">Download for macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.34',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.34.dmg">Download for macOS</a>
         </h2>
  <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.33',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.34',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
         </h2>
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.33',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.33.zip">Download for Linux</a>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.34',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.34.zip">Download for Linux</a>
         </h2>
+
+<h3>v1.1.34 (May 25th 2020)</h3>
+  - Add data compare beta
 
 <h3>v1.1.33 (March 29th 2020)</h3>
   - Fix deploying column comments
