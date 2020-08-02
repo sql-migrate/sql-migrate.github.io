@@ -8,7 +8,7 @@ pricing_table:
     features:
       - text: $15 per user per month
         highlight: true
-      - text: Always run the latest version of PostgresCompare
+      - text: Always free upgrades
         highlight: false
       - text: Install in 2 locations per user
         highlight: false
@@ -25,7 +25,7 @@ pricing_table:
     features:
       - text: $150 per user per year
         highlight: true
-      - text: Always run the latest version of PostgresCompare
+      - text: Always free upgrades
         highlight: false
       - text: Install in 2 locations per user
         highlight: false
