@@ -17,7 +17,7 @@ pricing_table:
       - text: 30 day money back guarantee
         highlight: false
     call_to_action:
-      text: Purchase Monthly
+      text: PURCHASE MONTHLY
       link: "#"
     plan: plan_H5jWkJgAr05v7C
   - name: Annual subscription
@@ -54,7 +54,7 @@ pricing_table:
         highlight: false
     call_to_action:
       link: mailto:neil@postgrescompare.com
-      text: Get In Touch
+      text: GET IN TOUCH
 faq:
   - question: How do I cancel my subscription?
     answer: Drop us an <a href="/contact">email</a> and we'll take care of your cancellation right away.
