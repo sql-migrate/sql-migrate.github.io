@@ -1,7 +1,7 @@
 ---
 title: Pricing
-heading: Purchase your PostgresCompare licence
-description: After checkout is complete you'll receive your licence key via email.
+heading: Purchase your PostgresCompare subscription
+description: After checkout is complete you'll receive your license key via email.
 pricing_table:
   - name: Monthly subscription
     color: "#8e8e8e"
@@ -17,7 +17,7 @@ pricing_table:
       - text: 30 day money back guarantee
         highlight: false
     call_to_action:
-      text: Purchase a licence
+      text: Purchase Monthly
       link: "#"
     plan: plan_H5jWkJgAr05v7C
   - name: Annual subscription
@@ -35,7 +35,7 @@ pricing_table:
         highlight: false
     call_to_action:
       link: "#"
-      text: Purchase a licence
+      text: PURCHASE ANNUAL
     plan: plan_H5jV4xSixPYKJw
   - name: Need something else?
     color: "#8e8e8e"
@@ -54,7 +54,7 @@ pricing_table:
         highlight: false
     call_to_action:
       link: mailto:neil@postgrescompare.com
-      text: Get in touch
+      text: Get In Touch
 faq:
   - question: How do I cancel my subscription?
     answer: Drop us an <a href="/contact">email</a> and we'll take care of your cancellation right away.
