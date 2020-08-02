@@ -21,7 +21,7 @@ pricing_table:
       link: "#"
     plan: plan_H5jWkJgAr05v7C
   - name: Annual subscription
-    color: "#4a4a4a"
+    color: "#4282ef"
     features:
       - text: $150 per user per year
         highlight: true
