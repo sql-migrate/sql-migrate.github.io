@@ -6,11 +6,11 @@ pricing_table:
   - name: Monthly subscription
     color: "#8e8e8e"
     features:
-      - text: $10 per user per month
+      - text: $15 per user per month
         highlight: true
       - text: Always run the latest version of PostgresCompare
         highlight: false
-      - text: 2 active installs per user
+      - text: Install in 2 locations per user
         highlight: false
       - text: Support via email
         highlight: false
@@ -18,29 +18,29 @@ pricing_table:
         highlight: false
     call_to_action:
       text: Purchase a licence
-      link: '#'
-    plan: plan_F7LHPebph3tpfU
+      link: "#"
+    plan: plan_H5jWkJgAr05v7C
   - name: Annual subscription
     color: "#4a4a4a"
     features:
-      - text: $100 per user per year
+      - text: $150 per user per year
         highlight: true
       - text: Always run the latest version of PostgresCompare
         highlight: false
-      - text: 2 active installs per user
+      - text: Install in 2 locations per user
         highlight: false
       - text: Support via email
         highlight: false
       - text: 30 day money back guarantee
         highlight: false
     call_to_action:
-      link: '#'
+      link: "#"
       text: Purchase a licence
-    plan: plan_F8N7x2Jh0miMkY
+    plan: plan_H5jV4xSixPYKJw
   - name: Need something else?
     color: "#8e8e8e"
     features:
-      - text: ''
+      - text: ""
         highlight: true
       - text: Require a quote?
         highlight: false
@@ -48,9 +48,9 @@ pricing_table:
         highlight: false
       - text: Multiple licenses?
         highlight: false
-      - text: ''
+      - text: ""
         highlight: false
-      - text: ''
+      - text: ""
         highlight: false
     call_to_action:
       link: mailto:neil@postgrescompare.com
@@ -64,7 +64,6 @@ faq:
 
 <script src="https://js.stripe.com/v3"></script>
 
-
 <div class="plans">
 	{% for plan in page.pricing_table %}
 		<ul class="plan">
@@ -75,11 +74,12 @@ faq:
 				<li {% if feature.highlight %} class="highlighted"{% endif %}>{{ feature.text }}</li>
 			{% endfor %}
 
-			{% if plan.call_to_action %}
-				<li class="pricing-cta"><div class="button"><a id="{{plan.plan}}" style="background: {{ plan.color }}" href="{{plan.call_to_action.link}}">{{ plan.call_to_action.text }}</a></div></li>
-			{% endif %}
-		</ul>
-	{% endfor %}
+    		{% if plan.call_to_action %}
+    			<li class="pricing-cta"><div class="button"><a id="{{plan.plan}}" style="background: {{ plan.color }}" href="{{plan.call_to_action.link}}">{{ plan.call_to_action.text }}</a></div></li>
+    		{% endif %}
+    	</ul>
+    {% endfor %}
+
 </div>
 
 <h2>Pricing FAQ</h2>
@@ -89,38 +89,37 @@ faq:
 			<dd>We use <a href="https://www.stripe.com">Stripe</a> to manage your subscription and payments.</dd>
 		</div>
 
-		<div>
-			<dt>How do I cancel my subscription?</dt>
-			<dd>Drop us an <a href="/contact">email</a> and we'll take care of your cancellation right away.</dd>
-		</div>
+    	<div>
+    		<dt>How do I cancel my subscription?</dt>
+    		<dd>Drop us an <a href="/contact">email</a> and we'll take care of your cancellation right away.</dd>
+    	</div>
 
 </dl>
 
 <script>
   var stripe = Stripe('pk_live_WBgGhfOBShwMGAXipP1KHl7u');
 
-  var monthlyPlanButton = document.getElementById('plan_F7LHPebph3tpfU');
+  var monthlyPlanButton = document.getElementById('plan_H5jWkJgAr05v7C');
   monthlyPlanButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{plan: 'plan_F7LHPebph3tpfU', quantity: 1}],
+      items: [{plan: 'plan_H5jWkJgAr05v7C', quantity: 1}],
       successUrl: 'https://www.postgrescompare.com/success',
       cancelUrl: 'https://www.postgrescompare.com/',
     });
     return false;
   });
 
-  var annualPlanButton = document.getElementById('plan_F8N7x2Jh0miMkY');
+  var annualPlanButton = document.getElementById('plan_H5jV4xSixPYKJw');
   annualPlanButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{plan: 'plan_F8N7x2Jh0miMkY', quantity: 1}],
+      items: [{plan: 'plan_H5jV4xSixPYKJw', quantity: 1}],
       successUrl: 'https://www.postgrescompare.com/success',
       cancelUrl: 'https://www.postgrescompare.com/',
     });
     return false;
   });
 </script>
-
