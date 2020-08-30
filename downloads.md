@@ -13,9 +13,7 @@
         </h2>
 <h2>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.42',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.42.zip">Download for Linux</a>
-        </h2>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.46',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.46.zip">Download for Linux</a> </h2>
 
 <h3>v1.1.46 (August 30th 2020)</h3>
   - Fix issus where Citus tables were being ignored
