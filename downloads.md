@@ -1,22 +1,40 @@
 ---
 ---
 
-<h2>
+<h2>Downloads</h2>
+<h3>Desktop app</h3>
+<h4>
           <a
           onclick="var that=this;ga('send', 'event','Download','macOS 1.1.47',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.47.dmg">Download for macOS</a>
-        </h2>
- <h2>
+</h4>
+<h4>
           <a
           onclick="var that=this;ga('send', 'event','Download','Windows 1.1.47',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
-        </h2>
-<h2>
+</h4>
+<h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.46',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.46.zip">Download for Linux</a> </h2>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.46',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.46.zip">Download for Linux</a>
+</h4>
 
-<h3>v1.1.46 (Sept 8th 2020)</h3>
+<h3>Command line</h3>
+<h4>
+          <a
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.47 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/cli/mac/1.1.47/pgc">Download for macOS</a>
+</h4>
+<h4>
+          <a
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.47 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/cli/1.1.47/pgc.exe">Download for Windows</a>
+</h4>
+
+<h2>Changelog</h2>
+
+<h3>v1.1.47 (Sept 8th 2020)</h3>
   - Detect differences in the partition by clause.
+  - Include command line interface
 
 <h3>v1.1.46 (August 30th 2020)</h3>
   - Fix issus where Citus tables were being ignored
