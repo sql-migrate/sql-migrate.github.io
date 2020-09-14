@@ -8,11 +8,11 @@
           onclick="var that=this;ga('send', 'event','Download','macOS 1.1.47',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.47.dmg">Download for macOS</a>
 </h4>
-<h4>
+<!-- <h4>
           <a
           onclick="var that=this;ga('send', 'event','Download','Windows 1.1.47',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
-</h4>
+</h4> -->
 <h4>
           <a
           onclick="var that=this;ga('send', 'event','Download','Linux 1.1.46',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.46.zip">Download for Linux</a>
