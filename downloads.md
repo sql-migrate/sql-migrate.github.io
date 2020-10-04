@@ -5,12 +5,12 @@
 <h3>Desktop app</h3>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.48',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.48.dmg">Download for macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.49',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.49.dmg">Download for macOS</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.48',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.49',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
 </h4>
 <h4>
@@ -36,6 +36,11 @@
 </h4>
 
 <h2>Changelog</h2>
+
+<h3>v1.1.49 (Oct 3rd 2020)</h3>
+  - Fix export report/save script
+  - DROP POLICY
+  - CREATE PUBLICATION
 
 <h3>v1.1.48 (Sept 16th 2020)</h3>
   - Fix frozen UI issue after editing project
