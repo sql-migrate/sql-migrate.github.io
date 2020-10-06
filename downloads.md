@@ -15,7 +15,7 @@
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.46',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.46.zip">Download for Linux</a>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.49',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.49.zip">Download for Linux</a>
 </h4>
 
 <h3>Command line</h3>
