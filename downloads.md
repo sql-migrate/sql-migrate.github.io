@@ -6,7 +6,7 @@
 <h4>
           <a
           onclick="var that=this;ga('send', 'event','Download','macOS 1.1.52',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/PostgresCompare_1.1.52.dmg">Download for macOS</a>
+          href="https://downloads.postgrescompare.com/builds/PostgresCompare_1.1.52.dmg">Download for macOS</a>
 </h4>
 <h4>
           <a
@@ -15,24 +15,24 @@
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.49',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="http://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.49.zip">Download for Linux</a>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.49',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.49.zip">Download for Linux</a>
 </h4>
 
 <h3>Command line</h3>
 <h4>
           <a
           onclick="var that=this;ga('send', 'event','Download','macOS 1.1.47 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/cli/mac/1.1.47/pgc">Download for macOS</a>
+          href="https://downloads.postgrescompare.com/builds/cli/mac/1.1.47/pgc">Download for macOS</a>
 </h4>
 <h4>
           <a
           onclick="var that=this;ga('send', 'event','Download','Windows 1.1.49 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/cli/1.1.49/pgc.exe">Download for Windows</a>
+          href="https://downloads.postgrescompare.com/builds/cli/1.1.49/pgc.exe">Download for Windows</a>
 </h4>
 <h4>
           <a
           onclick="var that=this;ga('send', 'event','Download','Linux 1.1.47 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="http://downloads.postgrescompare.com/builds/cli/linux/1.1.47/pgc">Download for Linux</a>
+          href="https://downloads.postgrescompare.com/builds/cli/linux/1.1.47/pgc">Download for Linux</a>
 </h4>
 
 <h2>Changelog</h2>
