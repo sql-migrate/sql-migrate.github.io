@@ -5,12 +5,12 @@
 <h3>Desktop app</h3>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.59',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="https://downloads.postgrescompare.com/builds/PostgresCompare_1.1.59.dmg">Download for macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.60',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="https://downloads.postgrescompare.com/builds/PostgresCompare_1.1.60.dmg">Download for macOS</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.59',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.60',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
 </h4>
 <h4>
@@ -36,6 +36,9 @@
 </h4>
 
 <h2>Changelog</h2>
+
+<h3>v1.1.60 (Jan 25th 2021)</h3>
+  - Add comparison of privileges for functions, views, sequences, schemas, databases, tablespaces.
 
 <h3>v1.1.59 (Jan 21st 2021)</h3>
   - Fixed test connection feedback
