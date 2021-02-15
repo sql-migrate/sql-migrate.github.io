@@ -5,12 +5,12 @@
 <h3>Desktop app</h3>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.63',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="https://downloads.postgrescompare.com/builds/PostgresCompare_1.1.63.dmg">Download for macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.64',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="https://downloads.postgrescompare.com/builds/PostgresCompare_1.1.64.dmg">Download for macOS</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.63',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.64',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
 </h4>
 <h4>
@@ -36,6 +36,11 @@
 </h4>
 
 <h2>Changelog</h2>
+
+
+<h3>v1.1.64 (Feb 15th 2021)</h3>
+  - Fix data compare issue where no options presented for tables to compare
+  - Sort schemas alphabetically when setting up projects
 
 <h3>v1.1.63 (Feb 8th 2021)</h3>
   - Add scripting of owner of sequences, enums, domains and aggregates
