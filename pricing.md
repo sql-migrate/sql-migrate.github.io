@@ -99,24 +99,24 @@ faq:
 <script>
   var stripe = Stripe('pk_live_WBgGhfOBShwMGAXipP1KHl7u');
 
-  var monthlyPlanButton = document.getElementById('plan_H5jWkJgAr05v7C');
+  var monthlyPlanButton = document.getElementById('price_1IOXkqKhvEuHFknZlCwbX1eV');
   monthlyPlanButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{plan: 'plan_H5jWkJgAr05v7C', quantity: 1}],
+      items: [{plan: 'price_1IOXkqKhvEuHFknZlCwbX1eV', quantity: 1}],
       successUrl: 'https://www.postgrescompare.com/success',
       cancelUrl: 'https://www.postgrescompare.com/',
     });
     return false;
   });
 
-  var annualPlanButton = document.getElementById('plan_H5jV4xSixPYKJw');
+  var annualPlanButton = document.getElementById('price_1IOXlOKhvEuHFknZBrJxEeZP');
   annualPlanButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{plan: 'plan_H5jV4xSixPYKJw', quantity: 1}],
+      items: [{plan: 'price_1IOXlOKhvEuHFknZBrJxEeZP', quantity: 1}],
       successUrl: 'https://www.postgrescompare.com/success',
       cancelUrl: 'https://www.postgrescompare.com/',
     });
