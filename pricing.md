@@ -6,7 +6,7 @@ pricing_table:
   - name: Monthly subscription
     color: "#8e8e8e"
     features:
-      - text: $15 per user per month
+      - text: $14.95 per user per month
         highlight: true
       - text: Always free upgrades
         highlight: false
@@ -19,11 +19,11 @@ pricing_table:
     call_to_action:
       text: PURCHASE MONTHLY
       link: "#"
-    plan: plan_H5jWkJgAr05v7C
+    plan: price_1IOXkqKhvEuHFknZlCwbX1eV
   - name: Annual subscription
     color: "#4282ef"
     features:
-      - text: $150 per user per year
+      - text: $149.95 per user per year
         highlight: true
       - text: Always free upgrades
         highlight: false
@@ -36,7 +36,7 @@ pricing_table:
     call_to_action:
       link: "#"
       text: PURCHASE ANNUAL
-    plan: plan_H5jV4xSixPYKJw
+    plan: price_1IOXlOKhvEuHFknZBrJxEeZP
   - name: Need something else?
     color: "#8e8e8e"
     features:
