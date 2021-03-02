@@ -5,12 +5,12 @@
 <h3>Desktop app</h3>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.65',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="https://downloads.postgrescompare.com/builds/PostgresCompare_1.1.65.dmg">Download for macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.66',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="https://downloads.postgrescompare.com/builds/PostgresCompare_1.1.66.dmg">Download for macOS</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.65',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.66',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
 </h4>
 <h4>
@@ -36,6 +36,10 @@
 </h4>
 
 <h2>Changelog</h2>
+
+<h3>v1.1.66 (March 1st 2021)</h3>
+  - Add remaining object types to scripts folder creation
+  - Fix issue comparing check constraint definitions between postgres versions
 
 <h3>v1.1.65 (Feb 22nd 2021)</h3>
   - Added first pass at scripts folder creation
