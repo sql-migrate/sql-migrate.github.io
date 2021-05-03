@@ -5,17 +5,17 @@
 <h3>Desktop app</h3>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.71',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="https://downloads.postgrescompare.com/builds/PostgresCompare_1.1.71.dmg">Download for macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.74',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="https://downloads.postgrescompare.com/builds/PostgresCompare_1.1.74.dmg">Download for macOS</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.71',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.74',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.68',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.68.zip">Download for Linux</a>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.74',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.74.zip">Download for Linux</a>
 </h4>
 
 <h3>Command line</h3>
@@ -36,6 +36,12 @@
 </h4>
 
 <h2>Changelog</h2>
+
+<h3>v1.1.74 (May 2nd 2021)</h3>
+  - Index include columns
+  - Index column  operator class names
+  - Fix issue where an index implementing a fk constraint was being excluded
+  - Fix ordering of deployment script when DROP/CREATE a view
 
 <h3>v1.1.71 (April 2nd 2021)</h3>
   - Compare range types
