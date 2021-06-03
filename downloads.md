@@ -27,7 +27,7 @@
 <h4>
           <a
           onclick="var that=this;ga('send', 'event','Download','Windows 1.1.76 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="https://downloads.postgrescompare.com/builds/cli/1.1.76/pgc.exe">Download for Windows</a>
+          href="https://downloads.postgrescompare.com/builds/cli/windows/1.1.76/pgc.exe">Download for Windows</a>
 </h4>
 <h4>
           <a
