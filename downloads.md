@@ -5,17 +5,17 @@
 <h3>Desktop app</h3>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.79',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
-          href="https://downloads.postgrescompare.com/builds/PostgresCompare_1.1.79.dmg">Download for macOS</a>
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.80',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          href="https://downloads.postgrescompare.com/builds/PostgresCompare_1.1.80.dmg">Download for macOS</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.79',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.80',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.79',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.79.zip">Download for Linux</a>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.80',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.80.zip">Download for Linux</a>
 </h4>
 
 <h3>Command line</h3>
@@ -36,6 +36,10 @@
 </h4>
 
 <h2>Changelog</h2>
+
+<h3>v1.1.80 (June 20th 2021)</h3>
+  - Compare and deploy table partitions
+  - Fix bug deploying  timestamp vs timestamp(0) differences
 
 <h3>v1.1.79 (June 13th 2021)</h3>
   - Ensure that adding a column comes before adding a foreign key
