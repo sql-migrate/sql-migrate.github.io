@@ -37,7 +37,7 @@
 
 <h2>Changelog</h2>
 
-<h3>v1.1.83 (Augst 5th 2021)</h3>
+<h3>v1.1.83 (August 5th 2021)</h3>
   - Fix comparison of partitions when comparing single schemas
 
 <h3>v1.1.82 (July 31st 2021)</h3>
