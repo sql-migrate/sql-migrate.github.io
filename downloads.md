@@ -5,12 +5,12 @@
 <h3>Desktop app</h3>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.88',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.89',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://downloads.postgrescompare.com/builds/PostgresCompare.pkg">Download for macOS</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.88',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.89',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
 </h4>
 <h4>
@@ -37,7 +37,9 @@
 
 <h2>Changelog</h2>
 
-
+<h3>v1.1.89 (July 7th 2022)</h3>
+  - Fix blank window issue on macOS
+  
 <h3>v1.1.88 (June 22nd 2022)</h3>
   - Fix escaping of CSV report
 
