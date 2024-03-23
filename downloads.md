@@ -5,17 +5,17 @@
 <h3>Desktop app</h3>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.91',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.93',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://downloads.postgrescompare.com/builds/PostgresCompare.pkg">Download for macOS</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.91',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.93',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.83',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.83.zip">Download for Linux</a>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.93',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.93.zip">Download for Linux</a>
 </h4>
 
 <h3>Command line</h3>
@@ -36,6 +36,9 @@
 </h4>
 
 <h2>Changelog</h2>
+
+<h3>v1.1.93 (March 22nd 2024)</h3>
+  - Support variadic function arguments.
 
 <h3>v1.1.91 (July 30th 2022)</h3>
   - Quote the object name fields when generating a CSV report
