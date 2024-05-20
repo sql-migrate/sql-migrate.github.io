@@ -6,6 +6,10 @@
   link: /pricing
   new_window: false
   highlight: false
+- name: FAQ
+  link: /faq
+  new_window: false
+  highlight: false
 - name: About
   link: /about
   new_window: false
