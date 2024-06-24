@@ -37,7 +37,7 @@
 
 <h2>Changelog</h2>
 
-<h3>v1.1.98 (June 24th 2024)</h3>
+<h3>v1.1.99 (June 24th 2024)</h3>
   - Fixed bug where PostgresCompare was not ignoring tablespace differences in indexes.
 
 
