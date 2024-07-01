@@ -5,17 +5,17 @@
 <h3>Desktop app</h3>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.99',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','macOS 1.1.100',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://downloads.postgrescompare.com/builds/PostgresCompare.pkg">Download for macOS</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.99',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
+          onclick="var that=this;ga('send', 'event','Download','Windows 1.1.100',this.href);setTimeout(function(){location.href=that.href;},200);return false;"
           href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe">Download for Windows</a>
 </h4>
 <h4>
           <a
-          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.99',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.99.zip">Download for Linux</a>
+          onclick="var that=this;ga('send', 'event','Download','Linux 1.1.100',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.100.zip">Download for Linux</a>
 </h4>
 
 <h3>Command line</h3>
@@ -37,9 +37,11 @@
 
 <h2>Changelog</h2>
 
+<h3>v1.1.100 (July 1st 2024)</h3>
+  - Removed heading from difference viewer.
+  
 <h3>v1.1.99 (June 24th 2024)</h3>
   - Fixed bug where PostgresCompare was not ignoring tablespace differences in indexes.
-
 
 <h3>v1.1.98 (May 8th 2024)</h3>
   - Fixed bug where PostgresCompare was failing to fetch the version number of PostgreSQL databases on Linux or MacOS. 
