@@ -9,6 +9,10 @@
     link: /about
   - name: Contact
     link: /contact
+  - name: MySQLCompare
+    link: https://www.mysqlcompare.app
+  - name: SnowflakeCompare
+    link: https://www.snowflakecompare.com
 - links:
   - name: Roadmap
     link: https://trello.com/b/uApHpejD/postgres-compare-dev
