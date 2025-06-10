@@ -107,6 +107,7 @@ faq:
       items: [{plan: 'price_1IOXkqKhvEuHFknZlCwbX1eV', quantity: 1}],
       successUrl: 'https://www.postgrescompare.com/success',
       cancelUrl: 'https://www.postgrescompare.com/',
+      billingAddressCollection: 'required'
     });
     return false;
   });
@@ -119,6 +120,7 @@ faq:
       items: [{plan: 'price_1IOXlOKhvEuHFknZBrJxEeZP', quantity: 1}],
       successUrl: 'https://www.postgrescompare.com/success',
       cancelUrl: 'https://www.postgrescompare.com/',
+	    
     });
     return false;
   });
