@@ -71,6 +71,37 @@ defaults:
       path: "contact.html"
     values:
       full_width: true
+  # Exclude from sitemap - utility pages
+  -
+    scope:
+      path: "pg_catalog"
+    values:
+      sitemap: false
+  -
+    scope:
+      path: "googlea1e2dd3fa6ff7786.html"
+    values:
+      sitemap: false
+  -
+    scope:
+      path: "download_ready.md"
+    values:
+      sitemap: false
+  -
+    scope:
+      path: "success.html"
+    values:
+      sitemap: false
+  -
+    scope:
+      path: "thanks.html"
+    values:
+      sitemap: false
+  -
+    scope:
+      path: "blog"
+    values:
+      sitemap: false
 
 jekyll-archives:
   enabled:
