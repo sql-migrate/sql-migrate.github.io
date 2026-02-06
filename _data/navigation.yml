@@ -1,9 +1,9 @@
-- name: Free Download
-  link: /downloads
+- name: Features
+  link: /#features
   new_window: false
-  highlight: true
-- name: Pricing
-  link: /pricing
+  highlight: false
+- name: Buy Now
+  link: /purchase
   new_window: false
   highlight: false
 - name: FAQ
@@ -18,3 +18,11 @@
   link: /contact
   new_window: false
   highlight: false
+- name: Release Notes
+  link: /release-notes
+  new_window: false
+  highlight: false
+- name: Download
+  link: /downloads
+  new_window: false
+  highlight: true

@@ -6,157 +6,213 @@ description: PostgresCompare compares PostgreSQL database schema objects and wri
 
 <section class="hero">
   <div class="text-container">
-    <h1><strong>PostgresCompare</strong></h1>
-    <h2>The schema and data comparison tool for PostgreSQL</h2>
-    <h3>PostgresCompare supports PostgreSQL v9.2 or later</h3>
-    <div class="cta button alt">
-      <a href="/downloads">Download free trial</a>
+    <h3>✓ Supports PostgreSQL v9.2 or later</h3>
+    <h1>The <span>Reliable</span> Way to<br>Compare PostgreSQL Databases</h1>
+    <h2>Find differences, generate deployment SQL, and keep your databases in sync with confidence. Trusted by developers worldwide.</h2>
+    <div class="hero-cta">
+      <a href="/downloads" class="primary-button">
+        Download Free Trial
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 3v14m0 0l6-6m-6 6l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <a href="/purchase" class="secondary-button">See Pricing</a>
     </div>
-    <div>
-      <img
-        src="/images/postgrescomparescreenshot.png"
-        alt="Screenshot"
-        class="screenshot editable"
-      />
+    <div class="trust-bar">
+      <div class="trust-item">
+        <span class="trust-icon">✓</span>
+        <span><strong>100%</strong> Safe & Secure</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">✓</span>
+        <span><strong>No</strong> Data Sent to Cloud</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">✓</span>
+        <span><strong>Free</strong> 30-Day Trial</span>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="content">
-  <section>
-    <div class="container flex">
-      <div class="text editable">
-        <h2>Find the <strong>differences</strong> between databases.</h2>
-        <p>
-          PostgresCompare identifies database objects that have been new,
-          different or deleted.
-        </p>
+<section class="screenshot-section">
+  <div class="screenshot-container">
+    <div class="screenshot-dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="carousel">
+      <div class="carousel-slides">
+        <img src="/images/postgrescomparescreenshot.png" alt="PostgresCompare Schema Comparison" class="carousel-slide active">
+        <img src="/images/screenshot2.png" alt="PostgresCompare SQL Diff" class="carousel-slide">
+        <img src="/images/screenshot3.png" alt="PostgresCompare Results" class="carousel-slide">
       </div>
-      <div class="image">
-        <img
-          src="/images/databasedifferences.png"
-          alt="Differences found by PostgresCompare"
-          class="screenshot"
-        />
+      <button class="carousel-btn carousel-prev" aria-label="Previous">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+      <button class="carousel-btn carousel-next" aria-label="Next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
+      <div class="carousel-indicators">
+        <button class="indicator active" aria-label="Slide 1"></button>
+        <button class="indicator" aria-label="Slide 2"></button>
+        <button class="indicator" aria-label="Slide 3"></button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <div class="container flex">
-      <div class="text">
-        <h2>Create the <strong>SQL</strong> to deploy your changes.</h2>
-        <p>
-          PostgresCompare generates the SQL to keep your database up to date.
-        </p>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.carousel');
+  if (!carousel) return;
+
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const indicators = carousel.querySelectorAll('.indicator');
+  const prevBtn = carousel.querySelector('.carousel-prev');
+  const nextBtn = carousel.querySelector('.carousel-next');
+  let currentIndex = 0;
+  let autoPlayInterval;
+
+  function showSlide(index) {
+    slides.forEach(s => s.classList.remove('active'));
+    indicators.forEach(i => i.classList.remove('active'));
+    currentIndex = (index + slides.length) % slides.length;
+    slides[currentIndex].classList.add('active');
+    indicators[currentIndex].classList.add('active');
+  }
+
+  function nextSlide() { showSlide(currentIndex + 1); }
+  function prevSlide() { showSlide(currentIndex - 1); }
+
+  function startAutoPlay() {
+    autoPlayInterval = setInterval(nextSlide, 5000);
+  }
+
+  function resetAutoPlay() {
+    clearInterval(autoPlayInterval);
+    startAutoPlay();
+  }
+
+  prevBtn.addEventListener('click', () => { prevSlide(); resetAutoPlay(); });
+  nextBtn.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
+  indicators.forEach((indicator, i) => {
+    indicator.addEventListener('click', () => { showSlide(i); resetAutoPlay(); });
+  });
+
+  startAutoPlay();
+});
+</script>
+
+<section class="features" id="features">
+  <div class="section-header">
+    <h2>Everything You Need to Compare<br>PostgreSQL Databases</h2>
+    <p>Powerful features designed to make schema comparison fast, accurate, and reliable.</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🔍</div>
+      <h3>Identify Differences</h3>
+      <p>PostgresCompare finds database objects that are new, modified, or deleted between environments. Get a clear, comprehensive view of all changes at a glance.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Generate Deployment SQL</h3>
+      <p>Automatically create the exact SQL scripts needed to synchronize your databases. Review, customize, and deploy with complete confidence.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🛡️</div>
+      <h3>Safe & Reliable</h3>
+      <p>All comparisons happen locally on your machine. Your data never leaves your network, ensuring complete security and compliance.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Schema & Data Compare</h3>
+      <p>Compare both database structure and data. Perfect for validating migrations, testing changes, or understanding differences across environments.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Clear Visual Reports</h3>
+      <p>See differences presented in an intuitive, easy-to-understand format. Drill down into details or get a high-level overview—your choice.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚙️</div>
+      <h3>Flexible & Configurable</h3>
+      <p>Customize comparisons to match your workflow. Filter objects, exclude certain types, and fine-tune exactly what you want to compare.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <div class="testimonials-container">
+    <div class="section-header">
+      <h2>Trusted by Developers Worldwide</h2>
+      <p>Join thousands of developers who rely on PostgresCompare every day.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p class="testimonial-text">Clever and complete tool to compare PostgreSQL Schemas and Diff Databases</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SH</div>
+          <div class="author-info">
+            <strong>Scott Hanselman</strong>
+            <span>@shanselman</span>
+          </div>
+        </div>
       </div>
-      <div class="image">
-        <img
-          src="/images/generatesql.png"
-          alt="Screenshot"
-          class="screenshot"
-        />
+      <div class="testimonial">
+        <p class="testimonial-text">I needed a quick schema diff and got the answers I needed in under a minute ❤️</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RH</div>
+          <div class="author-info">
+            <strong>Richard Hayes</strong>
+            <span>@justcompile</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">Using @postgrescompare daily and loving it!</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">W</div>
+          <div class="author-info">
+            <strong>Wellspring</strong>
+            <span>@WellspringCloud</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">Compare dev to test to stage to prod - it has become essential as I plan website updates and verify database changes have been implemented.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">DL</div>
+          <div class="author-info">
+            <strong>Dan Langille</strong>
+            <span>@DLangille</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">Just used the tool for the first time and it was a huge help!</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RB</div>
+          <div class="author-info">
+            <strong>Ryan Booz</strong>
+            <span>@ryanbooz</span>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="testimonial">
-    <div class="container flex">
-      <div class="testimonial-block" style="margin-right: 10px;">
-        <blockquote class="twitter-tweet">
-          <p lang="en" dir="ltr">
-            Clever and complete tool to compare PostgreSQL Schemas and Diff
-            Databases - “Postgres Compare”
-            <a href="https://t.co/OtrRPIyrWK">https://t.co/OtrRPIyrWK</a>
-          </p>
-          &mdash; Scott Hanselman (@shanselman)
-          <a
-            href="https://twitter.com/shanselman/status/1103439410220032001?ref_src=twsrc%5Etfw"
-            >March 6, 2019</a
-          >
-        </blockquote>
-      </div>
-      <div class="testimonial-block" style="margin-right: 10px;">
-        <blockquote class="twitter-tweet">
-          <p lang="en" dir="ltr">
-            I needed a quick schema diff and got the answers I needed in under a
-            minute ❤️
-          </p>
-          &mdash; Richard Hayes (@justcompile)
-          <a
-            href="https://twitter.com/justcompile/status/1134186658184802305?ref_src=twsrc%5Etfw"
-            >May 30, 2019</a
-          >
-        </blockquote>
-      </div>
-      <div class="testimonial-block">
-        <blockquote class="twitter-tweet">
-          <p lang="en" dir="ltr">
-            Using
-            <a href="https://twitter.com/postgrescompare?ref_src=twsrc%5Etfw"
-              >@postgrescompare</a
-            >
-            daily and loving it!
-          </p>
-          &mdash; Wellspring (@WellspringCloud)
-          <a
-            href="https://twitter.com/WellspringCloud/status/1289239047605551104?ref_src=twsrc%5Etfw"
-            >July 31, 2020</a
-          >
-        </blockquote>
-      </div>
-    </div>
-    <div class="container flex">
-      <div class="testimonial-block">
-        <blockquote class="twitter-tweet">
-          <p lang="en" dir="ltr">
-            I first used
-            <a href="https://t.co/qKuRTts74A">https://t.co/qKuRTts74A</a> for
-            comparing two
-            <a href="https://twitter.com/PostgreSQL?ref_src=twsrc%5Etfw"
-              >@PostgreSQL</a
-            >
-            database schemas late last year. Now it has become useful as I plan
-            a website update and I want to verify the database changes have
-            already been implemented. Compare dev to test to stage to prod.
-          </p>
-          &mdash; Dan Langille (@DLangille)
-          <a
-            href="https://twitter.com/DLangille/status/1080978019941040128?ref_src=twsrc%5Etfw"
-            >January 4, 2019</a
-          >
-        </blockquote>
-      </div>
-      <div class="testimonial-block">
-        <blockquote class="twitter-tweet">
-          <p lang="en" dir="ltr">
-            <a href="https://twitter.com/postgrescompare?ref_src=twsrc%5Etfw"
-              >@postgrescompare</a
-            >
-            - just used the tool for the first time and it was a huge help!
-            Thanks!<br /><br />Have some minor feedback on the results of the
-            diffs and wondered where/how you&#39;d like me to submit it?
-          </p>
-          &mdash; Ryan Booz (@ryanbooz)
-          <a
-            href="https://twitter.com/ryanbooz/status/1115342248097587207?ref_src=twsrc%5Etfw"
-            >April 8, 2019</a
-          >
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <section class="bottom-cta">
-    <h2>
-      <strong>Improve</strong> your development process with PostgresCompare
-    </h2>
-    <div class="button alt"><a href="/downloads">Download free trial</a></div>
-  </section>
-
-  <script
-  async defer
-  src="https://platform.twitter.com/widgets.js"
-  charset="utf-8"
-></script>
-</div>
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Start Comparing with Confidence</h2>
+    <p>Download your free 30-day trial and experience the difference. No credit card required, no commitment—just reliable database comparison.</p>
+    <a href="/downloads" class="primary-button">Download Free Trial</a>
+  </div>
+</section>

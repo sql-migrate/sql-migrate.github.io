@@ -1,41 +1,41 @@
-- links:
+- title: Product
+  links:
   - name: Free Download
     link: /downloads
-  - name: Pricing
-    link: /pricing
+  - name: Buy Now
+    link: /purchase
   - name: FAQ
     link: /faq
+  - name: Roadmap
+    link: https://trello.com/b/uApHpejD/postgres-compare-dev
+    new_window: true
+- title: Company
+  links:
   - name: About
     link: /about
   - name: Contact
     link: /contact
-  - name: MySQLCompare
-    link: https://www.mysqlcompare.app
-  - name: SnowflakeCompare
-    link: https://www.snowflakecompare.com
-- links:
-  - name: Roadmap
-    link: https://trello.com/b/uApHpejD/postgres-compare-dev
   - name: EULA
     link: /eula
-- links:
+- title: Related Tools
+  links:
+  - name: MySQLCompare
+    link: https://www.mysqlcompare.app
+    new_window: true
+  - name: SnowflakeCompare
+    link: https://www.snowflakecompare.com
+    new_window: true
+- title: Connect
+  links:
   - name: Facebook
     link: https://www.facebook.com/postgrescompare
     new_window: true
-    social_icon: Facebook
   - name: Twitter
     link: https://www.twitter.com/postgrescompare
-    social_icon: Twitter
     new_window: true
   - name: YouTube
     link: https://www.youtube.com/channel/UCRuo5SO6qXM48WUg3YNP-NQ
-    social_icon: YouTube
     new_window: true
-  - name: Linkedin
+  - name: LinkedIn
     link: https://www.linkedin.com/company/postgres-compare
-    social_icon: LinkedIn
     new_window: true
-  - name: RSS
-    link: /feed.xml
-    social_icon: RSS
-    new_window: false
