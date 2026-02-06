@@ -9,7 +9,7 @@
 }
 
 .container {
-	max-width: 1280px;
+	max-width: 1140px;
 
 	&.max-container {
 		max-width: 100%;
@@ -17,9 +17,40 @@
 	}
 }
 
-// Content wrapper
+header {
+	color: #fff;
+	padding: 20px 0;
+	background: $brand-color; /* Old browsers */
+	background: linear-gradient(to bottom, $brand-color 0%, $middle-gradient-color 100%) no-repeat $brand-color;
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		z-index: 1;
+		position: relative;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.company-name {
+		font-size: 1.7em;
+		line-height: 0;
+
+		a {
+			display: inline-block;
+		}
+
+		img {
+			display: block;
+			width: auto;
+		}
+	}
+}
+
 .content {
-	background: $background;
+	background: #fff;
 	padding: 1px 0 0 0;
 	position: relative;
 }
@@ -28,8 +59,8 @@
 	max-width: 100%;
 	height: auto;
 	display: block;
-	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-	border-radius: 12px;
+	box-shadow: 0 1px 0 #ccc, 0 1px 0 1px #eee;
+	border-radius: 2px;
 	margin-left: auto;
 	margin-right: auto;
 	background: #DDD url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2244%22%20height%3D%2212%22%20viewBox%3D%220%200%2044%2012%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2222%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3Ccircle%20cx%3D%2238%22%20cy%3D%226%22%20r%3D%224%22%20fill%3D%22%23eee%22%20%2F%3E%3C%2Fsvg%3E') 4px 4px no-repeat;
@@ -38,7 +69,7 @@
 }
 
 section {
-	padding: 80px 0;
+	padding: 100px 0;
 }
 
 section + section {
@@ -49,6 +80,7 @@ section + section {
 	margin-top: 10px;
 	text-align: center;
 }
+
 
 .cta {
 	margin: 60px 0;
@@ -78,7 +110,7 @@ blockquote {
 }
 
 blockquote:before {
-	color: $primary-light;
+	color: #ccc;
 	content: open-quote;
 	font-size: 4em;
 	line-height: 0.1em;
@@ -119,7 +151,7 @@ blockquote:before {
 	margin-top: 0;
 	.btn {
 		border: 0;
-		border-radius: 8px;
+		border-radius: 2px;
 		width: 100%;
 		max-width: 500px;
 		box-sizing: border-box;
@@ -129,13 +161,14 @@ blockquote:before {
 		margin: 0;
 		font-size: 18px;
 		cursor: pointer;
-		background-color: $accent;
+		background-color: #f7e064;
 		color: #333;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
 
 		&:hover {
-			background-color: $accent-light;
+			background-color: #f4d525;
 			color: #333;
 		}
 	}
+
 }

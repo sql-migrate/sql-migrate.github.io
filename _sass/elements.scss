@@ -1,5 +1,5 @@
 html {
-	background: $background;
+	background: #2b2b40;
 }
 
 html, body {
@@ -7,34 +7,21 @@ html, body {
 	padding: 0;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 body {
-	font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-	color: $text;
-	background: $background;
-	line-height: 1.6;
-	overflow-x: hidden;
+	font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
 }
 
 a {
-	color: $primary;
+	color: #00a4ca;
 	text-decoration: none;
-	transition: color 0.3s ease;
 }
 
 a:hover {
 	text-decoration: underline;
-	color: $primary-dark;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+	width: 100%;
 }
 
 h1 strong, h2 strong {
@@ -42,148 +29,26 @@ h1 strong, h2 strong {
 }
 
 h1 {
-	font-family: 'Plus Jakarta Sans', sans-serif;
-	font-weight: 800;
-	font-size: 2.5rem;
+	font-weight: 300;
+	font-size: 2.3em;
 	margin: 0;
-	color: $text;
 }
 
 h2 {
-	font-family: 'Plus Jakarta Sans', sans-serif;
-	font-weight: 700;
-	font-size: 2rem;
+	font-weight: 300;
+	font-size: 2.2em;
 	margin: 0 0 30px 0;
-	color: $text;
 }
 
 h3 {
-	font-family: 'Plus Jakarta Sans', sans-serif;
-	font-weight: 600;
 	margin: 20px 0 10px 0;
-	color: $text;
 }
 
-h4 {
-	font-family: 'Plus Jakarta Sans', sans-serif;
-	font-weight: 600;
-	color: $text;
-}
 
 p, address {
-	font-size: 1.1rem;
-	color: $text-light;
+	font-size: 1.38em;
+	color: #666;
 	margin-bottom: 20px;
-	font-weight: 400;
-	line-height: 1.8;
-}
-
-ul, ol {
-	color: $text-light;
-	line-height: 1.8;
-}
-
-blockquote {
-	background: $background;
-	border-left: 4px solid $primary-light;
-	padding: 1.5rem;
-	margin: 1.5rem 0;
-	border-radius: 0 12px 12px 0;
-
-	p {
-		margin: 0;
-		font-style: italic;
-	}
-}
-
-code {
-	background: rgba(15, 118, 110, 0.1);
-	color: $primary;
-	padding: 0.2rem 0.5rem;
-	border-radius: 4px;
-	font-size: 0.9em;
-}
-
-pre {
-	background: $text;
-	color: white;
-	padding: 1.5rem;
-	border-radius: 12px;
-	overflow-x: auto;
-
-	code {
-		background: none;
-		color: inherit;
-		padding: 0;
-	}
-}
-
-hr {
-	border: none;
-	border-top: 1px solid $border;
-	margin: 2rem 0;
-}
-
-table {
-	width: 100%;
-	border-collapse: collapse;
-	margin: 1.5rem 0;
-
-	th, td {
-		padding: 0.75rem 1rem;
-		text-align: left;
-		border-bottom: 1px solid $border;
-	}
-
-	th {
-		background: rgba(15, 118, 110, 0.05);
-		font-weight: 600;
-		color: $text;
-	}
-
-	tr:hover td {
-		background: rgba(15, 118, 110, 0.02);
-	}
-}
-
-// Button base styles
-.button {
-	display: inline-block;
-
-	a {
-		display: inline-block;
-		padding: 0.8rem 1.5rem;
-		background: $primary;
-		color: white;
-		border-radius: 8px;
-		text-decoration: none;
-		font-weight: 600;
-		transition: all 0.3s ease;
-
-		&:hover {
-			background: $primary-dark;
-			transform: translateY(-2px);
-			text-decoration: none;
-		}
-	}
-
-	&.alt a {
-		background: $primary;
-
-		&:hover {
-			background: $primary-dark;
-		}
-	}
-}
-
-// Selection styles
-::selection {
-	background: rgba(15, 118, 110, 0.2);
-	color: $text;
-}
-
-// Focus styles for accessibility
-:focus-visible {
-	outline: 2px solid $primary-light;
-	outline-offset: 2px;
+	font-weight: 300;
+	line-height: 1.4em;
 }
