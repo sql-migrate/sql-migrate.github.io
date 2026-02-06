@@ -5,6 +5,40 @@ description: Purchase your PostgresCompare subscription. Choose monthly or annua
 
 <script src="https://js.stripe.com/v3"></script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "PostgresCompare",
+  "description": "PostgreSQL database schema comparison tool. Compare schemas, generate deployment SQL, and keep databases in sync.",
+  "image": "https://www.postgrescompare.com/images/postgrescomparescreenshot.png",
+  "brand": {
+    "@type": "Brand",
+    "name": "PostgresCompare"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Monthly Subscription",
+      "price": "14.95",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.postgrescompare.com/purchase"
+    },
+    {
+      "@type": "Offer",
+      "name": "Annual Subscription",
+      "price": "149.95",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.postgrescompare.com/purchase"
+    }
+  ]
+}
+</script>
+
 <section class="page-hero">
   <h1>Purchase Your <span>PostgresCompare</span> Subscription</h1>
   <p>Choose the plan that works best for you. After checkout, you'll receive your license key via email.</p>

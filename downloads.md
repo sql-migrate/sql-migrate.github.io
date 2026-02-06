@@ -166,3 +166,25 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
     </a>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PostgresCompare",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows, macOS, Linux",
+  "description": "PostgresCompare compares PostgreSQL database schema objects and writes the SQL to deploy the differences.",
+  "url": "https://www.postgrescompare.com/downloads",
+  "downloadUrl": "https://www.postgrescompare.com/downloads",
+  "softwareVersion": "1.1.100",
+  "fileSize": "250MB",
+  "softwareRequirements": "PostgreSQL 9.2 or later",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "30-day free trial"
+  }
+}
+</script>
