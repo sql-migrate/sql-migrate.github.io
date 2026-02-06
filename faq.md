@@ -76,3 +76,84 @@ description: Frequently asked questions about PostgresCompare. Get answers to co
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "PostgresCompare is reporting that I have reached my maximum installs, what do I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drop us an email, we will reset your license key so you are good to go again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PostgresCompare is not responding or just showing a spinner, how do I fix it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sometimes (after the app updates for example) the PostgresCompare background process does not restart successfully which can lead to the UI spinning and failing to load projects. Fix the issue by finding the process 'PostgresCompareWebApi' and killing it, then restart the PostgresCompare app. If the problem persists try restarting your machine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PostgresCompare recently updated and now my projects are not showing up, how do I fix it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PostgresCompare relies on the operating system to tell it where to store your data. Sometimes this can change leading to a new database file being created. To recover your data: 1) Search your machine for the file 'postgrescompare_7.db'. There should be 2 instances of a file with that name. Note which file is the older one, it probably also has a larger file size. 2) Copy the old postgrescompare_7.db into the new location, overwriting the db file there. 3) Restart PostgresCompare."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which PostgreSQL versions are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PostgresCompare supports PostgreSQL version 9.2 and later, including the latest PostgreSQL 16. We regularly update to support new PostgreSQL releases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data safe? Does PostgresCompare send data to the cloud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All comparisons happen locally on your machine. Your database credentials and data never leave your network. PostgresCompare connects directly to your PostgreSQL databases and processes everything locally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use PostgresCompare for free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We offer a free 30-day trial with full access to all features. No credit card required. After the trial, you can purchase a monthly or annual subscription to continue using the software."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I cancel my subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drop us an email and we'll take care of your cancellation right away. We also offer a 30-day money-back guarantee if you're not satisfied."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does '2 locations per user' mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can install PostgresCompare on two different machines (e.g., work laptop and home desktop) with a single license. This gives you flexibility to use the tool wherever you need it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use PostgresCompare on macOS, Windows, and Linux?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! PostgresCompare is available for all three major platforms. We also provide a command-line interface (CLI) for automation and CI/CD pipeline integration."
+      }
+    }
+  ]
+}
+</script>

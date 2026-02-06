@@ -8,6 +8,7 @@ disqus_shortname: https-www-postgrescompare-com
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: https://www.postgrescompare.com/images/1469427963_009_053_animal_elephant_bishop_mammal.png
+image: /images/postgrescomparescreenshot.png
 description: PostgresCompare compares PostgreSQL database schema objects and writes the SQL to deploy the differences. An accurate and easy to use diff tool for Postgres.
 author:
   name: PostgresCompare

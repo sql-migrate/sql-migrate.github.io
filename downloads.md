@@ -12,7 +12,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
   <div class="download-cards">
     <div class="download-card">
       <div class="platform-icon">🪟</div>
-      <h3>Windows</h3>
+      <h2>Windows</h2>
       <p class="version-info">Version 1.1.100 • Windows 10 or later</p>
       <p style="color: var(--text-light); margin-bottom: 1rem;">Full-featured desktop application with native Windows integration.</p>
       <a onclick="var that=this;ga('send', 'event','Download','Windows 1.1.100',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe" class="download-btn">
@@ -26,7 +26,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
 
     <div class="download-card">
       <div class="platform-icon">🍎</div>
-      <h3>macOS</h3>
+      <h2>macOS</h2>
       <p class="version-info">Version 1.1.100 • macOS 11 or later</p>
       <p style="color: var(--text-light); margin-bottom: 1rem;">Optimized for Apple Silicon and Intel Macs with native performance.</p>
       <a onclick="var that=this;ga('send', 'event','Download','macOS 1.1.100',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare.pkg" class="download-btn">
@@ -40,7 +40,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
 
     <div class="download-card">
       <div class="platform-icon">🐧</div>
-      <h3>Linux</h3>
+      <h2>Linux</h2>
       <p class="version-info">Version 1.1.100 • Ubuntu 20.04+ / Debian 11+</p>
       <p style="color: var(--text-light); margin-bottom: 1rem;">Available as a zip package for major distributions.</p>
       <a onclick="var that=this;ga('send', 'event','Download','Linux 1.1.100',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.100.zip" class="download-btn">
@@ -61,7 +61,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
   <div class="download-cards">
     <div class="download-card">
       <div class="platform-icon">🪟</div>
-      <h3>Windows CLI</h3>
+      <h3 class="cli-platform">Windows CLI</h3>
       <p class="version-info">Version 1.1.76</p>
       <a onclick="var that=this;ga('send', 'event','Download','Windows 1.1.76 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/windows/1.1.76/pgc.exe" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -74,7 +74,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
 
     <div class="download-card">
       <div class="platform-icon">🍎</div>
-      <h3>macOS CLI</h3>
+      <h3 class="cli-platform">macOS CLI</h3>
       <p class="version-info">Version 1.1.76</p>
       <a onclick="var that=this;ga('send', 'event','Download','macOS 1.1.76 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/mac/1.1.76/pgc" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -87,7 +87,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
 
     <div class="download-card">
       <div class="platform-icon">🐧</div>
-      <h3>Linux CLI</h3>
+      <h3 class="cli-platform">Linux CLI</h3>
       <p class="version-info">Version 1.1.79</p>
       <a onclick="var that=this;ga('send', 'event','Download','Linux 1.1.79 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/linux/1.1.79/pgc" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -157,7 +157,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
   </div>
 
   <div class="changelog-link">
-    <h3>What's New?</h3>
+    <h2>What's New?</h2>
     <a href="/release-notes">
       View Release Notes
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
