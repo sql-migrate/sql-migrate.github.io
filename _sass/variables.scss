@@ -1,5 +1,20 @@
-$brand-color: #4182e4;
-$secondary-brand-color: #4182e4;
+// New teal color palette
+$primary: #0F766E;
+$primary-light: #14B8A6;
+$primary-dark: #115E59;
+$accent: #F59E0B;
+$accent-light: #FCD34D;
+$text: #1F2937;
+$text-light: #6B7280;
+$background: #FAFAFA;
+$surface: #FFFFFF;
+$border: #E5E7EB;
+$success: #10B981;
+$shadow: rgba(15, 118, 110, 0.1);
+
+// Keep $brand-color as alias for compatibility
+$brand-color: $primary;
+$secondary-brand-color: $primary-light;
 $middle-gradient-color: mix($brand-color, $secondary-brand-color, 95%);
 
 // Breakpoints

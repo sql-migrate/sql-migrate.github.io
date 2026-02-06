@@ -1,29 +1,63 @@
 ---
-title: Contact
-heading: Get in touch today
-description: Let us know how we're doing.
+title: Contact PostgresCompare
+description: Get in touch with the PostgresCompare team. We'd love to hear from you.
 ---
 
+<section class="page-hero">
+  <h1>Get in <span>Touch</span></h1>
+  <p>Have a question or feedback? We'd love to hear from you.</p>
+</section>
 
-<div class="contact-box">
-	<form action="https://formspree.io/neil@postgrescompare.com" method="post" class="contact-form">
-		<input type="hidden" name="request_type" value="contact">
-		<input type="hidden" name="_next" value="https://www.postgrescompare.com/thanks">
+<section style="padding: 3rem 2rem; max-width: 900px; margin: 0 auto;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+    <div class="feature-card">
+      <h3>Send a Message</h3>
+      <form action="https://formspree.io/neil@postgrescompare.com" method="post" style="margin-top: 1.5rem;">
+        <input type="hidden" name="request_type" value="contact">
+        <input type="hidden" name="_next" value="https://www.postgrescompare.com/thanks">
 
-		<label for="name">Full Name</label>
-		<input type="text" name="name" id="name" placeholder="Enter your name..." />
+        <div style="margin-bottom: 1.5rem;">
+          <label for="name" style="display: block; font-weight: 600; color: #1F2937; margin-bottom: 0.5rem;">Full Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name..." style="width: 100%; padding: 0.8rem 1rem; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s ease;" />
+        </div>
 
-		<label for="email">Email Address</label>
-		<input type="email" name="email" id="email" placeholder="Enter your email..." required />
+        <div style="margin-bottom: 1.5rem;">
+          <label for="email" style="display: block; font-weight: 600; color: #1F2937; margin-bottom: 0.5rem;">Email Address</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email..." required style="width: 100%; padding: 0.8rem 1rem; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s ease;" />
+        </div>
 
-		<label for="message">Message</label>
-		<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+        <div style="margin-bottom: 1.5rem;">
+          <label for="message" style="display: block; font-weight: 600; color: #1F2937; margin-bottom: 0.5rem;">Message</label>
+          <textarea name="message" id="message" placeholder="Enter your message..." rows="5" style="width: 100%; padding: 0.8rem 1rem; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 1rem; resize: vertical; transition: border-color 0.3s ease;"></textarea>
+        </div>
 
-		<input type="submit" value="Send Message" />
-	</form>
+        <input type="submit" value="Send Message" class="primary-button" style="width: 100%; border: none; cursor: pointer;" />
+      </form>
+    </div>
 
-	<div class="contact-details">
-		<h3 class="editable">Email</h3>
-		<p><a href="mailto:neil@postgrescompare.com">neil@postgrescompare.com</a></p>
-	</div>
-</div>
+    <div class="feature-card">
+      <h3>Other Ways to Reach Us</h3>
+      <div style="margin-top: 1.5rem;">
+        <div style="margin-bottom: 2rem;">
+          <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Email</h4>
+          <p style="margin: 0;"><a href="mailto:neil@postgrescompare.com">neil@postgrescompare.com</a></p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Twitter</h4>
+          <p style="margin: 0;"><a href="https://twitter.com/postgrescompare" target="_blank">@postgrescompare</a></p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">LinkedIn</h4>
+          <p style="margin: 0;"><a href="https://www.linkedin.com/company/postgres-compare" target="_blank">Postgres Compare</a></p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Feature Requests & Roadmap</h4>
+          <p style="margin: 0;"><a href="https://trello.com/b/uApHpejD/postgres-compare-dev" target="_blank">View our public roadmap on Trello</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
