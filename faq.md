@@ -157,3 +157,14 @@ description: Frequently asked questions about PostgresCompare. Get answers to co
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.postgrescompare.com"},
+    {"@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://www.postgrescompare.com/faq"}
+  ]
+}
+</script>

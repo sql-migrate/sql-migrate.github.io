@@ -30,3 +30,14 @@ description: Learn about PostgresCompare and the team behind the reliable Postgr
     </ul>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.postgrescompare.com"},
+    {"@type": "ListItem", "position": 2, "name": "About", "item": "https://www.postgrescompare.com/about"}
+  ]
+}
+</script>

@@ -208,3 +208,14 @@ description: Purchase your PostgresCompare subscription. Choose monthly or annua
     return false;
   });
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.postgrescompare.com"},
+    {"@type": "ListItem", "position": 2, "name": "Purchase", "item": "https://www.postgrescompare.com/purchase"}
+  ]
+}
+</script>
