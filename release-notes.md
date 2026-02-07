@@ -13,15 +13,15 @@ description: Track the evolution of PostgresCompare with detailed release notes 
 <div class="release latest">
   <div class="release-header">
     <div class="version-info">
-      <h2>Version 1.1.100</h2>
-      <p class="release-date">Released July 1st, 2024</p>
+      <h2>Version 1.1.102</h2>
+      <p class="release-date">Released February 7th, 2026</p>
     </div>
     <span class="latest-badge">Latest</span>
   </div>
-  <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+  <div class="change-section new-features">
+    <h3><span class="section-icon">✨</span> New Features</h3>
     <ul class="change-list">
-      <li class="change-item">Removed heading from difference viewer for cleaner UI</li>
+      <li class="change-item">Added option to ignore column statistics differences - useful when source and target databases have different ANALYZE settings</li>
     </ul>
   </div>
   <a href="/downloads" class="download-link">
@@ -29,8 +29,39 @@ description: Track the evolution of PostgresCompare with detailed release notes 
       <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </svg>
-    Download Version 1.1.100
+    Download Version 1.1.102
   </a>
+</div>
+
+<div class="release">
+  <div class="release-header">
+    <div class="version-info">
+      <h2>Version 1.1.101</h2>
+      <p class="release-date">Released January 18th, 2026</p>
+    </div>
+  </div>
+  <div class="change-section bug-fixes">
+    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <ul class="change-list">
+      <li class="change-item">Fixed PostgreSQL 18 compatibility by removing deprecated attcacheoff column from queries</li>
+      <li class="change-item">Fixed compatibility issue with PostgreSQL 17's new MAINTAIN privilege</li>
+    </ul>
+  </div>
+</div>
+
+<div class="release">
+  <div class="release-header">
+    <div class="version-info">
+      <h2>Version 1.1.100</h2>
+      <p class="release-date">Released July 1st, 2024</p>
+    </div>
+  </div>
+  <div class="change-section improvements">
+    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <ul class="change-list">
+      <li class="change-item">Removed heading from difference viewer for cleaner UI</li>
+    </ul>
+  </div>
 </div>
 
 <div class="release">
