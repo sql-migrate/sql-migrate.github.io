@@ -103,4 +103,4 @@ In PostgreSQL 11+, adding a column with a non-volatile default is optimised and 
 
 When reviewing generated migration scripts, pay particular attention to any operation listed in this guide. A few seconds of review can prevent hours of recovery work.
 
-[Download PostgresCompare](/download/) to add this safety net to your deployment workflow.
+[Download PostgresCompare](/downloads/) to add this safety net to your deployment workflow.
