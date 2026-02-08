@@ -13,8 +13,15 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
     <p style="margin: 0; color: var(--text, #1e293b);"><strong>What's new in 1.1.102:</strong> Added option to ignore column statistics differences. <a href="/release-notes" style="color: var(--primary, #0f766e);">View all release notes →</a></p>
   </div>
 
-  <div class="download-cards">
-    <div class="download-card">
+  <div class="download-cards" id="single-platform-downloads" style="display: none;"></div>
+
+  <p id="show-all-platforms" style="text-align: center; margin-top: 1rem; display: none;">
+    <a href="#" onclick="showAllPlatforms(); return false;" style="color: var(--primary, #0f766e);">Show all platforms</a>
+  </p>
+
+  <div id="all-platforms-view">
+  <div class="download-cards" id="gui-downloads">
+    <div class="download-card" data-os="windows">
       <div class="platform-icon">🪟</div>
       <h2>Windows</h2>
       <p class="version-info">Version 1.1.102 • Windows 10 or later</p>
@@ -28,7 +35,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
       </a>
     </div>
 
-    <div class="download-card">
+    <div class="download-card" data-os="macos">
       <div class="platform-icon">🍎</div>
       <h2>macOS</h2>
       <p class="version-info">Version 1.1.102 • macOS 11 or later</p>
@@ -42,7 +49,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
       </a>
     </div>
 
-    <div class="download-card">
+    <div class="download-card" data-os="linux">
       <div class="platform-icon">🐧</div>
       <h2>Linux</h2>
       <p class="version-info">Version 1.1.102 • Ubuntu 20.04+ / Debian 11+</p>
@@ -62,8 +69,8 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
     <p>For CI/CD pipelines and automation workflows.</p>
   </div>
 
-  <div class="download-cards">
-    <div class="download-card">
+  <div class="download-cards" id="cli-downloads">
+    <div class="download-card" data-os="windows">
       <div class="platform-icon">🪟</div>
       <h3 class="cli-platform">Windows CLI</h3>
       <p class="version-info">Version 1.1.76</p>
@@ -76,7 +83,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
       </a>
     </div>
 
-    <div class="download-card">
+    <div class="download-card" data-os="macos">
       <div class="platform-icon">🍎</div>
       <h3 class="cli-platform">macOS CLI</h3>
       <p class="version-info">Version 1.1.76</p>
@@ -89,7 +96,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
       </a>
     </div>
 
-    <div class="download-card">
+    <div class="download-card" data-os="linux">
       <div class="platform-icon">🐧</div>
       <h3 class="cli-platform">Linux CLI</h3>
       <p class="version-info">Version 1.1.79</p>
@@ -101,6 +108,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
         Download CLI
       </a>
     </div>
+  </div>
   </div>
 
   <div class="trial-info">
@@ -192,4 +200,94 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
     {"@type": "ListItem", "position": 2, "name": "Downloads", "item": "https://www.postgrescompare.com/downloads"}
   ]
 }
+</script>
+
+<script>
+(function() {
+  function detectOS() {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf('win') !== -1) return 'windows';
+    if (ua.indexOf('mac') !== -1) return 'macos';
+    if (ua.indexOf('linux') !== -1) return 'linux';
+    return null;
+  }
+
+  function showSinglePlatform(os) {
+    var singleView = document.getElementById('single-platform-downloads');
+    var allView = document.getElementById('all-platforms-view');
+    var showAllLink = document.getElementById('show-all-platforms');
+
+    // Clone matching cards into single platform view
+    var guiCard = document.querySelector('#gui-downloads .download-card[data-os="' + os + '"]');
+    var cliCard = document.querySelector('#cli-downloads .download-card[data-os="' + os + '"]');
+
+    var osNames = { windows: 'Windows', macos: 'macOS', linux: 'Linux' };
+    var osName = osNames[os] || os;
+
+    if (guiCard && cliCard) {
+      singleView.innerHTML = '';
+      var guiClone = guiCard.cloneNode(true);
+      var cliClone = cliCard.cloneNode(true);
+
+      // Update GUI card for combined view
+      var guiHeading = guiClone.querySelector('h2');
+      if (guiHeading) {
+        guiHeading.innerHTML = 'Desktop App';
+      }
+      var guiIcon = guiClone.querySelector('.platform-icon');
+      if (guiIcon) {
+        guiIcon.textContent = '🖥️';
+      }
+
+      // Update CLI card for combined view
+      var cliHeading = cliClone.querySelector('h3');
+      if (cliHeading) {
+        cliHeading.outerHTML = '<h2>Command Line</h2>';
+      }
+      var cliIcon = cliClone.querySelector('.platform-icon');
+      if (cliIcon) {
+        cliIcon.textContent = '⌨️';
+      }
+      // Add description to CLI card
+      var cliVersionInfo = cliClone.querySelector('.version-info');
+      if (cliVersionInfo) {
+        cliVersionInfo.insertAdjacentHTML('afterend', '<p style="color: var(--text-light); margin-bottom: 1rem;">For CI/CD pipelines and automation workflows.</p>');
+      }
+
+      // Update both button texts
+      var guiBtn = guiClone.querySelector('.download-btn');
+      if (guiBtn) {
+        guiBtn.lastChild.textContent = ' Download for ' + osName;
+      }
+      var cliBtn = cliClone.querySelector('.download-btn');
+      if (cliBtn) {
+        cliBtn.lastChild.textContent = ' Download for ' + osName;
+      }
+
+      singleView.appendChild(guiClone);
+      singleView.appendChild(cliClone);
+
+      singleView.style.display = '';
+      allView.style.display = 'none';
+      if (showAllLink) showAllLink.style.display = 'block';
+    }
+  }
+
+  window.showAllPlatforms = function() {
+    var singleView = document.getElementById('single-platform-downloads');
+    var allView = document.getElementById('all-platforms-view');
+    var showAllLink = document.getElementById('show-all-platforms');
+
+    singleView.style.display = 'none';
+    allView.style.display = '';
+    if (showAllLink) showAllLink.style.display = 'none';
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var os = detectOS();
+    if (os) {
+      showSinglePlatform(os);
+    }
+  });
+})();
 </script>
