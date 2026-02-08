@@ -22,6 +22,10 @@
   link: /release-notes
   new_window: false
   highlight: false
+- name: Articles
+  link: /articles
+  new_window: false
+  highlight: false
 - name: Download
   link: /downloads
   new_window: false
