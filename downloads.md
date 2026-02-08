@@ -129,7 +129,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
         <div class="requirement-icon">🗄️</div>
         <div class="requirement-content">
           <h4>PostgreSQL Version</h4>
-          <p>Supports PostgreSQL 9.2 or later, including PostgreSQL 16</p>
+          <p>Supports PostgreSQL 9.2 through 18</p>
         </div>
       </div>
       <div class="requirement-item">
@@ -179,7 +179,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
   "downloadUrl": "https://www.postgrescompare.com/downloads",
   "softwareVersion": "1.1.102",
   "fileSize": "250MB",
-  "softwareRequirements": "PostgreSQL 9.2 or later",
+  "softwareRequirements": "PostgreSQL 9.2 through 18",
   "offers": {
     "@type": "Offer",
     "price": "0",
