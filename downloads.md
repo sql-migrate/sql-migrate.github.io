@@ -9,6 +9,10 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
 </section>
 
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 1280px; margin: 0 auto;">
+  <div class="whats-new" style="margin-bottom: 2rem; padding: 1rem 1.5rem; background: rgba(15, 118, 110, 0.05); border-radius: 12px; border-left: 4px solid var(--primary, #0f766e);">
+    <p style="margin: 0; color: var(--text, #1e293b);"><strong>What's new in 1.1.102:</strong> Added option to ignore column statistics differences. <a href="/release-notes" style="color: var(--primary, #0f766e);">View all release notes →</a></p>
+  </div>
+
   <div class="download-cards">
     <div class="download-card">
       <div class="platform-icon">🪟</div>
@@ -51,10 +55,6 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
         Download for Linux
       </a>
     </div>
-  </div>
-
-  <div class="whats-new" style="margin: 2rem 0; padding: 1rem 1.5rem; background: rgba(15, 118, 110, 0.05); border-radius: 12px; border-left: 4px solid var(--primary, #0f766e);">
-    <p style="margin: 0; color: var(--text, #1e293b);"><strong>What's new in 1.1.102:</strong> Added option to ignore column statistics differences. <a href="/release-notes" style="color: var(--primary, #0f766e);">View all release notes →</a></p>
   </div>
 
   <div class="section-header" style="margin-top: 4rem;">
