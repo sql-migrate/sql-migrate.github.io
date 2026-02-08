@@ -156,10 +156,22 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
     </div>
   </div>
 
-  <div class="changelog-link">
-    <h2>What's New?</h2>
-    <a href="/release-notes">
-      View Release Notes
+  <div class="release latest">
+    <div class="release-header">
+      <div class="version-info">
+        <h2>Version 1.1.102</h2>
+        <p class="release-date">Released February 7th, 2026</p>
+      </div>
+      <span class="latest-badge">Latest</span>
+    </div>
+    <div class="change-section new-features">
+      <h3><span class="section-icon">✨</span> New Features</h3>
+      <ul class="change-list">
+        <li class="change-item">Added option to ignore column statistics differences - useful when source and target databases have different ANALYZE settings</li>
+      </ul>
+    </div>
+    <a href="/release-notes" class="download-link">
+      View All Release Notes
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
         <path d="M7 3l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </svg>
