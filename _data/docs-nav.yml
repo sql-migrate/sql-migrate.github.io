@@ -1,0 +1,44 @@
+- title: Getting Started
+  items:
+    - title: Installation
+      url: /docs/getting-started/installation/
+    - title: Quick Start
+      url: /docs/getting-started/quick-start/
+    - title: First Comparison
+      url: /docs/getting-started/first-comparison/
+
+- title: Guides
+  items:
+    - title: Comparing Databases
+      url: /docs/guides/comparing-databases/
+    - title: Deployment Scripts
+      url: /docs/guides/deployment-scripts/
+    - title: Safe Deployments
+      url: /docs/guides/safe-deployments/
+    - title: Using Ignore Rules
+      url: /docs/guides/ignore-rules/
+
+- title: CLI Reference
+  items:
+    - title: Installation
+      url: /docs/cli/installation/
+    - title: Commands
+      url: /docs/cli/commands/
+    - title: Examples
+      url: /docs/cli/examples/
+
+- title: Configuration
+  items:
+    - title: Connections
+      url: /docs/configuration/connections/
+    - title: Ignore Rules
+      url: /docs/configuration/ignore-rules/
+    - title: Options
+      url: /docs/configuration/options/
+
+- title: Troubleshooting
+  items:
+    - title: Common Issues
+      url: /docs/troubleshooting/common-issues/
+    - title: Error Messages
+      url: /docs/troubleshooting/error-messages/

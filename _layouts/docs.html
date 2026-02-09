@@ -1,0 +1,93 @@
+---
+layout: default
+---
+<div class="docs-container">
+  <aside class="docs-sidebar">
+    <button class="docs-sidebar-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="docs-nav">
+      {% for section in site.data.docs-nav %}
+      <div class="docs-nav-section">
+        <h4 class="docs-nav-title">{{ section.title }}</h4>
+        <ul class="docs-nav-list">
+          {% for item in section.items %}
+          <li>
+            <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active"{% endif %}>
+              {{ item.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </nav>
+  </aside>
+
+  <main class="docs-content">
+    <nav class="docs-breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="{{ '/docs/' | relative_url }}">Docs</a></li>
+        {% if page.category %}
+        <li><span>{{ page.category | replace: '-', ' ' | capitalize }}</span></li>
+        {% endif %}
+        <li><span>{{ page.title }}</span></li>
+      </ol>
+    </nav>
+
+    <article class="docs-article">
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}
+      <p class="docs-description">{{ page.description }}</p>
+      {% endif %}
+
+      {{ content }}
+    </article>
+
+    {% assign docs = site.docs | sort: 'order' %}
+    {% assign current_index = nil %}
+    {% for doc in docs %}
+      {% if doc.url == page.url %}
+        {% assign current_index = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
+
+    {% if current_index != nil %}
+    <nav class="docs-pagination">
+      {% if current_index > 0 %}
+        {% assign prev_doc = docs[current_index | minus: 1] %}
+        <a href="{{ prev_doc.url | relative_url }}" class="docs-pagination-prev">
+          <span class="docs-pagination-label">Previous</span>
+          <span class="docs-pagination-title">{{ prev_doc.title }}</span>
+        </a>
+      {% else %}
+        <span></span>
+      {% endif %}
+
+      {% assign next_index = current_index | plus: 1 %}
+      {% if next_index < docs.size %}
+        {% assign next_doc = docs[next_index] %}
+        <a href="{{ next_doc.url | relative_url }}" class="docs-pagination-next">
+          <span class="docs-pagination-label">Next</span>
+          <span class="docs-pagination-title">{{ next_doc.title }}</span>
+        </a>
+      {% endif %}
+    </nav>
+    {% endif %}
+  </main>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var toggle = document.querySelector('.docs-sidebar-toggle');
+  var sidebar = document.querySelector('.docs-sidebar');
+
+  if (toggle && sidebar) {
+    toggle.addEventListener('click', function() {
+      sidebar.classList.toggle('open');
+    });
+  }
+});
+</script>

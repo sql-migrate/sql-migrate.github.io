@@ -31,6 +31,9 @@ timezone: Etc/UTC
 collections:
   staff_members:
     _hide_content: true
+  docs:
+    output: true
+    permalink: /:collection/:path/
 
 paginate: 10
 paginate_path: "/blog/:num/"
@@ -56,6 +59,12 @@ defaults:
         image_path:
           width: 600
           height: 600
+  -
+    scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "docs"
   -
     scope:
       path: ""
