@@ -12,18 +12,17 @@ This guide walks you through creating your first PostgresCompare project and run
 
 1. Launch PostgresCompare
 2. Click **New Project** on the welcome screen
-3. Choose a location and name for your project file (`.pgc`)
-4. Click **Save**
+3. Name your project
 
-Projects store your connection settings, comparison options, and ignore rules, making it easy to repeat comparisons.
+Projects store your environment settings, comparison options, and results, making it easy to repeat comparisons.
 
 ## Connecting to Databases
 
-PostgresCompare compares two databases: a **source** (what you have) and a **target** (what you want to update).
+PostgresCompare compares two databases referred to as the **X environment** and **Y environment**.
 
-### Adding a Connection
+### Adding an Environment
 
-1. In the project window, click **Add Connection** for either source or target
+1. In the project window, go to the **Environments** tab
 2. Enter your connection details:
    - **Host**: Database server address (e.g., `localhost` or `db.example.com`)
    - **Port**: PostgreSQL port (default: `5432`)
@@ -41,15 +40,15 @@ PostgresCompare compares two databases: a **source** (what you have) and a **tar
 
 ## Running Your First Comparison
 
-With both source and target connections configured:
+With both X and Y environments configured:
 
 1. Click **Compare** in the toolbar
 2. Wait for the comparison to complete
 
 The comparison reads the schema from both databases and identifies:
-- Objects that exist only in the source (will be created)
-- Objects that exist only in the target (will be dropped)
-- Objects that differ between source and target (will be altered)
+- Objects that exist only in the X environment (new)
+- Objects that exist only in the Y environment (dropped)
+- Objects that differ between X and Y environments (different)
 
 ## Understanding the Results
 
@@ -57,25 +56,56 @@ The comparison results show a tree view of all database objects organized by typ
 
 - **Tables** - Structure, columns, constraints
 - **Views** - View definitions
-- **Functions** - Stored procedures and functions
+- **Materialized Views** - Materialized view definitions
+- **Functions** - Functions
+- **Procedures** - Stored procedures
+- **Triggers** - Table triggers
 - **Indexes** - Table indexes
 - **Sequences** - Auto-increment sequences
-- **Types** - Custom data types
+- **Schemas** - Database schemas
+- **Composite Types** - User-defined composite types
+- **Enums** - Enumeration types
+- **Domains** - Domain types
 - **Extensions** - PostgreSQL extensions
+- **Roles** - Database roles
+- **Databases** - Database settings
+- **Tablespaces** - Tablespace definitions
+- **Casts** - Type casts
+- **Conversions** - Encoding conversions
+- **Event Triggers** - Event triggers
+- **Foreign Data Wrappers** - FDW definitions
+- **Foreign Servers** - Foreign server definitions
+- **Foreign Tables** - Foreign tables
+- **Operator Families** - Operator families
+- **Operators** - User-defined operators
+- **Access Methods** - Access methods
+- **Text Search Parsers** - Full-text search parsers
+- **Text Search Templates** - Full-text search templates
+- **Text Search Dictionaries** - Full-text search dictionaries
+- **Text Search Configurations** - Full-text search configurations
+- **User Mappings** - Foreign server user mappings
+- **Publications** - Logical replication publications
+- **Subscriptions** - Logical replication subscriptions
+- **Statistics** - Extended statistics
+- **Policies** - Row-level security policies
+- **Collations** - Collation definitions
+- **Aggregates** - Aggregate functions
+- **Ranges** - Range types
+- **Settings** - Configuration settings
 
-Each object shows an icon indicating its status:
-- **Green plus** - Exists only in source (will be created)
-- **Red minus** - Exists only in target (will be dropped)
-- **Yellow delta** - Different between source and target (will be altered)
-- **Gray check** - Identical in both databases (no action)
+Each object shows a status indicating its comparison result:
+- **New** - Exists only in the X environment
+- **Dropped** - Exists only in the Y environment
+- **Different** - Different between X and Y environments
+- **Identical** - Same in both databases (no action needed)
 
 ## Generating a Deployment Script
 
-To create a SQL script that updates the target to match the source:
+To create a SQL script that synchronizes the differences:
 
-1. Review the differences and select which changes to include
-2. Click **Generate Script** in the toolbar
-3. Choose a save location for the `.sql` file
+1. Review the differences and select which changes to include using the checkboxes
+2. Choose the script direction (X to Y or Y to X)
+3. Click **Generate Script** in the toolbar
 4. Review the generated SQL before executing
 
 <div class="warning">

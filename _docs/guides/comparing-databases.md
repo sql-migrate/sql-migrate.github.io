@@ -8,101 +8,52 @@ permalink: /docs/guides/comparing-databases/
 
 This guide covers advanced techniques for comparing PostgreSQL databases with PostgresCompare.
 
-## Comparison Modes
+## Database to Database Comparison
 
-PostgresCompare supports several comparison scenarios:
-
-### Database to Database
-Compare two live PostgreSQL databases. This is the most common scenario for:
+PostgresCompare compares two live PostgreSQL databases. Common scenarios include:
 - Comparing development to production
 - Comparing feature branches
 - Auditing database drift
 
-### Database to Snapshot
-Compare a live database against a saved snapshot. Useful for:
-- Tracking changes over time
-- Comparing against a known baseline
-- Working offline
-
-### Snapshot to Snapshot
-Compare two saved snapshots. Ideal for:
-- Historical comparison
-- Comparing databases without live access
-- Documentation and auditing
-
-## Working with Snapshots
-
-### Creating a Snapshot
-
-1. Connect to a database
-2. Click **Create Snapshot** in the toolbar
-3. Choose a location and name
-4. Wait for the snapshot to complete
-
-Snapshots capture the complete schema definition and can be shared with team members.
-
-### Using Snapshots
-
-1. In the source or target connection dialog, select **Snapshot**
-2. Browse to the `.pgs` snapshot file
-3. Continue with comparison as normal
-
 ## Schema Filtering
 
-By default, PostgresCompare compares all schemas. To focus on specific schemas:
+By default, PostgresCompare compares all schemas. To focus on specific schemas, use the schema pairing options:
 
-1. Open **Project Settings**
-2. Navigate to **Schema Filters**
-3. Add schemas to include or exclude
+| Option | Description |
+|--------|-------------|
+| X Schema to Compare | The schema to compare from the X environment |
+| Y Schema to Compare | The schema to compare from the Y environment |
 
-### Include vs. Exclude
-
-- **Include list**: Only compare schemas in this list
-- **Exclude list**: Compare all schemas except those in this list
-
-Common schemas to exclude:
-- `pg_catalog` - PostgreSQL system catalog
-- `information_schema` - SQL standard metadata
-- `pg_toast` - TOAST storage
+This also allows cross-schema comparison — comparing a schema named `dev` in X against `prod` in Y.
 
 ## Object Type Filtering
 
-Filter which object types are compared:
+Filter which object types are compared in the project settings. PostgresCompare supports 38 object types:
 
-1. Open **Project Settings**
-2. Navigate to **Object Types**
-3. Toggle object types on or off
+**Default ON:** Tables, Views, Materialized Views, Triggers, Functions, Procedures, Indexes, Schemas, Composite Types, Enums, Domains, Extensions, Access Methods, Casts, Conversions, Event Triggers, Foreign Data Wrappers, Operator Families, Foreign Servers, Text Search Parsers, Text Search Templates, Text Search Dictionaries, Text Search Configurations, User Mappings, Publications, Subscriptions, Statistics, Policies, Collations, Sequences, Operators, Foreign Tables, Aggregates, Ranges, Settings
 
-Available object types:
-- Tables
-- Views
-- Materialized Views
-- Functions
-- Procedures
-- Triggers
-- Indexes
-- Sequences
-- Types
-- Domains
-- Extensions
-- Schemas
+**Default OFF:** Roles, Databases, Tablespaces
 
 ## Comparison Options
 
-Fine-tune how objects are compared:
+Fine-tune how objects are compared using the 10 ignore toggles:
 
-### Ignore Options
+| Option | Default | Description |
+|--------|---------|-------------|
+| Ignore Whitespace | Off | Ignore whitespace in function definitions |
+| Ignore Table Partitions | Off | Ignore partition definitions |
+| Ignore Column Order | Off | Only compare column existence, not position |
+| Ignore Code Comments | On | Ignore comments in code |
+| Ignore Case | Off | Case-insensitive comparison |
+| Ignore Owner | Off | Don't compare ownership |
+| Ignore Tablespace | On | Don't compare tablespace assignments |
+| Ignore Privileges | On | Don't compare GRANT/REVOKE |
+| Ignore Defaults | Off | Ignore column default differences |
+| Ignore Statistics | Off | Ignore statistics targets |
 
-- **Ignore tablespace** - Treat objects as equal even if tablespace differs
-- **Ignore storage parameters** - Ignore FILLFACTOR, autovacuum settings, etc.
-- **Ignore owner** - Don't compare object ownership
-- **Ignore permissions** - Don't compare GRANT/REVOKE statements
+## Data Comparison
 
-### Script Options
-
-- **Include IF EXISTS** - Add IF EXISTS to DROP statements
-- **Include IF NOT EXISTS** - Add IF NOT EXISTS to CREATE statements
-- **Quote identifiers** - Always quote table and column names
+In addition to schema comparison, PostgresCompare supports data comparison between databases. This allows you to identify row-level differences in table data between your X and Y environments.
 
 ## Comparing Large Databases
 
@@ -111,44 +62,13 @@ For databases with thousands of objects:
 ### Performance Tips
 
 1. **Use schema filters** - Compare only relevant schemas
-2. **Exclude large tables** - If you only care about structure
-3. **Use snapshots** - Avoid re-reading the same database
-
-### Memory Management
-
-PostgresCompare loads schema metadata into memory. For very large databases:
-
-1. Close other applications to free memory
-2. Consider comparing schemas separately
-3. Use command-line for automated comparison
-
-## Multi-Database Comparison
-
-To compare the same source against multiple targets:
-
-1. Create a project for each target database
-2. Use the same source connection in each project
-3. Run comparisons separately
-
-Or use the CLI for automated batch comparison:
-
-```bash
-pgcompare --source production.pgs --target staging --output staging-diff.sql
-pgcompare --source production.pgs --target development --output dev-diff.sql
-```
+2. **Limit object types** - Disable types you don't need
 
 ## Tracking Changes Over Time
 
-Use snapshots to track schema changes:
-
-1. Create a baseline snapshot of your production database
-2. Schedule regular snapshots (weekly, after releases, etc.)
-3. Compare snapshots to see what changed
-
-This creates an audit trail of schema changes independent of your version control.
+PostgresCompare provides an object history viewer that tracks how database objects change across comparisons. This gives you a development history for your schema, independent of version control.
 
 ## Next Steps
 
 - [Generating deployment scripts](/docs/guides/deployment-scripts/) - Create SQL scripts from comparisons
-- [Using ignore rules](/docs/guides/ignore-rules/) - Fine-tune what gets compared
-- [CI/CD integration](/docs/guides/ci-cd-integration/) - Automate comparisons in your pipeline
+- [Safe deployments](/docs/guides/safe-deployments/) - Best practices for deploying changes

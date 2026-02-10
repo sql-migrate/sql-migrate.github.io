@@ -128,7 +128,7 @@ ERROR: canceling statement due to statement timeout
 **Solution:**
 1. Increase timeout in connection settings
 2. Check database performance
-3. Use a snapshot instead of live connection
+3. Compare during low-usage periods
 
 ## Script Execution Errors
 
@@ -155,8 +155,8 @@ HINT: Use DROP ... CASCADE to drop the dependent objects too.
 **Cause:** Object has dependencies that prevent dropping.
 
 **Solution:**
-1. Enable CASCADE option in script settings
-2. Or manually handle dependencies first
+1. Manually add CASCADE to the relevant DROP statements in the script
+2. Or handle dependencies first before running the script
 3. Review dependent objects before proceeding
 
 ### "Duplicate key value"
@@ -261,12 +261,12 @@ Could not connect to license server. Please check your internet connection.
 The project file appears to be corrupted and cannot be opened.
 ```
 
-**Cause:** Project file is damaged or invalid.
+**Cause:** The project database is damaged or invalid.
 
 **Solution:**
-1. Try opening a backup
-2. Create a new project
-3. Contact support with the file
+1. Try opening a backup of the project
+2. Create a new project and reconfigure your environments
+3. Contact support with details of the issue
 
 ### "Cannot write to file"
 

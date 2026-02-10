@@ -1,16 +1,18 @@
 ---
-title: Connections
-description: Configure database connections in PostgresCompare
+title: Environments
+description: Configure database environments in PostgresCompare
 category: configuration
 order: 11
 permalink: /docs/configuration/connections/
 ---
 
-PostgresCompare connects directly to PostgreSQL databases to read schema information. This guide covers connection configuration options.
+PostgresCompare connects directly to PostgreSQL databases to read schema information. This guide covers environment configuration options.
 
-## Connection Settings
+## Environment Settings
 
 ### Basic Settings
+
+Each environment is configured using individual connection fields:
 
 | Setting | Description | Example |
 |---------|-------------|---------|
@@ -19,20 +21,6 @@ PostgresCompare connects directly to PostgreSQL databases to read schema informa
 | Database | Database name | `production` |
 | Username | Database user | `postgres` |
 | Password | User password | (stored securely) |
-
-### Connection String Format
-
-PostgresCompare accepts standard PostgreSQL connection strings:
-
-```
-host=localhost port=5432 dbname=mydb user=postgres password=secret
-```
-
-Or URI format:
-
-```
-postgresql://postgres:secret@localhost:5432/mydb
-```
 
 ## SSL/TLS Configuration
 
@@ -47,20 +35,11 @@ postgresql://postgres:secret@localhost:5432/mydb
 | `verify-ca` | Require SSL, verify server certificate |
 | `verify-full` | Require SSL, verify certificate and hostname |
 
-### SSL Settings
-
-```
-sslmode=verify-full
-sslcert=/path/to/client.crt
-sslkey=/path/to/client.key
-sslrootcert=/path/to/ca.crt
-```
-
 ## SSH Tunnel Connections
 
 Connect through an SSH tunnel for secure remote access:
 
-1. In the connection dialog, enable **SSH Tunnel**
+1. In the environment dialog, enable **SSH Tunnel**
 2. Configure SSH settings:
    - **SSH Host**: Bastion/jump server
    - **SSH Port**: SSH port (default: 22)
@@ -86,13 +65,6 @@ PostgresCompare uses a single connection per database. For large schemas:
 - Connections may take longer to establish
 - Consider increasing `connect_timeout`
 - Use read replicas if available
-
-### Timeout Settings
-
-```
-connect_timeout=30    # Connection timeout in seconds
-statement_timeout=60000   # Query timeout in milliseconds
-```
 
 ## Required Permissions
 
@@ -122,69 +94,41 @@ GRANT SELECT ON pg_roles TO pgcompare_readonly;
 GRANT SELECT ON pg_auth_members TO pgcompare_readonly;
 ```
 
-## Saving Connections
-
-### Project Connections
-
-Connections saved in a project file are encrypted and specific to that project.
-
-### Shared Connections
-
-Create shared connections available to all projects:
-
-1. Open **Settings > Connections**
-2. Click **Add Connection**
-3. Configure and save
-
-Shared connections are stored in your user profile.
-
 ## Cloud Database Connections
 
 ### Amazon RDS
 
-```
-host=mydb.abc123.us-east-1.rds.amazonaws.com
-port=5432
-dbname=production
-user=postgres
-sslmode=require
-```
+Configure your environment with:
+
+| Setting | Value |
+|---------|-------|
+| Host | `mydb.abc123.us-east-1.rds.amazonaws.com` |
+| Port | `5432` |
+| Database | `production` |
+| SSL Mode | `require` |
 
 ### Azure Database for PostgreSQL
 
-```
-host=myserver.postgres.database.azure.com
-port=5432
-dbname=production
-user=myuser@myserver
-sslmode=require
-```
+| Setting | Value |
+|---------|-------|
+| Host | `myserver.postgres.database.azure.com` |
+| Port | `5432` |
+| Database | `production` |
+| Username | `myuser@myserver` |
+| SSL Mode | `require` |
 
 ### Google Cloud SQL
 
-Use the Cloud SQL Auth Proxy for secure connections, or:
-
-```
-host=<INSTANCE_IP>
-port=5432
-dbname=production
-user=postgres
-sslmode=verify-ca
-sslrootcert=/path/to/server-ca.pem
-sslcert=/path/to/client-cert.pem
-sslkey=/path/to/client-key.pem
-```
+Use the Cloud SQL Auth Proxy for secure connections, or configure SSL certificates directly in the environment settings.
 
 ### Heroku Postgres
 
-```
-host=<hostname>.compute-1.amazonaws.com
-port=5432
-dbname=<dbname>
-user=<username>
-password=<password>
-sslmode=require
-```
+| Setting | Value |
+|---------|-------|
+| Host | `<hostname>.compute-1.amazonaws.com` |
+| Port | `5432` |
+| Database | `<dbname>` |
+| SSL Mode | `require` |
 
 ## Troubleshooting Connections
 
@@ -214,5 +158,5 @@ sslmode=require
 
 ## Next Steps
 
-- [Ignore Rules](/docs/configuration/ignore-rules/) - Configure what to exclude
-- [Options](/docs/configuration/options/) - Comparison options
+- [Comparison Options](/docs/configuration/options/) - Configure comparison settings
+- [Comparing Databases](/docs/guides/comparing-databases/) - Run your first comparison

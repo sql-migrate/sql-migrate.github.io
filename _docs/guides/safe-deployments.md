@@ -256,8 +256,23 @@ Verify:
 3. **Analyze tables** - Run ANALYZE on affected tables
 4. **Consider rollback** - If impact is severe
 
+## Using PostgresCompare for Safe Deployments
+
+PostgresCompare provides several features that support safe deployment workflows:
+
+### Direct Deployment with Progress Tracking
+
+Use the **Deploy** button to apply changes directly to the target database. PostgresCompare provides real-time progress tracking so you can monitor each statement as it executes.
+
+### Deployment History
+
+PostgresCompare tracks all deployments within the project, creating an audit trail of what was changed and when.
+
+### Post-Deployment Recompare
+
+After deploying, run a new comparison to verify the deployment was successful. This confirms the target database matches the expected state and catches any issues immediately.
+
 ## Next Steps
 
 - [Deployment scripts](/docs/guides/deployment-scripts/) - Customize script generation
 - [Troubleshooting](/docs/troubleshooting/common-issues/) - Common issues during deployment
-- [CLI reference](/docs/cli/commands/) - Automate deployments

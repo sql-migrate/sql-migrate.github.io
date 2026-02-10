@@ -92,11 +92,7 @@ This page covers common issues users encounter with PostgresCompare and their so
    - Use schema filters to compare only relevant schemas
    - Exclude large schemas you don't need
 
-2. **Use snapshots**
-   - Create snapshots of frequently-compared databases
-   - Snapshots are faster than live connections
-
-3. **Check database load**
+2. **Check database load**
    - Compare during low-usage periods
    - Use a read replica if available
 
@@ -112,9 +108,9 @@ This page covers common issues users encounter with PostgresCompare and their so
    - Review Project Settings > Schema Filters
    - Ensure the schema isn't excluded
 
-2. **Check ignore rules**
-   - Review Project Settings > Ignore Rules
-   - Look for rules that might match the object
+2. **Check comparison options**
+   - Review Project Settings > Comparison Options
+   - Check if the object type is disabled or if an exclusion pattern matches
 
 3. **Check object type filters**
    - Ensure the object type is enabled in settings
@@ -162,8 +158,8 @@ This page covers common issues users encounter with PostgresCompare and their so
    - Don't reorder statements manually unless necessary
 
 3. **Handle existing objects**
-   - Enable "IF EXISTS" and "IF NOT EXISTS" options
-   - Or manually check for conflicts
+   - Refresh the comparison to get the current state
+   - Review the script for conflicts with existing objects
 
 ### Foreign key errors
 
@@ -224,9 +220,7 @@ This page covers common issues users encounter with PostgresCompare and their so
    - Uninstall and reinstall
 
 3. **Check logs**
-   - Windows: `%APPDATA%\PostgresCompare\logs`
-   - macOS: `~/Library/Logs/PostgresCompare`
-   - Linux: `~/.config/PostgresCompare/logs`
+   - Check the application logs for error details
 
 ### License issues
 
@@ -253,7 +247,6 @@ This page covers common issues users encounter with PostgresCompare and their so
 **Solutions:**
 
 1. **Save your work**
-   - Enable auto-save in settings
    - Save projects frequently
 
 2. **Check for updates**

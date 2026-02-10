@@ -6,16 +6,16 @@ order: 5
 permalink: /docs/guides/deployment-scripts/
 ---
 
-PostgresCompare generates SQL scripts that update your target database to match the source. This guide covers how to generate, customize, and safely deploy these scripts.
+PostgresCompare generates SQL scripts that synchronize your databases. This guide covers how to generate, customize, and safely deploy these scripts.
 
 ## Generating Scripts
 
 After running a comparison:
 
 1. Review the differences in the results view
-2. Select which changes to include (checked by default)
-3. Click **Generate Script** in the toolbar
-4. Choose a save location for the `.sql` file
+2. Select which changes to include using the checkboxes
+3. Choose the script direction (X to Y or Y to X)
+4. Click **Generate Script** in the toolbar
 
 The generated script includes all selected changes in dependency order.
 
@@ -26,8 +26,8 @@ A typical deployment script includes:
 ```sql
 -- PostgresCompare Deployment Script
 -- Generated: 2024-01-15 10:30:00
--- Source: production-db
--- Target: staging-db
+-- X: production-db
+-- Y: staging-db
 
 BEGIN;
 
@@ -56,49 +56,41 @@ CREATE INDEX idx_users_status ON public.users(status);
 COMMIT;
 ```
 
-## Script Options
+## Script Direction
 
-Customize how scripts are generated:
+PostgresCompare supports two script directions:
 
-### Transaction Wrapping
+- **X to Y** - Generate SQL to update Y to match X
+- **Y to X** - Generate SQL to update X to match Y
 
-- **Wrap in transaction** - Enclose all statements in BEGIN/COMMIT
-- **Use savepoints** - Add SAVEPOINTs for partial rollback
-- **No transaction** - Individual statements (for large changes)
+Choose the direction based on which database you want to update.
 
-### Statement Options
+## Transaction Wrapping
 
-- **Include IF EXISTS** - Safer DROP statements
-- **Include IF NOT EXISTS** - Safer CREATE statements
-- **Add comments** - Include object descriptions as comments
-- **Separate files** - One file per object type
+Scripts can be wrapped in a transaction block (BEGIN/COMMIT) so that all changes are applied atomically. If any statement fails, the entire transaction is rolled back.
 
-### Ordering Options
+## Direct Deployment
 
-- **Dependency order** - PostgresCompare default, respects references
-- **Alphabetical within type** - Easier to review
-- **Custom order** - Drag and drop in UI
+In addition to generating SQL scripts, PostgresCompare can deploy changes directly to the target database:
 
-## Customizing Generated SQL
+1. Review and select the changes to deploy
+2. Click the **Deploy** button
+3. Monitor deployment progress in the progress tracker
+4. Review the deployment results
 
-Before saving, you can customize the script:
+Direct deployment provides real-time progress tracking and immediate feedback on success or failure.
 
-### In the Preview Window
+## Deployment History
 
-1. Click **Preview Script** before generating
-2. Edit SQL directly in the preview
-3. Click **Save** to write the file
+PostgresCompare tracks deployment history within the project. You can review past deployments to see what was changed and when, providing an audit trail for your database changes.
 
-### Post-Generation
+## Post-Deployment Comparison
 
-1. Open the generated `.sql` file
-2. Add custom statements (data migrations, etc.)
-3. Adjust statement order if needed
-4. Add your own transaction handling
+After deploying changes, run a new comparison to verify the deployment was successful. This confirms that the target database now matches the expected state and helps catch any issues immediately.
 
 ## Handling Data Migrations
 
-Schema changes often require data migrations. PostgresCompare generates DDL only, but you can add data migration statements:
+Schema changes often require data migrations. PostgresCompare generates DDL only, but you can add data migration statements to the generated script:
 
 ### Column Type Changes
 
@@ -181,15 +173,9 @@ BEGIN
 END $$;
 ```
 
-## Splitting Large Scripts
+## Splitting Large Deployments
 
-For large deployments, consider splitting scripts:
-
-### By Object Type
-
-1. In **Generate Script** options, select **Separate files**
-2. Creates: `tables.sql`, `views.sql`, `functions.sql`, etc.
-3. Deploy in dependency order
+For large deployments, consider splitting changes:
 
 ### By Risk Level
 
@@ -227,5 +213,5 @@ Include metadata in script comments:
 ## Next Steps
 
 - [Safe deployments](/docs/guides/safe-deployments/) - Best practices for running deployment scripts
-- [CI/CD integration](/docs/guides/ci-cd-integration/) - Automate script generation
+- [Comparing databases](/docs/guides/comparing-databases/) - Advanced comparison techniques
 - [Troubleshooting](/docs/troubleshooting/common-issues/) - Common issues and solutions

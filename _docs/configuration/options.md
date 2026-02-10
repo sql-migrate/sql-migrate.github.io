@@ -1,210 +1,109 @@
 ---
 title: Options
-description: Configure comparison and script generation options
+description: Configure comparison and deployment options
 category: configuration
 order: 13
 permalink: /docs/configuration/options/
 ---
 
-PostgresCompare offers many options to customize how comparisons are performed and how deployment scripts are generated.
+PostgresCompare offers options to customize how comparisons are performed and how deployment scripts are generated. All options are configured per project in the project settings.
 
 ## Comparison Options
 
-### Schema Options
+### Ignore Toggles
+
+Control which types of differences are detected:
 
 | Option | Description | Default |
 |--------|-------------|---------|
-| Include schemas | List of schemas to compare | All |
-| Exclude schemas | List of schemas to skip | None |
-| Compare system schemas | Include pg_catalog, information_schema | Off |
+| Ignore Whitespace | Ignore whitespace differences when comparing functions | Off |
+| Ignore Table Partitions | Ignore partition definitions on tables | Off |
+| Ignore Column Order | Only compare column existence, not position | Off |
+| Ignore Code Comments | Ignore comments within code definitions | On |
+| Ignore Case | Treat identifiers as case-insensitive | Off |
+| Ignore Owner | Don't compare object ownership | Off |
+| Ignore Tablespace | Don't compare tablespace assignments | On |
+| Ignore Privileges | Don't compare GRANT/REVOKE statements | On |
+| Ignore Defaults | Ignore column default value differences | Off |
+| Ignore Statistics | Ignore statistics target differences | Off |
 
-### Object Type Options
+### Object Type Toggles
 
-Toggle which object types are compared:
+Toggle which object types are included in the comparison. Each type can be independently enabled or disabled.
 
-| Option | Default |
-|--------|---------|
-| Tables | On |
-| Views | On |
-| Materialized Views | On |
-| Functions | On |
-| Procedures | On |
-| Triggers | On |
-| Indexes | On |
-| Sequences | On |
-| Types | On |
-| Domains | On |
-| Extensions | On |
-| Schemas | On |
-| Comments | On |
-| Privileges | Off |
+**Default ON:**
 
-### Difference Detection
+| Object Type | Description |
+|-------------|-------------|
+| Tables | Table structure, columns, constraints |
+| Views | View definitions |
+| Materialized Views | Materialized view definitions |
+| Triggers | Table and event triggers |
+| Functions | User-defined functions |
+| Procedures | Stored procedures |
+| Indexes | Table indexes |
+| Schemas | Schema definitions |
+| Composite Types | User-defined composite types |
+| Enums | Enumeration types |
+| Domains | Domain types |
+| Extensions | PostgreSQL extensions |
+| Access Methods | Custom access methods |
+| Casts | Type casts |
+| Conversions | Encoding conversions |
+| Event Triggers | Event-level triggers |
+| Foreign Data Wrappers | FDW definitions |
+| Operator Families | Operator family definitions |
+| Foreign Servers | Foreign server definitions |
+| Text Search Parsers | Full-text search parsers |
+| Text Search Templates | Full-text search templates |
+| Text Search Dictionaries | Full-text search dictionaries |
+| Text Search Configurations | Full-text search configurations |
+| User Mappings | Foreign server user mappings |
+| Publications | Logical replication publications |
+| Subscriptions | Logical replication subscriptions |
+| Statistics | Extended statistics objects |
+| Policies | Row-level security policies |
+| Collations | Collation definitions |
+| Sequences | Sequence definitions |
+| Operators | User-defined operators |
+| Foreign Tables | Foreign table definitions |
+| Aggregates | Aggregate functions |
+| Ranges | Range type definitions |
+| Settings | Configuration parameter settings |
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| Ignore case in names | Treat "MyTable" and "mytable" as equal | Off |
-| Ignore whitespace in definitions | Ignore formatting differences | On |
-| Ignore column order | Only compare column existence, not position | Off |
-| Ignore constraint names | Compare constraint definitions, not names | Off |
-| Ignore index names | Compare index definitions, not names | Off |
+**Default OFF:**
 
-### Property Options
+| Object Type | Description |
+|-------------|-------------|
+| Roles | Database roles and permissions |
+| Databases | Database-level settings |
+| Tablespaces | Tablespace definitions |
 
-Ignore specific object properties:
+### Schema Filtering
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| Ignore owner | Don't compare object ownership | Off |
-| Ignore tablespace | Don't compare tablespace assignments | Off |
-| Ignore storage parameters | Don't compare FILLFACTOR, etc. | Off |
-| Ignore privileges | Don't compare GRANT/REVOKE | On |
-| Ignore comments | Don't compare object comments | Off |
+| Option | Description |
+|--------|-------------|
+| X Schema to Compare | Schema to compare from the X environment |
+| Y Schema to Compare | Schema to compare from the Y environment |
 
-## Script Generation Options
+## Script Options
 
-### Transaction Options
+### Script Direction
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| Wrap in transaction | BEGIN/COMMIT around script | On |
-| Use savepoints | Add SAVEPOINTs for partial rollback | Off |
-| Transaction isolation | Set isolation level | Default |
+Choose the direction for the generated deployment script:
 
-### Statement Options
+- **X to Y** - Generate SQL to make Y match X
+- **Y to X** - Generate SQL to make X match Y
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| IF EXISTS | Add IF EXISTS to DROP statements | On |
-| IF NOT EXISTS | Add IF NOT EXISTS to CREATE | Off |
-| Quote identifiers | Always quote names | Off |
-| Lowercase keywords | Use lowercase SQL keywords | Off |
-| Statement separator | Character between statements | `;` |
+### Statement Selection
 
-### Drop Options
+After running a comparison, use the checkboxes next to each difference to select which changes to include in the generated script. This allows fine-grained control over what gets deployed.
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| Include drops | Generate DROP statements | On |
-| Cascade drops | Add CASCADE to DROP | Off |
-| Comment out drops | Wrap DROP in comments | Off |
+### Transaction Wrapping
 
-### Ordering Options
-
-| Option | Description | Default |
-|--------|-------------|---------|
-| Dependency order | Order by object dependencies | On |
-| Alphabetical | Sort alphabetically within type | Off |
-| Group by type | Group all tables, then views, etc. | On |
-
-### Output Options
-
-| Option | Description | Default |
-|--------|-------------|---------|
-| Include header | Add script header with metadata | On |
-| Include timestamps | Add generation timestamp | On |
-| Separate files | One file per object type | Off |
-| Line ending | LF, CRLF, or platform default | Platform |
-| Encoding | Output file encoding | UTF-8 |
-
-## Project Settings
-
-### Default Connections
-
-Set default source and target connections that are used when the project opens.
-
-### Comparison Presets
-
-Save common option combinations as presets:
-
-1. Configure options
-2. Click **Save as Preset**
-3. Name the preset
-4. Apply presets from the dropdown
-
-### Auto-Save
-
-| Option | Description | Default |
-|--------|-------------|---------|
-| Auto-save project | Save project after comparison | Off |
-| Auto-save interval | Minutes between auto-saves | 5 |
-| Save comparison results | Persist results in project | On |
-
-## Application Settings
-
-### General
-
-| Option | Description | Default |
-|--------|-------------|---------|
-| Theme | Light, Dark, or System | System |
-| Font size | UI font size | Medium |
-| Show line numbers | In SQL preview | On |
-| Syntax highlighting | Color SQL syntax | On |
-
-### Performance
-
-| Option | Description | Default |
-|--------|-------------|---------|
-| Max parallel queries | Concurrent schema queries | 4 |
-| Query timeout | Seconds before timeout | 60 |
-| Cache snapshots | Keep snapshots in memory | On |
-
-### Updates
-
-| Option | Description | Default |
-|--------|-------------|---------|
-| Check for updates | On startup | On |
-| Auto-download updates | Download when available | Off |
-
-## CLI Configuration
-
-Many options can be set via command line:
-
-```bash
-pgcompare compare \
-  --source production \
-  --target staging \
-  --ignore-owner \
-  --ignore-tablespace \
-  --ignore-privileges \
-  --include-if-exists \
-  --wrap-transaction \
-  --output deploy.sql
-```
-
-Or via environment variables:
-
-```bash
-export PGCOMPARE_IGNORE_OWNER=true
-export PGCOMPARE_IGNORE_TABLESPACE=true
-export PGCOMPARE_WRAP_TRANSACTION=true
-```
-
-## Configuration File
-
-Create a `.pgcompare.yaml` in your project directory:
-
-```yaml
-comparison:
-  ignore_owner: true
-  ignore_tablespace: true
-  ignore_privileges: true
-  exclude_schemas:
-    - pg_temp
-    - staging
-
-script:
-  wrap_transaction: true
-  include_if_exists: true
-  quote_identifiers: false
-
-output:
-  include_header: true
-  encoding: utf-8
-```
+Deployment scripts can be wrapped in a transaction block (BEGIN/COMMIT) so that all changes are applied atomically — either all succeed or all are rolled back.
 
 ## Next Steps
 
-- [Connections](/docs/configuration/connections/) - Connection configuration
-- [Ignore Rules](/docs/configuration/ignore-rules/) - Object filtering
-- [CLI Commands](/docs/cli/commands/) - Command-line options
+- [Environments](/docs/configuration/connections/) - Environment configuration
+- [Comparing Databases](/docs/guides/comparing-databases/) - Comparison techniques
