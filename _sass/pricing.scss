@@ -73,8 +73,10 @@
 // New FAQ section styles
 .faq-section {
   margin-top: 4rem;
+  width: 100%;
   max-width: 100%;
   overflow: hidden;
+  box-sizing: border-box;
 
   h2 {
     text-align: center;
@@ -86,7 +88,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+  width: 100%;
   max-width: 100%;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -99,6 +103,9 @@
   border-radius: 12px;
   padding: 1.5rem;
   overflow: hidden;
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .faq-question {
