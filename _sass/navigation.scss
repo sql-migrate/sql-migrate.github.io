@@ -94,6 +94,10 @@ header {
 
 		&.active {
 			color: $primary;
+
+			&::after {
+				width: 100%;
+			}
 		}
 	}
 }

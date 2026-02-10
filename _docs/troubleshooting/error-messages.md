@@ -309,5 +309,5 @@ If you encounter an error not listed here:
 ## Next Steps
 
 - [Common Issues](/docs/troubleshooting/common-issues/) - General troubleshooting
-- [FAQ](/faq/) - Frequently asked questions
-- [Contact Support](/contact/) - Get help from our team
+- [FAQ](/faq) - Frequently asked questions
+- [Contact Support](/contact) - Get help from our team
