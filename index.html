@@ -7,7 +7,7 @@ description: PostgresCompare compares PostgreSQL database schema objects and wri
 <section class="hero">
   <div class="text-container">
     <p class="version-badge"><a href="/downloads">Version 1.1.102 now available (Feb 7, 2026) →</a></p>
-    <h1>The <span>Reliable</span> Way to<br>Compare PostgreSQL Databases</h1>
+    <h1>The <span class="typewriter" data-words='["Reliable", "Fast", "Accurate", "Simple"]'></span> Way to<br>Compare PostgreSQL Databases</h1>
     <h2>Find differences, generate deployment SQL, and keep your databases in sync with confidence. Trusted by developers worldwide.</h2>
     <div class="hero-cta">
       <a href="/downloads" class="primary-button">
@@ -276,4 +276,77 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   ]
 }
+</script>
+
+<style>
+.typewriter {
+  position: relative;
+}
+.typewriter::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+  margin-left: 2px;
+  -webkit-text-fill-color: currentColor;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var element = document.querySelector('.typewriter');
+  if (!element) return;
+
+  var words = JSON.parse(element.dataset.words);
+  var wordIndex = 0;
+  var charIndex = 0;
+  var isDeleting = false;
+  var isPaused = false;
+
+  var typeSpeed = 80;
+  var deleteSpeed = 50;
+  var pauseAfterWord = 2000;
+  var pauseAfterDelete = 300;
+
+  function type() {
+    var currentWord = words[wordIndex];
+
+    if (isPaused) {
+      isPaused = false;
+      setTimeout(type, isDeleting ? pauseAfterDelete : pauseAfterWord);
+      return;
+    }
+
+    if (isDeleting) {
+      element.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        isPaused = true;
+      }
+    } else {
+      element.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === currentWord.length) {
+        isDeleting = true;
+        isPaused = true;
+      }
+    }
+
+    var speed = isDeleting ? deleteSpeed : typeSpeed;
+    setTimeout(type, speed);
+  }
+
+  // Start with first word displayed
+  element.textContent = words[0];
+  charIndex = words[0].length;
+  isDeleting = true;
+  isPaused = true;
+  setTimeout(type, pauseAfterWord);
+});
 </script>
