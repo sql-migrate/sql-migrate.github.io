@@ -1,9 +1,17 @@
 // Documentation layout styles
 
 .docs-container {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  align-items: flex-start;
   min-height: calc(100vh - 80px);
   background: $background;
+  width: 100%;
+
+  @media (max-width: 767px) {
+    flex-direction: column !important;
+  }
 }
 
 // Sidebar
