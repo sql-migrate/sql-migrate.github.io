@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (isPaused) {
       isPaused = false;
-      setTimeout(type, isDeleting ? pauseAfterDelete : pauseAfterWord);
+      setTimeout(type, isDeleting ? pauseAfterWord : pauseAfterDelete);
       return;
     }
 
