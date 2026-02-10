@@ -823,8 +823,14 @@
 
 .faq-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .faq-item {
@@ -832,6 +838,8 @@
     background: $background;
     border-radius: 12px;
     transition: all 0.3s ease;
+    min-width: 0;
+    overflow: hidden;
 
     &:hover {
         background: white;
