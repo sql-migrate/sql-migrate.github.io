@@ -2,6 +2,10 @@
   link: /#features
   new_window: false
   highlight: false
+- name: Docs
+  link: /docs
+  new_window: false
+  highlight: false
 - name: Buy Now
   link: /purchase
   new_window: false

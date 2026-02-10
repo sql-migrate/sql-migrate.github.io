@@ -1,0 +1,150 @@
+- title: Getting Started
+  items:
+    - title: Installation
+      url: /docs/getting-started/installation/
+      subitems:
+        - title: System Requirements
+          url: /docs/getting-started/installation/#system-requirements
+        - title: Installation
+          url: /docs/getting-started/installation/#installation
+        - title: First Launch
+          url: /docs/getting-started/installation/#first-launch
+    - title: Quick Start
+      url: /docs/getting-started/quick-start/
+      subitems:
+        - title: Creating a New Project
+          url: /docs/getting-started/quick-start/#creating-a-new-project
+        - title: Connecting to Databases
+          url: /docs/getting-started/quick-start/#connecting-to-databases
+        - title: Running Your First Comparison
+          url: /docs/getting-started/quick-start/#running-your-first-comparison
+        - title: Understanding the Results
+          url: /docs/getting-started/quick-start/#understanding-the-results
+        - title: Generating a Deployment Script
+          url: /docs/getting-started/quick-start/#generating-a-deployment-script
+    - title: First Comparison
+      url: /docs/getting-started/first-comparison/
+      subitems:
+        - title: The Results View
+          url: /docs/getting-started/first-comparison/#the-results-view
+        - title: Viewing Differences
+          url: /docs/getting-started/first-comparison/#viewing-differences
+        - title: Object History
+          url: /docs/getting-started/first-comparison/#object-history
+        - title: Selecting Changes to Deploy
+          url: /docs/getting-started/first-comparison/#selecting-changes-to-deploy
+        - title: Handling Conflicts
+          url: /docs/getting-started/first-comparison/#handling-conflicts
+
+- title: Guides
+  items:
+    - title: Comparing Databases
+      url: /docs/guides/comparing-databases/
+      subitems:
+        - title: Database to Database
+          url: /docs/guides/comparing-databases/#database-to-database-comparison
+        - title: Schema Filtering
+          url: /docs/guides/comparing-databases/#schema-filtering
+        - title: Object Type Filtering
+          url: /docs/guides/comparing-databases/#object-type-filtering
+        - title: Comparison Options
+          url: /docs/guides/comparing-databases/#comparison-options
+        - title: Data Comparison
+          url: /docs/guides/comparing-databases/#data-comparison
+    - title: Deployment Scripts
+      url: /docs/guides/deployment-scripts/
+      subitems:
+        - title: Generating Scripts
+          url: /docs/guides/deployment-scripts/#generating-scripts
+        - title: Script Direction
+          url: /docs/guides/deployment-scripts/#script-direction
+        - title: Direct Deployment
+          url: /docs/guides/deployment-scripts/#direct-deployment
+        - title: Deployment History
+          url: /docs/guides/deployment-scripts/#deployment-history
+        - title: Handling Data Migrations
+          url: /docs/guides/deployment-scripts/#handling-data-migrations
+        - title: Version Control
+          url: /docs/guides/deployment-scripts/#version-control
+    - title: Safe Deployments
+      url: /docs/guides/safe-deployments/
+      subitems:
+        - title: Pre-Deployment Checklist
+          url: /docs/guides/safe-deployments/#pre-deployment-checklist
+        - title: Destructive Operations
+          url: /docs/guides/safe-deployments/#understanding-destructive-operations
+        - title: Testing Strategy
+          url: /docs/guides/safe-deployments/#testing-strategy
+        - title: Backup Strategies
+          url: /docs/guides/safe-deployments/#backup-strategies
+        - title: Deployment Patterns
+          url: /docs/guides/safe-deployments/#deployment-patterns
+        - title: Rollback Planning
+          url: /docs/guides/safe-deployments/#rollback-planning
+        - title: Monitoring Deployments
+          url: /docs/guides/safe-deployments/#monitoring-deployments
+
+- title: Configuration
+  items:
+    - title: Environments
+      url: /docs/configuration/connections/
+      subitems:
+        - title: Environment Settings
+          url: /docs/configuration/connections/#environment-settings
+        - title: SSL/TLS Configuration
+          url: /docs/configuration/connections/#ssltls-configuration
+        - title: SSH Tunnel
+          url: /docs/configuration/connections/#ssh-tunnel-connections
+        - title: Required Permissions
+          url: /docs/configuration/connections/#required-permissions
+        - title: Cloud Databases
+          url: /docs/configuration/connections/#cloud-database-connections
+        - title: Troubleshooting
+          url: /docs/configuration/connections/#troubleshooting-connections
+    - title: Options
+      url: /docs/configuration/options/
+      subitems:
+        - title: Ignore Toggles
+          url: /docs/configuration/options/#ignore-toggles
+        - title: Object Type Toggles
+          url: /docs/configuration/options/#object-type-toggles
+        - title: Schema Filtering
+          url: /docs/configuration/options/#schema-filtering
+        - title: Script Options
+          url: /docs/configuration/options/#script-options
+
+- title: CLI Reference
+  items:
+    - title: Installation
+      url: /docs/cli/installation/
+    - title: Commands
+      url: /docs/cli/commands/
+    - title: Examples
+      url: /docs/cli/examples/
+
+- title: Troubleshooting
+  items:
+    - title: Common Issues
+      url: /docs/troubleshooting/common-issues/
+      subitems:
+        - title: Connection Issues
+          url: /docs/troubleshooting/common-issues/#connection-issues
+        - title: Comparison Issues
+          url: /docs/troubleshooting/common-issues/#comparison-issues
+        - title: Script Generation Issues
+          url: /docs/troubleshooting/common-issues/#script-generation-issues
+        - title: Application Issues
+          url: /docs/troubleshooting/common-issues/#application-issues
+    - title: Error Messages
+      url: /docs/troubleshooting/error-messages/
+      subitems:
+        - title: Connection Errors
+          url: /docs/troubleshooting/error-messages/#connection-errors
+        - title: Comparison Errors
+          url: /docs/troubleshooting/error-messages/#comparison-errors
+        - title: Script Execution Errors
+          url: /docs/troubleshooting/error-messages/#script-execution-errors
+        - title: License Errors
+          url: /docs/troubleshooting/error-messages/#license-errors
+        - title: File Errors
+          url: /docs/troubleshooting/error-messages/#file-errors
