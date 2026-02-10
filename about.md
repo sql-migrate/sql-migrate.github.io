@@ -15,7 +15,7 @@ description: Learn about PostgresCompare and the team behind the reliable Postgr
   </div>
 
   <div class="feature-card" style="margin-bottom: 2rem;">
-    <h2>About the Creator</h2>
+    <h2>Meet Neil</h2>
     <p><a href="https://www.postgrescompare.com">PostgresCompare</a> is the work of founder Neil Anderson. An experienced software engineer, Neil spent a large chunk of his career working on database diffing tools targeting SQL Server, Oracle and MySQL at <a href="https://www.red-gate.com">Redgate Software</a>.</p>
     <p>Now he has turned his attention to building the fastest, most accurate and easy to use schema comparison product for PostgreSQL.</p>
     <p>Contact Neil on <a href="https://www.twitter.com/neilAnders0n">Twitter</a> or via <a href="mailto:neil@postgrescompare.com">email</a> and let him know how he can make PostgresCompare work for you!</p>
