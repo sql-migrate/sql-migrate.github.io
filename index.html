@@ -283,9 +283,14 @@ document.addEventListener('DOMContentLoaded', function() {
   position: relative;
 }
 .typewriter::after {
-  content: '|';
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 0.9em;
+  background: #0F766E;
+  margin-left: 4px;
+  vertical-align: middle;
   animation: blink 0.7s infinite;
-  -webkit-text-fill-color: currentColor;
 }
 @keyframes blink {
   0%, 50% { opacity: 1; }
