@@ -286,10 +286,12 @@ document.addEventListener('DOMContentLoaded', function() {
   content: '';
   display: inline-block;
   width: 3px;
-  height: 0.9em;
+  height: 0.85em;
   background: #0F766E;
   margin-left: 4px;
-  vertical-align: middle;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.05em;
   animation: blink 0.7s infinite;
 }
 @keyframes blink {
