@@ -51,6 +51,16 @@ Fine-tune how objects are compared using the 10 ignore toggles:
 | Ignore Defaults | Off | Ignore column default differences |
 | Ignore Statistics | Off | Ignore statistics targets |
 
+## Filtering and Selecting Changes
+
+The results view lets you filter differences before generating a script:
+
+- Use the filter dropdowns to narrow results by object type, change type, or schema
+- The **select all** checkbox in the header toggles only the rows currently visible after filtering — rows hidden by a filter are not affected
+- The header checkbox reflects the actual selection state of visible rows and updates as filters change
+
+This makes it straightforward to select a specific subset of changes — for example, selecting only new tables while leaving function changes unselected.
+
 ## Data Comparison
 
 In addition to schema comparison, PostgresCompare supports data comparison between databases. This allows you to identify row-level differences in table data between your X and Y environments.

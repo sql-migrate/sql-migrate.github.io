@@ -14,56 +14,74 @@ After running a comparison:
 
 1. Review the differences in the results view
 2. Select which changes to include using the checkboxes
-3. Choose the script direction (X to Y or Y to X)
-4. Click **Generate Script** in the toolbar
+3. Click **Generate Script** in the toolbar
 
 The generated script includes all selected changes in dependency order.
 
 ## Script Structure
 
-A typical deployment script includes:
+Generated scripts include a header with metadata followed by statements grouped into labeled sections:
 
 ```sql
 -- PostgresCompare Deployment Script
--- Generated: 2024-01-15 10:30:00
+-- Version: 1.1.103
 -- X: production-db
 -- Y: staging-db
+-- Generated: 2026-02-18 10:30:00
 
 BEGIN;
 
--- Create new types
-CREATE TYPE public.status_type AS ENUM ('active', 'inactive', 'pending');
+/*** Tables ***/
 
--- Create new tables
 CREATE TABLE public.audit_log (
     id SERIAL PRIMARY KEY,
     action VARCHAR(50) NOT NULL,
     created_at TIMESTAMP DEFAULT NOW()
 );
 
--- Alter existing tables
+/*** Types ***/
+
+CREATE TYPE public.status_type AS ENUM ('active', 'inactive', 'pending');
+
+/*** Column Changes ***/
+
 ALTER TABLE public.users ADD COLUMN last_login TIMESTAMP;
 
--- Create new functions
+/*** Functions ***/
+
+-- depends on: public.users
 CREATE OR REPLACE FUNCTION public.get_active_users()
 RETURNS SETOF public.users AS $$
     SELECT * FROM public.users WHERE status = 'active';
 $$ LANGUAGE SQL;
 
--- Create indexes
+/*** Indexes ***/
+
 CREATE INDEX idx_users_status ON public.users(status);
 
 COMMIT;
 ```
 
-## Script Direction
+Sections appear only when the script contains objects of that type. Dependency comments (`-- depends on`, `-- required by`) explain the ordering of dependency-sorted objects.
 
-PostgresCompare supports two script directions:
+## Destructive Change Warnings
 
-- **X to Y** - Generate SQL to update Y to match X
-- **Y to X** - Generate SQL to update X to match Y
+Before you run a script, PostgresCompare classifies every statement by risk level and surfaces warnings in the UI:
 
-Choose the direction based on which database you want to update.
+| Level | Examples | Indicators |
+|-------|----------|------------|
+| **Destructive** | `DROP TABLE`, `DROP COLUMN` | Red row, warning icon, glyph marker in editor |
+| **Warning** | `DROP FUNCTION`, `DROP VIEW` | Amber row, warning icon, glyph marker in editor |
+
+A summary banner above the statement list shows the total count of destructive and warning statements. Review these carefully before proceeding — destructive statements can cause data loss that cannot be automatically reversed.
+
+## Previewing Differences
+
+Hover over any row in the statement list to see a floating diff popover showing the before and after SQL side-by-side. This lets you inspect individual changes without leaving the script screen.
+
+## Navigating the Statement List
+
+Statements are grouped under clickable section headers (Tables, Views, Types, Sequences, Column Changes, Constraints, Indexes, Functions, Materialized Views, Triggers, Policies, Privileges, Drop Objects). Click a section header in the list to jump directly to that section in the SQL editor.
 
 ## Transaction Wrapping
 

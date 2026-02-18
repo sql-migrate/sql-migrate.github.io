@@ -10,7 +10,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
 
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 1280px; margin: 0 auto;">
   <div class="whats-new" style="margin-bottom: 2rem; padding: 1rem 1.5rem; background: rgba(15, 118, 110, 0.05); border-radius: 12px; border-left: 4px solid var(--primary, #0f766e);">
-    <p style="margin: 0; color: var(--text, #1e293b);"><strong>What's new in 1.1.102:</strong> Added option to ignore column statistics differences. <a href="/release-notes" style="color: var(--primary, #0f766e);">View all release notes →</a></p>
+    <p style="margin: 0; color: var(--text, #1e293b);"><strong>What's new in 1.1.103:</strong> Destructive change warnings, hover-to-preview diffs, and structured deployment script section headers. <a href="/release-notes" style="color: var(--primary, #0f766e);">View all release notes →</a></p>
   </div>
 
   <div class="download-cards" id="single-platform-downloads" style="display: none;"></div>
@@ -24,7 +24,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
     <div class="download-card" data-os="windows">
       <div class="platform-icon">🪟</div>
       <h2>Windows</h2>
-      <p class="version-info">Version 1.1.102 • Windows 10 or later</p>
+      <p class="version-info">Version 1.1.103 • Windows 10 or later</p>
       <p style="color: var(--text-light); margin-bottom: 1rem;">Full-featured desktop application with native Windows integration.</p>
       <a onclick="var that=this;ga('send', 'event','Download','Windows 1.1.100',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://d10jucl19ljf5k.cloudfront.net/PostgresCompareSetup.exe" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -38,7 +38,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
     <div class="download-card" data-os="macos">
       <div class="platform-icon">🍎</div>
       <h2>macOS</h2>
-      <p class="version-info">Version 1.1.102 • macOS 11 or later</p>
+      <p class="version-info">Version 1.1.103 • macOS 11 or later</p>
       <p style="color: var(--text-light); margin-bottom: 1rem;">Optimized for Apple Silicon and Intel Macs with native performance.</p>
       <a onclick="var that=this;ga('send', 'event','Download','macOS 1.1.100',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare.pkg" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -52,9 +52,9 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
     <div class="download-card" data-os="linux">
       <div class="platform-icon">🐧</div>
       <h2>Linux</h2>
-      <p class="version-info">Version 1.1.102 • Ubuntu 20.04+ / Debian 11+</p>
+      <p class="version-info">Version 1.1.103 • Ubuntu 20.04+ / Debian 11+</p>
       <p style="color: var(--text-light); margin-bottom: 1rem;">Available as a zip package for major distributions.</p>
-      <a onclick="var that=this;ga('send', 'event','Download','Linux 1.1.102',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.102.zip" class="download-btn">
+      <a onclick="var that=this;ga('send', 'event','Download','Linux 1.1.103',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.1.103.zip" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -179,7 +179,7 @@ description: Download PostgresCompare for Windows, macOS, or Linux. Start your f
   "description": "PostgresCompare compares PostgreSQL database schema objects and writes the SQL to deploy the differences.",
   "url": "https://www.postgrescompare.com/downloads",
   "downloadUrl": "https://www.postgrescompare.com/downloads",
-  "softwareVersion": "1.1.102",
+  "softwareVersion": "1.1.103",
   "fileSize": "250MB",
   "softwareRequirements": "PostgreSQL 9.2 through 18",
   "offers": {

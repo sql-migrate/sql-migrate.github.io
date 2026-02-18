@@ -104,8 +104,7 @@ Each object shows a status indicating its comparison result:
 To create a SQL script that synchronizes the differences:
 
 1. Review the differences and select which changes to include using the checkboxes
-2. Choose the script direction (X to Y or Y to X)
-3. Click **Generate Script** in the toolbar
+2. Click **Generate Script** in the toolbar
 4. Review the generated SQL before executing
 
 <div class="warning">

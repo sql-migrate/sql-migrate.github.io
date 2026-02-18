@@ -13,15 +13,25 @@ description: Track the evolution of PostgresCompare with detailed release notes 
 <div class="release latest">
   <div class="release-header">
     <div class="version-info">
-      <h2>Version 1.1.102</h2>
-      <p class="release-date">Released February 7th, 2026</p>
+      <h2>Version 1.1.103</h2>
+      <p class="release-date">Released February 18th, 2026</p>
     </div>
     <span class="latest-badge">Latest</span>
   </div>
   <div class="change-section new-features">
     <h3><span class="section-icon">✨</span> New Features</h3>
     <ul class="change-list">
-      <li class="change-item">Added option to ignore column statistics differences - useful when source and target databases have different ANALYZE settings</li>
+      <li class="change-item"><strong>Destructive change warnings</strong> — Deployment scripts now highlight dangerous statements before you run them. Statements are classified as Destructive (e.g. DROP TABLE, DROP COLUMN) or Warning (e.g. DROP FUNCTION, DROP VIEW), with colored row styling, warning icons, summary banners, and glyph margin indicators in the SQL editor</li>
+      <li class="change-item"><strong>Hover to preview differences</strong> — Hovering over a row in the script statement list shows a floating diff popover so you can inspect the before/after SQL without leaving the screen</li>
+      <li class="change-item"><strong>Deployment script section headers</strong> — Generated scripts now group statements by object type (Tables, Views, Types, Sequences, Column Changes, Constraints, Indexes, Functions, Materialized Views, Triggers, Policies, Privileges, Drop Objects). Section headers are clickable in the statement list, and a script header shows the version, source/target database names, and timestamps. Dependency comments explain ordering for dependency-sorted objects</li>
+    </ul>
+  </div>
+  <div class="change-section bug-fixes">
+    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <ul class="change-list">
+      <li class="change-item">Select all now only toggles rows visible after filtering, and the header checkbox accurately reflects the current selection state</li>
+      <li class="change-item">Filter dropdowns no longer lose their selected value on re-render</li>
+      <li class="change-item">Filter counts exclude section header rows</li>
     </ul>
   </div>
   <a href="/downloads" class="download-link">
@@ -29,8 +39,23 @@ description: Track the evolution of PostgresCompare with detailed release notes 
       <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </svg>
-    Download Version 1.1.102
+    Download Version 1.1.103
   </a>
+</div>
+
+<div class="release">
+  <div class="release-header">
+    <div class="version-info">
+      <h2>Version 1.1.102</h2>
+      <p class="release-date">Released February 7th, 2026</p>
+    </div>
+  </div>
+  <div class="change-section new-features">
+    <h3><span class="section-icon">✨</span> New Features</h3>
+    <ul class="change-list">
+      <li class="change-item">Added option to ignore column statistics differences - useful when source and target databases have different ANALYZE settings</li>
+    </ul>
+  </div>
 </div>
 
 <div class="release">

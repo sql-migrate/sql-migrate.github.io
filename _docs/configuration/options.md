@@ -88,13 +88,6 @@ Toggle which object types are included in the comparison. Each type can be indep
 
 ## Script Options
 
-### Script Direction
-
-Choose the direction for the generated deployment script:
-
-- **X to Y** - Generate SQL to make Y match X
-- **Y to X** - Generate SQL to make X match Y
-
 ### Statement Selection
 
 After running a comparison, use the checkboxes next to each difference to select which changes to include in the generated script. This allows fine-grained control over what gets deployed.
