@@ -49,15 +49,35 @@
           url: /docs/guides/comparing-databases/#object-type-filtering
         - title: Comparison Options
           url: /docs/guides/comparing-databases/#comparison-options
+        - title: Filtering and Selecting Changes
+          url: /docs/guides/comparing-databases/#filtering-and-selecting-changes
+        - title: Global Search
+          url: /docs/guides/comparing-databases/#global-search
+        - title: Keyboard Navigation
+          url: /docs/guides/comparing-databases/#keyboard-navigation
         - title: Data Comparison
           url: /docs/guides/comparing-databases/#data-comparison
+        - title: Tracking Changes Over Time
+          url: /docs/guides/comparing-databases/#tracking-changes-over-time
     - title: Deployment Scripts
       url: /docs/guides/deployment-scripts/
       subitems:
         - title: Generating Scripts
           url: /docs/guides/deployment-scripts/#generating-scripts
-        - title: Script Direction
-          url: /docs/guides/deployment-scripts/#script-direction
+        - title: Script Structure
+          url: /docs/guides/deployment-scripts/#script-structure
+        - title: Destructive Change Warnings
+          url: /docs/guides/deployment-scripts/#destructive-change-warnings
+        - title: Previewing Differences
+          url: /docs/guides/deployment-scripts/#previewing-differences
+        - title: Pre/Post Deploy Scripts
+          url: /docs/guides/deployment-scripts/#prepost-deploy-scripts
+        - title: Selecting Statements
+          url: /docs/guides/deployment-scripts/#selecting-statements-and-dependencies
+        - title: Navigating the Statement List
+          url: /docs/guides/deployment-scripts/#navigating-the-statement-list
+        - title: Transaction Wrapping
+          url: /docs/guides/deployment-scripts/#transaction-wrapping
         - title: Direct Deployment
           url: /docs/guides/deployment-scripts/#direct-deployment
         - title: Deployment History
