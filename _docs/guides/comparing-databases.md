@@ -61,6 +61,14 @@ The results view lets you filter differences before generating a script:
 
 This makes it straightforward to select a specific subset of changes — for example, selecting only new tables while leaving function changes unselected.
 
+## Global Search
+
+Use the global search bar to find projects, environments, and comparison objects from anywhere in the app. Results are grouped by type and update as you type.
+
+## Keyboard Navigation
+
+In the difference list, use the **up/down arrow keys** to move between rows without the mouse. This makes it faster to review a long list of differences when scripting or deploying changes.
+
 ## Data Comparison
 
 In addition to schema comparison, PostgresCompare supports data comparison between databases. This allows you to identify row-level differences in table data between your X and Y environments.

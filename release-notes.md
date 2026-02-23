@@ -13,10 +13,49 @@ description: Track the evolution of PostgresCompare with detailed release notes 
 <div class="release latest">
   <div class="release-header">
     <div class="version-info">
+      <h2>Version 1.1.104</h2>
+      <p class="release-date">Released February 23rd, 2026</p>
+    </div>
+    <span class="latest-badge">Latest</span>
+  </div>
+  <div class="change-section new-features">
+    <h3><span class="section-icon">✨</span> New Features</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Pre/post deploy scripts</strong> — Add custom SQL that runs before or after the generated deployment script, editable directly in the app using Monaco editor</li>
+      <li class="change-item"><strong>Global search</strong> — Search across projects, environments, and comparison objects from anywhere in the app</li>
+      <li class="change-item"><strong>Keyboard navigation in the difference list</strong> — Use arrow keys to move through differences without the mouse</li>
+      <li class="change-item"><strong>Dependency cascade selection</strong> — Selecting a script statement automatically selects its dependencies</li>
+    </ul>
+  </div>
+  <div class="change-section improvements">
+    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <ul class="change-list">
+      <li class="change-item">Redesigned comparison card with progress bars and a breakdown of difference types</li>
+    </ul>
+  </div>
+  <div class="change-section bug-fixes">
+    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <ul class="change-list">
+      <li class="change-item">Fixed comparison panel overflowing the bottom of the screen</li>
+      <li class="change-item">Fixed arrow key expand/collapse for tree rows</li>
+      <li class="change-item">Fixed auto-updater crash on update errors</li>
+    </ul>
+  </div>
+  <a href="/downloads" class="download-link">
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Download Version 1.1.104
+  </a>
+</div>
+
+<div class="release">
+  <div class="release-header">
+    <div class="version-info">
       <h2>Version 1.1.103</h2>
       <p class="release-date">Released February 18th, 2026</p>
     </div>
-    <span class="latest-badge">Latest</span>
   </div>
   <div class="change-section new-features">
     <h3><span class="section-icon">✨</span> New Features</h3>
@@ -34,13 +73,6 @@ description: Track the evolution of PostgresCompare with detailed release notes 
       <li class="change-item">Filter counts exclude section header rows</li>
     </ul>
   </div>
-  <a href="/downloads" class="download-link">
-    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    Download Version 1.1.103
-  </a>
 </div>
 
 <div class="release">

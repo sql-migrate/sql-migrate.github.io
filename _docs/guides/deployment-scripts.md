@@ -24,7 +24,7 @@ Generated scripts include a header with metadata followed by statements grouped 
 
 ```sql
 -- PostgresCompare Deployment Script
--- Version: 1.1.103
+-- Version: 1.1.104
 -- X: production-db
 -- Y: staging-db
 -- Generated: 2026-02-18 10:30:00
@@ -78,6 +78,33 @@ A summary banner above the statement list shows the total count of destructive a
 ## Previewing Differences
 
 Hover over any row in the statement list to see a floating diff popover showing the before and after SQL side-by-side. This lets you inspect individual changes without leaving the script screen.
+
+## Pre/Post Deploy Scripts
+
+You can attach custom SQL to run before or after the generated deployment script. This is useful for pre-flight checks, disabling triggers, setting session variables, or post-deployment verification steps.
+
+To add pre/post deploy SQL, open the project and use the **Pre-Deploy** and **Post-Deploy** script editors on the Scripts tab. Both editors use Monaco with full SQL syntax highlighting. The scripts are saved with the project and included in the generated output:
+
+```sql
+-- Pre-deploy script (runs first)
+SET lock_timeout = '5s';
+
+-- PostgresCompare Deployment Script
+-- Version: 1.1.104
+-- X: production-db
+-- Y: staging-db
+-- ...
+BEGIN;
+  -- generated statements --
+COMMIT;
+
+-- Post-deploy script (runs last)
+ANALYZE public.users;
+```
+
+## Selecting Statements and Dependencies
+
+When you select a statement in the list, PostgresCompare automatically selects any statements it depends on. This prevents incomplete deployments caused by missing dependencies — for example, selecting a function that references a type will also select the type.
 
 ## Navigating the Statement List
 
@@ -141,7 +168,7 @@ ALTER TABLE public.users RENAME COLUMN username TO user_name;
 
 ## Script Templates
 
-Create reusable templates for common patterns:
+Use the built-in [pre/post deploy scripts](#prepost-deploy-scripts) to attach reusable SQL directly to your project. The examples below show common patterns you might add to your pre or post deploy scripts:
 
 ### Pre-Deployment Checks
 
