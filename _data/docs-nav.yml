@@ -27,8 +27,14 @@
       subitems:
         - title: The Results View
           url: /docs/getting-started/first-comparison/#the-results-view
+        - title: The Overview Tab
+          url: /docs/getting-started/first-comparison/#the-overview-tab
         - title: Viewing Differences
           url: /docs/getting-started/first-comparison/#viewing-differences
+        - title: SQL Line Highlighting
+          url: /docs/getting-started/first-comparison/#sql-line-highlighting
+        - title: Related Object Navigation
+          url: /docs/getting-started/first-comparison/#related-object-navigation
         - title: Object History
           url: /docs/getting-started/first-comparison/#object-history
         - title: Selecting Changes to Deploy
@@ -55,10 +61,14 @@
           url: /docs/guides/comparing-databases/#global-search
         - title: Keyboard Navigation
           url: /docs/guides/comparing-databases/#keyboard-navigation
+        - title: Re-running a Comparison
+          url: /docs/guides/comparing-databases/#re-running-a-comparison
         - title: Data Comparison
           url: /docs/guides/comparing-databases/#data-comparison
-        - title: Tracking Changes Over Time
-          url: /docs/guides/comparing-databases/#tracking-changes-over-time
+        - title: Tracking Schema Changes
+          url: /docs/guides/comparing-databases/#tracking-schema-changes-over-time
+        - title: Schema Changes Swimlane
+          url: /docs/guides/comparing-databases/#the-schema-changes-swimlane-view
     - title: Deployment Scripts
       url: /docs/guides/deployment-scripts/
       subitems:

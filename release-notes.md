@@ -13,10 +13,54 @@ description: Track the evolution of PostgresCompare with detailed release notes 
 <div class="release latest">
   <div class="release-header">
     <div class="version-info">
+      <h2>Version 1.1.105</h2>
+      <p class="release-date">Released March 2nd, 2026</p>
+    </div>
+    <span class="latest-badge">Latest</span>
+  </div>
+  <div class="change-section new-features">
+    <h3><span class="section-icon">✨</span> New Features</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Re-run comparison</strong> — Run a fresh comparison directly from the comparison detail view without navigating away. Results stream in live, and the previous comparison is preserved in the history list</li>
+      <li class="change-item"><strong>Comparison history swimlane view</strong> — Track how your schema has changed over time with a new grouped history view. Objects are organised by change category (Fixed, Regressed, New, Removed, Changed, Unchanged) with collapsible sections, count badges, and colour-coded borders</li>
+      <li class="change-item"><strong>Related object navigation</strong> — When viewing a difference, clickable chips appear showing dependencies ("Depends on") and reverse references ("Referenced by") for the selected object, colour-coded by their comparison status. Clicking a chip jumps straight to that object in the list</li>
+      <li class="change-item"><strong>SQL line highlighting</strong> — Clicking a child row (column, constraint, or property) in the differences list now scrolls the diff editor to and highlights the exact line of SQL for that sub-object</li>
+      <li class="change-item"><strong>Auto-fetch databases and schemas</strong> — Databases load automatically when a connection is selected, and schemas load when a database is chosen. The environment dropdowns have been replaced with styled Bootstrap menus matching the rest of the app</li>
+      <li class="change-item"><strong>Delete comparison confirmation</strong> — Deleting a comparison now shows a confirmation dialog. The tile fades out on confirm to give clear visual feedback</li>
+    </ul>
+  </div>
+  <div class="change-section improvements">
+    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Redesigned Overview tab</strong> — Replaced the text summary with five clickable stat cards (Total, Identical, Different, New, Dropped). Chart segments are now interactive — clicking navigates to the Objects tab with the relevant filter applied. The tab has been renamed from "Summary" to "Overview"</li>
+      <li class="change-item"><strong>Save script respects your selection</strong> — The saved .sql file now matches exactly what would be deployed, correctly applying any statements you have deselected</li>
+      <li class="change-item"><strong>Faster startup</strong> — The app loads noticeably faster through parallel API calls on launch and deferred loading of the Monaco editor (~2.5 MB removed from the critical path)</li>
+    </ul>
+  </div>
+  <div class="change-section bug-fixes">
+    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <ul class="change-list">
+      <li class="change-item">Fixed deployment executing the wrong statements when some script entries were deselected</li>
+      <li class="change-item">Fixed save script failing silently on API error — an error dialog is now shown</li>
+      <li class="change-item">Fixed the comparison toolbar scrolling out of view</li>
+      <li class="change-item">Fixed the licence modal layout where the machine ID was overlapping the activation status indicator</li>
+    </ul>
+  </div>
+  <a href="/downloads" class="download-link">
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Download Version 1.1.105
+  </a>
+</div>
+
+<div class="release">
+  <div class="release-header">
+    <div class="version-info">
       <h2>Version 1.1.104</h2>
       <p class="release-date">Released February 23rd, 2026</p>
     </div>
-    <span class="latest-badge">Latest</span>
   </div>
   <div class="change-section new-features">
     <h3><span class="section-icon">✨</span> New Features</h3>
@@ -41,13 +85,6 @@ description: Track the evolution of PostgresCompare with detailed release notes 
       <li class="change-item">Fixed auto-updater crash on update errors</li>
     </ul>
   </div>
-  <a href="/downloads" class="download-link">
-    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    Download Version 1.1.104
-  </a>
 </div>
 
 <div class="release">

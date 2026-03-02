@@ -25,6 +25,16 @@ The comparison results are displayed in a tree structure, organized by object ty
 | Different | Different between X and Y | Will be altered to match X |
 | Identical | Same in both databases | No action needed |
 
+## The Overview Tab
+
+The **Overview** tab gives you a high-level summary of a comparison at a glance. It shows:
+
+- **Stat cards** — Five clickable cards (Total, Identical, Different, New, Dropped) each showing a count. Clicking a card switches to the Objects tab with that status filter applied.
+- **By Status chart** — A doughnut chart breaking down objects by their comparison result. Click a segment to jump to the Objects tab filtered by that status.
+- **By Object Type chart** — A stacked bar chart showing the breakdown of change types per object type, sorted by total count. Click a bar segment to filter by both status and object type simultaneously.
+
+Use the Overview tab to quickly understand the shape of a comparison before diving into individual differences.
+
 ## Viewing Differences
 
 Click on any object to see its details in the right panel. PostgresCompare uses a Monaco SQL editor to display DDL, providing syntax highlighting and a familiar editing experience.
@@ -41,6 +51,30 @@ Click on any object to see its details in the right panel. PostgresCompare uses 
 - Shows a side-by-side comparison of X vs. Y definitions
 - Highlights specific differences (columns added/removed, type changes, etc.)
 - Shows the ALTER statements needed to make the changes
+
+### SQL line highlighting
+
+When you click a child row in the differences list — such as a column, constraint, or property — the diff editor automatically scrolls to and highlights the exact line of SQL for that sub-object. This makes it easy to pinpoint a specific change without manually searching through the SQL.
+
+### Related object navigation
+
+When a difference is selected, clickable chips appear in the diff viewer header showing the selected object's dependencies and reverse references:
+
+- **Depends on** — objects this one references (e.g. a trigger's parent table and function, a view's referenced tables)
+- **Referenced by** — objects that reference this one (e.g. indexes and foreign keys on a table)
+
+Each chip is colour-coded to match the object's comparison status:
+
+| Colour | Status |
+|--------|--------|
+| Amber | Different |
+| Blue | New |
+| Red | Dropped |
+| Green | Identical |
+
+Click a chip to select that object in the differences list and scroll to it. Objects that don't appear in the comparison are shown as dimmed, non-clickable chips.
+
+This makes it straightforward to trace the impact of a change — for example, clicking a table chip from a trigger to review what other objects depend on it.
 
 ## Object History
 

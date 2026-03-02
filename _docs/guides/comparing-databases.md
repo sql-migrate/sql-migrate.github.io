@@ -82,9 +82,42 @@ For databases with thousands of objects:
 1. **Use schema filters** - Compare only relevant schemas
 2. **Limit object types** - Disable types you don't need
 
-## Tracking Changes Over Time
+## Re-running a Comparison
 
-PostgresCompare provides an object history viewer that tracks how database objects change across comparisons. This gives you a development history for your schema, independent of version control.
+The **Re-run comparison** button in the comparison toolbar starts a fresh comparison without leaving the current view. This is useful when you've made changes to a database and want to see whether a difference has been resolved.
+
+- Results stream in live as the new comparison runs
+- The toolbar button is disabled while a comparison is in progress
+- The previous comparison is preserved in the history list — navigating away and back will not lose it
+- If you navigate to a different comparison while a re-run is in progress, polling is cancelled automatically
+
+## Tracking Schema Changes Over Time
+
+PostgresCompare records every comparison, letting you see how your schema has evolved across runs. To view schema changes between two snapshots:
+
+1. From the comparisons list, select two comparisons using the checkboxes
+2. Click the **Schema Changes** button that appears
+
+### The schema changes swimlane view
+
+The schema changes view groups database objects by how they changed between the two selected comparisons:
+
+| Category | Meaning |
+|----------|---------|
+| **Fixed** | Was different or missing; now identical |
+| **Regressed** | Was identical; now different or missing |
+| **New** | Appeared for the first time |
+| **Removed** | No longer present |
+| **Changed** | Different in both snapshots, but the difference changed |
+| **Unchanged** | No change between the two snapshots |
+
+Each category is a collapsible section with a count badge and a colour-coded left border. A date range header shows the time span between the two comparisons. Use the name filter to search within the view.
+
+This makes it easy to spot regressions — for example, catching a table that was identical in an earlier comparison but has drifted since a recent deployment.
+
+### Object history viewer
+
+Click any object in the differences list and open the history tab to see that specific object's changes across all comparisons. This gives you a per-object development timeline independent of version control.
 
 ## Next Steps
 
