@@ -24,7 +24,7 @@ Generated scripts include a header with metadata followed by statements grouped 
 
 ```sql
 -- PostgresCompare Deployment Script
--- Version: 1.1.104
+-- Version: 1.1.106
 -- X: production-db
 -- Y: staging-db
 -- Generated: 2026-02-18 10:30:00
@@ -83,14 +83,16 @@ Hover over any row in the statement list to see a floating diff popover showing 
 
 You can attach custom SQL to run before or after the generated deployment script. This is useful for pre-flight checks, disabling triggers, setting session variables, or post-deployment verification steps.
 
-To add pre/post deploy SQL, open the project and use the **Pre-Deploy** and **Post-Deploy** script editors on the Scripts tab. Both editors use Monaco with full SQL syntax highlighting. The scripts are saved with the project and included in the generated output:
+To add pre/post deploy SQL, open the project and use the **Pre-Deploy** and **Post-Deploy** script editors on the Scripts tab. Both editors use Monaco with full SQL syntax highlighting. The scripts are saved with the project and included in the generated output.
+
+Pre and post deploy scripts also appear as entries in the **statement list** alongside the generated changes. Each has its own include/exclude checkbox, so you can toggle them independently. When a script entry is unchecked, its section headers and dependency comments are suppressed automatically, and the deployment will execute exactly what the list shows.
 
 ```sql
 -- Pre-deploy script (runs first)
 SET lock_timeout = '5s';
 
 -- PostgresCompare Deployment Script
--- Version: 1.1.104
+-- Version: 1.1.106
 -- X: production-db
 -- Y: staging-db
 -- ...
@@ -119,9 +121,11 @@ Scripts can be wrapped in a transaction block (BEGIN/COMMIT) so that all changes
 In addition to generating SQL scripts, PostgresCompare can deploy changes directly to the target database:
 
 1. Review and select the changes to deploy
-2. Click the **Deploy** button
-3. Monitor deployment progress in the progress tracker
-4. Review the deployment results
+2. Click **Run script…** in the toolbar
+3. Review the confirmation dialog — it shows the target connection and database, and highlights any **Destructive** (red) or **Warning** (amber) statements in the script. The Run button turns red when destructive changes are present.
+4. Click **Run script** to confirm and execute
+5. Monitor deployment progress in the progress tracker
+6. Review the deployment results
 
 Direct deployment provides real-time progress tracking and immediate feedback on success or failure.
 

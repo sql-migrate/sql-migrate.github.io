@@ -61,6 +61,12 @@ The results view lets you filter differences before generating a script:
 
 This makes it straightforward to select a specific subset of changes — for example, selecting only new tables while leaving function changes unselected.
 
+## Starring Comparisons
+
+Mark comparisons as favourites by clicking the **star icon** on a comparison tile. The star appears on hover and turns amber when active. To show only starred comparisons, click the **Starred** filter toggle in the comparisons toolbar.
+
+This is useful for pinning the comparisons you return to regularly — for example, your main dev-to-production check — so they are easy to find in a busy project.
+
 ## Global Search
 
 Use the global search bar to find projects, environments, and comparison objects from anywhere in the app. Results are grouped by type and update as you type.
@@ -68,6 +74,21 @@ Use the global search bar to find projects, environments, and comparison objects
 ## Keyboard Navigation
 
 In the difference list, use the **up/down arrow keys** to move between rows without the mouse. This makes it faster to review a long list of differences when scripting or deploying changes.
+
+## Exporting Comparison Results
+
+Export comparison results from the comparison details panel. Click the **Export** button and choose a format:
+
+| Format | Description |
+|--------|-------------|
+| **Excel** | Spreadsheet with a Summary sheet (including a doughnut chart) and a per-object data sheet |
+| **HTML** | Self-contained file with clickable status filter pills and sortable column headers |
+| **PDF** | Print-ready document generated from the HTML report |
+| **JSON** | Machine-readable export; a companion `.schema.json` file is written alongside for CI/CD validation |
+| **Markdown** | Plain-text table format for pasting into wikis or pull requests |
+| **CSV** | Simple comma-separated values for spreadsheet import |
+
+The export options modal lets you choose which status categories to include. **Identical** objects are unchecked by default to keep exports focused on differences. Filenames default to the source and target database names plus the date (e.g. `devDb_vs_prodDb_2026-03-08.xlsx`).
 
 ## Data Comparison
 

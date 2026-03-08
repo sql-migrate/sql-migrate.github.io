@@ -264,6 +264,10 @@ PostgresCompare provides several features that support safe deployment workflows
 
 The script screen automatically classifies every statement by risk level. **Destructive** statements (e.g. `DROP TABLE`, `DROP COLUMN`) and **Warning** statements (e.g. `DROP FUNCTION`, `DROP VIEW`) are highlighted with colored rows, warning icons, and glyph margin indicators in the SQL editor. A summary banner shows the total count at a glance so nothing is missed before you deploy.
 
+### Deploy Confirmation Dialog
+
+Clicking **Run script…** shows a confirmation modal before any SQL is executed. The dialog displays the target connection name and database, and summarises the number of destructive and warning statements in the script. The Run button turns red when destructive changes are present, making it harder to deploy accidentally. This gives you one final checkpoint to verify the right database is selected and the risk level is acceptable.
+
 ### Hover to Preview Differences
 
 Hover over any row in the statement list to see a floating diff popover with the before and after SQL. Use this to quickly verify each change looks correct without having to switch screens.
