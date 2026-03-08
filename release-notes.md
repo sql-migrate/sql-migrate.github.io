@@ -13,10 +13,53 @@ description: Track the evolution of PostgresCompare with detailed release notes 
 <div class="release latest">
   <div class="release-header">
     <div class="version-info">
+      <h2>Version 1.1.106</h2>
+      <p class="release-date">Released March 8th, 2026</p>
+    </div>
+    <span class="latest-badge">Latest</span>
+  </div>
+  <div class="change-section new-features">
+    <h3><span class="section-icon">✨</span> New Features</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Star / favourite comparisons</strong> — Mark comparisons as favourites by clicking the star icon on a comparison tile. Starred comparisons show an amber star and can be filtered to the top of the list with a single click on the toolbar toggle</li>
+      <li class="change-item"><strong>Deploy confirmation dialog</strong> — Clicking "Run script…" now shows a confirmation modal displaying the target connection and database before executing. Destructive statements are highlighted in red and warnings in amber, and the Run button itself turns red when the script contains destructive changes</li>
+      <li class="change-item"><strong>Export reports</strong> — Export comparison results in multiple formats: Excel (with a doughnut-chart summary sheet), HTML (with clickable status filter pills and sortable columns), PDF, JSON, Markdown, and CSV. Filenames default to the database names and date (e.g. <em>devDb_vs_prodDb_2026-03-08.xlsx</em>). A companion <code>.schema.json</code> is written alongside JSON exports for CI/CD validation. The export options modal defaults "Identical" objects to unchecked</li>
+    </ul>
+  </div>
+  <div class="change-section improvements">
+    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Pre/post deploy scripts in statement list</strong> — Pre- and post-deploy scripts now appear as entries in the deployment statement list with include/exclude checkboxes. Section headers and dependency comments are suppressed automatically when their associated change is excluded, and the deployment execution matches exactly what the list shows</li>
+      <li class="change-item"><strong>Faster script generation</strong> — The dependency-ordering algorithm has been replaced with Kahn's O(V+E) topological sort, eliminating the previous O(n³) approach. The script page now shows shimmer skeleton loaders on both panels while the draft is being generated</li>
+      <li class="change-item"><strong>Cleaner script section headers</strong> — Drop operations now use the same "Type name" heading format as creates. Indexes, triggers, and policies each get their own per-item section header rather than being grouped under a parent table heading</li>
+    </ul>
+  </div>
+  <div class="change-section bug-fixes">
+    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <ul class="change-list">
+      <li class="change-item">Fixed "Select all" / "Deselect all" not toggling pre/post deploy scripts</li>
+      <li class="change-item">Fixed syntax errors when a column, index, or other identifier is named a PostgreSQL reserved keyword (e.g. <code>order</code>)</li>
+      <li class="change-item">Fixed aggregate scripting to include the argument type in <code>CREATE AGGREGATE</code> and <code>ALTER AGGREGATE</code> statements</li>
+      <li class="change-item">Fixed deployment script ordering for materialized views, corrected index expression parsing for multi-argument expressions such as <code>COALESCE(a, b)</code>, and fixed <code>character[]</code> function arguments being rendered as <code>haracter []</code></li>
+      <li class="change-item">Fixed the Monaco diff editor failing to initialise in the comparison history viewer</li>
+      <li class="change-item">Fixed a false "stale comparison" warning appearing when it should not</li>
+    </ul>
+  </div>
+  <a href="/downloads" class="download-link">
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Download Version 1.1.106
+  </a>
+</div>
+
+<div class="release">
+  <div class="release-header">
+    <div class="version-info">
       <h2>Version 1.1.105</h2>
       <p class="release-date">Released March 2nd, 2026</p>
     </div>
-    <span class="latest-badge">Latest</span>
   </div>
   <div class="change-section new-features">
     <h3><span class="section-icon">✨</span> New Features</h3>
@@ -46,13 +89,6 @@ description: Track the evolution of PostgresCompare with detailed release notes 
       <li class="change-item">Fixed the licence modal layout where the machine ID was overlapping the activation status indicator</li>
     </ul>
   </div>
-  <a href="/downloads" class="download-link">
-    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    Download Version 1.1.105
-  </a>
 </div>
 
 <div class="release">
