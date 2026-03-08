@@ -57,12 +57,16 @@
           url: /docs/guides/comparing-databases/#comparison-options
         - title: Filtering and Selecting Changes
           url: /docs/guides/comparing-databases/#filtering-and-selecting-changes
+        - title: Starring Comparisons
+          url: /docs/guides/comparing-databases/#starring-comparisons
         - title: Global Search
           url: /docs/guides/comparing-databases/#global-search
         - title: Keyboard Navigation
           url: /docs/guides/comparing-databases/#keyboard-navigation
         - title: Re-running a Comparison
           url: /docs/guides/comparing-databases/#re-running-a-comparison
+        - title: Exporting Results
+          url: /docs/guides/comparing-databases/#exporting-comparison-results
         - title: Data Comparison
           url: /docs/guides/comparing-databases/#data-comparison
         - title: Tracking Schema Changes
@@ -113,6 +117,8 @@
           url: /docs/guides/safe-deployments/#rollback-planning
         - title: Monitoring Deployments
           url: /docs/guides/safe-deployments/#monitoring-deployments
+        - title: Deploy Confirmation Dialog
+          url: /docs/guides/safe-deployments/#deploy-confirmation-dialog
 
 - title: Configuration
   items:
