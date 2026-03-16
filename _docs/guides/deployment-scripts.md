@@ -64,6 +64,41 @@ COMMIT;
 
 Sections appear only when the script contains objects of that type. Dependency comments (`-- depends on`, `-- required by`) explain the ordering of dependency-sorted objects.
 
+## Progress Logging
+
+PostgresCompare injects `RAISE NOTICE` statements into the generated script after each DDL change, and a final notice when the migration completes. This means that when the script is run — whether through the app or externally via psql or another client — you get progress output as each change executes:
+
+```sql
+/*** Tables ***/
+
+CREATE TABLE public.audit_log (
+    id SERIAL PRIMARY KEY,
+    action VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+DO $$ BEGIN RAISE NOTICE '[✓] % | public.audit_log | create table', clock_timestamp()::time; END $$;
+
+/*** Column Changes ***/
+
+ALTER TABLE public.users ADD COLUMN last_login TIMESTAMP;
+DO $$ BEGIN RAISE NOTICE '[✓] % | public.users | alter table', clock_timestamp()::time; END $$;
+
+DO $$ BEGIN RAISE NOTICE '[>>] Migration complete at %', clock_timestamp()::time; END $$;
+COMMIT;
+```
+
+When run via psql or another client, the output looks like:
+
+```
+NOTICE:  [✓] 14:23:05.123 | public.audit_log | create table
+NOTICE:  [✓] 14:23:05.456 | public.users | alter table
+NOTICE:  [>>] Migration complete at 14:23:05.789
+```
+
+Progress logging is **on by default**. To turn it off, use the toggle in the script toolbar — the script is re-drafted immediately when the setting changes. Progress notices follow statement selection: if a DDL statement is deselected, its corresponding notice is excluded from the script automatically.
+
+When deploying directly through PostgresCompare, NOTICE output is captured and displayed in the running deployment modal alongside the statement-by-statement progress list.
+
 ## Destructive Change Warnings
 
 Before you run a script, PostgresCompare classifies every statement by risk level and surfaces warnings in the UI:
@@ -127,7 +162,7 @@ In addition to generating SQL scripts, PostgresCompare can deploy changes direct
 5. Monitor deployment progress in the progress tracker
 6. Review the deployment results
 
-Direct deployment provides real-time progress tracking and immediate feedback on success or failure.
+Direct deployment provides real-time progress tracking with per-statement logging — each statement is listed as it executes, with its result. This makes it straightforward to see exactly where a deployment is, and to identify which statement caused a failure if something goes wrong.
 
 ## Deployment History
 

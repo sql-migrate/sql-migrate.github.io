@@ -52,6 +52,14 @@ Click on any object to see its details in the right panel. PostgresCompare uses 
 - Highlights specific differences (columns added/removed, type changes, etc.)
 - Shows the ALTER statements needed to make the changes
 
+### Changes tab
+
+The **Changes tab** provides a human-readable summary of what changed between the X and Y definitions. Instead of reading raw DDL, you see a structured breakdown: which columns were added or removed, which constraints changed, and so on. Switch between the Changes tab and the SQL diff tab depending on whether you want a plain-English summary or the full DDL comparison.
+
+### Diff editor navigation
+
+The SQL diff editor includes a **navigator** panel that lists each changed section and lets you jump between them without scrolling. Use the **word wrap** toggle in the editor toolbar to wrap long lines — useful for function bodies and complex DDL.
+
 ### SQL line highlighting
 
 When you click a child row in the differences list — such as a column, constraint, or property — the diff editor automatically scrolls to and highlights the exact line of SQL for that sub-object. This makes it easy to pinpoint a specific change without manually searching through the SQL.

@@ -56,6 +56,7 @@ Fine-tune how objects are compared using the 10 ignore toggles:
 The results view lets you filter differences before generating a script:
 
 - Use the filter dropdowns to narrow results by object type, change type, or schema
+- Use the **name filter** on any object type column to search within that type — for example, showing only tables whose names contain a specific term, without affecting other object types in the list
 - The **select all** checkbox in the header toggles only the rows currently visible after filtering — rows hidden by a filter are not affected
 - The header checkbox reflects the actual selection state of visible rows and updates as filters change
 

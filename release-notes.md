@@ -13,10 +13,42 @@ description: Track the evolution of PostgresCompare with detailed release notes 
 <div class="release latest">
   <div class="release-header">
     <div class="version-info">
+      <h2>Version 1.1.107</h2>
+      <p class="release-date">Released March 16th, 2026</p>
+    </div>
+    <span class="latest-badge">Latest</span>
+  </div>
+  <div class="change-section new-features">
+    <h3><span class="section-icon">✨</span> New Features</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Changes tab</strong> — A new Changes tab sits alongside the SQL diff view and shows a human-readable summary of what changed: which columns were added or removed, which constraints were modified, and so on. Switch between the Changes tab and the SQL view depending on whether you want a plain-English summary or the full DDL comparison</li>
+      <li class="change-item"><strong>Deployment progress logging</strong> — Generated scripts now include timestamped <code>RAISE NOTICE</code> statements after each DDL change (e.g. <code>[✓] 14:23:05 | public.users | alter table</code>) and a <code>[>>] Migration complete at …</code> notice at the end. Progress output is visible in any client — psql, DataGrip, or similar — and NOTICE output is captured and displayed in the in-app deployment modal. The toggle is on by default and can be disabled from the script toolbar; notices follow statement selection so deselecting a change also removes its notice</li>
+      <li class="change-item"><strong>Name filters</strong> — Each object type in the comparison list now has its own name filter. Type to show only objects whose names match within that type — for example, showing only tables containing "order" — without affecting other object types in the list</li>
+      <li class="change-item"><strong>Create database</strong> — PostgresCompare can now create a new PostgreSQL database directly from within the app. Open an environment and click <strong>Create database</strong> to create a database on that server without leaving the app</li>
+    </ul>
+  </div>
+  <div class="change-section improvements">
+    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Diff editor: navigator and word wrap</strong> — The SQL diff editor now includes a navigator panel listing each changed section for quick jumping, and a word wrap toggle in the toolbar for long lines such as function bodies</li>
+      <li class="change-item"><strong>Cleaner object list</strong> — Value columns have been removed from the comparison list and the schema column is collapsed by default, giving more room for object names and making the list easier to scan</li>
+    </ul>
+  </div>
+  <a href="/downloads" class="download-link">
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Download Version 1.1.107
+  </a>
+</div>
+
+<div class="release">
+  <div class="release-header">
+    <div class="version-info">
       <h2>Version 1.1.106</h2>
       <p class="release-date">Released March 8th, 2026</p>
     </div>
-    <span class="latest-badge">Latest</span>
   </div>
   <div class="change-section new-features">
     <h3><span class="section-icon">✨</span> New Features</h3>
@@ -45,13 +77,6 @@ description: Track the evolution of PostgresCompare with detailed release notes 
       <li class="change-item">Fixed a false "stale comparison" warning appearing when it should not</li>
     </ul>
   </div>
-  <a href="/downloads" class="download-link">
-    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    Download Version 1.1.106
-  </a>
 </div>
 
 <div class="release">

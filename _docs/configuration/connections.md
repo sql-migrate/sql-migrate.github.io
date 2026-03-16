@@ -130,6 +130,16 @@ Use the Cloud SQL Auth Proxy for secure connections, or configure SSL certificat
 | Database | `<dbname>` |
 | SSL Mode | `require` |
 
+## Creating a Database
+
+PostgresCompare can create a new PostgreSQL database directly from within the app. To create a database:
+
+1. Open an environment and click **Create database**
+2. Enter the new database name
+3. Click **Create**
+
+The database is created on the server the environment connects to. This is useful when setting up a new comparison target — for example, creating a blank staging database before deploying a schema to it.
+
 ## Troubleshooting Connections
 
 ### Connection Refused

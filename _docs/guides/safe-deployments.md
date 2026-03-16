@@ -274,7 +274,7 @@ Hover over any row in the statement list to see a floating diff popover with the
 
 ### Direct Deployment with Progress Tracking
 
-Use the **Deploy** button to apply changes directly to the target database. PostgresCompare provides real-time progress tracking so you can monitor each statement as it executes.
+Use the **Deploy** button to apply changes directly to the target database. PostgresCompare logs each statement as it executes, showing a real-time progress list with the result of each step. If a statement fails, you can see immediately which one caused the issue and what the error was.
 
 ### Deployment History
 
