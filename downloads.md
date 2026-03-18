@@ -1,6 +1,6 @@
 ---
-title: Download PostgresCompare - Free 30-Day Trial
-description: Download PostgresCompare for Windows, macOS, or Linux. Start your free 30-day trial today with full access to all features.
+title: "Download PostgresCompare — Free 30-Day Trial | Windows, Mac, Linux"
+description: "Download PostgresCompare and start comparing PostgreSQL schemas in minutes. No credit card required. Works with PostgreSQL 9.2 through 18."
 ---
 
 <section class="page-hero">

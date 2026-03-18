@@ -1,6 +1,6 @@
 ---
-title: FAQ - PostgresCompare
-description: Frequently asked questions about PostgresCompare. Get answers to common questions about installation, licensing, and troubleshooting.
+title: "PostgresCompare FAQ — Common Questions Answered"
+description: "How does PostgresCompare work? What PostgreSQL versions are supported? Is my data secure? Answers to frequently asked questions."
 ---
 
 <section class="page-hero">

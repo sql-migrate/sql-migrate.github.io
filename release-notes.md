@@ -1,6 +1,6 @@
 ---
-title: Release Notes - PostgresCompare
-description: Track the evolution of PostgresCompare with detailed release notes and version history.
+title: "PostgresCompare Release Notes — Latest Updates & Features"
+description: "See what's new in PostgresCompare. Detailed changelog covering new features, improvements, and bug fixes for every release."
 ---
 
 <section class="page-hero">

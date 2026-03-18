@@ -1,6 +1,6 @@
 ---
-title: Purchase - PostgresCompare
-description: Purchase your PostgresCompare subscription. Choose monthly or annual billing with full access to all features.
+title: "PostgresCompare Pricing — $14.95/month or $149.95/year"
+description: "Simple, transparent pricing for PostgreSQL schema comparison. Monthly or annual plans. Instant access, cancel anytime. Volume discounts available."
 ---
 
 <script src="https://js.stripe.com/v3"></script>

@@ -1,8 +1,8 @@
 ---
 layout: post
 published: false
-title: "Redgate pgCompare vs PostgresCompare"
-excerpt: "Redgate pgCompare is a new PostgreSQL schema comparison tool from the team behind SQL Compare. PostgresCompare is a dedicated schema comparison product built specifically for PostgreSQL. Here's how they compare."
+title: "PostgresCompare vs Redgate pgCompare"
+excerpt: "Both tools compare PostgreSQL schemas. One deploys directly with safety checks and runs 100% locally. See the full feature and pricing comparison."
 ---
 
 Redgate built SQL Compare into the de facto standard for SQL Server schema comparison. It's a trusted tool across a huge number of enterprise teams. In 2024 they launched pgCompare — a PostgreSQL equivalent, available in a free Community edition and a paid Standard edition.

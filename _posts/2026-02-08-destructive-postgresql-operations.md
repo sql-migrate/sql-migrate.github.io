@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Destructive PostgreSQL Operations: A Reference Guide"
-excerpt: "A comprehensive reference of PostgreSQL operations that can cause data loss or service outages, and safer alternatives."
+title: "How to Safely Deploy PostgreSQL Schema Changes"
+excerpt: "DROP TABLE and DROP COLUMN can destroy data instantly. A reference guide to destructive PostgreSQL operations, their risks, and safer alternatives."
 ---
 
 When working with PostgreSQL schema migrations, understanding which operations are destructive is critical. This reference guide documents operations that can cause **data loss** or **service outages**, helping you review deployment scripts with confidence.
