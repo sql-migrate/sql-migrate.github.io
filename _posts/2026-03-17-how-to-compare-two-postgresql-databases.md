@@ -8,6 +8,8 @@ Comparing two PostgreSQL databases is one of the most common tasks in database d
 
 There are three practical approaches: a dedicated schema comparison tool, pgAdmin's built-in Schema Diff, or exporting schemas with `pg_dump` and diffing the output. Each fits a different situation.
 
+If you don't have two live databases available — for example, you only have a schema dump from a backup, or you store your schema as SQL files in version control — skip to the note on [file-based comparison](#comparing-against-a-file) below.
+
 ## Method 1: PostgresCompare (Recommended for Regular Use)
 
 PostgresCompare connects directly to both databases, compares their schemas, and shows you a structured list of every difference — objects that exist only on one side, and objects that differ between the two. From there you can generate a deployment script to bring them in sync.
@@ -38,6 +40,14 @@ Click any object in the list to see a side-by-side SQL diff showing exactly what
 Select the changes you want to deploy using the checkboxes. Click **Generate Script** to produce a dependency-ordered SQL script. The script includes `RAISE NOTICE` progress statements so you can monitor execution. Destructive statements (`DROP TABLE`, `DROP COLUMN`) are flagged in red so nothing gets missed.
 
 PostgresCompare runs entirely on your machine. Neither database connection nor schema data is sent anywhere.
+
+### Comparing against a file {#comparing-against-a-file}
+
+If you don't have a second live database, you can use a SQL file as either side of a comparison instead of a connection. When creating the project, select **SQL File** as the source type for that environment and browse to a `.sql` file or a folder of SQL files.
+
+PostgresCompare accepts pg_dump plain-text output, binary pg_dump format (converted automatically via `pg_restore` if it is on your PATH), and folders containing multiple SQL files. The comparison runs exactly as it would for two live databases — the same results list, the same script generation, the same deployment workflow.
+
+This replaces the need for the manual `pg_dump` + `diff` approach described in Method 3 below, with the added benefit of structured results and a deployment path.
 
 ---
 
@@ -128,7 +138,8 @@ diff --unified schema_a_sorted.sql schema_b_sorted.sql | less
 
 | Method | Best for | Limitations |
 |--------|----------|-------------|
-| PostgresCompare | Regular comparisons, deployments, team workflows | Paid (30-day free trial) |
+| PostgresCompare (live DB) | Regular comparisons, deployments, team workflows | Paid (30-day free trial) |
+| PostgresCompare (SQL file) | No second live DB, version-controlled schemas, backups | Paid (30-day free trial) |
 | pgAdmin Schema Diff | Quick checks, already using pgAdmin | No history, manual deployment, limited object types |
 | pg_dump + diff | One-off checks, scripting, no GUI | Noisy output, no deployment path, ordering issues |
 

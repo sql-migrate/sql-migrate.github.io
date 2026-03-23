@@ -20,6 +20,12 @@ It's a useful tool for one-off comparisons in a familiar interface.
 
 ## The Comparison, Feature by Feature
 
+### Comparison sources
+
+pgAdmin Schema Diff requires two live database connections — both databases must be accessible at the time of comparison. There is no way to compare against a schema file or a snapshot.
+
+PostgresCompare supports live databases and **SQL files** as sources. Either side of a comparison can be a live database or a SQL file — including pg_dump output, hand-written SQL, or a folder of migration scripts. This means you can compare a live production database against a schema stored in version control, audit a backup dump without needing a running server, or work offline when a direct connection isn't available.
+
 ### Schema diff basics
 
 Both tools compare two PostgreSQL schemas and produce a list of differences. pgAdmin covers the most common object types — tables, functions, views, and a handful of others. PostgresCompare supports 38 object types, including less common ones like event triggers, foreign data wrappers, publications, subscriptions, operator families, and text search configuration objects.
@@ -86,6 +92,7 @@ PostgresCompare can export results in six formats: Excel (with a summary sheet a
 |---------|---------------------|-----------------|
 | Basic diff | Yes | Yes |
 | Object types | Limited | 38 |
+| SQL file / pg_dump as source | No | Yes |
 | Readable diff summary | No | Yes (Changes tab, 1.1.107) |
 | Projects and organisation | No | Yes |
 | Starred comparisons | No | Yes |
