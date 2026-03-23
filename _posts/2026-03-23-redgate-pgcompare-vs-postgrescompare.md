@@ -16,6 +16,8 @@ pgCompare covers the comparison fundamentals: connect to two PostgreSQL database
 
 The Community edition is free, with no revenue limit for students, educators, and open-source projects (and a generous threshold for small businesses). For teams that need a no-cost comparison tool and are comfortable running SQL scripts manually, that's a reasonable starting point.
 
+Using pgCompare requires a Redgate account. You sign up on the Redgate website before downloading, and the application authenticates against Redgate's servers on first use. PostgresCompare has no account requirement — download, install, and run.
+
 It runs on Windows, macOS, and Linux.
 
 <!-- SCREENSHOT: Redgate pgCompare main diff view — two databases selected, list of differences shown, SQL diff panel on the right -->
