@@ -22,9 +22,15 @@ It runs on Windows, macOS, and Linux.
 
 ## The Comparison, Feature by Feature
 
+### Comparison sources
+
+pgCompare requires two live PostgreSQL database connections. There is no way to compare against a schema file or snapshot — both sides must be live at the time of comparison. Redgate's roadmap lists Snapshots support (using a Redgate Snapshot file as a source or target) as a planned Standard edition feature, but it is not yet available.
+
+PostgresCompare supports live database connections and **pg_dump SQL files** as sources. Either side of a comparison — X or Y — can be a live database or a pg_dump file imported from disk. This means you can compare a live database against a schema dump taken at a point in time, compare two dump files directly, or use a dump as a baseline when you don't have access to a second live environment. The project settings include a toggle between "live database" and "SQL file" per environment.
+
 ### Schema diff basics
 
-Both tools compare two live PostgreSQL databases and produce a list of schema differences. pgCompare covers the most common object types — tables, views, functions, sequences, indexes, triggers, constraints, and procedures. PostgresCompare supports 38 object types, including less common ones like event triggers, foreign data wrappers, publications, subscriptions, operator families, and text search configuration objects.
+Both tools compare PostgreSQL schemas and produce a list of differences. pgCompare covers the most common object types — tables, views, functions, sequences, indexes, triggers, constraints, and procedures. PostgresCompare supports 38 object types, including less common ones like event triggers, foreign data wrappers, publications, subscriptions, operator families, and text search configuration objects.
 
 For most comparisons this won't matter. For teams managing complex schemas the broader coverage is useful.
 
@@ -48,7 +54,7 @@ PostgresCompare organises work into projects, each containing named comparisons.
 
 pgCompare has no history. Each session starts fresh.
 
-PostgresCompare records every comparison automatically. You can select any two historical runs and view a swimlane showing how objects moved between states — which differences were fixed, which are new, which have changed since the last run. Individual objects have their own history tab showing how that specific object changed across all comparisons. This makes it straightforward to track schema drift over time and to verify that a deployment had exactly the intended effect.
+PostgresCompare records every comparison automatically. You can select any two historical runs and view a swimlane showing how objects moved between states — which differences were fixed, which are new, which have changed since the last run. Individual objects have their own history tab, redesigned in 1.2 with a timeline view and a Changes tab showing a plain-English summary of how that object evolved across comparisons. This makes it straightforward to track schema drift over time and to verify that a deployment had exactly the intended effect.
 
 ### Dependency tracking
 
@@ -84,6 +90,7 @@ PostgresCompare can export comparison results in six formats today: Excel (with 
 |---------|-------------------|-----------------|
 | Basic diff | Yes | Yes |
 | Object types | Common types | 38 |
+| pg_dump / file as source | No (Snapshots on roadmap) | Yes |
 | Readable diff summary | No | Yes (Changes tab, 1.1.107) |
 | Free edition | Yes (Community) | 30-day trial |
 | Projects and organisation | No | Yes |
@@ -110,6 +117,7 @@ PostgresCompare can export comparison results in six formats today: Excel (with 
 
 - You deploy schema changes regularly and need safety checks built into the process
 - You manage multiple databases or environments and need persistent, organised comparisons
+- You want to compare against a pg_dump file rather than a live database — for offline comparison, CI pipelines, or point-in-time baselines
 - You want to track schema changes over time and catch regressions
 - You need to share comparison reports with the team or produce audit trails
 - You want a tool that covers the full range of PostgreSQL object types
