@@ -15,6 +15,28 @@ PostgresCompare compares two live PostgreSQL databases. Common scenarios include
 - Comparing feature branches
 - Auditing database drift
 
+## Comparing Against a pg_dump File
+
+Instead of connecting to two live databases, you can use a pg_dump SQL file or a folder of SQL files as the source or target for a comparison. This is useful when:
+
+- You store schema definitions in version control and want to compare a committed snapshot against a live database
+- You want to audit a schema without needing a live connection
+- You are working in an environment where only a database export is available
+
+### Setting up a file-based comparison
+
+When creating a new project, select **SQL File** or **Folder** as the source type for either side instead of choosing an environment. Browse to a `.sql` file exported by `pg_dump`, or to a folder containing multiple SQL files.
+
+PostgresCompare accepts:
+
+| Format | Notes |
+|--------|-------|
+| Plain SQL (`pg_dump --format=plain`) | Used directly |
+| Binary pg_dump (`pg_dump --format=custom` or `--format=directory`) | Converted via `pg_restore` automatically — `pg_restore` must be on your PATH |
+| Folder of SQL files | All `.sql` files in the folder are parsed and merged |
+
+The comparison then runs exactly as it would for two live databases — differences are listed, scripts can be generated, and exports work the same way.
+
 ## Schema Filtering
 
 By default, PostgresCompare compares all schemas. To focus on specific schemas, use the schema pairing options:
@@ -36,7 +58,7 @@ Filter which object types are compared in the project settings. PostgresCompare 
 
 ## Comparison Options
 
-Fine-tune how objects are compared using the 10 ignore toggles:
+Fine-tune how objects are compared using the 10 ignore toggles. The options that were active when a comparison ran are saved with the result — click the **info icon** next to the Re-run comparison button to review them at any time.
 
 | Option | Default | Description |
 |--------|---------|-------------|
@@ -140,6 +162,10 @@ This makes it easy to spot regressions — for example, catching a table that wa
 ### Object history viewer
 
 Click any object in the differences list and open the history tab to see that specific object's changes across all comparisons. This gives you a per-object development timeline independent of version control.
+
+The history viewer shows a vertical timeline with colour-coded indicator dots and relative timestamps (e.g. "2 hours ago"). Selecting an entry loads the Monaco diff editor with the older version on the left and the newer version on the right, labelled with their dates. For objects that were created or deleted, a single-panel view with a contextual banner is shown instead of an empty diff.
+
+The **Changes tab** alongside the diff panel gives a plain-English description of what changed — for example, "column `price` changed from `numeric(10,2)` to `numeric(12,4)`" — without needing to read raw SQL.
 
 ## Next Steps
 

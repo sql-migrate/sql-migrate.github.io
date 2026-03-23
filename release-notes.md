@@ -13,10 +13,43 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 <div class="release latest">
   <div class="release-header">
     <div class="version-info">
+      <h2>Version 1.2.0</h2>
+      <p class="release-date">Released March 23rd, 2026</p>
+    </div>
+    <span class="latest-badge">Latest</span>
+  </div>
+  <div class="change-section new-features">
+    <h3><span class="section-icon">✨</span> New Features</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>pg_dump / SQL file import</strong> — Compare one or both sides of a comparison against a pg_dump file or folder instead of a live database connection. PostgresCompare accepts plain SQL pg_dump output and binary pg_dump format (automatically converted via <code>pg_restore</code> if it is on your PATH). You can also point to a folder containing multiple SQL files. This is useful for auditing schema definitions stored in version control, comparing a snapshot against a live database, or working in environments where a direct connection is not available</li>
+      <li class="change-item"><strong>Comparison options saved per result</strong> — The ignore flags, object type filters, name filters, and pre/post deploy script settings that were active when a comparison ran are now stored with the result. Click the <strong>info icon</strong> next to the Re-run comparison button to see exactly which options produced a given result</li>
+    </ul>
+  </div>
+  <div class="change-section improvements">
+    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>History viewer timeline</strong> — The schema history view has been redesigned as a vertical timeline with colour-coded indicator dots, relative timestamps (e.g. "2 hours ago"), and automatic selection of the most recent entry. The Monaco diff editor now shows the correct direction (older version on the left, newer on the right) and labels each side with its date. For objects that were created or deleted, a single editor with a contextual banner is shown instead of a blank diff panel</li>
+      <li class="change-item"><strong>Changes tab in history viewer</strong> — A Changes tab alongside the diff panel gives a plain-English description of what changed for each object between the two selected history entries</li>
+      <li class="change-item"><strong>Column reorder migration</strong> — PostgresCompare now detects when table columns have changed position and generates a safe migration using CREATE TABLE / INSERT INTO / DROP / RENAME with full constraint reconstruction (primary keys, unique constraints, check constraints, and foreign keys)</li>
+      <li class="change-item"><strong>Column scale detection</strong> — Scale differences in numeric columns are now detected and generate <code>ALTER COLUMN TYPE</code> statements</li>
+      <li class="change-item"><strong>Scrollable deployment progress log</strong> — The deployment progress log in the Run Script modal is now a scrollable, multi-line display that accumulates <code>RAISE NOTICE</code> output as each statement executes. The progress logging preference is saved per project in local storage</li>
+    </ul>
+  </div>
+  <a href="/downloads" class="download-link">
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Download Version 1.2.0
+  </a>
+</div>
+
+<div class="release">
+  <div class="release-header">
+    <div class="version-info">
       <h2>Version 1.1.107</h2>
       <p class="release-date">Released March 16th, 2026</p>
     </div>
-    <span class="latest-badge">Latest</span>
   </div>
   <div class="change-section new-features">
     <h3><span class="section-icon">✨</span> New Features</h3>

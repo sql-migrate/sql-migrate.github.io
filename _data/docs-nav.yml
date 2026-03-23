@@ -49,6 +49,8 @@
       subitems:
         - title: Database to Database
           url: /docs/guides/comparing-databases/#database-to-database-comparison
+        - title: pg_dump File Import
+          url: /docs/guides/comparing-databases/#comparing-against-a-pg_dump-file
         - title: Schema Filtering
           url: /docs/guides/comparing-databases/#schema-filtering
         - title: Object Type Filtering
