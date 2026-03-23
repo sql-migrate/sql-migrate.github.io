@@ -111,7 +111,7 @@ description: "How does PostgresCompare work? What PostgreSQL versions are suppor
       "name": "Which PostgreSQL versions are supported?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "PostgresCompare supports PostgreSQL version 9.2 and later, including the latest PostgreSQL 16. We regularly update to support new PostgreSQL releases."
+        "text": "PostgresCompare supports PostgreSQL version 9.2 and later, through PostgreSQL 18. We regularly update to support new PostgreSQL releases."
       }
     },
     {

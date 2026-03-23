@@ -24,7 +24,7 @@ Generated scripts include a header with metadata followed by statements grouped 
 
 ```sql
 -- PostgresCompare Deployment Script
--- Version: 1.1.106
+-- Version: 1.2.0
 -- X: production-db
 -- Y: staging-db
 -- Generated: 2026-02-18 10:30:00
@@ -127,7 +127,7 @@ Pre and post deploy scripts also appear as entries in the **statement list** alo
 SET lock_timeout = '5s';
 
 -- PostgresCompare Deployment Script
--- Version: 1.1.106
+-- Version: 1.2.0
 -- X: production-db
 -- Y: staging-db
 -- ...
