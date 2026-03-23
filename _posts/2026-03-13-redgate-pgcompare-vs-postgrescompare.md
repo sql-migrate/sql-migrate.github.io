@@ -1,6 +1,5 @@
 ---
 layout: post
-published: false
 title: "PostgresCompare vs Redgate pgCompare"
 excerpt: "Both tools compare PostgreSQL schemas. One deploys directly with safety checks and runs 100% locally. See the full feature and pricing comparison."
 ---
