@@ -157,8 +157,64 @@
       url: /docs/cli/installation/
     - title: Commands
       url: /docs/cli/commands/
+      subitems:
+        - title: pgc diff
+          url: /docs/cli/commands/#pgc-diff
+        - title: pgc script
+          url: /docs/cli/commands/#pgc-script
+        - title: pgc apply
+          url: /docs/cli/commands/#pgc-apply
+        - title: pgc snapshot
+          url: /docs/cli/commands/#pgc-snapshot
+        - title: pgc watch
+          url: /docs/cli/commands/#pgc-watch
+        - title: pgc interactive
+          url: /docs/cli/commands/#pgc-interactive
+        - title: pgc docs
+          url: /docs/cli/commands/#pgc-docs
+        - title: pgc report
+          url: /docs/cli/commands/#pgc-report
+        - title: pgc validate
+          url: /docs/cli/commands/#pgc-validate
+        - title: pgc env
+          url: /docs/cli/commands/#pgc-env
+        - title: pgc config
+          url: /docs/cli/commands/#pgc-config
+        - title: pgc health
+          url: /docs/cli/commands/#pgc-health
+    - title: Data Sources
+      url: /docs/cli/data-sources/
+      subitems:
+        - title: Live Database
+          url: /docs/cli/data-sources/#live-database
+        - title: Environment
+          url: /docs/cli/data-sources/#environment
+        - title: JSON Snapshot
+          url: /docs/cli/data-sources/#json-snapshot
+        - title: SQL File
+          url: /docs/cli/data-sources/#sql-file
+        - title: SQL Folder
+          url: /docs/cli/data-sources/#sql-folder
+        - title: Git Reference
+          url: /docs/cli/data-sources/#git-reference
+    - title: Configuration
+      url: /docs/cli/configuration/
+      subitems:
+        - title: Configuration Discovery
+          url: /docs/cli/configuration/#configuration-discovery
+        - title: Configuration Structure
+          url: /docs/cli/configuration/#configuration-structure
+        - title: Merging and Precedence
+          url: /docs/cli/configuration/#merging-and-precedence
     - title: Examples
       url: /docs/cli/examples/
+      subitems:
+        - title: Daily Development
+          url: /docs/cli/examples/#daily-development
+        - title: CI/CD Integration
+          url: /docs/cli/examples/#cicd-integration
+        - title: Monitoring and Alerting
+          url: /docs/cli/examples/#monitoring-and-alerting
 
 - title: Troubleshooting
   items:

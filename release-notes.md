@@ -13,10 +13,61 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 <div class="release latest">
   <div class="release-header">
     <div class="version-info">
+      <h2>Version 1.2.1</h2>
+      <p class="release-date">Released March 31st, 2026</p>
+    </div>
+    <span class="latest-badge">Latest</span>
+  </div>
+  <div class="change-section new-features">
+    <h3><span class="section-icon">🚀</span> New Command-Line Interface (CLI)</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Full-Featured CLI (`pgc`)</strong> — A powerful new CLI for schema comparison, script generation, and automation. All major features of the desktop app are now available in the terminal, designed for both interactive use and CI/CD integration.</li>
+      <li class="change-item"><strong>Advanced Script Generation (`pgc script`)</strong> — Generate dependency-ordered, transactional deployment scripts directly from the command line. Supports pre/post deployment scripts, migration direction control, and dry-run checks.</li>
+      <li class="change-item"><strong>New Data Sources (Git Refs & Folders)</strong> — Compare against schema files directly from any Git branch, tag, or commit (e.g., `git:main:schema.sql`). You can also now use a folder of `.sql` files as a single data source.</li>
+      <li class="change-item"><strong>Interactive Mode (`pgc interactive`)</strong> — A new terminal UI for interactively exploring schema differences in a tree view, with keyboard shortcuts for easy navigation.</li>
+      <li class="change-item"><strong>Schema Documentation (`pgc docs`)</strong> — Generate schema documentation in Markdown or HTML format from any data source.</li>
+      <li class="change-item"><strong>Watch Mode (`pgc watch`)</strong> — Monitor a database for schema drift against a baseline, with the ability to trigger a command on change.</li>
+      <li class="change-item"><strong>Configuration Files (`pgc.yaml`)</strong> — Manage project-level settings for environments, default comparison options, and script generation. Use `pgc config init` to get started.</li>
+      <li class="change-item"><strong>Apply Scripts Safely (`pgc apply`)</strong> — Apply migration scripts to a database with built-in safety features: explicit <code>--confirm</code> flag required, <code>--dry-run</code> validation, <code>--max-drops</code> and <code>--max-statements</code> guardrails, and read-only environment protection.</li>
+      <li class="change-item"><strong>Rich Comparison Reports (`pgc report`)</strong> — Generate standalone HTML reports (with dark mode support), Markdown summaries, or JSON reports. Optionally include the full migration script with <code>--include-script</code>.</li>
+      <li class="change-item"><strong>Multi-Target Validation (`pgc validate`)</strong> — Validate SQL scripts, configuration files, database connections, or snapshot files with a single command. Checks for dangerous statements, unbalanced transactions, and connectivity issues.</li>
+      <li class="change-item"><strong>Health Checks (`pgc health`)</strong> — Check database connectivity and CLI health. Use <code>--all-envs</code> to verify all configured environments at once — ideal for CI/CD pipeline pre-flight checks.</li>
+    </ul>
+  </div>
+  <div class="change-section improvements">
+    <h3><span class="section-icon">⚡</span> CLI Improvements</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Comprehensive Object Support</strong> — The CLI now supports comparison and scripting for over 40 PostgreSQL object types, including FDWs, Publications, Subscriptions, and more, achieving parity with the desktop app.</li>
+      <li class="change-item"><strong>CI/CD Friendly Output Formats</strong> — New output formats like JUnit XML (`--format junit`) and GitHub Actions annotations (`--format github`) are available for seamless pipeline integration.</li>
+      <li class="change-item"><strong>Advanced Filtering</strong> — Use wildcard patterns to include or exclude specific objects from a comparison (e.g., `--include 'users_*,orders_*'`).</li>
+      <li class="change-item"><strong>Environment Management</strong> — `pgc profile` has been renamed to `pgc env` for consistency. The `@` prefix is now optional for better PowerShell compatibility.</li>
+      <li class="change-item"><strong>Clean SQL Output</strong> — Using <code>--sql</code> or <code>--format sql</code> suppresses the license banner and progress indicators, so <code>pgc diff ... --sql > migration.sql</code> produces clean, pipeable output.</li>
+    </ul>
+  </div>
+  <div class="change-section bug-fixes">
+    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <ul class="change-list">
+      <li class="change-item">Fixed snapshot JSON serialization/deserialization losing constraints due to array handling with <code>PreserveReferencesHandling</code></li>
+      <li class="change-item">Fixed <code>--only</code> type normalization (e.g. <code>tables</code> is now correctly normalized to <code>table</code>)</li>
+      <li class="change-item">Fixed false positives when comparing databases with partitioned tables — constraints on partition child tables are now excluded from comparisons</li>
+    </ul>
+  </div>
+  <a href="/downloads" class="download-link">
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Download Version 1.2.1
+  </a>
+</div>
+
+<div class="release">
+  <div class="release-header">
+    <div class="version-info">
       <h2>Version 1.2.0</h2>
       <p class="release-date">Released March 23rd, 2026</p>
     </div>
-    <span class="latest-badge">Latest</span>
+    
   </div>
   <div class="change-section new-features">
     <h3><span class="section-icon">✨</span> New Features</h3>
