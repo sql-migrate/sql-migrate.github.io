@@ -27,9 +27,9 @@ robots: noindex
     <div class="download-card" data-os="windows">
       <div class="platform-icon">🪟</div>
       <h2>Windows</h2>
-      <p class="version-info">Version 1.2.0 • Windows 10 or later</p>
+      <p class="version-info">Version 1.2.1 • Windows 10 or later</p>
       <p style="color: var(--text-light); margin-bottom: 1rem;">Full-featured desktop application with native Windows integration.</p>
-      <a onclick="var that=this;ga('send', 'event','Download','Windows 1.2.0',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://windows.postgrescompare.com/PostgresCompareSetup.exe" class="download-btn">
+      <a onclick="var that=this;ga('send', 'event','Download','Windows 1.2.1',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://windows.postgrescompare.com/PostgresCompareSetup.exe" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -41,9 +41,9 @@ robots: noindex
     <div class="download-card" data-os="macos">
       <div class="platform-icon">🍎</div>
       <h2>macOS</h2>
-      <p class="version-info">Version 1.2.0 • macOS 11 or later</p>
+      <p class="version-info">Version 1.2.1 • macOS 11 or later</p>
       <p style="color: var(--text-light); margin-bottom: 1rem;">Optimized for Apple Silicon and Intel Macs with native performance.</p>
-      <a onclick="var that=this;ga('send', 'event','Download','macOS 1.2.0',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare.pkg" class="download-btn">
+      <a onclick="var that=this;ga('send', 'event','Download','macOS 1.2.1',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare.pkg" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -55,9 +55,9 @@ robots: noindex
     <div class="download-card" data-os="linux">
       <div class="platform-icon">🐧</div>
       <h2>Linux</h2>
-      <p class="version-info">Version 1.2.0 • Ubuntu 20.04+ / Debian 11+</p>
+      <p class="version-info">Version 1.2.1 • Ubuntu 20.04+ / Debian 11+</p>
       <p style="color: var(--text-light); margin-bottom: 1rem;">Available as a zip package for major distributions.</p>
-      <a onclick="var that=this;ga('send', 'event','Download','Linux 1.2.0',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.2.0.zip" class="download-btn">
+      <a onclick="var that=this;ga('send', 'event','Download','Linux 1.2.1',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.2.1.zip" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
