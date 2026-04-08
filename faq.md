@@ -40,7 +40,7 @@ description: "How does PostgresCompare work? What PostgreSQL versions are suppor
 
       <div class="faq-item">
         <div class="faq-question">Which PostgreSQL versions are supported?</div>
-        <div class="faq-answer">PostgresCompare supports PostgreSQL version 9.2 and later, including the latest PostgreSQL 16. We regularly update to support new PostgreSQL releases.</div>
+        <div class="faq-answer">PostgresCompare supports PostgreSQL version 9.2 and later, through the latest PostgreSQL 18. We regularly update to support new PostgreSQL releases.</div>
       </div>
 
       <div class="faq-item">

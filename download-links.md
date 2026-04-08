@@ -13,7 +13,7 @@ robots: noindex
 
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 1280px; margin: 0 auto;">
   <div class="whats-new" style="margin-bottom: 2rem; padding: 1rem 1.5rem; background: rgba(15, 118, 110, 0.05); border-radius: 12px; border-left: 4px solid var(--primary, #0f766e);">
-    <p style="margin: 0; color: var(--text, #1e293b);"><strong>What's new in 1.2.1:</strong> Full-featured command-line interface (`pgc`) for schema comparison, script generation, and CI/CD integration. Compare against git refs, SQL folders, and snapshots. New commands: diff, script, apply, watch, interactive, docs, report, validate, and health. <a href="/release-notes" style="color: var(--primary, #0f766e);">View all release notes →</a></p>
+    <p style="margin: 0; color: var(--text, #1e293b);"><strong>What's new in 1.2.2:</strong> MCP server integration for AI agents (`pgc mcp serve`), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes" style="color: var(--primary, #0f766e);">View all release notes →</a></p>
   </div>
 
   <div class="download-cards" id="single-platform-downloads" style="display: none;"></div>
@@ -27,9 +27,9 @@ robots: noindex
     <div class="download-card" data-os="windows">
       <div class="platform-icon">🪟</div>
       <h2>Windows</h2>
-      <p class="version-info">Version 1.2.1 • Windows 10 or later</p>
+      <p class="version-info">Version 1.2.2 • Windows 10 or later</p>
       <p style="color: var(--text-light); margin-bottom: 1rem;">Full-featured desktop application with native Windows integration.</p>
-      <a onclick="var that=this;ga('send', 'event','Download','Windows 1.2.1',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://windows.postgrescompare.com/PostgresCompareSetup.exe" class="download-btn">
+      <a onclick="var that=this;ga('send', 'event','Download','Windows 1.2.2',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://windows.postgrescompare.com/PostgresCompareSetup.exe" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -41,9 +41,9 @@ robots: noindex
     <div class="download-card" data-os="macos">
       <div class="platform-icon">🍎</div>
       <h2>macOS</h2>
-      <p class="version-info">Version 1.2.1 • macOS 11 or later</p>
+      <p class="version-info">Version 1.2.2 • macOS 11 or later</p>
       <p style="color: var(--text-light); margin-bottom: 1rem;">Optimized for Apple Silicon and Intel Macs with native performance.</p>
-      <a onclick="var that=this;ga('send', 'event','Download','macOS 1.2.1',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare.pkg" class="download-btn">
+      <a onclick="var that=this;ga('send', 'event','Download','macOS 1.2.2',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare.pkg" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -55,9 +55,9 @@ robots: noindex
     <div class="download-card" data-os="linux">
       <div class="platform-icon">🐧</div>
       <h2>Linux</h2>
-      <p class="version-info">Version 1.2.1 • Ubuntu 20.04+ / Debian 11+</p>
+      <p class="version-info">Version 1.2.2 • Ubuntu 20.04+ / Debian 11+</p>
       <p style="color: var(--text-light); margin-bottom: 1rem;">Available as a zip package for major distributions.</p>
-      <a onclick="var that=this;ga('send', 'event','Download','Linux 1.2.1',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.2.1.zip" class="download-btn">
+      <a onclick="var that=this;ga('send', 'event','Download','Linux 1.2.2',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.2.2.zip" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -76,8 +76,8 @@ robots: noindex
     <div class="download-card" data-os="windows">
       <div class="platform-icon">🪟</div>
       <h3 class="cli-platform">Windows CLI</h3>
-      <p class="version-info">Version 1.2.1 • x64</p>
-      <a onclick="var that=this;ga('send', 'event','Download','Windows 1.2.1 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/windows/1.2.1/pgc.exe" class="download-btn">
+      <p class="version-info">Version 1.2.2 • x64</p>
+      <a onclick="var that=this;ga('send', 'event','Download','Windows 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/windows/1.2.2/pgc.exe" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -89,15 +89,15 @@ robots: noindex
     <div class="download-card" data-os="macos">
       <div class="platform-icon">🍎</div>
       <h3 class="cli-platform">macOS CLI (Apple Silicon)</h3>
-      <p class="version-info">Version 1.2.1 • ARM64</p>
-      <a onclick="var that=this;ga('send', 'event','Download','macOS ARM64 1.2.1 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/mac/1.2.1/osx-arm64/pgc" class="download-btn">
+      <p class="version-info">Version 1.2.2 • ARM64</p>
+      <a onclick="var that=this;ga('send', 'event','Download','macOS ARM64 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/mac/1.2.2/osx-arm64/pgc" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
         Download CLI
       </a>
-      <a onclick="var that=this;ga('send', 'event','Download','macOS x64 1.2.1 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/mac/1.2.1/osx-x64/pgc" class="download-btn-secondary" style="display: inline-block; margin-top: 0.5rem; font-size: 0.85rem; color: var(--primary, #0f766e);">
+      <a onclick="var that=this;ga('send', 'event','Download','macOS x64 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/mac/1.2.2/osx-x64/pgc" class="download-btn-secondary" style="display: inline-block; margin-top: 0.5rem; font-size: 0.85rem; color: var(--primary, #0f766e);">
         Intel Mac (x64) →
       </a>
     </div>
@@ -105,8 +105,8 @@ robots: noindex
     <div class="download-card" data-os="linux">
       <div class="platform-icon">🐧</div>
       <h3 class="cli-platform">Linux CLI</h3>
-      <p class="version-info">Version 1.2.1 • x64</p>
-      <a onclick="var that=this;ga('send', 'event','Download','Linux 1.2.1 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/linux/1.2.1/pgc" class="download-btn">
+      <p class="version-info">Version 1.2.2 • x64</p>
+      <a onclick="var that=this;ga('send', 'event','Download','Linux 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/linux/1.2.2/pgc" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>

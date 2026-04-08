@@ -182,6 +182,21 @@
           url: /docs/cli/commands/#pgc-config
         - title: pgc health
           url: /docs/cli/commands/#pgc-health
+        - title: pgc license
+          url: /docs/cli/commands/#pgc-license
+        - title: pgc mcp
+          url: /docs/cli/commands/#pgc-mcp
+    - title: MCP Server
+      url: /docs/cli/mcp-server/
+      subitems:
+        - title: Quick Start
+          url: /docs/cli/mcp-server/#quick-start
+        - title: Claude Desktop Setup
+          url: /docs/cli/mcp-server/#claude-desktop-configuration
+        - title: Available Tools
+          url: /docs/cli/mcp-server/#available-tools
+        - title: Safety Controls
+          url: /docs/cli/mcp-server/#safety-controls
     - title: Data Sources
       url: /docs/cli/data-sources/
       subitems:

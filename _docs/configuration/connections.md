@@ -2,7 +2,7 @@
 title: Environments
 description: Configure database environments in PostgresCompare
 category: configuration
-order: 12
+order: 13
 permalink: /docs/configuration/connections/
 ---
 

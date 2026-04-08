@@ -2,7 +2,7 @@
 title: Options
 description: Configure comparison and deployment options
 category: configuration
-order: 13
+order: 14
 permalink: /docs/configuration/options/
 ---
 

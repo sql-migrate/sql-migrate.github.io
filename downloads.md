@@ -10,7 +10,7 @@ description: "Download PostgresCompare and start comparing PostgreSQL schemas in
 
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 900px; margin: 0 auto; text-align: center;">
   <div class="whats-new" style="margin-bottom: 2.5rem; text-align: left; padding: 1rem 1.5rem; background: rgba(15, 118, 110, 0.05); border-radius: 12px; border-left: 4px solid var(--primary, #0f766e);">
-    <p style="margin: 0; color: var(--text, #1e293b); font-size: 0.95rem;"><strong>What's new in 1.2.1:</strong> Full-featured command-line interface (`pgc`) for schema comparison, script generation, and CI/CD integration. Compare against git refs, SQL folders, and snapshots. <a href="/release-notes" style="color: var(--primary, #0f766e);">View all release notes →</a></p>
+    <p style="margin: 0; color: var(--text, #1e293b); font-size: 0.95rem;"><strong>What's new in 1.2.2:</strong> MCP server integration for AI agents (`pgc mcp serve`), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes" style="color: var(--primary, #0f766e);">View all release notes →</a></p>
   </div>
 
   <p style="font-size: 1.125rem; color: var(--text-light, #475569); margin-bottom: 2.5rem;">
@@ -38,7 +38,7 @@ description: "Download PostgresCompare and start comparing PostgreSQL schemas in
   "description": "PostgresCompare compares PostgreSQL database schema objects and writes the SQL to deploy the differences.",
   "url": "https://www.postgrescompare.com/downloads",
   "downloadUrl": "https://www.postgrescompare.com/downloads",
-  "softwareVersion": "1.2.1",
+  "softwareVersion": "1.2.2",
   "fileSize": "250MB",
   "softwareRequirements": "PostgreSQL 9.2 through 18",
   "offers": {

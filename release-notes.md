@@ -13,10 +13,63 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 <div class="release latest">
   <div class="release-header">
     <div class="version-info">
+      <h2>Version 1.2.2</h2>
+      <p class="release-date">Released April 7th, 2026</p>
+    </div>
+    <span class="latest-badge">Latest</span>
+  </div>
+  <div class="change-section new-features">
+    <h3><span class="section-icon">🤖</span> MCP Server for AI Agent Integration</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Model Context Protocol Support (`pgc mcp serve`)</strong> — PostgresCompare now integrates directly with AI coding assistants like Claude Desktop and Claude Code. Run <code>pgc mcp serve</code> to start a stdio JSON-RPC server that exposes your PostgreSQL environments to AI agents for schema exploration, comparison, and migration generation.</li>
+      <li class="change-item"><strong>10 MCP Tools Available</strong> — AI agents can use <code>list_environments</code>, <code>compare_schemas</code>, <code>generate_migration</code>, <code>get_schema</code>, <code>health_check</code>, <code>validate_sql</code>, <code>apply_migration</code>, <code>create_snapshot</code>, <code>detect_drift</code>, and <code>explain_difference</code>.</li>
+      <li class="change-item"><strong>Production Safety Controls</strong> — Use <code>--read-only</code> to prevent any write operations, or <code>--allowed-envs</code> to restrict which environments the AI can access. The <code>apply_migration</code> tool respects environment-level read-only settings and supports <code>--max-drops</code> / <code>--max-statements</code> guardrails.</li>
+    </ul>
+  </div>
+  <div class="change-section new-features">
+    <h3><span class="section-icon">📊</span> Data Comparison Enhancements</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Redesigned Data Comparison View</strong> — A new horizontal three-panel layout with a compact table sidebar, row grid with status filter badges, and a slide-up row detail drawer for side-by-side value comparison.</li>
+      <li class="change-item"><strong>Overview Dashboard</strong> — A new Overview tab shows summary statistics with an interactive donut chart for row status distribution and a horizontal bar chart highlighting tables with the most differences.</li>
+      <li class="change-item"><strong>Data Script Generation</strong> — Generate INSERT, UPDATE, and DELETE scripts directly from data comparison results. Select which row changes to include and export a ready-to-run SQL migration script.</li>
+      <li class="change-item"><strong>CSV Per-Table Export</strong> — Export data comparison results to CSV on a per-table basis for further analysis or reporting.</li>
+      <li class="change-item"><strong>Star / Favourite Tables</strong> — Mark frequently compared tables with a star for quick filtering.</li>
+    </ul>
+  </div>
+  <div class="change-section improvements">
+    <h3><span class="section-icon">⚡</span> CLI Improvements</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>License Activation Command</strong> — Use <code>pgc license activate &lt;key&gt;</code> to activate your license directly from the command line without needing the desktop app.</li>
+      <li class="change-item"><strong>Configuration File Settings Apply Everywhere</strong> — Comparison settings defined in <code>pgc.yaml</code> now correctly apply to the <code>script</code> and <code>report</code> commands, not just <code>diff</code>.</li>
+    </ul>
+  </div>
+  <div class="change-section bug-fixes">
+    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <ul class="change-list">
+      <li class="change-item">Fixed partition detection to use <code>relispartition</code> instead of <code>pg_inherits</code>, eliminating false positives on inherited tables that are not partitions</li>
+      <li class="change-item">Fixed the Update SQL tab not showing content in certain comparison scenarios</li>
+      <li class="change-item">Fixed foreign key constraint scripting when adding new tables via the WebApplication script creator</li>
+      <li class="change-item">Fixed CLI license file detection on Windows when the license was stored in a non-default location</li>
+      <li class="change-item">Fixed data comparison row panel and drawer rendering issues</li>
+      <li class="change-item">Fixed excessive Sentry error logging in both CLI and desktop builds</li>
+    </ul>
+  </div>
+  <a href="/downloads" class="download-link">
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Download Version 1.2.2
+  </a>
+</div>
+
+<div class="release">
+  <div class="release-header">
+    <div class="version-info">
       <h2>Version 1.2.1</h2>
       <p class="release-date">Released March 31st, 2026</p>
     </div>
-    <span class="latest-badge">Latest</span>
+    
   </div>
   <div class="change-section new-features">
     <h3><span class="section-icon">🚀</span> New Command-Line Interface (CLI)</h3>
@@ -52,13 +105,6 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
       <li class="change-item">Fixed false positives when comparing databases with partitioned tables — constraints on partition child tables are now excluded from comparisons</li>
     </ul>
   </div>
-  <a href="/downloads" class="download-link">
-    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    Download Version 1.2.1
-  </a>
 </div>
 
 <div class="release">

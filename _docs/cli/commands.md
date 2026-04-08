@@ -1,6 +1,6 @@
 ---
 title: CLI Commands
-description: Command-line interface reference for PostgresCompare CLI v1.2.1
+description: Command-line interface reference for PostgresCompare CLI v1.2.2
 category: cli
 order: 8
 permalink: /docs/cli/commands/
@@ -564,6 +564,93 @@ pgc health --all-envs --format json
 
 ## `pgc license`
 
-Show license information. Alias: `pgc licence`.
+Manage license information. Alias: `pgc licence`.
 
-The `license`, `env`, and `config` commands can always run, even without a valid license.
+The `license`, `env`, `config`, and `help` commands can always run, even without a valid license.
+
+### Commands
+
+#### `pgc license`
+
+Show current license status and machine ID.
+
+#### `pgc license activate <key>`
+
+Activate a license key on this machine.
+
+| Option | Description |
+|---|---|
+| `<key>` | **(Required)** Your PostgresCompare license key |
+
+### Examples
+
+```bash
+# Show license info
+pgc license
+
+# Activate a license
+pgc license activate XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+```
+
+---
+
+## `pgc mcp`
+
+Start the MCP (Model Context Protocol) server for AI agent integration. This allows AI coding assistants like Claude Desktop and Claude Code to interact with your PostgreSQL databases.
+
+See [MCP Server](/docs/cli/mcp-server/) for full setup instructions.
+
+### Syntax
+
+```
+pgc mcp serve [options]
+```
+
+### Options
+
+| Option | Description |
+|---|---|
+| `--read-only` | Prevent any write operations (blocks `apply_migration` tool) |
+| `--allowed-envs <ENVS>` | Comma-separated list of environments the AI can access |
+
+### Examples
+
+```bash
+# Start MCP server (stdio mode)
+pgc mcp serve
+
+# Start with safety restrictions
+pgc mcp serve --read-only --allowed-envs dev,staging
+```
+
+### Claude Desktop Configuration
+
+Add to your `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "postgres-compare": {
+      "command": "pgc",
+      "args": ["mcp", "serve"]
+    }
+  }
+}
+```
+
+### Available Tools
+
+The MCP server exposes 10 tools:
+
+| Tool | Description |
+|------|-------------|
+| `list_environments` | List configured database environments |
+| `compare_schemas` | Compare two schemas and return diff summary |
+| `generate_migration` | Generate SQL migration script |
+| `get_schema` | Get table, view, and function definitions |
+| `health_check` | Test connectivity and return server version |
+| `validate_sql` | Parse SQL, detect dangerous operations |
+| `apply_migration` | Apply SQL script with safety guards |
+| `create_snapshot` | Capture schema to JSON snapshot |
+| `detect_drift` | Compare database against baseline |
+| `explain_difference` | Detailed diff for a specific object |

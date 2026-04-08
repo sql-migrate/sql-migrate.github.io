@@ -2,7 +2,7 @@
 title: Error Messages
 description: Explanations and solutions for PostgresCompare error messages
 category: troubleshooting
-order: 15
+order: 16
 permalink: /docs/troubleshooting/error-messages/
 ---
 
