@@ -77,7 +77,7 @@ robots: noindex
       <div class="platform-icon">🪟</div>
       <h3 class="cli-platform">Windows CLI</h3>
       <p class="version-info">Version 1.2.2 • x64</p>
-      <a onclick="var that=this;ga('send', 'event','Download','Windows 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/windows/1.2.2/pgc.exe" class="download-btn">
+      <a onclick="var that=this;ga('send', 'event','Download','Windows 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/windows/pgc.exe" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -90,14 +90,14 @@ robots: noindex
       <div class="platform-icon">🍎</div>
       <h3 class="cli-platform">macOS CLI (Apple Silicon)</h3>
       <p class="version-info">Version 1.2.2 • ARM64</p>
-      <a onclick="var that=this;ga('send', 'event','Download','macOS ARM64 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/mac/1.2.2/osx-arm64/pgc" class="download-btn">
+      <a onclick="var that=this;ga('send', 'event','Download','macOS ARM64 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/mac/osx-arm64/pgc" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
         Download CLI
       </a>
-      <a onclick="var that=this;ga('send', 'event','Download','macOS x64 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/mac/1.2.2/osx-x64/pgc" class="download-btn-secondary" style="display: inline-block; margin-top: 0.5rem; font-size: 0.85rem; color: var(--primary, #0f766e);">
+      <a onclick="var that=this;ga('send', 'event','Download','macOS x64 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/mac/osx-64x/pgc" class="download-btn-secondary" style="display: inline-block; margin-top: 0.5rem; font-size: 0.85rem; color: var(--primary, #0f766e);">
         Intel Mac (x64) →
       </a>
     </div>
@@ -106,7 +106,7 @@ robots: noindex
       <div class="platform-icon">🐧</div>
       <h3 class="cli-platform">Linux CLI</h3>
       <p class="version-info">Version 1.2.2 • x64</p>
-      <a onclick="var that=this;ga('send', 'event','Download','Linux 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/linux/1.2.2/pgc" class="download-btn">
+      <a onclick="var that=this;ga('send', 'event','Download','Linux 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/linux-x64/pgc" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
