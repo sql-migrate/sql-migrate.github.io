@@ -25,6 +25,12 @@
   - name: SnowflakeCompare
     link: https://www.snowflakecompare.com
     new_window: true
+  - name: SchemaDrift for Oracle
+    link: https://www.schemadriftfororacle.com
+    new_window: true
+  - name: SQLServerCompare
+    link: https://www.sqlservercompare.com
+    new_window: true
 - title: Connect
   links:
   - name: Facebook
