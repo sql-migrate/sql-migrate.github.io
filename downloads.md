@@ -17,7 +17,7 @@ description: "Download PostgresCompare and start comparing PostgreSQL schemas in
     Enter your email and we'll send you the download link right away.
   </p>
 
-  <script async data-uid="7551f1ab24" src="https://postgrescompare.kit.com/7551f1ab24/index.js"></script>
+  <div class="ml-embedded" data-form="5WnEcn"></div>
 
   <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border, #e2e8f0);">
     <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; color: var(--text-light, #475569); font-size: 0.9rem;">
