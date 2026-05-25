@@ -108,6 +108,11 @@ defaults:
       sitemap: false
   -
     scope:
+      path: "order-cezannehr.md"
+    values:
+      sitemap: false
+  -
+    scope:
       path: "blog"
     values:
       sitemap: false
