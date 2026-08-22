@@ -691,13 +691,15 @@
 			color: var(--add);
 		}
 
-		// Excluded, stated matter-of-factly.
+		// Excluded, stated matter-of-factly. Darker than the brief's #B2BAB4 /
+		// #C9AFA9, which measured 1.99:1 and 2.06:1 against white. This is real
+		// pricing information, so it has to clear AA.
 		&.na {
-			color: #B2BAB4;
+			color: #6D7970;
 
 			&::before {
 				content: "\2212";
-				color: #C9AFA9;
+				color: #9A6B61;
 			}
 		}
 	}
@@ -742,7 +744,7 @@
 	}
 
 	.trust {
-		color: #7C877F;
+		color: #7E8981;
 		margin-top: 22px;
 		justify-content: center;
 	}

@@ -18,8 +18,12 @@
   --panel-2:   #FBFCFA; // panel headers/footers (title bars)
   --ink:       #1B211D; // primary text; also the dark final-CTA band bg
   --ink-soft:  #5A645D; // secondary text
-  --gutter:    #8A9490; // tertiary: mono labels, captions
-  --faint:     #C4CBC5; // line numbers in diffs
+  --gutter:    #6A7470; // tertiary: mono labels, captions
+                        // darker than the brief's #8A9490, which measured 2.93:1
+                        // on paper and failed the AA floor the brief itself sets
+  --faint:     #C4CBC5; // line numbers in diffs — deliberately recessive, and
+                        // only ever inside a role="img" panel that carries its
+                        // own description, so it is incidental text
   --line:      #E4E8E3; // all borders
   --blue:      #336791; // Postgres slate blue: links, primary buttons, hunk headers
   --blue-deep: #27506F; // button hover

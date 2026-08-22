@@ -213,3 +213,40 @@ docs/FAQ/blog/contact inherited the tokens cleanly; no orphaned teal or amber.
 
 Phases 1–3 land first as one reviewable unit on `website-redesign-v2` — no money paths
 touched. Phases 4–6 follow once Stripe is sorted.
+
+---
+
+## Status
+
+| Phase | State |
+|---|---|
+| 1 — Token foundation | done (`10083b8`) |
+| 2 — Shell | done (`0458858`) |
+| 3 — Homepage | done (`7558c74`) |
+| 4 — Purchase page | **blocked on Stripe price IDs** |
+| 5 — Copy sweep | done (`9606d5e`) |
+| 6 — Assets | done (`803b0a0`) |
+| 7 — Verification | done |
+
+### Found during verification, and fixed
+
+- Three palette values failed the WCAG AA floor the brief itself sets in
+  section 8. `--gutter` #8A9490 measured **2.93:1** on paper (it carries the
+  hunk labels, trust lines, footer headings and pricing notes) and is now
+  #6A7470. The excluded pricing rows measured **1.99:1** and **2.06:1** and are
+  now #6D7970 / #9A6B61. The dark band's trust line went #7C877F → #7E8981.
+  Every text pair on the site now clears 4.5:1.
+- `--faint` #C4CBC5 is kept as specified. It only ever renders diff line
+  numbers inside a `role="img"` panel that carries its own description, so it
+  is incidental text.
+- Blog posts had **no `<h1>` at all** — `_layouts/post.html` rendered only the
+  category/date line, and every body heading started at `<h2>`. Ninety pages
+  were affected. Fixed in the layout.
+- `pg_catalog/` (76 files) is a DB Doc frameset with no site layout, no skip
+  link and ~600 images without alt text. Pre-existing, sitemap-excluded, and
+  out of scope for a reskin — but worth knowing it is there.
+- `order-cezannehr.md` still carries an amber "amended" badge. It is a client
+  order form with self-contained styles and its own semantics, deliberately
+  left alone.
+- `/downloads/` (trailing slash) fails a strict static link check but resolves
+  on both Jekyll and GitHub Pages. Pre-existing, not a regression.

@@ -126,3 +126,14 @@
 		right: -3px;
 	}
 }
+
+// Posts had no <h1> at all: the layout rendered only the category/date line
+// and every body heading started at <h2>.
+.blog-post .post-heading {
+	font-size: clamp(1.95rem, 3.5vw, 2.6rem);
+	font-weight: 700;
+	letter-spacing: -0.022em;
+	line-height: 1.24;
+	color: var(--ink);
+	margin: 0 0 14px;
+}
