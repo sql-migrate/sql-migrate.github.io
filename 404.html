@@ -1,23 +1,54 @@
 ---
-title: Page Not Found - PostgresCompare
+title: Page not found - PostgresCompare
 description: The page you're looking for doesn't exist.
 permalink: /404.html
 sitemap: false
 ---
 
-<section class="page-hero">
-  <p class="hunk">@@ <b>error 404</b> @@</p>
-  <h1>Page <span>not found</span></h1>
-  <p>The page you're looking for doesn't exist.</p>
-</section>
+<section class="d-section">
+  <div class="dw nf">
+    <p class="hunk">@@ <b>404</b> &middot; no such path @@</p>
 
-<section style="padding: 3rem 2rem; max-width: 600px; margin: 0 auto; text-align: center;">
-  <div class="feature-card">
-    <h3>Let's Get You Back on Track</h3>
-    <p>The page you were looking for might have been moved or doesn't exist. Try one of these instead:</p>
-    <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="/" class="primary-button">Go to Homepage</a>
-      <a href="/downloads" class="secondary-button">Download</a>
+    <h1 class="nf-diff">
+      <span class="line del"><span class="sign">&minus;</span><span class="nf-path" id="nf-path">the page you asked for</span></span>
+      <span class="line add"><span class="sign">+</span>one of these, probably.</span>
+    </h1>
+
+    <p class="d-intro">It may have moved, or it may never have existed. Either way, nothing here is destructive.</p>
+
+    <div class="d-grid nf-grid">
+      <a class="cell" href="{{ site.baseurl }}/docs">
+        <span class="tag">/docs</span>
+        <h3>Documentation</h3>
+        <p>Installation, guides, the CLI reference and configuration options.</p>
+      </a>
+      <a class="cell" href="{{ site.baseurl }}/downloads">
+        <span class="tag">/downloads</span>
+        <h3>Download free</h3>
+        <p>macOS, Windows and Linux. Fourteen days of Pro, then the free tier.</p>
+      </a>
+      <a class="cell" href="{{ site.baseurl }}/purchase">
+        <span class="tag">/purchase</span>
+        <h3>Pricing</h3>
+        <p>What the free tier covers, and what a subscription adds.</p>
+      </a>
+      <a class="cell" href="{{ site.baseurl }}/">
+        <span class="tag">/</span>
+        <h3>Home</h3>
+        <p>Start over from the top.</p>
+      </a>
     </div>
   </div>
 </section>
+
+<script>
+  // Show the path that actually missed, so the removed line is the real one.
+  (function () {
+    var el = document.getElementById('nf-path');
+    if (!el) return;
+    var path = window.location.pathname;
+    if (path && path !== '/' && path.length < 80 && !/[<>"']/.test(path)) {
+      el.textContent = path;
+    }
+  })();
+</script>

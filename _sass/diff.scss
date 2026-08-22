@@ -844,3 +844,146 @@
 	font-size: 0.76rem;
 	color: var(--gutter);
 }
+
+// --- 404 ------------------------------------------------------------------
+// The one page where the brand device is also the joke: the path you asked
+// for is the removed line, the ways out are the added one.
+
+.nf {
+	padding-top: 24px;
+}
+
+.nf-diff {
+	font-family: var(--sans);
+	font-size: clamp(1.6rem, 3vw, 2.4rem);
+	line-height: 1.24;
+	letter-spacing: -0.022em;
+	font-weight: 700;
+	color: var(--ink);
+	margin: 0 0 24px;
+	max-width: 22ch;
+
+	.line {
+		display: block;
+		padding: 3px 16px;
+		border-left: 3px solid transparent;
+	}
+
+	.del {
+		background: var(--del-tint);
+		color: var(--del);
+		border-left-color: var(--del);
+		text-decoration: line-through;
+		text-decoration-thickness: 1.5px;
+		font-weight: 400;
+		font-size: 0.7em;
+		line-height: 1.4;
+	}
+
+	.add {
+		background: var(--add-tint);
+		border-left-color: var(--add);
+	}
+
+	.sign {
+		font-family: var(--mono);
+		font-size: 0.55em;
+		vertical-align: 0.28em;
+		margin-right: 10px;
+		font-weight: 700;
+		display: inline-block;
+	}
+
+	.del .sign { color: var(--del); }
+	.add .sign { color: var(--add); }
+
+	// The missed path is machine content.
+	.nf-path {
+		font-family: var(--mono);
+		font-size: 0.9em;
+		word-break: break-all;
+	}
+}
+
+.nf-grid {
+	a.cell {
+		color: inherit;
+		text-decoration: none;
+		transition: background 0.15s ease;
+
+		&:hover {
+			background: var(--panel-2);
+			text-decoration: none;
+		}
+
+		h3 {
+			color: var(--blue);
+		}
+	}
+}
+
+// --- Docs landing ---------------------------------------------------------
+
+.docs-landing-title {
+	font-family: var(--sans);
+	font-size: clamp(1.95rem, 3.5vw, 2.75rem);
+	font-weight: 700;
+	letter-spacing: -0.022em;
+	line-height: 1.24;
+	color: var(--ink);
+	margin: 0 0 14px;
+}
+
+// Three across: six entries divide evenly and the cards keep a readable
+// measure at 1140px.
+.docs-grid {
+	grid-template-columns: repeat(3, 1fr);
+
+	@media (max-width: 980px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media #{$mid} {
+		grid-template-columns: 1fr;
+	}
+
+	a.cell {
+		color: inherit;
+		text-decoration: none;
+		transition: background 0.15s ease;
+
+		&:hover {
+			background: var(--panel-2);
+			text-decoration: none;
+		}
+
+		h3 {
+			color: var(--blue);
+		}
+	}
+}
+
+.docs-quick-hunk {
+	margin-top: 56px;
+}
+
+.docs-quick {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	columns: 2;
+	column-gap: 40px;
+
+	@media #{$mid} {
+		columns: 1;
+	}
+
+	li {
+		margin-bottom: 10px;
+		break-inside: avoid;
+	}
+
+	a {
+		font-size: 0.95rem;
+	}
+}
