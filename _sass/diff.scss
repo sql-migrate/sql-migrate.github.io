@@ -795,3 +795,52 @@
 	font-size: 0.76rem;
 	color: var(--blue);
 }
+
+// --- Demo embed -----------------------------------------------------------
+
+// Framed like the hero diff panel so a third-party embed reads as part of the
+// product rather than a bolted-on widget. Holds a 16:10 box and stretches any
+// direct child to fill it, so the provider's iframe needs no dimensions.
+.demo-frame {
+	position: relative;
+	margin-top: 40px;
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	box-shadow: var(--shadow-panel);
+	overflow: hidden;
+	aspect-ratio: 16 / 10;
+
+	> * {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+		display: block;
+	}
+
+	// aspect-ratio fallback for older engines
+	@supports not (aspect-ratio: 16 / 10) {
+		height: 0;
+		padding-bottom: 62.5%;
+	}
+
+	@media #{$mid} {
+		aspect-ratio: 4 / 3;
+
+		@supports not (aspect-ratio: 4 / 3) {
+			padding-bottom: 75%;
+		}
+	}
+}
+
+.demo-pending {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--panel-2);
+	font-family: var(--mono);
+	font-size: 0.76rem;
+	color: var(--gutter);
+}
