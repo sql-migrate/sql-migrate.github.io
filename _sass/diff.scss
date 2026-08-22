@@ -770,3 +770,28 @@
 	margin-top: 26px;
 	justify-content: center;
 }
+
+// --- Interior page tags ---------------------------------------------------
+
+// Names the artefact you are about to download. Replaces an emoji tile that
+// only repeated the heading underneath it.
+.platform-tag {
+	display: block;
+	font-family: var(--mono);
+	font-size: 0.72rem;
+	color: var(--gutter);
+	margin-bottom: 10px;
+}
+
+// Green is semantic: these are things you get.
+.flow .ok,
+.trust-list .ok {
+	color: var(--add);
+	font-style: normal;
+}
+
+.read-more a {
+	font-family: var(--mono);
+	font-size: 0.76rem;
+	color: var(--blue);
+}

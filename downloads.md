@@ -11,7 +11,7 @@ description: "Download PostgresCompare and start comparing PostgreSQL schemas in
 
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 900px; margin: 0 auto; text-align: center;">
   <div class="whats-new" style="margin-bottom: 2.5rem; text-align: left; padding: 1rem 1.5rem; background: var(--panel); border-radius: 12px; border-left: 4px solid var(--blue);">
-    <p style="margin: 0; color: var(--ink); font-size: 0.95rem;"><strong>What's new in 1.2.2:</strong> MCP server integration for AI agents (`pgc mcp serve`), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes" style="color: var(--blue);">View all release notes →</a></p>
+    <p style="margin: 0; color: var(--ink); font-size: 0.95rem;"><strong>What's new in 1.2.2:</strong> MCP server integration for AI agents (<code>pgc mcp serve</code>), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes" style="color: var(--blue);">View all release notes →</a></p>
   </div>
 
   <p style="font-size: 1.125rem; color: var(--ink-soft); margin-bottom: 2.5rem;">
@@ -21,10 +21,10 @@ description: "Download PostgresCompare and start comparing PostgreSQL schemas in
   <div class="ml-embedded" data-form="5WnEcn"></div>
 
   <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line);">
-    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; color: var(--ink-soft); font-size: 0.9rem;">
-      <span>✓ 14 days of Pro, then free forever</span>
-      <span>✓ Compare, script and deploy on the free tier</span>
-      <span>✓ No credit card required</span>
+    <div class="trust-list" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; color: var(--ink-soft); font-size: 0.9rem;">
+      <span><i class="ok">✓</i> 14 days of Pro, then free forever</span>
+      <span><i class="ok">✓</i> Compare, script and deploy on the free tier</span>
+      <span><i class="ok">✓</i> No credit card required</span>
     </div>
   </div>
 </section>

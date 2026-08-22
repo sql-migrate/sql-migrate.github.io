@@ -126,19 +126,6 @@
         }
     }
 
-    .feature-icon {
-        width: 60px;
-        height: 60px;
-        background: var(--panel-2);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-        color: $primary;
-    }
-
     h3 {
         font-family: var(--sans);
         font-size: 1.4rem;
@@ -185,18 +172,6 @@
         &::before {
             transform: scaleX(1);
         }
-    }
-
-    .platform-icon {
-        width: 70px;
-        height: 70px;
-        background: var(--panel-2);
-        border-radius: 14px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
     }
 
     h3 {
@@ -305,37 +280,44 @@
             font-size: 1.1rem;
             font-weight: 700;
             color: $text;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            margin: 0 0 1rem;
         }
 
-        .section-icon {
-            width: 28px;
-            height: 28px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
+        // Mono tag in the same grammar as the homepage feature cards, in place
+        // of the emoji that used to sit inside the heading.
+        .change-tag {
+            display: block;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--gutter);
+            margin-bottom: 6px;
         }
 
-        // green is semantic: these are additions
-        &.new-features .section-icon {
-            background: var(--add-tint);
+        // green is semantic: these really are additions
+        &.new-features .change-tag {
             color: var(--add);
         }
 
-        &.improvements .section-icon {
-            background: var(--panel-2);
+        &.improvements .change-tag {
             color: var(--blue);
         }
+    }
 
-        &.bug-fixes .section-icon {
-            background: var(--panel-2);
-            color: var(--gutter);
-        }
+    // .change-list is a sibling of .change-section, so these have to be
+    // written out rather than nested with &.
+    .change-section.new-features .change-item::before {
+        content: '+';
+        color: var(--add);
+    }
+
+    .change-section.improvements .change-item::before {
+        content: '~';
+        color: var(--blue);
+    }
+
+    .change-section.bug-fixes .change-item::before {
+        content: '-';
+        color: var(--gutter);
     }
 
     .change-list {
@@ -351,10 +333,11 @@
             line-height: 1.8;
 
             &::before {
-                content: '→';
+                content: '~';
                 position: absolute;
                 left: 0;
-                color: $primary-light;
+                font-family: var(--mono);
+                color: var(--gutter);
                 font-weight: 700;
             }
         }
@@ -504,19 +487,6 @@
 .requirement-item {
     display: flex;
     gap: 1rem;
-
-    .requirement-icon {
-        width: 48px;
-        height: 48px;
-        background: var(--panel-2);
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $primary;
-        font-size: 1.3rem;
-        flex-shrink: 0;
-    }
 
     .requirement-content {
         h4 {

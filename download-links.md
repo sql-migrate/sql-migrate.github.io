@@ -14,7 +14,7 @@ robots: noindex
 
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 1280px; margin: 0 auto;">
   <div class="whats-new" style="margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--panel); border-radius: 12px; border-left: 4px solid var(--blue);">
-    <p style="margin: 0; color: var(--ink);"><strong>What's new in 1.2.2:</strong> MCP server integration for AI agents (`pgc mcp serve`), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes" style="color: var(--blue);">View all release notes →</a></p>
+    <p style="margin: 0; color: var(--ink);"><strong>What's new in 1.2.2:</strong> MCP server integration for AI agents (<code>pgc mcp serve</code>), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes" style="color: var(--blue);">View all release notes →</a></p>
   </div>
 
   <div class="download-cards" id="single-platform-downloads" style="display: none;"></div>
@@ -26,7 +26,7 @@ robots: noindex
   <div id="all-platforms-view">
   <div class="download-cards" id="gui-downloads">
     <div class="download-card" data-os="windows">
-      <div class="platform-icon">🪟</div>
+      <span class="platform-tag">.exe</span>
       <h2>Windows</h2>
       <p class="version-info">Version 1.2.2 • Windows 10 or later</p>
       <p style="color: var(--ink-soft); margin-bottom: 1rem;">Full-featured desktop application with native Windows integration.</p>
@@ -40,7 +40,7 @@ robots: noindex
     </div>
 
     <div class="download-card" data-os="macos">
-      <div class="platform-icon">🍎</div>
+      <span class="platform-tag">.pkg</span>
       <h2>macOS</h2>
       <p class="version-info">Version 1.2.2 • macOS 11 or later</p>
       <p style="color: var(--ink-soft); margin-bottom: 1rem;">Optimized for Apple Silicon and Intel Macs with native performance.</p>
@@ -54,7 +54,7 @@ robots: noindex
     </div>
 
     <div class="download-card" data-os="linux">
-      <div class="platform-icon">🐧</div>
+      <span class="platform-tag">.zip</span>
       <h2>Linux</h2>
       <p class="version-info">Version 1.2.2 • Ubuntu 20.04+ / Debian 11+</p>
       <p style="color: var(--ink-soft); margin-bottom: 1rem;">Available as a zip package for major distributions.</p>
@@ -75,7 +75,7 @@ robots: noindex
 
   <div class="download-cards" id="cli-downloads">
     <div class="download-card" data-os="windows">
-      <div class="platform-icon">🪟</div>
+      <span class="platform-tag">pgc.exe</span>
       <h3 class="cli-platform">Windows CLI</h3>
       <p class="version-info">Version 1.2.2 • x64</p>
       <a onclick="var that=this;ga('send', 'event','Download','Windows 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/windows/pgc.exe" class="download-btn">
@@ -88,7 +88,7 @@ robots: noindex
     </div>
 
     <div class="download-card" data-os="macos">
-      <div class="platform-icon">🍎</div>
+      <span class="platform-tag">pgc</span>
       <h3 class="cli-platform">macOS CLI (Apple Silicon)</h3>
       <p class="version-info">Version 1.2.2 • ARM64</p>
       <a onclick="var that=this;ga('send', 'event','Download','macOS ARM64 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/mac/osx-arm64/pgc" class="download-btn">
@@ -104,7 +104,7 @@ robots: noindex
     </div>
 
     <div class="download-card" data-os="linux">
-      <div class="platform-icon">🐧</div>
+      <span class="platform-tag">pgc</span>
       <h3 class="cli-platform">Linux CLI</h3>
       <p class="version-info">Version 1.2.2 • x64</p>
       <a onclick="var that=this;ga('send', 'event','Download','Linux 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/linux-x64/pgc" class="download-btn">
@@ -145,28 +145,24 @@ robots: noindex
     <h2>System requirements</h2>
     <div class="requirements-grid">
       <div class="requirement-item">
-        <div class="requirement-icon">🗄️</div>
         <div class="requirement-content">
           <h4>PostgreSQL Version</h4>
           <p>Supports PostgreSQL 9.2 through 18</p>
         </div>
       </div>
       <div class="requirement-item">
-        <div class="requirement-icon">💾</div>
         <div class="requirement-content">
           <h4>Disk Space</h4>
           <p>250 MB free disk space for installation</p>
         </div>
       </div>
       <div class="requirement-item">
-        <div class="requirement-icon">🧠</div>
         <div class="requirement-content">
           <h4>Memory</h4>
           <p>4 GB RAM minimum, 8 GB recommended</p>
         </div>
       </div>
       <div class="requirement-item">
-        <div class="requirement-icon">🔌</div>
         <div class="requirement-content">
           <h4>Network Access</h4>
           <p>Direct connection to PostgreSQL databases on your network</p>
@@ -204,13 +200,13 @@ robots: noindex
 
       var guiHeading = guiClone.querySelector('h2');
       if (guiHeading) guiHeading.innerHTML = 'Desktop app';
-      var guiIcon = guiClone.querySelector('.platform-icon');
-      if (guiIcon) guiIcon.textContent = '🖥️';
+      var guiIcon = guiClone.querySelector('.platform-tag');
+      if (guiIcon) guiIcon.textContent = 'desktop';
 
       var cliHeading = cliClone.querySelector('h3');
       if (cliHeading) cliHeading.outerHTML = '<h2>Command line</h2>';
-      var cliIcon = cliClone.querySelector('.platform-icon');
-      if (cliIcon) cliIcon.textContent = '⌨️';
+      var cliIcon = cliClone.querySelector('.platform-tag');
+      if (cliIcon) cliIcon.textContent = 'cli';
       var cliVersionInfo = cliClone.querySelector('.version-info');
       if (cliVersionInfo) cliVersionInfo.insertAdjacentHTML('afterend', '<p style="color: var(--ink-soft); margin-bottom: 1rem;">For CI/CD pipelines and automation workflows.</p>');
 

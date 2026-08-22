@@ -20,15 +20,17 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     <span class="latest-badge">Latest</span>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">🤖</span> MCP Server for AI Agent Integration</h3>
+    <span class="change-tag">+ added</span>
+    <h3>MCP Server for AI Agent Integration</h3>
     <ul class="change-list">
-      <li class="change-item"><strong>Model Context Protocol Support (`pgc mcp serve`)</strong> — PostgresCompare now integrates directly with AI coding assistants like Claude Desktop and Claude Code. Run <code>pgc mcp serve</code> to start a stdio JSON-RPC server that exposes your PostgreSQL environments to AI agents for schema exploration, comparison, and migration generation.</li>
+      <li class="change-item"><strong>Model Context Protocol Support (<code>pgc mcp serve</code>)</strong> — PostgresCompare now integrates directly with AI coding assistants like Claude Desktop and Claude Code. Run <code>pgc mcp serve</code> to start a stdio JSON-RPC server that exposes your PostgreSQL environments to AI agents for schema exploration, comparison, and migration generation.</li>
       <li class="change-item"><strong>10 MCP Tools Available</strong> — AI agents can use <code>list_environments</code>, <code>compare_schemas</code>, <code>generate_migration</code>, <code>get_schema</code>, <code>health_check</code>, <code>validate_sql</code>, <code>apply_migration</code>, <code>create_snapshot</code>, <code>detect_drift</code>, and <code>explain_difference</code>.</li>
       <li class="change-item"><strong>Production Safety Controls</strong> — Use <code>--read-only</code> to prevent any write operations, or <code>--allowed-envs</code> to restrict which environments the AI can access. The <code>apply_migration</code> tool respects environment-level read-only settings and supports <code>--max-drops</code> / <code>--max-statements</code> guardrails.</li>
     </ul>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">📊</span> Data Comparison Enhancements</h3>
+    <span class="change-tag">+ added</span>
+    <h3>Data Comparison Enhancements</h3>
     <ul class="change-list">
       <li class="change-item"><strong>Redesigned Data Comparison View</strong> — A new horizontal three-panel layout with a compact table sidebar, row grid with status filter badges, and a slide-up row detail drawer for side-by-side value comparison.</li>
       <li class="change-item"><strong>Overview Dashboard</strong> — A new Overview tab shows summary statistics with an interactive donut chart for row status distribution and a horizontal bar chart highlighting tables with the most differences.</li>
@@ -38,14 +40,16 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </ul>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> CLI Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>CLI Improvements</h3>
     <ul class="change-list">
       <li class="change-item"><strong>License Activation Command</strong> — Use <code>pgc license activate &lt;key&gt;</code> to activate your license directly from the command line without needing the desktop app.</li>
       <li class="change-item"><strong>Configuration File Settings Apply Everywhere</strong> — Comparison settings defined in <code>pgc.yaml</code> now correctly apply to the <code>script</code> and <code>report</code> commands, not just <code>diff</code>.</li>
     </ul>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fixed partition detection to use <code>relispartition</code> instead of <code>pg_inherits</code>, eliminating false positives on inherited tables that are not partitions</li>
       <li class="change-item">Fixed the Update SQL tab not showing content in certain comparison scenarios</li>
@@ -73,33 +77,36 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">🚀</span> New Command-Line Interface (CLI)</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Command-Line Interface (CLI)</h3>
     <ul class="change-list">
-      <li class="change-item"><strong>Full-Featured CLI (`pgc`)</strong> — A powerful new CLI for schema comparison, script generation, and automation. All major features of the desktop app are now available in the terminal, designed for both interactive use and CI/CD integration.</li>
-      <li class="change-item"><strong>Advanced Script Generation (`pgc script`)</strong> — Generate dependency-ordered, transactional deployment scripts directly from the command line. Supports pre/post deployment scripts, migration direction control, and dry-run checks.</li>
-      <li class="change-item"><strong>New Data Sources (Git Refs & Folders)</strong> — Compare against schema files directly from any Git branch, tag, or commit (e.g., `git:main:schema.sql`). You can also now use a folder of `.sql` files as a single data source.</li>
-      <li class="change-item"><strong>Interactive Mode (`pgc interactive`)</strong> — A new terminal UI for interactively exploring schema differences in a tree view, with keyboard shortcuts for easy navigation.</li>
-      <li class="change-item"><strong>Schema Documentation (`pgc docs`)</strong> — Generate schema documentation in Markdown or HTML format from any data source.</li>
-      <li class="change-item"><strong>Watch Mode (`pgc watch`)</strong> — Monitor a database for schema drift against a baseline, with the ability to trigger a command on change.</li>
-      <li class="change-item"><strong>Configuration Files (`pgc.yaml`)</strong> — Manage project-level settings for environments, default comparison options, and script generation. Use `pgc config init` to get started.</li>
-      <li class="change-item"><strong>Apply Scripts Safely (`pgc apply`)</strong> — Apply migration scripts to a database with built-in safety features: explicit <code>--confirm</code> flag required, <code>--dry-run</code> validation, <code>--max-drops</code> and <code>--max-statements</code> guardrails, and read-only environment protection.</li>
-      <li class="change-item"><strong>Rich Comparison Reports (`pgc report`)</strong> — Generate standalone HTML reports (with dark mode support), Markdown summaries, or JSON reports. Optionally include the full migration script with <code>--include-script</code>.</li>
-      <li class="change-item"><strong>Multi-Target Validation (`pgc validate`)</strong> — Validate SQL scripts, configuration files, database connections, or snapshot files with a single command. Checks for dangerous statements, unbalanced transactions, and connectivity issues.</li>
-      <li class="change-item"><strong>Health Checks (`pgc health`)</strong> — Check database connectivity and CLI health. Use <code>--all-envs</code> to verify all configured environments at once — ideal for CI/CD pipeline pre-flight checks.</li>
+      <li class="change-item"><strong>Full-Featured CLI (<code>pgc</code>)</strong> — A powerful new CLI for schema comparison, script generation, and automation. All major features of the desktop app are now available in the terminal, designed for both interactive use and CI/CD integration.</li>
+      <li class="change-item"><strong>Advanced Script Generation (<code>pgc script</code>)</strong> — Generate dependency-ordered, transactional deployment scripts directly from the command line. Supports pre/post deployment scripts, migration direction control, and dry-run checks.</li>
+      <li class="change-item"><strong>New Data Sources (Git Refs & Folders)</strong> — Compare against schema files directly from any Git branch, tag, or commit (e.g., <code>git:main:schema.sql</code>). You can also now use a folder of <code>.sql</code> files as a single data source.</li>
+      <li class="change-item"><strong>Interactive Mode (<code>pgc interactive</code>)</strong> — A new terminal UI for interactively exploring schema differences in a tree view, with keyboard shortcuts for easy navigation.</li>
+      <li class="change-item"><strong>Schema Documentation (<code>pgc docs</code>)</strong> — Generate schema documentation in Markdown or HTML format from any data source.</li>
+      <li class="change-item"><strong>Watch Mode (<code>pgc watch</code>)</strong> — Monitor a database for schema drift against a baseline, with the ability to trigger a command on change.</li>
+      <li class="change-item"><strong>Configuration Files (<code>pgc.yaml</code>)</strong> — Manage project-level settings for environments, default comparison options, and script generation. Use <code>pgc config init</code> to get started.</li>
+      <li class="change-item"><strong>Apply Scripts Safely (<code>pgc apply</code>)</strong> — Apply migration scripts to a database with built-in safety features: explicit <code>--confirm</code> flag required, <code>--dry-run</code> validation, <code>--max-drops</code> and <code>--max-statements</code> guardrails, and read-only environment protection.</li>
+      <li class="change-item"><strong>Rich Comparison Reports (<code>pgc report</code>)</strong> — Generate standalone HTML reports (with dark mode support), Markdown summaries, or JSON reports. Optionally include the full migration script with <code>--include-script</code>.</li>
+      <li class="change-item"><strong>Multi-Target Validation (<code>pgc validate</code>)</strong> — Validate SQL scripts, configuration files, database connections, or snapshot files with a single command. Checks for dangerous statements, unbalanced transactions, and connectivity issues.</li>
+      <li class="change-item"><strong>Health Checks (<code>pgc health</code>)</strong> — Check database connectivity and CLI health. Use <code>--all-envs</code> to verify all configured environments at once — ideal for CI/CD pipeline pre-flight checks.</li>
     </ul>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> CLI Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>CLI Improvements</h3>
     <ul class="change-list">
       <li class="change-item"><strong>Comprehensive Object Support</strong> — The CLI now supports comparison and scripting for over 40 PostgreSQL object types, including FDWs, Publications, Subscriptions, and more, achieving parity with the desktop app.</li>
-      <li class="change-item"><strong>CI/CD Friendly Output Formats</strong> — New output formats like JUnit XML (`--format junit`) and GitHub Actions annotations (`--format github`) are available for seamless pipeline integration.</li>
-      <li class="change-item"><strong>Advanced Filtering</strong> — Use wildcard patterns to include or exclude specific objects from a comparison (e.g., `--include 'users_*,orders_*'`).</li>
-      <li class="change-item"><strong>Environment Management</strong> — `pgc profile` has been renamed to `pgc env` for consistency. The `@` prefix is now optional for better PowerShell compatibility.</li>
+      <li class="change-item"><strong>CI/CD Friendly Output Formats</strong> — New output formats like JUnit XML (<code>--format junit</code>) and GitHub Actions annotations (<code>--format github</code>) are available for seamless pipeline integration.</li>
+      <li class="change-item"><strong>Advanced Filtering</strong> — Use wildcard patterns to include or exclude specific objects from a comparison (e.g., <code>--include 'users_*,orders_*'</code>).</li>
+      <li class="change-item"><strong>Environment Management</strong> — <code>pgc profile</code> has been renamed to <code>pgc env</code> for consistency. The <code>@</code> prefix is now optional for better PowerShell compatibility.</li>
       <li class="change-item"><strong>Clean SQL Output</strong> — Using <code>--sql</code> or <code>--format sql</code> suppresses the license banner and progress indicators, so <code>pgc diff ... --sql > migration.sql</code> produces clean, pipeable output.</li>
     </ul>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fixed snapshot JSON serialization/deserialization losing constraints due to array handling with <code>PreserveReferencesHandling</code></li>
       <li class="change-item">Fixed <code>--only</code> type normalization (e.g. <code>tables</code> is now correctly normalized to <code>table</code>)</li>
@@ -117,14 +124,16 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item"><strong>pg_dump / SQL file import</strong> — Compare one or both sides of a comparison against a pg_dump file or folder instead of a live database connection. PostgresCompare accepts plain SQL pg_dump output and binary pg_dump format (automatically converted via <code>pg_restore</code> if it is on your PATH). You can also point to a folder containing multiple SQL files. This is useful for auditing schema definitions stored in version control, comparing a snapshot against a live database, or working in environments where a direct connection is not available</li>
       <li class="change-item"><strong>Comparison options saved per result</strong> — The ignore flags, object type filters, name filters, and pre/post deploy script settings that were active when a comparison ran are now stored with the result. Click the <strong>info icon</strong> next to the Re-run comparison button to see exactly which options produced a given result</li>
     </ul>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item"><strong>History viewer timeline</strong> — The schema history view has been redesigned as a vertical timeline with colour-coded indicator dots, relative timestamps (e.g. "2 hours ago"), and automatic selection of the most recent entry. The Monaco diff editor now shows the correct direction (older version on the left, newer on the right) and labels each side with its date. For objects that were created or deleted, a single editor with a contextual banner is shown instead of a blank diff panel</li>
       <li class="change-item"><strong>Changes tab in history viewer</strong> — A Changes tab alongside the diff panel gives a plain-English description of what changed for each object between the two selected history entries</li>
@@ -150,7 +159,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item"><strong>Changes tab</strong> — A new Changes tab sits alongside the SQL diff view and shows a human-readable summary of what changed: which columns were added or removed, which constraints were modified, and so on. Switch between the Changes tab and the SQL view depending on whether you want a plain-English summary or the full DDL comparison</li>
       <li class="change-item"><strong>Deployment progress logging</strong> — Generated scripts now include timestamped <code>RAISE NOTICE</code> statements after each DDL change (e.g. <code>[✓] 14:23:05 | public.users | alter table</code>) and a <code>[>>] Migration complete at …</code> notice at the end. Progress output is visible in any client — psql, DataGrip, or similar — and NOTICE output is captured and displayed in the in-app deployment modal. The toggle is on by default and can be disabled from the script toolbar; notices follow statement selection so deselecting a change also removes its notice</li>
@@ -159,7 +169,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </ul>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item"><strong>Diff editor: navigator and word wrap</strong> — The SQL diff editor now includes a navigator panel listing each changed section for quick jumping, and a word wrap toggle in the toolbar for long lines such as function bodies</li>
       <li class="change-item"><strong>Cleaner object list</strong> — Value columns have been removed from the comparison list and the schema column is collapsed by default, giving more room for object names and making the list easier to scan</li>
@@ -182,7 +193,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item"><strong>Star / favourite comparisons</strong> — Mark comparisons as favourites by clicking the star icon on a comparison tile. Starred comparisons show an amber star and can be filtered to the top of the list with a single click on the toolbar toggle</li>
       <li class="change-item"><strong>Deploy confirmation dialog</strong> — Clicking "Run script…" now shows a confirmation modal displaying the target connection and database before executing. Destructive statements are highlighted in red and warnings in amber, and the Run button itself turns red when the script contains destructive changes</li>
@@ -190,7 +202,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </ul>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item"><strong>Pre/post deploy scripts in statement list</strong> — Pre- and post-deploy scripts now appear as entries in the deployment statement list with include/exclude checkboxes. Section headers and dependency comments are suppressed automatically when their associated change is excluded, and the deployment execution matches exactly what the list shows</li>
       <li class="change-item"><strong>Faster script generation</strong> — The dependency-ordering algorithm has been replaced with Kahn's O(V+E) topological sort, eliminating the previous O(n³) approach. The script page now shows shimmer skeleton loaders on both panels while the draft is being generated</li>
@@ -198,7 +211,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </ul>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fixed "Select all" / "Deselect all" not toggling pre/post deploy scripts</li>
       <li class="change-item">Fixed syntax errors when a column, index, or other identifier is named a PostgreSQL reserved keyword (e.g. <code>order</code>)</li>
@@ -218,7 +232,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item"><strong>Re-run comparison</strong> — Run a fresh comparison directly from the comparison detail view without navigating away. Results stream in live, and the previous comparison is preserved in the history list</li>
       <li class="change-item"><strong>Comparison history swimlane view</strong> — Track how your schema has changed over time with a new grouped history view. Objects are organised by change category (Fixed, Regressed, New, Removed, Changed, Unchanged) with collapsible sections, count badges, and colour-coded borders</li>
@@ -229,7 +244,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </ul>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item"><strong>Redesigned Overview tab</strong> — Replaced the text summary with five clickable stat cards (Total, Identical, Different, New, Dropped). Chart segments are now interactive — clicking navigates to the Objects tab with the relevant filter applied. The tab has been renamed from "Summary" to "Overview"</li>
       <li class="change-item"><strong>Save script respects your selection</strong> — The saved .sql file now matches exactly what would be deployed, correctly applying any statements you have deselected</li>
@@ -237,7 +253,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </ul>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fixed deployment executing the wrong statements when some script entries were deselected</li>
       <li class="change-item">Fixed save script failing silently on API error — an error dialog is now shown</li>
@@ -255,7 +272,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item"><strong>Pre/post deploy scripts</strong> — Add custom SQL that runs before or after the generated deployment script, editable directly in the app using Monaco editor</li>
       <li class="change-item"><strong>Global search</strong> — Search across projects, environments, and comparison objects from anywhere in the app</li>
@@ -264,13 +282,15 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </ul>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item">Redesigned comparison card with progress bars and a breakdown of difference types</li>
     </ul>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fixed comparison panel overflowing the bottom of the screen</li>
       <li class="change-item">Fixed arrow key expand/collapse for tree rows</li>
@@ -287,7 +307,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item"><strong>Destructive change warnings</strong> — Deployment scripts now highlight dangerous statements before you run them. Statements are classified as Destructive (e.g. DROP TABLE, DROP COLUMN) or Warning (e.g. DROP FUNCTION, DROP VIEW), with colored row styling, warning icons, summary banners, and glyph margin indicators in the SQL editor</li>
       <li class="change-item"><strong>Hover to preview differences</strong> — Hovering over a row in the script statement list shows a floating diff popover so you can inspect the before/after SQL without leaving the screen</li>
@@ -295,7 +316,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </ul>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Select all now only toggles rows visible after filtering, and the header checkbox accurately reflects the current selection state</li>
       <li class="change-item">Filter dropdowns no longer lose their selected value on re-render</li>
@@ -312,7 +334,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item">Added option to ignore column statistics differences - useful when source and target databases have different ANALYZE settings</li>
     </ul>
@@ -327,7 +350,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fixed PostgreSQL 18 compatibility by removing deprecated attcacheoff column from queries</li>
       <li class="change-item">Fixed compatibility issue with PostgreSQL 17's new MAINTAIN privilege</li>
@@ -343,7 +367,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item">Removed heading from difference viewer for cleaner UI</li>
     </ul>
@@ -358,7 +383,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fixed bug where PostgresCompare was not ignoring tablespace differences in indexes</li>
     </ul>
@@ -373,7 +399,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fixed bug where PostgresCompare was failing to fetch the version number of PostgreSQL databases on Linux or MacOS</li>
     </ul>
@@ -388,7 +415,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item">Updated .NET Core to v8</li>
       <li class="change-item">Refreshed the UI on the schema comparisons list</li>
@@ -404,7 +432,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fixed bug where PostgresCompare would attempt to read a now removed field from pg_database</li>
     </ul>
@@ -419,7 +448,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item">Support variadic function arguments</li>
     </ul>
@@ -434,7 +464,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item">Quote the object name fields when generating a CSV report</li>
     </ul>
@@ -449,7 +480,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item">Add owner to CREATE sql for Materialized View</li>
     </ul>
@@ -464,7 +496,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fix blank window issue on macOS</li>
     </ul>
@@ -479,7 +512,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fix escaping of CSV report</li>
     </ul>
@@ -494,7 +528,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fixed comparison of Casts</li>
       <li class="change-item">Added :: cast notation when changing data type of a column</li>
@@ -511,7 +546,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fixed navigation and display of data projects</li>
     </ul>
@@ -526,7 +562,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item">Added comparison of Configuration Parameters</li>
     </ul>
@@ -541,7 +578,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item">Added history view</li>
     </ul>
@@ -556,7 +594,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fix comparison of partitions when comparing single schemas</li>
     </ul>
@@ -571,7 +610,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item">Ignore differing schema names when comparing single schemas</li>
     </ul>
@@ -586,13 +626,15 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item">Compare and deploy table partitions</li>
     </ul>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fix bug deploying timestamp vs timestamp(0) differences</li>
     </ul>
@@ -607,7 +649,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item">Ensure that adding a column comes before adding a foreign key</li>
     </ul>
@@ -622,7 +665,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Resolve issue comparing domains</li>
     </ul>
@@ -637,7 +681,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Resolve 'keynotfound' issue with data comparison</li>
       <li class="change-item">Resolve 'keynotfound' issue with schema comparison</li>
@@ -653,7 +698,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item">Performance improvements, filtering by schema</li>
     </ul>
@@ -668,14 +714,16 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item">Index include columns</li>
       <li class="change-item">Index column operator class names</li>
     </ul>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fix issue where an index implementing a fk constraint was being excluded</li>
       <li class="change-item">Fix ordering of deployment script when DROP/CREATE a view</li>
@@ -691,7 +739,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item">Compare range types</li>
       <li class="change-item">Store and recover window state between launches</li>
@@ -708,7 +757,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item">Add sample project option</li>
       <li class="change-item">Add ignore default arguments option</li>
@@ -724,7 +774,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item">Grant/Revoke privileges in deploy script</li>
       <li class="change-item">Show script folder progress</li>
@@ -741,7 +792,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">⚡</span> Improvements</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
     <ul class="change-list">
       <li class="change-item">Sort differences with identical last</li>
       <li class="change-item">Added edit project button</li>
@@ -758,13 +810,15 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item">Add remaining object types to scripts folder creation</li>
     </ul>
   </div>
   <div class="change-section bug-fixes">
-    <h3><span class="section-icon">🔧</span> Bug Fixes</h3>
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
     <ul class="change-list">
       <li class="change-item">Fix issue comparing check constraint definitions between postgres versions</li>
     </ul>
@@ -779,7 +833,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section new-features">
-    <h3><span class="section-icon">✨</span> New Features</h3>
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
     <ul class="change-list">
       <li class="change-item">Added first pass at scripts folder creation</li>
     </ul>
@@ -794,7 +849,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
     </div>
   </div>
   <div class="change-section improvements">
-    <h3><span class="section-icon">📋</span> Historical Releases</h3>
+    <span class="change-tag">~ changed</span>
+    <h3>Historical Releases</h3>
     <ul class="change-list">
       <li class="change-item">v1.1.64 - Fix data compare issue, sort schemas alphabetically</li>
       <li class="change-item">v1.1.63 - Add scripting of owner of sequences, enums, domains and aggregates</li>

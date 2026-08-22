@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Top 5 Ways to Compare PostgreSQL Databases (And Why `pg_dump` Isn't Enough)"
+title: "The Top 5 Ways to Compare PostgreSQL Databases (And Why pg_dump Isn't Enough)"
 author: "The PostgresCompare Team"
 date: 2026-03-30
 excerpt: "Comparing database schemas is a core task. We review 5 methods, from simple CLI tricks to dedicated tools, to find the best fit for your workflow."
