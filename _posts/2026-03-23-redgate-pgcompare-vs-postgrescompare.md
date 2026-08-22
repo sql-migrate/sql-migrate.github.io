@@ -94,7 +94,7 @@ PostgresCompare can export comparison results in six formats today: Excel (with 
 | Object types | Common types | 38 |
 | SQL file / folder as source | No (Snapshots on roadmap) | Yes |
 | Readable diff summary | No | Yes (Changes tab, 1.1.107) |
-| Free edition | Yes (Community) | 30-day trial |
+| Free edition | Yes (Community) | Yes (free tier, plus a 14-day Pro trial) |
 | Projects and organisation | No | Yes |
 | Simultaneous comparisons | No | Yes |
 | Starred comparisons | No | Yes |
@@ -126,4 +126,4 @@ PostgresCompare can export comparison results in six formats today: Excel (with 
 
 ---
 
-[Download PostgresCompare](/downloads/) to try it free for 30 days — no credit card required.
+[Download PostgresCompare](/downloads/) — comparing, scripting and deploying are free forever, and your first 14 days include everything in Pro. No credit card required.

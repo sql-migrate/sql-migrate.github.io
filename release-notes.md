@@ -4,7 +4,8 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 ---
 
 <section class="page-hero">
-  <h1>Release <span>Notes</span></h1>
+  <p class="hunk">@@ <b>changelog</b> @@</p>
+  <h1>Release <span>notes</span></h1>
   <p>Track the evolution of PostgresCompare with detailed release notes and version history.</p>
 </section>
 

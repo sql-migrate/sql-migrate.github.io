@@ -4,13 +4,14 @@ description: Learn about PostgresCompare and the team behind the reliable Postgr
 ---
 
 <section class="page-hero">
+  <p class="hunk">@@ <b>about</b> @@</p>
   <h1>About <span>PostgresCompare</span></h1>
   <p>The story behind the reliable PostgreSQL schema comparison tool.</p>
 </section>
 
 <section style="padding: 3rem 2rem; max-width: 900px; margin: 0 auto;">
   <div class="feature-card" style="margin-bottom: 2rem;">
-    <h2>Our Mission</h2>
+    <h2>Our mission</h2>
     <p>PostgreSQL is battle hardened, reliable and free! In recent years it has become one of the most loved and wanted database technologies among developers. PostgresCompare provides PostgreSQL users the tools they need to take the pain out of managing and deploying different environments.</p>
   </div>
 
@@ -22,7 +23,7 @@ description: Learn about PostgresCompare and the team behind the reliable Postgr
   </div>
 
   <div class="feature-card">
-    <h2>Related Products</h2>
+    <h2>Related products</h2>
     <p>If you work with other database platforms, you might also be interested in checking out:</p>
     <ul style="margin-top: 1rem; padding-left: 1.5rem;">
       <li style="margin-bottom: 0.5rem;"><a href="https://www.mysqlcompare.app">MySQLCompare</a> - Schema comparison for MySQL databases</li>

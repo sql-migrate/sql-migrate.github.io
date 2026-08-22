@@ -122,7 +122,7 @@ description: "Simple, transparent pricing for PostgreSQL schema comparison. Mont
   </div>
 
   <div class="enterprise-card">
-    <h2>Need Something Else?</h2>
+    <h2>Need something else?</h2>
     <p>We offer flexible options for teams and organizations with specific requirements.</p>
 
     <div class="enterprise-features">
@@ -144,7 +144,7 @@ description: "Simple, transparent pricing for PostgreSQL schema comparison. Mont
       </div>
     </div>
 
-    <a href="/contact" class="buy-button">Get In Touch</a>
+    <a href="/contact" class="buy-button">Get in touch</a>
   </div>
 
   <div class="faq-section">
@@ -172,7 +172,7 @@ description: "Simple, transparent pricing for PostgreSQL schema comparison. Mont
 
       <div class="faq-item">
         <div class="faq-question">Can I try before I buy?</div>
-        <div class="faq-answer">Absolutely! We offer a free 30-day trial with full access to all features. <a href="/downloads">Download it now</a>.</div>
+        <div class="faq-answer">Yes. Every download starts with 14 days of Pro, and when the trial ends the app becomes the free tier rather than expiring. <a href="/downloads">Download it now</a>.</div>
       </div>
 
       <div class="faq-item">

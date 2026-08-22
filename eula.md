@@ -4,7 +4,8 @@ description: PostgresCompare End User License Agreement (EULA). Read the terms a
 ---
 
 <section class="page-hero">
-  <h1>End User <span>License Agreement</span></h1>
+  <p class="hunk">@@ <b>eula</b> @@</p>
+  <h1>End user <span>license agreement</span></h1>
   <p>Terms and conditions for using PostgresCompare.</p>
 </section>
 

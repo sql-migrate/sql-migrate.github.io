@@ -1,14 +1,15 @@
 ---
-title: "Download PostgresCompare — Free 30-Day Trial | Windows, Mac, Linux"
-description: "Download PostgresCompare and start comparing PostgreSQL schemas in minutes. No credit card required. Works with PostgreSQL 9.2 through 18."
+title: "Download PostgresCompare for Windows, Mac and Linux"
+description: "Download PostgresCompare and start comparing PostgreSQL schemas in minutes. 14 days of Pro, then the free tier — no expiry, no credit card. Works with PostgreSQL 9.2 through 18."
 permalink: /get
 sitemap: false
 robots: noindex
 ---
 
 <section class="page-hero">
+  <p class="hunk">@@ <b>download</b> @@</p>
   <h1>Download <span>PostgresCompare</span></h1>
-  <p>Get started with your free 30-day trial. No credit card required, no commitments.</p>
+  <p>Fourteen days of Pro, then it becomes the free tier. No expiry, no credit card, no commitments.</p>
 </section>
 
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 1280px; margin: 0 auto;">
@@ -28,7 +29,7 @@ robots: noindex
       <div class="platform-icon">🪟</div>
       <h2>Windows</h2>
       <p class="version-info">Version 1.2.2 • Windows 10 or later</p>
-      <p style="color: var(--text-light); margin-bottom: 1rem;">Full-featured desktop application with native Windows integration.</p>
+      <p style="color: var(--ink-soft); margin-bottom: 1rem;">Full-featured desktop application with native Windows integration.</p>
       <a onclick="var that=this;ga('send', 'event','Download','Windows 1.2.2',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://windows.postgrescompare.com/PostgresCompareSetup.exe" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -42,7 +43,7 @@ robots: noindex
       <div class="platform-icon">🍎</div>
       <h2>macOS</h2>
       <p class="version-info">Version 1.2.2 • macOS 11 or later</p>
-      <p style="color: var(--text-light); margin-bottom: 1rem;">Optimized for Apple Silicon and Intel Macs with native performance.</p>
+      <p style="color: var(--ink-soft); margin-bottom: 1rem;">Optimized for Apple Silicon and Intel Macs with native performance.</p>
       <a onclick="var that=this;ga('send', 'event','Download','macOS 1.2.2',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare.pkg" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -56,7 +57,7 @@ robots: noindex
       <div class="platform-icon">🐧</div>
       <h2>Linux</h2>
       <p class="version-info">Version 1.2.2 • Ubuntu 20.04+ / Debian 11+</p>
-      <p style="color: var(--text-light); margin-bottom: 1rem;">Available as a zip package for major distributions.</p>
+      <p style="color: var(--ink-soft); margin-bottom: 1rem;">Available as a zip package for major distributions.</p>
       <a onclick="var that=this;ga('send', 'event','Download','Linux 1.2.2',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/PostgresCompare-linux-x64_1.2.2.zip" class="download-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -68,7 +69,7 @@ robots: noindex
   </div>
 
   <div class="section-header" style="margin-top: 4rem;">
-    <h2>Command Line Interface</h2>
+    <h2>Command line interface</h2>
     <p>For CI/CD pipelines and automation workflows.</p>
   </div>
 
@@ -118,30 +119,30 @@ robots: noindex
   </div>
 
   <div class="trial-info">
-    <h2>30-Day Free Trial</h2>
-    <p>Try PostgresCompare completely free for 30 days with full access to all features. No credit card required, no strings attached. If you love it, purchase a license when you're ready.</p>
+    <h2>14 days of Pro, then free forever</h2>
+    <p>Every download starts with 14 days of Pro. When the trial ends the app becomes the free tier — you can still compare, generate deployment scripts and deploy. History, pipelines and the CLI are what a subscription adds. No credit card, and nothing expires into a locked window.</p>
     <div class="trial-features">
       <div class="trial-feature">
         <span class="check-icon">✓</span>
-        <span><strong>Full Features</strong></span>
+        <span><strong>14 days of Pro</strong></span>
       </div>
       <div class="trial-feature">
         <span class="check-icon">✓</span>
-        <span><strong>No Limitations</strong></span>
+        <span><strong>Then free, forever</strong></span>
       </div>
       <div class="trial-feature">
         <span class="check-icon">✓</span>
-        <span><strong>30 Days</strong></span>
+        <span><strong>No expiry cliff</strong></span>
       </div>
       <div class="trial-feature">
         <span class="check-icon">✓</span>
-        <span><strong>No Credit Card</strong></span>
+        <span><strong>No credit card</strong></span>
       </div>
     </div>
   </div>
 
   <div class="requirements">
-    <h2>System Requirements</h2>
+    <h2>System requirements</h2>
     <div class="requirements-grid">
       <div class="requirement-item">
         <div class="requirement-icon">🗄️</div>
@@ -202,16 +203,16 @@ robots: noindex
       var cliClone = cliCard.cloneNode(true);
 
       var guiHeading = guiClone.querySelector('h2');
-      if (guiHeading) guiHeading.innerHTML = 'Desktop App';
+      if (guiHeading) guiHeading.innerHTML = 'Desktop app';
       var guiIcon = guiClone.querySelector('.platform-icon');
       if (guiIcon) guiIcon.textContent = '🖥️';
 
       var cliHeading = cliClone.querySelector('h3');
-      if (cliHeading) cliHeading.outerHTML = '<h2>Command Line</h2>';
+      if (cliHeading) cliHeading.outerHTML = '<h2>Command line</h2>';
       var cliIcon = cliClone.querySelector('.platform-icon');
       if (cliIcon) cliIcon.textContent = '⌨️';
       var cliVersionInfo = cliClone.querySelector('.version-info');
-      if (cliVersionInfo) cliVersionInfo.insertAdjacentHTML('afterend', '<p style="color: var(--text-light); margin-bottom: 1rem;">For CI/CD pipelines and automation workflows.</p>');
+      if (cliVersionInfo) cliVersionInfo.insertAdjacentHTML('afterend', '<p style="color: var(--ink-soft); margin-bottom: 1rem;">For CI/CD pipelines and automation workflows.</p>');
 
       var guiBtn = guiClone.querySelector('.download-btn');
       if (guiBtn) guiBtn.lastChild.textContent = ' Download for ' + osName;

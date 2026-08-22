@@ -120,4 +120,4 @@ PostgresCompare can export results in six formats: Excel (with a summary sheet a
 
 ---
 
-[Download PostgresCompare](/downloads/) to try it free for 30 days — no credit card required.
+[Download PostgresCompare](/downloads/) — comparing, scripting and deploying are free forever, and your first 14 days include everything in Pro. No credit card required.

@@ -4,7 +4,8 @@ description: "How does PostgresCompare work? What PostgreSQL versions are suppor
 ---
 
 <section class="page-hero">
-  <h1>Frequently Asked <span>Questions</span></h1>
+  <p class="hunk">@@ <b>faq</b> @@</p>
+  <h1>Frequently asked <span>questions</span></h1>
   <p>Find answers to common questions about PostgresCompare.</p>
 </section>
 
@@ -50,7 +51,17 @@ description: "How does PostgresCompare work? What PostgreSQL versions are suppor
 
       <div class="faq-item">
         <div class="faq-question">Can I use PostgresCompare for free?</div>
-        <div class="faq-answer">Yes! We offer a free 30-day trial with full access to all features. No credit card required. After the trial, you can purchase a monthly or annual subscription to continue using the software. <a href="/downloads">Download the trial here</a>.</div>
+        <div class="faq-answer">Yes. Every download starts with 14 days of Pro, and when the trial ends the app becomes the free tier rather than expiring. On the free tier you can run unlimited comparisons across all 40+ object types, generate dependency-ordered deployment scripts, deploy them, and use data comparison, snapshots and exports. <a href="/downloads">Download it here</a>.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What does a subscription add on top of the free tier?</div>
+        <div class="faq-answer">Comparison history and drift timelines, pipelines, the <code>pgc</code> command-line interface for CI and automation, parallel connections, include/exclude object rules, and pre- and post-deploy scripts. Comparing, scripting and deploying stay free.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What is the one-comparison limit on the free tier?</div>
+        <div class="faq-answer">The free tier holds one comparison at a time per project. Running a new one asks you to delete the existing one first — nothing is ever replaced silently. Comparisons you created during your trial are kept, stay openable, and don't count against the limit.</div>
       </div>
 
       <div class="faq-item">
@@ -65,12 +76,12 @@ description: "How does PostgresCompare work? What PostgreSQL versions are suppor
 
       <div class="faq-item">
         <div class="faq-question">Can I use PostgresCompare on macOS, Windows, and Linux?</div>
-        <div class="faq-answer">Yes! PostgresCompare is available for all three major platforms. We also provide a command-line interface (CLI) for automation and CI/CD pipeline integration. <a href="/downloads">Download for your platform</a>.</div>
+        <div class="faq-answer">Yes. PostgresCompare is available for all three major platforms. We also provide a command-line interface (CLI) for automation and CI/CD pipeline integration. <a href="/downloads">Download for your platform</a>.</div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">Have a question that's not answered here?</div>
-        <div class="faq-answer"><a href="/contact">Contact us</a> and we'll be happy to help!</div>
+        <div class="faq-answer"><a href="/contact">Contact us</a> and we'll be happy to help.</div>
       </div>
 
     </div>
@@ -127,7 +138,23 @@ description: "How does PostgresCompare work? What PostgreSQL versions are suppor
       "name": "Can I use PostgresCompare for free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! We offer a free 30-day trial with full access to all features. No credit card required. After the trial, you can purchase a monthly or annual subscription to continue using the software."
+        "text": "Yes. Every download starts with 14 days of Pro, and when the trial ends the app becomes the free tier rather than expiring. On the free tier you can run unlimited comparisons across all 40+ object types, generate dependency-ordered deployment scripts, deploy them, and use data comparison, snapshots and exports."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a subscription add on top of the free tier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Comparison history and drift timelines, pipelines, the pgc command-line interface for CI and automation, parallel connections, include/exclude object rules, and pre- and post-deploy scripts. Comparing, scripting and deploying stay free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the one-comparison limit on the free tier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The free tier holds one comparison at a time per project. Running a new one asks you to delete the existing one first, and nothing is ever replaced silently. Comparisons created during your trial are kept, stay openable, and do not count against the limit."
       }
     },
     {
@@ -151,7 +178,7 @@ description: "How does PostgresCompare work? What PostgreSQL versions are suppor
       "name": "Can I use PostgresCompare on macOS, Windows, and Linux?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! PostgresCompare is available for all three major platforms. We also provide a command-line interface (CLI) for automation and CI/CD pipeline integration."
+        "text": "Yes. PostgresCompare is available for all three major platforms. We also provide a command-line interface (CLI) for automation and CI/CD pipeline integration."
       }
     }
   ]

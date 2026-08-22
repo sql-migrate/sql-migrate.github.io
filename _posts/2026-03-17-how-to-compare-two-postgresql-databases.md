@@ -138,8 +138,8 @@ diff --unified schema_a_sorted.sql schema_b_sorted.sql | less
 
 | Method | Best for | Limitations |
 |--------|----------|-------------|
-| PostgresCompare (live DB) | Regular comparisons, deployments, team workflows | Paid (30-day free trial) |
-| PostgresCompare (SQL file) | No second live DB, version-controlled schemas, backups | Paid (30-day free trial) |
+| PostgresCompare (live DB) | Regular comparisons, deployments, team workflows | Free tier (14-day Pro trial) |
+| PostgresCompare (SQL file) | No second live DB, version-controlled schemas, backups | Free tier (14-day Pro trial) |
 | pgAdmin Schema Diff | Quick checks, already using pgAdmin | No history, manual deployment, limited object types |
 | pg_dump + diff | One-off checks, scripting, no GUI | Noisy output, no deployment path, ordering issues |
 
@@ -147,4 +147,4 @@ The `pg_dump` approach is fine for a quick sanity check when you have no other t
 
 ---
 
-[Download PostgresCompare](/downloads/) and run your first comparison in minutes — free for 30 days, no credit card required.
+[Download PostgresCompare](/downloads/) and run your first comparison in minutes — free forever, no credit card required.

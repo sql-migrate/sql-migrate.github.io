@@ -1,11 +1,12 @@
 ---
-title: "Download PostgresCompare — Free 30-Day Trial | Windows, Mac, Linux"
-description: "Download PostgresCompare and start comparing PostgreSQL schemas in minutes. No credit card required. Works with PostgreSQL 9.2 through 18."
+title: "Download PostgresCompare for Windows, Mac and Linux"
+description: "Download PostgresCompare and start comparing PostgreSQL schemas in minutes. 14 days of Pro, then the free tier — no expiry, no credit card. Works with PostgreSQL 9.2 through 18."
 ---
 
 <section class="page-hero">
+  <p class="hunk">@@ <b>download</b> @@</p>
   <h1>Download <span>PostgresCompare</span></h1>
-  <p>Get started with your free 30-day trial. No credit card required, no commitments.</p>
+  <p>Fourteen days of Pro, then it becomes the free tier. No expiry, no credit card, no commitments.</p>
 </section>
 
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 900px; margin: 0 auto; text-align: center;">
@@ -13,16 +14,16 @@ description: "Download PostgresCompare and start comparing PostgreSQL schemas in
     <p style="margin: 0; color: var(--ink); font-size: 0.95rem;"><strong>What's new in 1.2.2:</strong> MCP server integration for AI agents (`pgc mcp serve`), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes" style="color: var(--blue);">View all release notes →</a></p>
   </div>
 
-  <p style="font-size: 1.125rem; color: var(--text-light, #475569); margin-bottom: 2.5rem;">
+  <p style="font-size: 1.125rem; color: var(--ink-soft); margin-bottom: 2.5rem;">
     Enter your email and we'll send you the download link right away.
   </p>
 
   <div class="ml-embedded" data-form="5WnEcn"></div>
 
-  <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border, #e2e8f0);">
-    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; color: var(--text-light, #475569); font-size: 0.9rem;">
-      <span>✓ Full features, no limitations</span>
-      <span>✓ 30-day free trial</span>
+  <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line);">
+    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; color: var(--ink-soft); font-size: 0.9rem;">
+      <span>✓ 14 days of Pro, then free forever</span>
+      <span>✓ Compare, script and deploy on the free tier</span>
       <span>✓ No credit card required</span>
     </div>
   </div>
@@ -45,7 +46,7 @@ description: "Download PostgresCompare and start comparing PostgreSQL schemas in
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD",
-    "description": "30-day free trial"
+    "description": "Free tier, with a 14-day Pro trial"
   }
 }
 </script>

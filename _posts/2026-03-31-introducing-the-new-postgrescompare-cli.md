@@ -56,4 +56,4 @@ Check out the [full CLI documentation](/docs/cli/installation/) to see everythin
 
 ---
 
-**Ready to automate your schema workflows?** [Sign up for a free 30-day trial](/downloads) and get the latest CLI today.
+**Ready to automate your schema workflows?** [Download PostgresCompare](/downloads) and start your 14-day trial — the `pgc` CLI is part of a subscription, and the trial includes it.

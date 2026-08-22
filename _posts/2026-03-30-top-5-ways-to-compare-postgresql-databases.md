@@ -135,10 +135,10 @@ It addresses the limitations of all the other methods:
 | **pgAdmin Schema Diff** | Occasional, simple comparisons if you already use pgAdmin. | Stateless and lacks advanced features. |
 | **IDE Extensions** | Convenient checks for developers inside their editor. | Not designed for automation or deployment. |
 | **Migration Frameworks**| Applying versioned migrations in a CI/CD pipeline. | Can't compare two live databases or detect drift. |
-| **PostgresCompare** | Reliable deployments, CI/CD automation, and drift detection. | A commercial tool (with a 30-day free trial). |
+| **PostgresCompare** | Reliable deployments, CI/CD automation, and drift detection. | Free to compare, script and deploy; history and automation are paid. |
 
 Start with the simplest tool that meets your needs. But as soon as your workflow involves regular deployments, multiple environments, or automated validation, the investment in a dedicated tool pays for itself in time saved and mistakes avoided.
 
 ---
 
-**Ready to try a professional-grade tool?** [Download your free 30-day trial of PostgresCompare](/downloads) and see the difference for yourself.
+**Ready to try a professional-grade tool?** [Download PostgresCompare](/downloads) — free forever, with 14 days of Pro to start.

@@ -27,7 +27,11 @@ When you first launch PostgresCompare, you'll see the welcome screen where you c
 1. Create a new project
 2. Open an existing project
 
-If you have a license key, you can enter it in the application settings to unlock all features. Otherwise, you can use the trial to evaluate PostgresCompare.
+Your first 14 days include everything in Pro. After that, PostgresCompare
+becomes the free tier: you can still run comparisons, generate deployment
+scripts and deploy them. Comparison history, pipelines, the `pgc` CLI and the
+advanced comparison options need a subscription — enter a license key in the
+application settings to unlock them.
 
 ## Next Steps
 
