@@ -13,8 +13,9 @@ robots: noindex
 </section>
 
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 1280px; margin: 0 auto;">
-  <div class="whats-new" style="margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--panel); border-radius: 12px; border-left: 4px solid var(--blue);">
-    <p style="margin: 0; color: var(--ink);"><strong>What's new in 1.2.2:</strong> MCP server integration for AI agents (<code>pgc mcp serve</code>), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes" style="color: var(--blue);">View all release notes →</a></p>
+  <div class="whatsnew">
+    <div class="bar">postgrescompare 1.2.2</div>
+    <p>MCP server integration for AI agents (<code>pgc mcp serve</code>), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes">View all release notes &rarr;</a></p>
   </div>
 
   <div class="download-cards" id="single-platform-downloads" style="display: none;"></div>

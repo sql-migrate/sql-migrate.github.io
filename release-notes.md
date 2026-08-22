@@ -12,12 +12,13 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 <section class="releases-section" style="padding: 3rem 2rem; max-width: 900px; margin: 0 auto;">
 
 <div class="release latest">
-  <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.2.2</h2>
-      <p class="release-date">Released April 7th, 2026</p>
-    </div>
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.2.2</span>
     <span class="latest-badge">Latest</span>
+  </div>
+  <div class="release-header">
+    <h2>Version 1.2.2</h2>
+    <p class="release-date">Released April 7th, 2026</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -69,12 +70,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.2.1</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.2.1</h2>
-      <p class="release-date">Released March 31st, 2026</p>
-    </div>
-    
+    <h2>Version 1.2.1</h2>
+    <p class="release-date">Released March 31st, 2026</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -116,12 +117,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.2.0</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.2.0</h2>
-      <p class="release-date">Released March 23rd, 2026</p>
-    </div>
-    
+    <h2>Version 1.2.0</h2>
+    <p class="release-date">Released March 23rd, 2026</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -152,11 +153,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.107</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.107</h2>
-      <p class="release-date">Released March 16th, 2026</p>
-    </div>
+    <h2>Version 1.1.107</h2>
+    <p class="release-date">Released March 16th, 2026</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -186,11 +188,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.106</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.106</h2>
-      <p class="release-date">Released March 8th, 2026</p>
-    </div>
+    <h2>Version 1.1.106</h2>
+    <p class="release-date">Released March 8th, 2026</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -225,11 +228,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.105</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.105</h2>
-      <p class="release-date">Released March 2nd, 2026</p>
-    </div>
+    <h2>Version 1.1.105</h2>
+    <p class="release-date">Released March 2nd, 2026</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -265,11 +269,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.104</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.104</h2>
-      <p class="release-date">Released February 23rd, 2026</p>
-    </div>
+    <h2>Version 1.1.104</h2>
+    <p class="release-date">Released February 23rd, 2026</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -300,11 +305,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.103</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.103</h2>
-      <p class="release-date">Released February 18th, 2026</p>
-    </div>
+    <h2>Version 1.1.103</h2>
+    <p class="release-date">Released February 18th, 2026</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -327,11 +333,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.102</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.102</h2>
-      <p class="release-date">Released February 7th, 2026</p>
-    </div>
+    <h2>Version 1.1.102</h2>
+    <p class="release-date">Released February 7th, 2026</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -343,11 +350,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.101</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.101</h2>
-      <p class="release-date">Released January 18th, 2026</p>
-    </div>
+    <h2>Version 1.1.101</h2>
+    <p class="release-date">Released January 18th, 2026</p>
   </div>
   <div class="change-section bug-fixes">
     <span class="change-tag">- fixed</span>
@@ -360,11 +368,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.100</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.100</h2>
-      <p class="release-date">Released July 1st, 2024</p>
-    </div>
+    <h2>Version 1.1.100</h2>
+    <p class="release-date">Released July 1st, 2024</p>
   </div>
   <div class="change-section improvements">
     <span class="change-tag">~ changed</span>
@@ -376,11 +385,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.99</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.99</h2>
-      <p class="release-date">Released June 24th, 2024</p>
-    </div>
+    <h2>Version 1.1.99</h2>
+    <p class="release-date">Released June 24th, 2024</p>
   </div>
   <div class="change-section bug-fixes">
     <span class="change-tag">- fixed</span>
@@ -392,11 +402,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.98</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.98</h2>
-      <p class="release-date">Released May 8th, 2024</p>
-    </div>
+    <h2>Version 1.1.98</h2>
+    <p class="release-date">Released May 8th, 2024</p>
   </div>
   <div class="change-section bug-fixes">
     <span class="change-tag">- fixed</span>
@@ -408,11 +419,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.97</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.97</h2>
-      <p class="release-date">Released May 6th, 2024</p>
-    </div>
+    <h2>Version 1.1.97</h2>
+    <p class="release-date">Released May 6th, 2024</p>
   </div>
   <div class="change-section improvements">
     <span class="change-tag">~ changed</span>
@@ -425,11 +437,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.94</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.94</h2>
-      <p class="release-date">Released April 1st, 2024</p>
-    </div>
+    <h2>Version 1.1.94</h2>
+    <p class="release-date">Released April 1st, 2024</p>
   </div>
   <div class="change-section bug-fixes">
     <span class="change-tag">- fixed</span>
@@ -441,11 +454,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.93</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.93</h2>
-      <p class="release-date">Released March 22nd, 2024</p>
-    </div>
+    <h2>Version 1.1.93</h2>
+    <p class="release-date">Released March 22nd, 2024</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -457,11 +471,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.91</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.91</h2>
-      <p class="release-date">Released July 30th, 2022</p>
-    </div>
+    <h2>Version 1.1.91</h2>
+    <p class="release-date">Released July 30th, 2022</p>
   </div>
   <div class="change-section improvements">
     <span class="change-tag">~ changed</span>
@@ -473,11 +488,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.90</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.90</h2>
-      <p class="release-date">Released July 28th, 2022</p>
-    </div>
+    <h2>Version 1.1.90</h2>
+    <p class="release-date">Released July 28th, 2022</p>
   </div>
   <div class="change-section improvements">
     <span class="change-tag">~ changed</span>
@@ -489,11 +505,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.89</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.89</h2>
-      <p class="release-date">Released July 7th, 2022</p>
-    </div>
+    <h2>Version 1.1.89</h2>
+    <p class="release-date">Released July 7th, 2022</p>
   </div>
   <div class="change-section bug-fixes">
     <span class="change-tag">- fixed</span>
@@ -505,11 +522,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.88</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.88</h2>
-      <p class="release-date">Released June 22nd, 2022</p>
-    </div>
+    <h2>Version 1.1.88</h2>
+    <p class="release-date">Released June 22nd, 2022</p>
   </div>
   <div class="change-section bug-fixes">
     <span class="change-tag">- fixed</span>
@@ -521,11 +539,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.87</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.87</h2>
-      <p class="release-date">Released November 15th, 2021</p>
-    </div>
+    <h2>Version 1.1.87</h2>
+    <p class="release-date">Released November 15th, 2021</p>
   </div>
   <div class="change-section bug-fixes">
     <span class="change-tag">- fixed</span>
@@ -539,11 +558,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.86</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.86</h2>
-      <p class="release-date">Released October 5th, 2021</p>
-    </div>
+    <h2>Version 1.1.86</h2>
+    <p class="release-date">Released October 5th, 2021</p>
   </div>
   <div class="change-section bug-fixes">
     <span class="change-tag">- fixed</span>
@@ -555,11 +575,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.85</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.85</h2>
-      <p class="release-date">Released September 22nd, 2021</p>
-    </div>
+    <h2>Version 1.1.85</h2>
+    <p class="release-date">Released September 22nd, 2021</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -571,11 +592,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.84</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.84</h2>
-      <p class="release-date">Released September 13th, 2021</p>
-    </div>
+    <h2>Version 1.1.84</h2>
+    <p class="release-date">Released September 13th, 2021</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -587,11 +609,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.83</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.83</h2>
-      <p class="release-date">Released August 5th, 2021</p>
-    </div>
+    <h2>Version 1.1.83</h2>
+    <p class="release-date">Released August 5th, 2021</p>
   </div>
   <div class="change-section bug-fixes">
     <span class="change-tag">- fixed</span>
@@ -603,11 +626,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.82</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.82</h2>
-      <p class="release-date">Released July 31st, 2021</p>
-    </div>
+    <h2>Version 1.1.82</h2>
+    <p class="release-date">Released July 31st, 2021</p>
   </div>
   <div class="change-section improvements">
     <span class="change-tag">~ changed</span>
@@ -619,11 +643,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.80</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.80</h2>
-      <p class="release-date">Released June 20th, 2021</p>
-    </div>
+    <h2>Version 1.1.80</h2>
+    <p class="release-date">Released June 20th, 2021</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -642,11 +667,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.79</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.79</h2>
-      <p class="release-date">Released June 13th, 2021</p>
-    </div>
+    <h2>Version 1.1.79</h2>
+    <p class="release-date">Released June 13th, 2021</p>
   </div>
   <div class="change-section improvements">
     <span class="change-tag">~ changed</span>
@@ -658,11 +684,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.78</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.78</h2>
-      <p class="release-date">Released June 4th, 2021</p>
-    </div>
+    <h2>Version 1.1.78</h2>
+    <p class="release-date">Released June 4th, 2021</p>
   </div>
   <div class="change-section bug-fixes">
     <span class="change-tag">- fixed</span>
@@ -674,11 +701,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.76</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.76</h2>
-      <p class="release-date">Released June 2nd, 2021</p>
-    </div>
+    <h2>Version 1.1.76</h2>
+    <p class="release-date">Released June 2nd, 2021</p>
   </div>
   <div class="change-section bug-fixes">
     <span class="change-tag">- fixed</span>
@@ -691,11 +719,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.75</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.75</h2>
-      <p class="release-date">Released May 31st, 2021</p>
-    </div>
+    <h2>Version 1.1.75</h2>
+    <p class="release-date">Released May 31st, 2021</p>
   </div>
   <div class="change-section improvements">
     <span class="change-tag">~ changed</span>
@@ -707,11 +736,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.74</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.74</h2>
-      <p class="release-date">Released May 2nd, 2021</p>
-    </div>
+    <h2>Version 1.1.74</h2>
+    <p class="release-date">Released May 2nd, 2021</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -732,11 +762,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.71</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.71</h2>
-      <p class="release-date">Released April 2nd, 2021</p>
-    </div>
+    <h2>Version 1.1.71</h2>
+    <p class="release-date">Released April 2nd, 2021</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -750,11 +781,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.69</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.69</h2>
-      <p class="release-date">Released March 22nd, 2021</p>
-    </div>
+    <h2>Version 1.1.69</h2>
+    <p class="release-date">Released March 22nd, 2021</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -767,11 +799,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.68</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.68</h2>
-      <p class="release-date">Released March 15th, 2021</p>
-    </div>
+    <h2>Version 1.1.68</h2>
+    <p class="release-date">Released March 15th, 2021</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -785,11 +818,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.67</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.67</h2>
-      <p class="release-date">Released March 8th, 2021</p>
-    </div>
+    <h2>Version 1.1.67</h2>
+    <p class="release-date">Released March 8th, 2021</p>
   </div>
   <div class="change-section improvements">
     <span class="change-tag">~ changed</span>
@@ -803,11 +837,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.66</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.66</h2>
-      <p class="release-date">Released March 1st, 2021</p>
-    </div>
+    <h2>Version 1.1.66</h2>
+    <p class="release-date">Released March 1st, 2021</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -826,11 +861,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.1.65</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Version 1.1.65</h2>
-      <p class="release-date">Released February 22nd, 2021</p>
-    </div>
+    <h2>Version 1.1.65</h2>
+    <p class="release-date">Released February 22nd, 2021</p>
   </div>
   <div class="change-section new-features">
     <span class="change-tag">+ added</span>
@@ -842,11 +878,12 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 </div>
 
 <div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git log --oneline</span>
+  </div>
   <div class="release-header">
-    <div class="version-info">
-      <h2>Older Versions</h2>
-      <p class="release-date">Prior releases</p>
-    </div>
+    <h2>Older versions</h2>
+    <p class="release-date">Prior releases</p>
   </div>
   <div class="change-section improvements">
     <span class="change-tag">~ changed</span>

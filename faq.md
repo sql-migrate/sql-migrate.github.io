@@ -9,9 +9,9 @@ description: "How does PostgresCompare work? What PostgreSQL versions are suppor
   <p>Find answers to common questions about PostgresCompare.</p>
 </section>
 
-<section style="padding: 3rem 2rem; max-width: 900px; margin: 0 auto;">
-  <div class="faq-section" style="padding: 0; border: none; background: none;">
-    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+<section class="dw faq-wrap">
+  <div class="faq-section">
+    <div class="d-grid faq-stack">
 
       <div class="faq-item">
         <div class="faq-question">PostgresCompare is reporting that I have reached my maximum installs, what do I do?</div>

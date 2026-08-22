@@ -987,3 +987,131 @@
 		font-size: 0.95rem;
 	}
 }
+
+// --- FAQ ------------------------------------------------------------------
+
+.faq-wrap {
+	padding-bottom: 5rem;
+}
+
+.faq-stack {
+	grid-template-columns: 1fr;
+	margin-top: 0;
+}
+
+// --- Receipt panels (post-purchase, post-contact) -------------------------
+// Same panel as the hero diff, used to state plainly what just happened and
+// what happens next. Green because these really are additions.
+
+.receipt-wrap {
+	padding-top: 0;
+}
+
+.receipt {
+	max-width: 720px;
+	margin: 0 auto;
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	box-shadow: var(--shadow-panel);
+	overflow: hidden;
+	font-family: var(--mono);
+	font-size: 0.83rem;
+
+	.bar {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 11px 14px;
+		border-bottom: 1px solid var(--line);
+		background: var(--panel-2);
+	}
+
+	.dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: var(--line);
+	}
+
+	.ttl {
+		margin-left: 6px;
+		color: var(--ink-soft);
+		font-size: 0.73rem;
+	}
+
+	.body {
+		padding: 16px 0;
+		line-height: 2;
+	}
+
+	.r {
+		white-space: normal;
+		padding: 6px 20px;
+
+		b {
+			font-family: var(--sans);
+			font-weight: 600;
+			color: var(--ink);
+		}
+
+		// These are sentences, not machine content, so they take the sans face.
+		.desc {
+			font-family: var(--sans);
+			font-size: 0.95rem;
+			color: var(--ink-soft);
+		}
+	}
+
+	.foot {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		padding: 16px 20px;
+		border-top: 1px solid var(--line);
+		background: var(--panel-2);
+	}
+}
+
+// --- "What's new" callout -------------------------------------------------
+// A small panel with a mono title bar rather than a left-border blockquote,
+// so it belongs to the same family as the diff panel and the release cards.
+
+.whatsnew {
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	overflow: hidden;
+	margin-bottom: 2.5rem;
+	text-align: left;
+
+	.bar {
+		padding: 11px 16px;
+		border-bottom: 1px solid var(--line);
+		background: var(--panel-2);
+		font-family: var(--mono);
+		font-size: 0.73rem;
+		color: var(--ink-soft);
+	}
+
+	p {
+		margin: 0;
+		padding: 18px 20px;
+		font-size: 0.95rem;
+		line-height: 1.65;
+		color: var(--ink-soft);
+	}
+}
+
+// --- MailerLite embed -----------------------------------------------------
+// NOT styled here on purpose. The download form's submit button is teal — off
+// palette, and a green button, which this system reserves for "added".
+//
+// It cannot be fixed from this stylesheet: MailerLite paints it from their own
+// runtime-loaded CSS, ID-scoped (#mlb2-<form id>) and !important, which beats
+// any class-based rule we can write and loads after ours. Matching it would
+// mean hardcoding a generated form id that breaks silently when the form is
+// rebuilt.
+//
+// The fix is one setting in the MailerLite dashboard: set the button colour to
+// #336791 and the hover to #27506F on form 185792471113925756.
