@@ -12,14 +12,14 @@ robots: noindex
 </section>
 
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 1280px; margin: 0 auto;">
-  <div class="whats-new" style="margin-bottom: 2rem; padding: 1rem 1.5rem; background: rgba(15, 118, 110, 0.05); border-radius: 12px; border-left: 4px solid var(--primary, #0f766e);">
-    <p style="margin: 0; color: var(--text, #1e293b);"><strong>What's new in 1.2.2:</strong> MCP server integration for AI agents (`pgc mcp serve`), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes" style="color: var(--primary, #0f766e);">View all release notes →</a></p>
+  <div class="whats-new" style="margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--panel); border-radius: 12px; border-left: 4px solid var(--blue);">
+    <p style="margin: 0; color: var(--ink);"><strong>What's new in 1.2.2:</strong> MCP server integration for AI agents (`pgc mcp serve`), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes" style="color: var(--blue);">View all release notes →</a></p>
   </div>
 
   <div class="download-cards" id="single-platform-downloads" style="display: none;"></div>
 
   <p id="show-all-platforms" style="text-align: center; margin-top: 1rem; display: none;">
-    <a href="#" onclick="showAllPlatforms(); return false;" style="color: var(--primary, #0f766e);">Show all platforms</a>
+    <a href="#" onclick="showAllPlatforms(); return false;" style="color: var(--blue);">Show all platforms</a>
   </p>
 
   <div id="all-platforms-view">
@@ -97,7 +97,7 @@ robots: noindex
         </svg>
         Download CLI
       </a>
-      <a onclick="var that=this;ga('send', 'event','Download','macOS x64 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/mac/osx-64x/pgc" class="download-btn-secondary" style="display: inline-block; margin-top: 0.5rem; font-size: 0.85rem; color: var(--primary, #0f766e);">
+      <a onclick="var that=this;ga('send', 'event','Download','macOS x64 1.2.2 cli',this.href);setTimeout(function(){location.href=that.href;},200);return false;" href="https://downloads.postgrescompare.com/builds/cli/mac/osx-64x/pgc" class="download-btn-secondary" style="display: inline-block; margin-top: 0.5rem; font-size: 0.85rem; color: var(--blue);">
         Intel Mac (x64) →
       </a>
     </div>

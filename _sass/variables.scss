@@ -1,23 +1,34 @@
-// New teal color palette
-$primary: #0F766E;
-$primary-light: #14B8A6;
-$primary-dark: #115E59;
-$accent: #F59E0B;
-$accent-light: #FCD34D;
-$text: #1F2937;
-$text-light: #6B7280;
-$background: #FAFAFA;
-$surface: #FFFFFF;
-$border: #E5E7EB;
-$success: #10B981;
-$shadow: rgba(15, 118, 110, 0.1);
+// Sass aliases onto the design tokens in _tokens.scss.
+//
+// These names are used throughout the older stylesheets. Pointing them at the
+// new palette reskins docs, FAQ, blog, forms and contact without touching those
+// files. Prefer the CSS custom properties (--blue, --ink, …) in new code.
+
+$primary: #336791; // --blue
+$primary-light: #336791; // deliberately the same: kills the old teal gradients
+$primary-dark: #27506F; // --blue-deep
+$accent: #336791; // the amber accent has no place in this palette
+$accent-light: #336791;
+$text: #1B211D; // --ink
+$text-light: #5A645D; // --ink-soft
+$text-faint: #8A9490; // --gutter
+$background: #F7F8F6; // --paper
+$surface: #FFFFFF; // --panel
+$surface-2: #FBFCFA; // --panel-2
+$border: #E4E8E3; // --line
+$success: #1E7B3C; // --add
+$success-tint: #E7F4EC; // --add-tint
+$danger: #B23A31; // --del
+$danger-tint: #FBEAE8; // --del-tint
+$shadow: rgba(27, 33, 29, 0.24);
 
 // Keep $brand-color as alias for compatibility
 $brand-color: $primary;
 $secondary-brand-color: $primary-light;
-$middle-gradient-color: mix($brand-color, $secondary-brand-color, 95%);
+$middle-gradient-color: $primary;
 
 // Breakpoints
 $tablet: "(min-width: 450px)";
 $mid-point: "(min-width: 620px)";
 $desktop: "(min-width: 768px)";
+$mid: "(max-width: 880px)"; // the redesign's single collapse point

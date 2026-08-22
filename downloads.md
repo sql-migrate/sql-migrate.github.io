@@ -9,8 +9,8 @@ description: "Download PostgresCompare and start comparing PostgreSQL schemas in
 </section>
 
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 900px; margin: 0 auto; text-align: center;">
-  <div class="whats-new" style="margin-bottom: 2.5rem; text-align: left; padding: 1rem 1.5rem; background: rgba(15, 118, 110, 0.05); border-radius: 12px; border-left: 4px solid var(--primary, #0f766e);">
-    <p style="margin: 0; color: var(--text, #1e293b); font-size: 0.95rem;"><strong>What's new in 1.2.2:</strong> MCP server integration for AI agents (`pgc mcp serve`), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes" style="color: var(--primary, #0f766e);">View all release notes →</a></p>
+  <div class="whats-new" style="margin-bottom: 2.5rem; text-align: left; padding: 1rem 1.5rem; background: var(--panel); border-radius: 12px; border-left: 4px solid var(--blue);">
+    <p style="margin: 0; color: var(--ink); font-size: 0.95rem;"><strong>What's new in 1.2.2:</strong> MCP server integration for AI agents (`pgc mcp serve`), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes" style="color: var(--blue);">View all release notes →</a></p>
   </div>
 
   <p style="font-size: 1.125rem; color: var(--text-light, #475569); margin-bottom: 2.5rem;">

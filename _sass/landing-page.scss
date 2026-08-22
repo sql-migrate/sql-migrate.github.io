@@ -16,7 +16,7 @@
 		right: -100px;
 		width: 600px;
 		height: 600px;
-		background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+		background: none;
 		border-radius: 50%;
 		z-index: -1;
 	}
@@ -28,13 +28,13 @@
 		left: -100px;
 		width: 500px;
 		height: 500px;
-		background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+		background: none;
 		border-radius: 50%;
 		z-index: -1;
 	}
 
 	h1 {
-		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-family: var(--sans);
 		font-size: 3.5rem;
 		font-weight: 800;
 		line-height: 1.2;
@@ -43,7 +43,7 @@
 		animation: fadeInUp 0.8s ease-out 0.3s both;
 
 		span {
-			background: linear-gradient(135deg, $primary 0%, $primary-light 100%);
+			background: $primary;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			background-clip: text;
@@ -61,7 +61,7 @@
 
 	h3 {
 		display: inline-block;
-		background: rgba(15, 118, 110, 0.1);
+		background: var(--panel-2);
 		color: $primary;
 		padding: 0.5rem 1rem;
 		border-radius: 20px;
@@ -237,13 +237,13 @@
 	height: 10px;
 	border-radius: 50%;
 	border: none;
-	background: rgba(15, 118, 110, 0.3);
+	background: var(--faint);
 	cursor: pointer;
 	transition: all 0.3s ease;
 	padding: 0;
 
 	&:hover {
-		background: rgba(15, 118, 110, 0.5);
+		background: var(--gutter);
 	}
 
 	&.active {
@@ -290,7 +290,7 @@
 // Bottom CTA Section
 .bottom-cta {
 	padding: 6rem 2rem;
-	background: linear-gradient(135deg, $primary 0%, $primary-light 100%);
+	background: $primary;
 	color: white;
 	text-align: center;
 	position: relative;
@@ -320,7 +320,7 @@
 	}
 
 	h2 {
-		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-family: var(--sans);
 		font-size: 2.5rem;
 		font-weight: 800;
 		margin-bottom: 2rem;
@@ -383,14 +383,14 @@
 .content {
 	.text {
 		h2 {
-			font-family: 'Plus Jakarta Sans', sans-serif;
+			font-family: var(--sans);
 			font-size: 2rem;
 			font-weight: 700;
 			margin-bottom: 1rem;
 			color: $text;
 
 			strong {
-				background: linear-gradient(135deg, $primary 0%, $primary-light 100%);
+				background: $primary;
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				background-clip: text;

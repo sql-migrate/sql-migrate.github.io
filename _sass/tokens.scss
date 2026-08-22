@@ -1,0 +1,40 @@
+// ---------------------------------------------------------------------------
+// Design tokens — "The diff is the brand"
+//
+// Red and green are SEMANTIC ONLY. Green means added/positive/allowed; red
+// means removed/destructive/excluded. They are never decorative — no green
+// buttons, no red badges. If a component carries no add/remove meaning, it
+// does not get these colours.
+//
+// Monospace marks "machine truth": SQL, file paths, version numbers, hunk
+// headers, terminal-style content. Marketing prose is never mono.
+//
+// No gradients. No colours outside this palette.
+// ---------------------------------------------------------------------------
+
+:root {
+  --paper:     #F7F8F6; // page background — cool, faintly green-gray
+  --panel:     #FFFFFF; // cards, diff panels
+  --panel-2:   #FBFCFA; // panel headers/footers (title bars)
+  --ink:       #1B211D; // primary text; also the dark final-CTA band bg
+  --ink-soft:  #5A645D; // secondary text
+  --gutter:    #8A9490; // tertiary: mono labels, captions
+  --faint:     #C4CBC5; // line numbers in diffs
+  --line:      #E4E8E3; // all borders
+  --blue:      #336791; // Postgres slate blue: links, primary buttons, hunk headers
+  --blue-deep: #27506F; // button hover
+  --add:       #1E7B3C; // diff green
+  --add-tint:  #E7F4EC; // diff green background
+  --add-line:  #BFE3CB; // borders on green elements
+  --del:       #B23A31; // diff red
+  --del-tint:  #FBEAE8; // diff red background
+  --del-line:  #F0CBC6; // borders on red elements
+
+  --sans: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  // The only two shadows on the site: the hero diff panel and the featured
+  // pricing card.
+  --shadow-panel: 0 16px 44px -22px rgba(27, 33, 29, .24);
+  --shadow-feat:  0 14px 38px -22px rgba(51, 103, 145, .45);
+}

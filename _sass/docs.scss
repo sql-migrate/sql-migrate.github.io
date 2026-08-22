@@ -113,13 +113,13 @@
     text-decoration: none;
 
     &:hover {
-      background: rgba(15, 118, 110, 0.05);
+      background: var(--panel-2);
       color: $primary;
       text-decoration: none;
     }
 
     &.active {
-      background: rgba(15, 118, 110, 0.1);
+      background: var(--panel-2);
       color: $primary;
       font-weight: 600;
     }
@@ -272,18 +272,20 @@
   }
 
   .note {
-    background: rgba(15, 118, 110, 0.08);
-    border-left: 4px solid $primary;
+    background: var(--panel-2);
+    border-left: 4px solid var(--blue);
   }
 
+  // red is semantic: this is the "careful, this can break things" callout
   .warning {
-    background: rgba(245, 158, 11, 0.1);
-    border-left: 4px solid $accent;
+    background: var(--del-tint);
+    border-left: 4px solid var(--del);
   }
 
+  // green is semantic: allowed / recommended
   .tip {
-    background: rgba(16, 185, 129, 0.1);
-    border-left: 4px solid $success;
+    background: var(--add-tint);
+    border-left: 4px solid var(--add);
   }
 }
 
@@ -314,7 +316,7 @@
 
     &:hover {
       border-color: $primary;
-      background: rgba(15, 118, 110, 0.02);
+      background: var(--panel-2);
       text-decoration: none;
     }
   }

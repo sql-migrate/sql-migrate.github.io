@@ -40,7 +40,7 @@
     cursor: pointer;
 
     &:hover {
-        background: rgba(15, 118, 110, 0.05);
+        background: var(--panel-2);
         transform: translateY(-3px);
         text-decoration: none;
     }
@@ -56,7 +56,7 @@
     animation: fadeInUp 0.8s ease-out 0.2s both;
 
     h1 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 3rem;
         font-weight: 800;
         line-height: 1.2;
@@ -64,7 +64,7 @@
         color: $text;
 
         span {
-            background: linear-gradient(135deg, $primary 0%, $primary-light 100%);
+            background: $primary;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -88,7 +88,7 @@
 // Version Badge
 .version-badge {
     display: inline-block;
-    background: rgba(15, 118, 110, 0.1);
+    background: var(--panel-2);
     color: $primary;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -109,7 +109,7 @@
 
 // Latest Badge
 .latest-badge {
-    background: linear-gradient(135deg, $accent 0%, $accent-light 100%);
+    background: $accent;
     color: white;
     padding: 0.4rem 1rem;
     border-radius: 20px;
@@ -165,7 +165,7 @@
         left: 0;
         width: 4px;
         height: 0;
-        background: linear-gradient(180deg, $primary-light 0%, $primary 100%);
+        background: $primary-light;
         transition: height 0.3s ease;
     }
 
@@ -181,7 +181,7 @@
     .feature-icon {
         width: 60px;
         height: 60px;
-        background: linear-gradient(135deg, rgba(15, 118, 110, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%);
+        background: var(--panel-2);
         border-radius: 12px;
         display: flex;
         align-items: center;
@@ -192,7 +192,7 @@
     }
 
     h3 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 1.4rem;
         font-weight: 700;
         margin-bottom: 1rem;
@@ -224,7 +224,7 @@
         left: 0;
         right: 0;
         height: 4px;
-        background: linear-gradient(90deg, $primary 0%, $primary-light 100%);
+        background: $primary;
         transform: scaleX(0);
         transition: transform 0.3s ease;
     }
@@ -242,7 +242,7 @@
     .platform-icon {
         width: 70px;
         height: 70px;
-        background: linear-gradient(135deg, rgba(15, 118, 110, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%);
+        background: var(--panel-2);
         border-radius: 14px;
         display: flex;
         align-items: center;
@@ -252,7 +252,7 @@
     }
 
     h3 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 1.6rem;
         font-weight: 700;
         margin-bottom: 0.5rem;
@@ -317,7 +317,7 @@
             top: -14px;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(135deg, $primary 0%, $primary-light 100%);
+            background: $primary;
             color: white;
             padding: 0.4rem 1.2rem;
             border-radius: 20px;
@@ -329,7 +329,7 @@
     }
 
     .plan-name {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 1.5rem;
         font-weight: 800;
         color: $text;
@@ -356,7 +356,7 @@
     }
 
     .price-amount {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 3rem;
         font-weight: 800;
         color: $text;
@@ -374,7 +374,7 @@
 
     .savings-badge {
         display: inline-block;
-        background: rgba(16, 185, 129, 0.1);
+        background: var(--panel-2);
         color: $success;
         padding: 0.4rem 0.9rem;
         border-radius: 16px;
@@ -414,7 +414,7 @@
             border: 2px solid $primary;
 
             &:hover {
-                background: rgba(15, 118, 110, 0.05);
+                background: var(--panel-2);
             }
         }
     }
@@ -458,7 +458,7 @@
         top: -10px;
         left: 20px;
         font-size: 4rem;
-        font-family: Georgia, serif;
+        font-family: var(--sans);
         color: $primary-light;
         opacity: 0.3;
     }
@@ -485,7 +485,7 @@
         width: 48px;
         height: 48px;
         border-radius: 50%;
-        background: linear-gradient(135deg, $primary 0%, $primary-light 100%);
+        background: $primary;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -530,11 +530,11 @@
         left: 0;
         width: 5px;
         height: 100%;
-        background: linear-gradient(180deg, $primary-light 0%, $primary 100%);
+        background: $primary-light;
     }
 
     &.latest::before {
-        background: linear-gradient(180deg, $accent 0%, $accent-light 100%);
+        background: $accent;
     }
 
     .release-header {
@@ -547,7 +547,7 @@
     }
 
     .version-info h2 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 1.8rem;
         font-weight: 800;
         color: $text;
@@ -567,7 +567,7 @@
         }
 
         h3 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: var(--sans);
             font-size: 1.1rem;
             font-weight: 700;
             color: $text;
@@ -587,19 +587,20 @@
             font-size: 0.9rem;
         }
 
+        // green is semantic: these are additions
         &.new-features .section-icon {
-            background: rgba(16, 185, 129, 0.1);
-            color: $success;
+            background: var(--add-tint);
+            color: var(--add);
         }
 
         &.improvements .section-icon {
-            background: rgba(15, 118, 110, 0.1);
-            color: $primary;
+            background: var(--panel-2);
+            color: var(--blue);
         }
 
         &.bug-fixes .section-icon {
-            background: rgba(245, 158, 11, 0.1);
-            color: $accent;
+            background: var(--panel-2);
+            color: var(--gutter);
         }
     }
 
@@ -631,7 +632,7 @@
         gap: 0.5rem;
         margin-top: 1.5rem;
         padding: 0.8rem 1.5rem;
-        background: rgba(15, 118, 110, 0.05);
+        background: var(--panel-2);
         border: 2px solid $primary-light;
         border-radius: 10px;
         color: $primary;
@@ -651,7 +652,7 @@
 // CTA Section
 .cta-section {
     padding: 6rem 2rem;
-    background: linear-gradient(135deg, $primary 0%, $primary-light 100%);
+    background: $primary;
     color: white;
     text-align: center;
     position: relative;
@@ -686,7 +687,7 @@
         z-index: 1;
 
         h2 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: var(--sans);
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 1.5rem;
@@ -717,7 +718,7 @@
     margin-bottom: 4rem;
 
     h2 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 2.5rem;
         font-weight: 800;
         margin-bottom: 1rem;
@@ -812,7 +813,7 @@
     border: 1px solid $border;
 
     h2 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 2rem;
         font-weight: 800;
         margin-bottom: 2rem;
@@ -847,7 +848,7 @@
     }
 
     .faq-question {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 1.1rem;
         font-weight: 700;
         color: $text;
@@ -879,7 +880,7 @@
     margin-bottom: 4rem;
 
     h2 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 2rem;
         font-weight: 800;
         margin-bottom: 2rem;
@@ -900,7 +901,7 @@
     .requirement-icon {
         width: 48px;
         height: 48px;
-        background: rgba(15, 118, 110, 0.1);
+        background: var(--panel-2);
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -927,15 +928,15 @@
 
 // Trial Info Box
 .trial-info {
-    background: linear-gradient(135deg, rgba(15, 118, 110, 0.05) 0%, rgba(20, 184, 166, 0.05) 100%);
+    background: var(--panel-2);
     border-radius: 16px;
     padding: 3rem;
-    border: 2px solid rgba(15, 118, 110, 0.2);
+    border: 2px solid var(--line);
     text-align: center;
     margin-bottom: 4rem;
 
     h2 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 2rem;
         font-weight: 800;
         margin-bottom: 1rem;
@@ -968,10 +969,10 @@
 
 // Enterprise Card
 .enterprise-card {
-    background: linear-gradient(135deg, rgba(15, 118, 110, 0.03) 0%, rgba(20, 184, 166, 0.03) 100%);
+    background: var(--panel-2);
     border-radius: 20px;
     padding: 3rem;
-    border: 2px solid rgba(15, 118, 110, 0.15);
+    border: 2px solid var(--line);
     text-align: center;
     margin-bottom: 4rem;
     max-width: 800px;
@@ -979,7 +980,7 @@
     margin-right: auto;
 
     h2 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 2rem;
         font-weight: 800;
         margin-bottom: 1rem;
@@ -1026,7 +1027,7 @@
     }
 
     h3 {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: var(--sans);
         font-size: 1.5rem;
         font-weight: 700;
         margin-bottom: 1rem;
@@ -1067,7 +1068,7 @@
         left: 0;
         right: 0;
         height: 40px;
-        background: linear-gradient(135deg, $primary 0%, $primary-light 100%);
+        background: $primary;
         border-radius: 20px 20px 0 0;
     }
 
