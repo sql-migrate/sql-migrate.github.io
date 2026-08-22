@@ -7,7 +7,7 @@ google_analytics_key: UA-43432786-3
 disqus_shortname: https-www-postgrescompare-com
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: https://www.postgrescompare.com/images/1469427963_009_053_animal_elephant_bishop_mammal.png
+logo: https://www.postgrescompare.com/siteicon.png
 image: /images/postgrescomparescreenshot.png
 description: "PostgreSQL schema comparison tool. Compare databases, generate deployment scripts, and track schema changes. Runs 100% locally — free forever, with a 14-day Pro trial."
 author:
