@@ -12,7 +12,7 @@ Branch: `website-redesign-v2`, cut from `website-redesign`.
 
 | Question | Decision |
 |---|---|
-| Pricing | Move to **$29.95/user/month**, **$299/year**. Needs new Stripe prices. |
+| Pricing | **$29.95/user/month** (`price_1U2gmnKhvEuHFknZ7qYklVhI`), **$299.95/year** (`price_1U2gmSKhvEuHFknZrkJItaph`). Annual saves $59.45 — stated as the saving, not "2 months free", because two months would be $59.90. |
 | Grandfathering | **Not mentioned.** Drop the mockup's "existing subscribers keep their price" footnote. |
 | Version framing | Launch as **v2.0**. |
 | Trial | **14 days**, then lands on the free tier — no expiry cliff. |
@@ -223,7 +223,7 @@ touched. Phases 4–6 follow once Stripe is sorted.
 | 1 — Token foundation | done (`10083b8`) |
 | 2 — Shell | done (`0458858`) |
 | 3 — Homepage | done (`7558c74`) |
-| 4 — Purchase page | **blocked on Stripe price IDs** |
+| 4 — Purchase page | done — Stripe IDs supplied 2026-08-22 |
 | 5 — Copy sweep | done (`9606d5e`) |
 | 6 — Assets | done (`803b0a0`) |
 | 7 — Verification | done |
@@ -250,3 +250,9 @@ touched. Phases 4–6 follow once Stripe is sorted.
   left alone.
 - `/downloads/` (trailing slash) fails a strict static link check but resolves
   on both Jekyll and GitHub Pages. Pre-existing, not a regression.
+
+### Left alone deliberately
+
+- `order-cezannehr.md` quotes **$149.95/user/year**. That is a negotiated client
+  order form, not site pricing, so the sweep did not touch it. Whether that deal
+  gets repriced against the new $299.95 is a commercial decision, not a site one.

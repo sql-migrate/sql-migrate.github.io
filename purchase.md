@@ -1,6 +1,6 @@
 ---
-title: "PostgresCompare Pricing — $14.95/month or $149.95/year"
-description: "Simple, transparent pricing for PostgreSQL schema comparison. Monthly or annual plans. Instant access, cancel anytime. Volume discounts available."
+title: "PostgresCompare pricing — free forever, Pro at $29.95/month"
+description: "Comparing, scripting and deploying are free forever. History, pipelines and the pgc CLI are what you pay for. Monthly or annual, cancel anytime."
 ---
 
 <script src="https://js.stripe.com/v3"></script>
@@ -19,8 +19,16 @@ description: "Simple, transparent pricing for PostgreSQL schema comparison. Mont
   "offers": [
     {
       "@type": "Offer",
-      "name": "Monthly Subscription",
-      "price": "14.95",
+      "name": "Free tier",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.postgrescompare.com/downloads"
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro — monthly subscription",
+      "price": "29.95",
       "priceCurrency": "USD",
       "priceValidUntil": "2026-12-31",
       "availability": "https://schema.org/InStock",
@@ -28,8 +36,8 @@ description: "Simple, transparent pricing for PostgreSQL schema comparison. Mont
     },
     {
       "@type": "Offer",
-      "name": "Annual Subscription",
-      "price": "149.95",
+      "name": "Pro — annual subscription",
+      "price": "299.95",
       "priceCurrency": "USD",
       "priceValidUntil": "2026-12-31",
       "availability": "https://schema.org/InStock",
@@ -40,145 +48,99 @@ description: "Simple, transparent pricing for PostgreSQL schema comparison. Mont
 </script>
 
 <section class="page-hero">
-  <h1>Purchase Your <span>PostgresCompare</span> Subscription</h1>
-  <p>Choose the plan that works best for you. After checkout, you'll receive your license key via email.</p>
+  <p class="hunk">@@ <b>pricing</b> @@</p>
+  <h1>Free to compare. <span>Paid to automate.</span></h1>
+  <p>Comparing, scripting and deploying are free forever. History, pipelines and the CLI are what you pay for.</p>
 </section>
 
-<section class="pricing-section" style="padding: 3rem 2rem; max-width: 1280px; margin: 0 auto;">
-  <div class="pricing-cards">
-    <div class="pricing-card">
-      <div class="plan-name">Monthly Subscription</div>
-      <p class="plan-description">Flexible month-to-month billing</p>
+<section class="dw" style="padding-bottom: 3rem;">
 
-      <div class="price">
-        <span class="price-currency">$</span>
-        <span class="price-amount">14<span class="price-decimal">.95</span></span>
-      </div>
-      <p class="price-period">per user per month</p>
-
-      <a href="#" id="price_1IOXkqKhvEuHFknZlCwbX1eV" class="buy-button secondary">Purchase Monthly</a>
-
-      <ul class="features-list">
-        <li class="feature-item">
-          <span class="check-icon">✓</span>
-          <span>Always free upgrades</span>
-        </li>
-        <li class="feature-item">
-          <span class="check-icon">✓</span>
-          <span>Install in 2 locations per user</span>
-        </li>
-        <li class="feature-item">
-          <span class="check-icon">✓</span>
-          <span>Support via email</span>
-        </li>
-        <li class="feature-item">
-          <span class="check-icon">✓</span>
-          <span>30 day money back guarantee</span>
-        </li>
-        <li class="feature-item">
-          <span class="check-icon">✓</span>
-          <span>Cancel anytime</span>
-        </li>
+  <div class="prices">
+    <div class="price">
+      <h3>Free</h3>
+      <div class="amt">$0</div>
+      <p class="note">Where your 14-day trial lands</p>
+      <ul>
+        <li>Unlimited comparisons, all 40+ object types</li>
+        <li>Live databases, pg_dump files, migration folders</li>
+        <li>Dependency-ordered deployment scripts</li>
+        <li>Deploy, with destructive-change safeguards</li>
+        <li>Data comparison, snapshots and exports</li>
+        <li class="na">Holds one comparison at a time</li>
+        <li class="na">No pipelines, no CLI</li>
       </ul>
+      <a href="/downloads" class="d-btn d-btn-quiet">Download free</a>
     </div>
 
-    <div class="pricing-card popular">
-      <div class="plan-name">Annual Subscription</div>
-      <p class="plan-description">Save with yearly billing</p>
-
-      <div class="savings-badge">Save $29.45 per year</div>
-
-      <div class="price">
-        <span class="price-currency">$</span>
-        <span class="price-amount">149<span class="price-decimal">.95</span></span>
-      </div>
-      <p class="price-period">per user per year</p>
-
-      <a href="#" id="price_1IOXlOKhvEuHFknZBrJxEeZP" class="buy-button">Purchase Annual</a>
-
-      <ul class="features-list">
-        <li class="feature-item">
-          <span class="check-icon">✓</span>
-          <span>Always free upgrades</span>
-        </li>
-        <li class="feature-item">
-          <span class="check-icon">✓</span>
-          <span>Install in 2 locations per user</span>
-        </li>
-        <li class="feature-item">
-          <span class="check-icon">✓</span>
-          <span>Support via email</span>
-        </li>
-        <li class="feature-item">
-          <span class="check-icon">✓</span>
-          <span>30 day money back guarantee</span>
-        </li>
-        <li class="feature-item">
-          <span class="check-icon">✓</span>
-          <span>Best value - 2 months free</span>
-        </li>
+    <div class="price feat">
+      <h3>Pro</h3>
+      <div class="amt">$29.95 <small>/ user / month</small></div>
+      <p class="note">Or $299.95 a year &mdash; saves $59.45</p>
+      <ul>
+        <li>Everything in Free</li>
+        <li>Full comparison history and drift timelines</li>
+        <li>Pipelines</li>
+        <li>The pgc CLI, for CI and automation</li>
+        <li>Parallel connections, include/exclude rules</li>
+        <li>Pre- and post-deploy scripts</li>
+        <li>Install on 2 machines per user</li>
+        <li>Free upgrades while your subscription is active</li>
       </ul>
+      <div class="buy-pair">
+        <button type="button" id="buy-annual" class="d-btn d-btn-primary">Subscribe yearly &mdash; $299.95</button>
+        <button type="button" id="buy-monthly" class="d-btn d-btn-quiet">Subscribe monthly &mdash; $29.95</button>
+      </div>
+    </div>
+
+    <div class="price">
+      <h3>Team</h3>
+      <div class="amt">Volume <small>pricing</small></div>
+      <p class="note">For teams and consultancies</p>
+      <ul>
+        <li>Everything in Pro</li>
+        <li>Volume discounts</li>
+        <li>Client-transferable licenses</li>
+        <li>Invoice billing</li>
+        <li>Priority support</li>
+      </ul>
+      <a href="/contact" class="d-btn d-btn-quiet">Talk to us</a>
     </div>
   </div>
 
-  <div class="enterprise-card">
-    <h2>Need something else?</h2>
-    <p>We offer flexible options for teams and organizations with specific requirements.</p>
+  <p class="trust buy-trust">
+    <span>cancel anytime</span><span>30-day money-back guarantee</span><span>payments handled by stripe</span>
+  </p>
 
-    <div class="enterprise-features">
-      <div class="enterprise-feature">
-        <span class="check-icon">✓</span>
-        <span>Multiple licenses</span>
-      </div>
-      <div class="enterprise-feature">
-        <span class="check-icon">✓</span>
-        <span>Custom quotes</span>
-      </div>
-      <div class="enterprise-feature">
-        <span class="check-icon">✓</span>
-        <span>Invoice billing</span>
-      </div>
-      <div class="enterprise-feature">
-        <span class="check-icon">✓</span>
-        <span>Volume discounts</span>
-      </div>
+</section>
+
+<section class="dw" style="padding-bottom: 4rem;">
+  <p class="hunk">@@ <b>pricing questions</b> @@</p>
+  <h2 class="d-h2">Before you buy.</h2>
+
+  <div class="d-grid">
+    <div class="cell">
+      <h3>What do I get without paying?</h3>
+      <p>Unlimited comparisons across all 40+ object types, the diff and DDL viewers, dependency-ordered deployment scripts, deploying those scripts, and data comparison with snapshots and exports. The free tier is a working tool, not a viewer.</p>
     </div>
-
-    <a href="/contact" class="buy-button">Get in touch</a>
-  </div>
-
-  <div class="faq-section">
-    <h2>Pricing FAQ</h2>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <div class="faq-question">Who is processing my payment?</div>
-        <div class="faq-answer">We use <a href="https://www.stripe.com" target="_blank">Stripe</a> to manage your subscription and payments securely.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">How do I cancel my subscription?</div>
-        <div class="faq-answer">Drop us an <a href="/contact">email</a> and we'll take care of your cancellation right away.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">What does "2 locations per user" mean?</div>
-        <div class="faq-answer">You can install PostgresCompare on two different machines (e.g., work laptop and home desktop) with a single license.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">Are updates really free forever?</div>
-        <div class="faq-answer">Yes! As long as your subscription is active, you'll receive all software updates and new features at no additional cost.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">Can I try before I buy?</div>
-        <div class="faq-answer">Yes. Every download starts with 14 days of Pro, and when the trial ends the app becomes the free tier rather than expiring. <a href="/downloads">Download it now</a>.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">What if I'm not satisfied?</div>
-        <div class="faq-answer">We offer a 30-day money-back guarantee. If you're not happy with PostgresCompare, we'll refund your purchase.</div>
-      </div>
+    <div class="cell">
+      <h3>What is the one-comparison limit?</h3>
+      <p>The free tier holds one comparison at a time per project. Running a new one asks you to delete the existing one first &mdash; nothing is replaced silently. Comparisons you created during your trial are kept and don't count against the limit.</p>
+    </div>
+    <div class="cell">
+      <h3>What happens when my trial ends?</h3>
+      <p>Nothing stops working. After 14 days PostgresCompare becomes the free tier rather than expiring, and everything you made during the trial stays open and readable.</p>
+    </div>
+    <div class="cell">
+      <h3>What does "2 machines per user" mean?</h3>
+      <p>One subscription installs on two machines &mdash; a work laptop and a home desktop, say. If you reach the install limit, <a href="/contact">email us</a> and we'll reset your license key.</p>
+    </div>
+    <div class="cell">
+      <h3>Can I transfer a license to a client?</h3>
+      <p>On Team plans, yes. Consultancies buy in volume and hand a license to the client at the end of an engagement. <a href="/contact">Get in touch</a> and we'll set it up.</p>
+    </div>
+    <div class="cell">
+      <h3>How do I cancel?</h3>
+      <p>Drop us an <a href="/contact">email</a> and we'll take care of it right away. There's a 30-day money-back guarantee if it isn't for you, and the app falls back to the free tier rather than going dark.</p>
     </div>
   </div>
 </section>
@@ -186,27 +148,30 @@ description: "Simple, transparent pricing for PostgreSQL schema comparison. Mont
 <script>
   var stripe = Stripe('pk_live_WBgGhfOBShwMGAXipP1KHl7u');
 
-  var monthlyPlanButton = document.getElementById('price_1IOXkqKhvEuHFknZlCwbX1eV');
-  monthlyPlanButton.addEventListener('click', function () {
+  function pgcCheckout(priceId) {
     stripe.redirectToCheckout({
-      items: [{plan: 'price_1IOXkqKhvEuHFknZlCwbX1eV', quantity: 1}],
+      items: [{plan: priceId, quantity: 1}],
       successUrl: 'https://www.postgrescompare.com/success',
-      cancelUrl: 'https://www.postgrescompare.com/',
+      cancelUrl: 'https://www.postgrescompare.com/purchase',
       billingAddressCollection: 'required'
     });
-    return false;
-  });
+  }
 
-  var annualPlanButton = document.getElementById('price_1IOXlOKhvEuHFknZBrJxEeZP');
-  annualPlanButton.addEventListener('click', function () {
-    stripe.redirectToCheckout({
-      items: [{plan: 'price_1IOXlOKhvEuHFknZBrJxEeZP', quantity: 1}],
-      successUrl: 'https://www.postgrescompare.com/success',
-      cancelUrl: 'https://www.postgrescompare.com/',
-      billingAddressCollection: 'required'
+  var monthlyButton = document.getElementById('buy-monthly');
+  if (monthlyButton) {
+    monthlyButton.addEventListener('click', function () {
+      pgcCheckout('price_1U2gmnKhvEuHFknZ7qYklVhI');
+      return false;
     });
-    return false;
-  });
+  }
+
+  var annualButton = document.getElementById('buy-annual');
+  if (annualButton) {
+    annualButton.addEventListener('click', function () {
+      pgcCheckout('price_1U2gmSKhvEuHFknZrkJItaph');
+      return false;
+    });
+  }
 </script>
 
 <script type="application/ld+json">
@@ -215,7 +180,7 @@ description: "Simple, transparent pricing for PostgreSQL schema comparison. Mont
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.postgrescompare.com"},
-    {"@type": "ListItem", "position": 2, "name": "Purchase", "item": "https://www.postgrescompare.com/purchase"}
+    {"@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://www.postgrescompare.com/purchase"}
   ]
 }
 </script>

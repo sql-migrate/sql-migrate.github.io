@@ -7,12 +7,11 @@
 
 // Content sections
 .content {
+	// No alternating white bands. The system has one deliberate band (.local);
+	// tinting every second section fought the new page structure and left
+	// half-empty white slabs behind the pricing cards.
 	section {
 		padding: 80px 0;
-
-		&:nth-child(even) {
-			background: var(--panel);
-		}
 	}
 }
 

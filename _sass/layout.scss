@@ -54,9 +54,9 @@ section + section {
 	margin: 60px 0;
 }
 
-.page h2 {
-	text-align: center;
-}
+// Interior h2s follow the same left-aligned rhythm as their hunk labels;
+// they used to be force-centred, which broke every new section.
+
 
 blockquote {
 	padding: 18px 25px;

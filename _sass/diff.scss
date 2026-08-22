@@ -749,3 +749,24 @@
 		justify-content: center;
 	}
 }
+
+// --- Purchase page --------------------------------------------------------
+
+// Pro offers two billing periods, so its card ends in a pair of buttons
+// rather than a single one.
+.buy-pair {
+	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	.d-btn {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.buy-trust {
+	margin-top: 26px;
+	justify-content: center;
+}
