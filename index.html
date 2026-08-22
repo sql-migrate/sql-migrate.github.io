@@ -1,218 +1,203 @@
 ---
-title: "PostgresCompare — PostgreSQL Schema Diff & Deployment Tool"
-description: "See every schema difference in seconds. Generate deployment scripts automatically. Runs 100% locally — your data never leaves your machine. Free 30-day trial."
+title: "PostgresCompare — Know exactly what changed"
+description: "Find every difference between two PostgreSQL schemas, then generate the dependency-ordered SQL to deploy them. Runs 100% locally. 14-day trial, then free forever."
 ---
 
-<section class="hero">
-  <div class="text-container">
-    <p class="version-badge"><a href="/downloads">Version 1.2.2 now available — MCP server for AI agents →</a></p>
-    <h1>The <span class="typewriter" data-words='["Reliable", "Fast", "Accurate", "Simple"]'></span>&nbsp;Way to<br>Compare PostgreSQL Databases</h1>
-    <h2>Find differences, generate deployment SQL, and keep your databases in sync with confidence. Trusted by developers worldwide.</h2>
-    <div class="hero-cta">
-      <a href="/downloads" class="primary-button">
-        Download Free Trial
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path d="M10 3v14m0 0l6-6m-6 6l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </a>
-      <a href="/purchase" class="secondary-button">See Pricing</a>
+<header class="d-hero">
+  <div>
+    <p class="hunk">@@ <b>v2.0</b> &middot; schema &amp; data comparison for postgresql @@</p>
+    <h1>
+      <span class="line del"><span class="sign">&minus;</span>Eyeball two schemas and hope for the best.</span>
+      <span class="line add"><span class="sign">+</span>Know exactly what changed. Deploy it safely.</span>
+    </h1>
+    <p class="d-hero-sub">PostgresCompare finds every difference across 40+ object types, then writes the dependency-ordered SQL to sync them &mdash; flagging anything destructive before you run it.</p>
+    <div class="d-hero-ctas">
+      <a href="/downloads" class="d-btn d-btn-primary">Download free</a>
+      <a href="/purchase" class="d-btn d-btn-quiet">See pricing</a>
     </div>
-    <div class="trust-bar">
-      <div class="trust-item">
-        <span class="trust-icon">✓</span>
-        <span><strong>100%</strong> Safe & Secure</span>
+    <p class="trust"><span>runs 100% locally</span><span>no credit card</span><span>macOS &middot; Windows &middot; Linux</span></p>
+  </div>
+
+  <div class="diff" role="img" aria-label="A schema comparison of the orders table between staging and production, showing an added currency column, an added index, and a removed legacy_ref column flagged as a destructive change.">
+    <div class="bar">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      <span class="ttl">orders &mdash; staging &rarr; production</span>
+    </div>
+    <div class="cols"><span>staging.public.orders</span><span>production.public.orders</span></div>
+    <div class="body">
+      <span class="r h">@@ table: orders &middot; 3 differences @@</span>
+      <span class="r"><span class="n">12</span>  amount      numeric(10,2) NOT NULL,</span>
+      <span class="r a"><span class="n">13</span>+ currency    char(3) NOT NULL DEFAULT 'USD',</span>
+      <span class="r"><span class="n">14</span>  status      order_status DEFAULT 'pending',</span>
+      <span class="r d"><span class="n">15</span>- legacy_ref  varchar(64),</span>
+      <span class="r a"><span class="n">21</span>+ CREATE INDEX idx_orders_status ON orders (status);</span>
+    </div>
+    <div class="warn">&#9888; <span><b>1 destructive change:</b> DROP COLUMN legacy_ref &mdash; review before deploying</span></div>
+    <div class="foot">
+      <span class="dp-btn">View history</span>
+      <span class="dp-btn primary">Generate deployment script</span>
+    </div>
+  </div>
+</header>
+
+<section id="features" class="d-section">
+  <div class="dw">
+    <p class="hunk">@@ <b>what it does</b> @@</p>
+    <h2 class="d-h2">Every difference found.<br>Every deploy accounted for.</h2>
+    <p class="d-intro">Compare any two schemas &mdash; then act on what you find with a script you can read before you run.</p>
+
+    <div class="d-grid">
+      <div class="cell">
+        <span class="tag">compare</span>
+        <h3>40+ object types, line by line</h3>
+        <p>Tables, functions, types, policies, triggers, and more &mdash; side by side with line-level highlighting, a plain-English summary, and dependency chips linking related objects.</p>
       </div>
-      <div class="trust-item">
-        <span class="trust-icon">✓</span>
-        <span><strong>No</strong> Data Sent to Cloud</span>
+      <div class="cell">
+        <span class="tag">deploy</span>
+        <h3>Deployment scripts, dependency-ordered</h3>
+        <p>One click generates the SQL to bring two schemas in sync &mdash; in an order that actually runs, with destructive statements surfaced in red before anything else.</p>
       </div>
-      <div class="trust-item">
-        <span class="trust-icon">✓</span>
-        <span><strong>Free</strong> 30-Day Trial</span>
+      <div class="cell">
+        <span class="tag">track</span>
+        <h3>Schema history and drift</h3>
+        <p>Every comparison is recorded. Watch your schema evolve in a swimlane view, and catch drift between environments before it reaches an incident channel.</p>
+      </div>
+      <div class="cell">
+        <span class="tag new">+ new in v2</span>
+        <h3>Built for AI-assisted workflows</h3>
+        <p>The bundled MCP server lets coding agents run comparisons and read diffs directly &mdash; your schema stays on your machine while your agent does the legwork.</p>
+      </div>
+    </div>
+
+    <div class="sources">
+      <span class="chip"><i>src</i>live databases</span>
+      <span class="chip"><i>src</i>pg_dump files</span>
+      <span class="chip"><i>src</i>migration folders</span>
+      <span class="chip"><i>src</i>any combination of the three</span>
+    </div>
+  </div>
+</section>
+
+<section class="local">
+  <div class="local-inner">
+    <div>
+      <p class="hunk">@@ <b>where it runs</b> @@</p>
+      <h2 class="d-h2">Your schema never leaves your machine.</h2>
+      <p class="d-intro">Every comparison runs locally on your desktop. No cloud processing, no data in transit, nothing for your security team to review &mdash; which is exactly how they like it.</p>
+    </div>
+    <pre class="flow" role="img" aria-label="Diagram: PostgresCompare and both database connections run on your machine. The cloud receives nothing.">your machine
+├── postgrescompare        <span class="ok">✓ compares here</span>
+├── staging connection     <span class="ok">✓ read-only</span>
+└── production connection  <span class="ok">✓ read-only</span>
+
+the cloud                  <span class="no">receives your data</span></pre>
+  </div>
+</section>
+
+<section id="v2" class="d-section">
+  <div class="dw">
+    <p class="hunk">@@ <b>what changed in v2</b> @@</p>
+    <h2 class="d-h2">The release notes, as they should be read.</h2>
+
+    <div class="clog">
+      <div class="bar">git log v1..v2 --oneline</div>
+      <div class="body">
+        <span class="r a">+ <b>Free tier.</b> <span class="desc">Compare, script and deploy for free, forever. Pay for history and automation.</span></span>
+        <span class="r a">+ <b>MCP server.</b> <span class="desc">Let AI coding agents diff schemas without your data leaving home.</span></span>
+        <span class="r a">+ <b>Data comparison.</b> <span class="desc">Row-level differences, not just structure &mdash; with INSERT, UPDATE and DELETE scripts.</span></span>
+        <span class="r d">- <b>The trial cliff.</b> <span class="desc">Your 14-day trial now expires into the free tier, not into a locked window.</span></span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="screenshot-section">
-  <div class="screenshot-container">
-    <div class="screenshot-dots">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+<section class="d-section">
+  <div class="dw">
+    <div class="d-quote">
+      <blockquote>Clever and complete tool to compare PostgreSQL schemas and diff databases.</blockquote>
+      <cite><b>Scott Hanselman</b> &middot; @shanselman</cite>
     </div>
-    <div class="carousel">
-      <div class="carousel-slides">
-        <img src="/images/postgrescomparescreenshot.png" alt="PostgresCompare Schema Comparison" class="carousel-slide active">
-        <img src="/images/screenshot2.png" alt="PostgresCompare SQL Diff" class="carousel-slide">
-        <img src="/images/screenshot3.png" alt="PostgresCompare Results" class="carousel-slide">
+
+    <div class="voices">
+      <div class="voice">
+        <p>I needed a quick schema diff and got the answers I needed in under a minute.</p>
+        <p class="who"><b>Richard Hayes</b> &middot; @justcompile</p>
       </div>
-      <button class="carousel-btn carousel-prev" aria-label="Previous">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M15 18l-6-6 6-6"/>
-        </svg>
-      </button>
-      <button class="carousel-btn carousel-next" aria-label="Next">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M9 18l6-6-6-6"/>
-        </svg>
-      </button>
-      <div class="carousel-indicators">
-        <button class="indicator active" aria-label="Slide 1"></button>
-        <button class="indicator" aria-label="Slide 2"></button>
-        <button class="indicator" aria-label="Slide 3"></button>
+      <div class="voice">
+        <p>Compare dev to test to stage to prod &mdash; it has become essential as I plan website updates and verify database changes have been implemented.</p>
+        <p class="who"><b>Dan Langille</b> &middot; @DLangille</p>
+      </div>
+      <div class="voice">
+        <p>Just used the tool for the first time and it was a huge help.</p>
+        <p class="who"><b>Ryan Booz</b> &middot; @ryanbooz</p>
+      </div>
+      <div class="voice">
+        <p>Using PostgresCompare daily and loving it.</p>
+        <p class="who"><b>Wellspring</b> &middot; @WellspringCloud</p>
       </div>
     </div>
   </div>
 </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const carousel = document.querySelector('.carousel');
-  if (!carousel) return;
+<section id="pricing" class="d-section">
+  <div class="dw">
+    <p class="hunk">@@ <b>pricing</b> @@</p>
+    <h2 class="d-h2">Free to compare. Paid to automate.</h2>
+    <p class="d-intro">Comparing, scripting and deploying are free forever. History, pipelines and the CLI are what you pay for.</p>
 
-  const slides = carousel.querySelectorAll('.carousel-slide');
-  const indicators = carousel.querySelectorAll('.indicator');
-  const prevBtn = carousel.querySelector('.carousel-prev');
-  const nextBtn = carousel.querySelector('.carousel-next');
-  let currentIndex = 0;
-  let autoPlayInterval;
-
-  function showSlide(index) {
-    slides.forEach(s => s.classList.remove('active'));
-    indicators.forEach(i => i.classList.remove('active'));
-    currentIndex = (index + slides.length) % slides.length;
-    slides[currentIndex].classList.add('active');
-    indicators[currentIndex].classList.add('active');
-  }
-
-  function nextSlide() { showSlide(currentIndex + 1); }
-  function prevSlide() { showSlide(currentIndex - 1); }
-
-  function startAutoPlay() {
-    autoPlayInterval = setInterval(nextSlide, 5000);
-  }
-
-  function resetAutoPlay() {
-    clearInterval(autoPlayInterval);
-    startAutoPlay();
-  }
-
-  prevBtn.addEventListener('click', () => { prevSlide(); resetAutoPlay(); });
-  nextBtn.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
-  indicators.forEach((indicator, i) => {
-    indicator.addEventListener('click', () => { showSlide(i); resetAutoPlay(); });
-  });
-
-  startAutoPlay();
-});
-</script>
-
-<section class="features" id="features">
-  <div class="section-header">
-    <h2>Everything You Need to Compare<br>PostgreSQL Databases</h2>
-    <p>Powerful features designed to make schema comparison fast, accurate, and reliable.</p>
-  </div>
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">🔍</div>
-      <h3>Find Every Difference</h3>
-      <p>Compare over 40 PostgreSQL object types side-by-side. See exactly what changed in a human-readable summary alongside the SQL diff, with line-level highlighting and dependency chips for related objects.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">⚡</div>
-      <h3>Generate Deployment Scripts</h3>
-      <p>Automatically generate dependency-ordered SQL scripts to synchronise any two schemas. Scripts include timestamped progress notices so you can monitor execution in any client — psql, DataGrip, or similar.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🛡️</div>
-      <h3>Runs 100% Locally</h3>
-      <p>All comparisons run on your machine. Your schema and data never leave your network — no cloud processing, no data in transit, no third-party access.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">⏱️</div>
-      <h3>Track Schema History</h3>
-      <p>Every comparison is saved automatically. See how your schema changed over time with a swimlane view grouped by change category, and a per-object history timeline to catch drift and regressions.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📂</div>
-      <h3>Compare SQL Files</h3>
-      <p>Use a live database, a pg_dump file, hand-written SQL, or a folder of migration scripts as either side of a comparison. No second live environment needed.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🚦</div>
-      <h3>Deploy with Confidence</h3>
-      <p>Destructive statements are highlighted red before you run anything. A confirmation dialog shows the target database and risk count. Pre- and post-deploy scripts attach to every project.</p>
-    </div>
-  </div>
-</section>
-
-<section class="testimonial">
-  <div class="testimonials-container">
-    <div class="section-header">
-      <h2>Trusted by Developers Worldwide</h2>
-      <p>Join thousands of developers who rely on PostgresCompare every day.</p>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial">
-        <p class="testimonial-text">Clever and complete tool to compare PostgreSQL Schemas and Diff Databases</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">SH</div>
-          <div class="author-info">
-            <strong>Scott Hanselman</strong>
-            <span>@shanselman</span>
-          </div>
-        </div>
+    <div class="prices">
+      <div class="price">
+        <h3>Free</h3>
+        <div class="amt">$0</div>
+        <p class="note">Where your 14-day trial lands</p>
+        <ul>
+          <li>Unlimited comparisons, all 40+ object types</li>
+          <li>Live databases, pg_dump files, migration folders</li>
+          <li>Dependency-ordered deployment scripts</li>
+          <li>Deploy, with destructive-change safeguards</li>
+          <li>Data comparison, snapshots and exports</li>
+          <li class="na">Holds one comparison at a time</li>
+          <li class="na">No pipelines, no CLI</li>
+        </ul>
+        <a href="/downloads" class="d-btn d-btn-quiet">Download free</a>
       </div>
-      <div class="testimonial">
-        <p class="testimonial-text">I needed a quick schema diff and got the answers I needed in under a minute ❤️</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">RH</div>
-          <div class="author-info">
-            <strong>Richard Hayes</strong>
-            <span>@justcompile</span>
-          </div>
-        </div>
+      <div class="price feat">
+        <h3>Pro</h3>
+        <div class="amt">$29.95 <small>/ user / month</small></div>
+        <p class="note">$299 billed yearly &mdash; 2 months free</p>
+        <ul>
+          <li>Everything in Free</li>
+          <li>Full comparison history and drift timelines</li>
+          <li>Pipelines</li>
+          <li>The pgc CLI, for CI and automation</li>
+          <li>Parallel connections, include/exclude rules</li>
+          <li>Pre- and post-deploy scripts</li>
+        </ul>
+        <a href="/purchase" class="d-btn d-btn-primary">Start with Pro</a>
       </div>
-      <div class="testimonial">
-        <p class="testimonial-text">Using @postgrescompare daily and loving it!</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">W</div>
-          <div class="author-info">
-            <strong>Wellspring</strong>
-            <span>@WellspringCloud</span>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial">
-        <p class="testimonial-text">Compare dev to test to stage to prod - it has become essential as I plan website updates and verify database changes have been implemented.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">DL</div>
-          <div class="author-info">
-            <strong>Dan Langille</strong>
-            <span>@DLangille</span>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial">
-        <p class="testimonial-text">Just used the tool for the first time and it was a huge help!</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">RB</div>
-          <div class="author-info">
-            <strong>Ryan Booz</strong>
-            <span>@ryanbooz</span>
-          </div>
-        </div>
+      <div class="price">
+        <h3>Team</h3>
+        <div class="amt">Volume <small>pricing</small></div>
+        <p class="note">For teams and consultancies</p>
+        <ul>
+          <li>Everything in Pro</li>
+          <li>Volume discounts</li>
+          <li>Client-transferable licences</li>
+          <li>Invoice billing</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="/contact" class="d-btn d-btn-quiet">Talk to us</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cta-section">
-  <div class="cta-content">
-    <h2>Start Comparing with Confidence</h2>
-    <p>Download your free 30-day trial and experience the difference. No credit card required, no commitment—just reliable database comparison.</p>
-    <a href="/downloads" class="primary-button">Download Free Trial</a>
+<section class="final">
+  <div class="dw">
+    <h2 class="d-h2">See what changed. In the next five minutes.</h2>
+    <p>Download free, open the sample comparison, and watch a realistic schema drift resolve into a deployment script.</p>
+    <a href="/downloads" class="d-btn d-btn-primary">Download free</a>
+    <span class="trust">macOS &middot; Windows &middot; Linux &mdash; no credit card, no account</span>
   </div>
 </section>
 
@@ -227,10 +212,10 @@ document.addEventListener('DOMContentLoaded', function() {
   "url": "https://www.postgrescompare.com",
   "downloadUrl": "https://www.postgrescompare.com/downloads",
   "screenshot": "https://www.postgrescompare.com/images/postgrescomparescreenshot.png",
-  "softwareVersion": "1.2.2",
+  "softwareVersion": "2.0",
   "offers": {
     "@type": "Offer",
-    "price": "14.95",
+    "price": "29.95",
     "priceCurrency": "USD",
     "priceValidUntil": "2026-12-31",
     "availability": "https://schema.org/InStock"
@@ -275,81 +260,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   ]
 }
-</script>
-
-<style>
-.typewriter {
-  position: relative;
-}
-.typewriter::after {
-  content: '';
-  display: inline-block;
-  width: 3px;
-  height: 0.85em;
-  background: #0F766E;
-  margin-left: 4px;
-  vertical-align: middle;
-  animation: blink 0.7s infinite;
-}
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var element = document.querySelector('.typewriter');
-  if (!element) return;
-
-  var words = JSON.parse(element.dataset.words);
-  var wordIndex = 0;
-  var charIndex = 0;
-  var isDeleting = false;
-  var isPaused = false;
-
-  var typeSpeed = 80;
-  var deleteSpeed = 120;
-  var pauseAfterWord = 4000;
-  var pauseAfterDelete = 500;
-
-  function type() {
-    var currentWord = words[wordIndex];
-
-    if (isPaused) {
-      isPaused = false;
-      setTimeout(type, isDeleting ? pauseAfterWord : pauseAfterDelete);
-      return;
-    }
-
-    if (isDeleting) {
-      element.textContent = currentWord.substring(0, charIndex - 1);
-      charIndex--;
-
-      if (charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        isPaused = true;
-      }
-    } else {
-      element.textContent = currentWord.substring(0, charIndex + 1);
-      charIndex++;
-
-      if (charIndex === currentWord.length) {
-        isDeleting = true;
-        isPaused = true;
-      }
-    }
-
-    var speed = isDeleting ? deleteSpeed : typeSpeed;
-    setTimeout(type, speed);
-  }
-
-  // Start with first word displayed
-  element.textContent = words[0];
-  charIndex = words[0].length;
-  isDeleting = true;
-  isPaused = false;
-  setTimeout(type, pauseAfterWord);
-});
 </script>

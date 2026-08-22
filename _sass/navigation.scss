@@ -1,4 +1,6 @@
-header {
+// Scoped to the site header only: the hero is also a <header>, and it must
+// not inherit sticky positioning or the bottom border.
+body > header {
 	position: sticky;
 	top: 0;
 	width: 100%;
