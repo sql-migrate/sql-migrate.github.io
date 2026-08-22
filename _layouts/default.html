@@ -62,16 +62,19 @@
     {% endif %}
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header>
       <nav>
         <a href="{{ site.baseurl }}/" class="logo">
-          <div class="logo-icon">P</div>
+          <span class="logo-mark" aria-hidden="true">&plusmn;</span>
           PostgresCompare
         </a>
         {% include navigation.html %}
       </nav>
     </header>
-    {{ content }}
+    <main id="main">
+      {{ content }}
+    </main>
     <footer>
       <div class="footer-content">
         {% for column in site.data.footer %}
@@ -93,7 +96,7 @@
         {% endfor %}
       </div>
       <div class="footer-bottom">
-        <p>&copy; {{ site.time | date: '%Y' }} PostgresCompare. All rights reserved.</p>
+        <p class="footer-mono">&copy; {{ site.time | date: '%Y' }} postgrescompare &middot; built by one person, used before every deploy</p>
       </div>
     </footer>
     <script>

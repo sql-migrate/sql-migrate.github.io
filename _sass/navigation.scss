@@ -1,17 +1,17 @@
 header {
-	position: fixed;
+	position: sticky;
 	top: 0;
 	width: 100%;
-	background: rgba(255, 255, 255, 0.95);
-	backdrop-filter: blur(10px);
-	border-bottom: 1px solid $border;
+	background: rgba(247, 248, 246, 0.92); // --paper, translucent
+	backdrop-filter: blur(8px);
+	border-bottom: 1px solid var(--line);
 	z-index: 1000;
-	animation: slideDown 0.5s ease-out;
 
 	nav {
-		max-width: 1280px;
+		max-width: 1140px;
 		margin: 0 auto;
-		padding: 1rem 2rem;
+		padding: 0 24px;
+		height: 64px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -20,36 +20,36 @@ header {
 
 .logo {
 	font-family: var(--sans);
-	font-size: 1.5rem;
-	font-weight: 800;
-	color: $primary;
+	font-size: 1.05rem;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	color: var(--ink);
 	display: flex;
 	align-items: center;
-	gap: 0.5rem;
 	text-decoration: none;
 
 	&:hover {
 		text-decoration: none;
-		color: $primary;
+		color: var(--ink);
 	}
 }
 
-.logo-icon {
-	width: 36px;
-	height: 36px;
-	background: $primary;
-	border-radius: 8px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: white;
+// The mark is the diff: plus over minus, in the machine face.
+.logo-mark {
+	font-family: var(--mono);
 	font-weight: 700;
-	font-size: 1.2rem;
+	font-size: 0.8rem;
+	line-height: 1;
+	color: #fff;
+	background: var(--blue);
+	border-radius: 5px;
+	padding: 4px 7px;
+	margin-right: 9px;
 }
 
 .nav-links {
 	display: flex;
-	gap: 2rem;
+	gap: 26px;
 	list-style: none;
 	align-items: center;
 	margin: 0;
@@ -65,63 +65,37 @@ header {
 	}
 
 	a {
-		color: $text;
+		color: var(--ink-soft);
 		text-decoration: none;
 		font-weight: 500;
-		font-size: 0.95rem;
-		transition: color 0.3s ease;
-		position: relative;
-
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: -4px;
-			left: 0;
-			width: 0;
-			height: 2px;
-			background: $primary-light;
-			transition: width 0.3s ease;
-		}
+		font-size: 0.9rem;
+		transition: color 0.15s ease;
 
 		&:hover {
-			color: $primary;
+			color: var(--ink);
 			text-decoration: none;
-
-			&::after {
-				width: 100%;
-			}
 		}
 
 		&.active {
-			color: $primary;
-
-			&::after {
-				width: 100%;
-			}
+			color: var(--ink);
 		}
 	}
 }
 
 .cta-button {
-	background: $primary;
-	color: white !important;
-	padding: 0.7rem 1.5rem;
-	border-radius: 8px;
+	background: var(--blue);
+	color: #fff !important;
+	padding: 8px 16px;
+	border-radius: 7px;
 	text-decoration: none;
 	font-weight: 600;
-	transition: all 0.3s ease;
-	box-shadow: 0 4px 12px $shadow;
-
-	&::after {
-		display: none !important;
-	}
+	font-size: 0.87rem;
+	transition: background 0.15s ease;
 
 	&:hover {
-		background: $primary-dark;
-		transform: translateY(-2px);
-		box-shadow: 0 6px 20px $shadow;
+		background: var(--blue-deep);
 		text-decoration: none;
-		color: white !important;
+		color: #fff !important;
 	}
 }
 
@@ -129,10 +103,10 @@ header {
 	display: inline;
 	position: absolute;
 	right: 20px;
-	top: 15px;
+	top: 12px;
 	font-size: 1.9em;
 	border: 0;
-	color: $primary;
+	color: var(--ink);
 	text-decoration: none;
 
 	@media #{$mid-point} {
@@ -150,13 +124,14 @@ header {
 	.nav-links {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 		position: absolute;
-		top: 60px;
+		top: 64px;
 		left: 0;
 		right: 0;
-		background: white;
-		padding: 1rem 2rem;
-		border-bottom: 1px solid $border;
+		background: var(--paper);
+		padding: 1rem 24px;
+		border-bottom: 1px solid var(--line);
 		gap: 1rem;
 
 		li {
@@ -168,7 +143,7 @@ header {
 			padding: 0.5rem 0;
 
 			&.cta-button {
-				padding: 0.7rem 1.5rem;
+				padding: 8px 16px;
 				display: inline-block;
 			}
 		}

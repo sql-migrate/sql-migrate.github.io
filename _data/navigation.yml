@@ -2,35 +2,19 @@
   link: /#features
   new_window: false
   highlight: false
+- name: Pricing
+  link: /purchase
+  new_window: false
+  highlight: false
 - name: Docs
   link: /docs
   new_window: false
   highlight: false
-- name: Buy Now
-  link: /purchase
-  new_window: false
-  highlight: false
-- name: FAQ
-  link: /faq
-  new_window: false
-  highlight: false
-- name: About
-  link: /about
-  new_window: false
-  highlight: false
-- name: Contact
-  link: /contact
-  new_window: false
-  highlight: false
-- name: Release Notes
+- name: Changelog
   link: /release-notes
   new_window: false
   highlight: false
-- name: Articles
-  link: /articles
-  new_window: false
-  highlight: false
-- name: Download
+- name: Download free
   link: /downloads
   new_window: false
   highlight: true
