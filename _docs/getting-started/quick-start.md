@@ -45,12 +45,22 @@ With both X and Y environments configured:
 1. Click **Compare** in the toolbar
 2. Wait for the comparison to complete
 
+<figure class="doc-shot">
+  <img src="/images/screenshot2.png" alt="A PostgresCompare project showing the latest comparison as a donut chart, with a status of Different (3) and a Compare again button." loading="lazy" width="1920" height="1086">
+  <figcaption>The project view after a comparison, with the result summarised and a button to run it again.</figcaption>
+</figure>
+
 The comparison reads the schema from both databases and identifies:
 - Objects that exist only in the X environment (new)
 - Objects that exist only in the Y environment (dropped)
 - Objects that differ between X and Y environments (different)
 
 ## Understanding the Results
+
+<figure class="doc-shot">
+  <img src="/images/postgrescomparescreenshot.png" alt="Comparison results in PostgresCompare: a filterable list of database objects with New, Different and Identical statuses, above a side-by-side Difference SQL view with changed lines highlighted." loading="lazy" width="1920" height="1084">
+  <figcaption>Objects on top, filterable by name, type and status; the difference SQL for the selected object below.</figcaption>
+</figure>
 
 The comparison results show a tree view of all database objects organized by type:
 

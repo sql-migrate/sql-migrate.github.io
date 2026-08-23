@@ -388,6 +388,17 @@
 		&.new {
 			color: var(--add);
 		}
+
+		// Marks a capability a subscription unlocks, so the grid and the
+		// pricing table can't drift apart.
+		i {
+			font-style: normal;
+			color: var(--blue);
+			border: 1px solid var(--line);
+			border-radius: 4px;
+			padding: 1px 5px;
+			margin-left: 6px;
+		}
 	}
 
 	h3 {

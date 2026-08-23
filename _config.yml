@@ -4,6 +4,12 @@
 title: PostgresCompare
 url: "https://www.postgrescompare.com"
 google_analytics_key: UA-43432786-3
+
+# Versions. app_version is what /downloads actually serves; marketing_version
+# is what the homepage and product schema claim. They differ while the v2 site
+# is live ahead of the v2 build — flipping them on release day is two edits.
+app_version: "1.2.2"
+marketing_version: "2.0"
 disqus_shortname: https-www-postgrescompare-com
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)

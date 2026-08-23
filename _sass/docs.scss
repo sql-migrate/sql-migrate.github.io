@@ -345,3 +345,26 @@
   text-align: right;
   margin-left: auto;
 }
+
+// Product screenshots inside a doc page. Framed like the other panels, and
+// captioned so the picture is not the only thing carrying the point.
+.doc-shot {
+  margin: 1.75rem 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--panel);
+  }
+
+  figcaption {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gutter);
+    margin-top: 10px;
+  }
+}

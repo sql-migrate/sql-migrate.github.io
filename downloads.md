@@ -11,7 +11,7 @@ description: "Download PostgresCompare and start comparing PostgreSQL schemas in
 
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 900px; margin: 0 auto; text-align: center;">
   <div class="whatsnew">
-    <div class="bar">postgrescompare 1.2.2</div>
+    <div class="bar">postgrescompare {{ site.app_version }}</div>
     <p>MCP server integration for AI agents (<code>pgc mcp serve</code>), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes">View all release notes &rarr;</a></p>
   </div>
 
@@ -40,7 +40,7 @@ description: "Download PostgresCompare and start comparing PostgreSQL schemas in
   "description": "PostgresCompare compares PostgreSQL database schema objects and writes the SQL to deploy the differences.",
   "url": "https://www.postgrescompare.com/downloads",
   "downloadUrl": "https://www.postgrescompare.com/downloads",
-  "softwareVersion": "1.2.2",
+  "softwareVersion": "{{ site.app_version }}",
   "fileSize": "250MB",
   "softwareRequirements": "PostgreSQL 9.2 through 18",
   "offers": {

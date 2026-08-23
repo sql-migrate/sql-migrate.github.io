@@ -256,3 +256,33 @@ touched. Phases 4–6 follow once Stripe is sorted.
 - `order-cezannehr.md` quotes **$149.95/user/year**. That is a negotiated client
   order form, not site pricing, so the sweep did not touch it. Whether that deal
   gets repriced against the new $299.95 is a commercial decision, not a site one.
+
+---
+
+## Content pass (2026-08-23)
+
+Five problems found by reading the homepage against what the product actually
+does, four fixed:
+
+1. **Pipelines and the CLI appeared only in the pricing table.** "Paid to
+   automate" was the pricing headline for two features the page never
+   introduced. The feature grid is 2x3 now, with an `automate` cell covering
+   the `pgc` CLI and pipelines.
+2. **"Every comparison is recorded" contradicted the free tier**, which holds
+   one at a time. Paid capabilities in the grid now carry a `pro` marker on
+   their mono tag, so the grid and the pricing table cannot drift apart.
+3. **The MCP card undercut the local-only band.** It claimed "your schema stays
+   on your machine while your agent does the legwork" — but a hosted agent
+   reading a diff is exactly what a security reviewer would care about. It now
+   describes the real controls: read-only mode and environment allow-lists.
+4. **The screenshots were orphaned** by the carousel deletion. All three are
+   rehomed in the docs where they are instructive rather than decorative:
+   two in Quick start, one in the Deployment scripts guide, framed and
+   captioned.
+5. **v2.0 timing** — still a decision, but no longer a chore. `app_version` and
+   `marketing_version` live in `_config.yml`; the homepage and product schema
+   use the marketing one, the download pages the app one. Flipping on release
+   day is two lines.
+
+Deleting the changelog section had also silently dropped data comparison from
+the homepage — it now has its own `data` cell.

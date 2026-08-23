@@ -18,6 +18,11 @@ After running a comparison:
 
 The generated script includes all selected changes in dependency order.
 
+<figure class="doc-shot">
+  <img src="/images/screenshot3.png" alt="The PostgresCompare deployment script view: a checklist of change types on the left, the generated SQL on the right with new statements highlighted, and a Run script button." loading="lazy" width="1920" height="1111">
+  <figcaption>Every statement is listed and individually selectable on the left; the script it produces is on the right, ready to copy, save or run.</figcaption>
+</figure>
+
 ## Script Structure
 
 Generated scripts include a header with metadata followed by statements grouped into labeled sections:

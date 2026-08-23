@@ -5,7 +5,7 @@ description: "Find every difference between two PostgreSQL schemas, then generat
 
 <header class="d-hero">
   <div>
-    <p class="hunk">@@ <b>v2.0</b> &middot; schema &amp; data comparison for postgresql @@</p>
+    <p class="hunk">@@ <b>v{{ site.marketing_version }}</b> &middot; schema &amp; data comparison for postgresql @@</p>
     <h1>
       <span class="line del"><span class="sign">&minus;</span>Eyeball two schemas and hope for the best.</span>
       <span class="line add"><span class="sign">+</span>Know exactly what changed. Deploy it safely.</span>
@@ -58,14 +58,24 @@ description: "Find every difference between two PostgreSQL schemas, then generat
         <p>One click generates the SQL to bring two schemas in sync &mdash; in an order that actually runs, with destructive statements surfaced in red before anything else.</p>
       </div>
       <div class="cell">
-        <span class="tag">track</span>
-        <h3>Schema history and drift</h3>
-        <p>Every comparison is recorded. Watch your schema evolve in a swimlane view, and catch drift between environments before it reaches an incident channel.</p>
+        <span class="tag">data</span>
+        <h3>Rows, not just structure</h3>
+        <p>Compare the data itself, see which rows differ, and generate the INSERT, UPDATE and DELETE statements to reconcile them. Export any table's differences to CSV.</p>
       </div>
       <div class="cell">
-        <span class="tag new">+ new in v2</span>
+        <span class="tag">automate <i>pro</i></span>
+        <h3>The pgc CLI and pipelines</h3>
+        <p>Run the same comparisons from CI, fail a build when a schema drifts unexpectedly, and chain steps into repeatable pipelines. No interface required.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">track <i>pro</i></span>
+        <h3>Schema history and drift</h3>
+        <p>Keep every comparison you run. Watch your schema evolve in a swimlane view, and catch drift between environments before it reaches an incident channel.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">agents</span>
         <h3>Built for AI-assisted workflows</h3>
-        <p>The bundled MCP server lets coding agents run comparisons and read diffs directly &mdash; your schema stays on your machine while your agent does the legwork.</p>
+        <p>The bundled MCP server lets coding agents run comparisons and read the results. Read-only mode and environment allow-lists control exactly what an agent can reach.</p>
       </div>
     </div>
 
@@ -215,7 +225,7 @@ the cloud                  <span class="no">receives your data</span></pre>
   "url": "https://www.postgrescompare.com",
   "downloadUrl": "https://www.postgrescompare.com/downloads",
   "screenshot": "https://www.postgrescompare.com/images/postgrescomparescreenshot.png",
-  "softwareVersion": "2.0",
+  "softwareVersion": "{{ site.marketing_version }}",
   "offers": {
     "@type": "Offer",
     "price": "29.95",
