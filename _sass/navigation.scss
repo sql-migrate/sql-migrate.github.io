@@ -36,19 +36,6 @@ body > header {
 	}
 }
 
-// The mark is the diff: plus over minus, in the machine face.
-.logo-mark {
-	font-family: var(--mono);
-	font-weight: 700;
-	font-size: 0.8rem;
-	line-height: 1;
-	color: #fff;
-	background: var(--blue);
-	border-radius: 5px;
-	padding: 4px 7px;
-	margin-right: 9px;
-}
-
 .nav-links {
 	display: flex;
 	gap: 26px;

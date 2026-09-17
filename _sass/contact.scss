@@ -30,3 +30,42 @@
 		font-size: .9em;
 	}
 }
+
+// --- Contact page: rebuilt form + details cells ----------------------------
+
+.cell form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.1rem;
+	margin-top: 1.5rem;
+}
+
+.cell form label {
+	margin: 0;
+	font-weight: 600;
+	font-size: 0.9rem;
+	color: var(--ink);
+}
+
+.contact-submit {
+	align-self: flex-start;
+}
+
+.contact-list {
+	margin-top: 1.5rem;
+
+	> div {
+		margin-bottom: 1.5rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	dt {
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--ink-soft);
+		margin-bottom: 0.3rem;
+	}
+}
