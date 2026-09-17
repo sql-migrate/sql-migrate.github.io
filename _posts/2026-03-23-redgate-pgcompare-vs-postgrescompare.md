@@ -32,7 +32,7 @@ PostgresCompare supports live database connections and **SQL files** as sources.
 
 ### Schema diff basics
 
-Both tools compare PostgreSQL schemas and produce a list of differences. pgCompare covers the most common object types — tables, views, functions, sequences, indexes, triggers, constraints, and procedures. PostgresCompare supports 38 object types, including less common ones like event triggers, foreign data wrappers, publications, subscriptions, operator families, and text search configuration objects.
+Both tools compare PostgreSQL schemas and produce a list of differences. pgCompare covers the most common object types — tables, views, functions, sequences, indexes, triggers, constraints, and procedures. PostgresCompare supports 40+ object types, including less common ones like event triggers, foreign data wrappers, publications, subscriptions, operator families, and text search configuration objects.
 
 For most comparisons this won't matter. For teams managing complex schemas the broader coverage is useful.
 
@@ -42,7 +42,7 @@ pgCompare shows a side-by-side SQL diff for each object — the before and after
 
 PostgresCompare gives you the same SQL diff, with line-level highlighting for child object changes within a table (individual columns, constraints, indexes) so you can see exactly what changed rather than scanning the full DDL. The editor includes a navigator for jumping between changed sections and a word wrap toggle for long function bodies.
 
-The Changes tab, added in 1.1.107, provides a human-readable summary alongside the SQL view — structured descriptions of what changed rather than raw DDL. For pre-deployment review this is considerably faster than reading SQL.
+The Changes tab provides a human-readable summary alongside the SQL view — structured descriptions of what changed rather than raw DDL. For pre-deployment review this is considerably faster than reading SQL.
 
 <!-- SCREENSHOT: PostgresCompare Changes tab alongside the SQL diff editor, showing a human-readable breakdown of a table's modifications -->
 
@@ -68,7 +68,7 @@ PostgresCompare surfaces object dependencies directly in the comparison list. Ea
 
 pgCompare's filtering options are limited. You can focus on specific object types but there's no fine-grained control over how objects are compared.
 
-PostgresCompare has 10 ignore toggles — whitespace, column order, privileges, owner, tablespace, and others — that let you tune the comparison to your workflow. All 38 object types can be enabled or disabled in project settings. The 1.1.107 release adds per-object-type name filters, so you can search within a specific type (for example, showing only tables whose names contain "order") without affecting the rest of the results.
+PostgresCompare has 10 ignore toggles — whitespace, column order, privileges, owner, tablespace, and others — that let you tune the comparison to your workflow. All 40+ object types can be enabled or disabled in project settings. Per-object-type name filters let you search within a specific type (for example, showing only tables whose names contain "order") without affecting the rest of the results.
 
 ### Deployment
 
@@ -76,7 +76,7 @@ pgCompare generates SQL scripts. Deployment is a manual step — you take the ge
 
 PostgresCompare has a built-in deployment workflow. Every statement in the generated script is classified by risk: **Destructive** statements (DROP TABLE, DROP COLUMN) are highlighted red; **Warning** statements (DROP FUNCTION, DROP VIEW) are highlighted amber. A summary banner shows the total count before you do anything.
 
-Clicking **Run script…** shows a confirmation dialog with the target connection name, database, and a restatement of the risk counts. The Run button turns red when destructive changes are present. Pre-deploy and post-deploy scripts can be attached to each project. The 1.1.107 release improves deployment progress logging, giving real-time per-statement feedback as the script executes.
+Clicking **Run script…** shows a confirmation dialog with the target connection name, database, and a restatement of the risk counts. The Run button turns red when destructive changes are present. Pre-deploy and post-deploy scripts can be attached to each project. Deployment progress logging gives real-time per-statement feedback as the script executes.
 
 <!-- SCREENSHOT: PostgresCompare deploy confirmation dialog — target database name, destructive statement count, Run button in red -->
 
@@ -91,9 +91,9 @@ PostgresCompare can export comparison results in six formats today: Excel (with 
 | Feature | Redgate pgCompare | PostgresCompare |
 |---------|-------------------|-----------------|
 | Basic diff | Yes | Yes |
-| Object types | Common types | 38 |
+| Object types | Common types | 40+ |
 | SQL file / folder as source | No (Snapshots on roadmap) | Yes |
-| Readable diff summary | No | Yes (Changes tab, 1.1.107) |
+| Readable diff summary | No | Yes (Changes tab) |
 | Free edition | Yes (Community) | Yes (free tier, plus a 14-day Pro trial) |
 | Projects and organisation | No | Yes |
 | Simultaneous comparisons | No | Yes |
@@ -101,11 +101,11 @@ PostgresCompare can export comparison results in six formats today: Excel (with 
 | Global search | No | Yes |
 | Comparison history | No | Yes |
 | Dependency tracking | No | Yes |
-| Name filters | No | Yes (1.1.107) |
+| Name filters | No | Yes |
 | Direct deployment | No | Yes |
 | Deployment safety checks | No | Yes |
 | Destructive warnings | No | Yes |
-| Progress notifications | No | Yes (1.1.107) |
+| Progress notifications | No | Yes |
 | Export reports | Roadmap | Yes (6 formats) |
 
 ## When Redgate pgCompare Is Worth Considering
@@ -126,4 +126,4 @@ PostgresCompare can export comparison results in six formats today: Excel (with 
 
 ---
 
-[Download PostgresCompare](/downloads/) — comparing, scripting and deploying are free forever, and your first 14 days include everything in Pro. No credit card required.
+[Download PostgresCompare](/downloads) — comparing, scripting and deploying are free forever, and your first 14 days include everything in Pro. No credit card required.

@@ -3,7 +3,7 @@ layout: post
 title: "Using AI to Manage Your PostgreSQL Schema"
 author: "The PostgresCompare Team"
 date: 2026-04-07
-excerpt: "PostgresCompare 1.2.2 introduces MCP server support, letting AI assistants like Claude explore your databases, compare schemas, and generate migration scripts—all through natural conversation."
+excerpt: "PostgresCompare's MCP server support lets AI assistants like Claude explore your databases, compare schemas, and generate migration scripts—all through natural conversation."
 ---
 
 What if you could manage your PostgreSQL schemas by simply *asking*?
@@ -12,7 +12,7 @@ What if you could manage your PostgreSQL schemas by simply *asking*?
 "Compare staging to production and show me the differences."  
 "Generate a migration script to sync them."
 
-With **PostgresCompare 1.2.2**, you can. We've added support for the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), allowing AI coding assistants like Claude Desktop and Claude Code to interact directly with your PostgreSQL databases through PostgresCompare.
+With **PostgresCompare**, you can. We've added support for the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), allowing AI coding assistants like Claude Desktop and Claude Code to interact directly with your PostgreSQL databases through PostgresCompare.
 
 This isn't just a gimmick—it's a genuinely useful way to explore schemas, understand drift, and generate migrations without memorizing CLI flags or navigating through UI screens.
 
@@ -39,7 +39,7 @@ When you run `pgc mcp serve`, PostgresCompare starts a local server that exposes
 
 ### 1. Install the CLI
 
-If you haven't already, [download the PostgresCompare CLI](/get) for your platform. It's a single executable—just add it to your PATH.
+If you haven't already, [download PostgresCompare](/downloads) — the CLI binaries are listed alongside the desktop app. It's a single executable—just add it to your PATH. The `pgc` CLI is part of Pro, and the 14-day trial includes it.
 
 ### 2. Configure Your Environments
 
@@ -218,7 +218,7 @@ Since it uses stdio JSON-RPC, you can also script it directly for advanced autom
 
 ## Getting Started
 
-1. **Update to 1.2.2:** [Download the latest release](/get)
+1. **Get the CLI:** [Download PostgresCompare](/downloads) — the `pgc` CLI is part of Pro and included in the 14-day trial
 2. **Configure your environments:** Create a `pgc.yaml` with your database connections
 3. **Start the MCP server:** Run `pgc mcp serve` (add `--read-only` for safety)
 4. **Connect your AI assistant:** Add the server to Claude Desktop's config
@@ -228,6 +228,6 @@ For complete setup instructions and the full list of available tools, see the [M
 
 ---
 
-AI-assisted database management isn't science fiction—it's available today in PostgresCompare 1.2.2. Whether you're onboarding onto a new project, debugging schema drift, or just tired of writing SQL by hand, give it a try.
+AI-assisted database management isn't science fiction—it's available today in PostgresCompare. Whether you're onboarding onto a new project, debugging schema drift, or just tired of writing SQL by hand, give it a try.
 
-**Ready to let AI help manage your schemas?** [Download PostgresCompare 1.2.2](/get) and start the conversation.
+**Ready to let AI help manage your schemas?** [Download PostgresCompare](/downloads) and start your 14-day trial — the MCP server runs through the `pgc` CLI, which is part of Pro, and the trial includes it.

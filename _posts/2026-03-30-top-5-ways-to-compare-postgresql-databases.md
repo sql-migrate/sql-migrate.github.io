@@ -119,7 +119,7 @@ This is where PostgresCompare fits in. A dedicated tool is purpose-built to solv
 
 It addresses the limitations of all the other methods:
 
-*   **Intelligent, Structured Diffing:** It parses and understands all 38 PostgreSQL object types and their dependencies. This eliminates the noise from `pg_dump` and provides a semantic understanding of every change.
+*   **Intelligent, Structured Diffing:** It parses and understands 40+ PostgreSQL object types and their dependencies. This eliminates the noise from `pg_dump` and provides a semantic understanding of every change.
 *   **Flexible Comparison Sources:** You can compare a live database to another live database, a `pg_dump` file, or a folder of SQL files from your Git repository. This allows for offline comparisons and "database-as-code" workflows.
 *   **Automation-Ready:** The `pgc` command-line interface is designed for CI/CD. With structured output formats (JSON, GitHub Actions annotations) and clear exit codes, it can easily be integrated into any pipeline to automatically validate schema changes.
 *   **History and Auditing:** Every comparison is saved. You can see how a schema has evolved, track drift over time, and generate reports (HTML, PDF, Excel) for auditing.

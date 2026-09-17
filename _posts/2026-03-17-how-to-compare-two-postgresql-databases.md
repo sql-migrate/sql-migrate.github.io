@@ -20,7 +20,7 @@ Open PostgresCompare and add a connection for each database. Each connection nee
 
 ### Step 2: Create a project and comparison
 
-Create a project (a container for related comparisons — for example, all comparisons for a given application) and add a new comparison. Select the X environment (the source — typically dev or staging) and the Y environment (the target — typically production).
+Create a project (a container for related comparisons — for example, all comparisons for a given application) and add a new comparison. Select the source connection (typically dev or staging) and the target connection (typically production).
 
 ### Step 3: Run the comparison
 
@@ -28,8 +28,8 @@ Click **Compare**. PostgresCompare connects to both databases, reads their schem
 
 - **Identical** — the same in both databases
 - **Different** — exists in both but the definitions differ
-- **New** — exists only in X (will need to be created in Y)
-- **Dropped** — exists only in Y (will need to be removed from Y)
+- **New** — exists only in the source (will need to be created in the target)
+- **Dropped** — exists only in the target (will need to be removed from the target)
 
 ### Step 4: Review the differences
 
@@ -43,7 +43,7 @@ PostgresCompare runs entirely on your machine. Neither database connection nor s
 
 ### Comparing against a file {#comparing-against-a-file}
 
-If you don't have a second live database, you can use a SQL file as either side of a comparison instead of a connection. When creating the project, select **SQL File** as the source type for that environment and browse to a `.sql` file or a folder of SQL files.
+If you don't have a second live database, you can use a SQL file as either side of a comparison instead of a connection. When creating the project, select **SQL File** as the source type for that side and browse to a `.sql` file or a folder of SQL files.
 
 PostgresCompare accepts pg_dump plain-text output, binary pg_dump format (converted automatically via `pg_restore` if it is on your PATH), and folders containing multiple SQL files. The comparison runs exactly as it would for two live databases — the same results list, the same script generation, the same deployment workflow.
 
@@ -147,4 +147,4 @@ The `pg_dump` approach is fine for a quick sanity check when you have no other t
 
 ---
 
-[Download PostgresCompare](/downloads/) and run your first comparison in minutes — free forever, no credit card required.
+[Download PostgresCompare](/downloads) and run your first comparison in minutes — free forever, no credit card required.

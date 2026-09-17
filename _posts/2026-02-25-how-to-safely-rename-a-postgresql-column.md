@@ -143,4 +143,4 @@ When working across multiple environments — dev, staging, production — colum
 
 [PostgresCompare](/) surfaces these differences clearly in its side-by-side comparison view, letting you see exactly what changed and generate the appropriate migration script before anything reaches production.
 
-[Download PostgresCompare](/downloads/) to keep your schemas in sync across environments.
+[Download PostgresCompare](/downloads) to keep your schemas in sync across environments.

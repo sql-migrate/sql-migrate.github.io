@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PostgresCompare vs pgAdmin Schema Diff — Which Is Better?"
-excerpt: "pgAdmin is free but limited. PostgresCompare offers deployment scripts, comparison history, and 38 object types. See the full feature comparison."
+excerpt: "pgAdmin is free but limited. PostgresCompare offers deployment scripts, comparison history, and 40+ object types. See the full feature comparison."
 ---
 
 pgAdmin is the default PostgreSQL admin tool for most developers. It's free, it's everywhere, and it covers a huge range of database administration tasks — query execution, user management, object browsing, and more. For many teams it's the first tool they reach for.
@@ -28,7 +28,7 @@ PostgresCompare supports live databases and **SQL files** as sources. Either sid
 
 ### Schema diff basics
 
-Both tools compare two PostgreSQL schemas and produce a list of differences. pgAdmin covers the most common object types — tables, functions, views, and a handful of others. PostgresCompare supports 38 object types, including less common ones like event triggers, foreign data wrappers, publications, subscriptions, operator families, and text search configuration objects.
+Both tools compare two PostgreSQL schemas and produce a list of differences. pgAdmin covers the most common object types — tables, functions, views, and a handful of others. PostgresCompare supports 40+ object types, including less common ones like event triggers, foreign data wrappers, publications, subscriptions, operator families, and text search configuration objects.
 
 For most day-to-day comparisons the difference won't matter. For teams managing complex schemas with varied object types, it does.
 
@@ -38,7 +38,7 @@ pgAdmin presents differences as raw SQL: the before and after DDL for each objec
 
 PostgresCompare gives you two ways to read a diff. The SQL diff editor shows the before and after DDL side-by-side, with line-level highlighting for individual child object changes (columns, constraints, indexes) within a table definition — so you can see exactly which column changed rather than reading through the entire table DDL. The editor includes a navigator for jumping between changed sections, and a word wrap toggle for long function bodies.
 
-The new Changes tab in 1.1.107 adds a human-readable summary alongside the SQL view. Instead of parsing the raw DDL, you see a structured description of what changed: which columns were added or removed, which constraints were modified, and so on. For reviewing a script before deployment, this is considerably faster than reading SQL.
+The Changes tab adds a human-readable summary alongside the SQL view. Instead of parsing the raw DDL, you see a structured description of what changed: which columns were added or removed, which constraints were modified, and so on. For reviewing a script before deployment, this is considerably faster than reading SQL.
 
 ### Projects and organisation
 
@@ -66,7 +66,7 @@ PostgresCompare surfaces dependencies between objects directly in the comparison
 
 pgAdmin's filtering is limited. You can switch between a handful of object types but there's no fine-grained control over what you're comparing.
 
-PostgresCompare has 10 ignore toggles (whitespace, column order, privileges, owner, and others) that let you tune the comparison to your workflow. All 38 object types can be enabled or disabled in the project settings. The 1.1.107 release adds per-object-type name filters in the comparison list, so you can search within a specific type — for example, showing only tables whose names contain "order" — without affecting the rest of the results.
+PostgresCompare has 10 ignore toggles (whitespace, column order, privileges, owner, and others) that let you tune the comparison to your workflow. All 40+ object types can be enabled or disabled in the project settings. Per-object-type name filters in the comparison list let you search within a specific type — for example, showing only tables whose names contain "order" — without affecting the rest of the results.
 
 ### Deployment safety
 
@@ -78,7 +78,7 @@ When you click **Run script…**, a confirmation dialog shows the target connect
 
 Pre-deploy and post-deploy scripts can be attached to a project for pre-flight checks or post-deployment verification steps. Both are saved with the project and toggled independently in the statement list.
 
-The 1.1.107 release improves deployment progress logging, giving you real-time feedback on each statement as it executes so you can see exactly where a deployment is and catch problems early.
+Deployment progress logging gives you real-time feedback on each statement as it executes so you can see exactly where a deployment is and catch problems early.
 
 ### Export and reporting
 
@@ -91,18 +91,18 @@ PostgresCompare can export results in six formats: Excel (with a summary sheet a
 | Feature | pgAdmin Schema Diff | PostgresCompare |
 |---------|---------------------|-----------------|
 | Basic diff | Yes | Yes |
-| Object types | Limited | 38 |
+| Object types | Limited | 40+ |
 | SQL file / pg_dump as source | No | Yes |
-| Readable diff summary | No | Yes (Changes tab, 1.1.107) |
+| Readable diff summary | No | Yes (Changes tab) |
 | Projects and organisation | No | Yes |
 | Starred comparisons | No | Yes |
 | Global search | No | Yes |
 | Comparison history | No | Yes |
 | Dependency tracking | No | Yes |
-| Name filters | No | Yes (1.1.107) |
+| Name filters | No | Yes |
 | Deployment safety | No | Yes |
 | Destructive warnings | No | Yes |
-| Progress notifications | No | Yes (1.1.107) |
+| Progress notifications | No | Yes |
 | Export reports | No | Yes (6 formats) |
 
 ## When pgAdmin Schema Diff Is Enough
@@ -120,4 +120,4 @@ PostgresCompare can export results in six formats: Excel (with a summary sheet a
 
 ---
 
-[Download PostgresCompare](/downloads/) — comparing, scripting and deploying are free forever, and your first 14 days include everything in Pro. No credit card required.
+[Download PostgresCompare](/downloads) — comparing, scripting and deploying are free forever, and your first 14 days include everything in Pro. No credit card required.

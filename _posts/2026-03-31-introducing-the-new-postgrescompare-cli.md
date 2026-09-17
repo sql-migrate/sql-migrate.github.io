@@ -45,7 +45,7 @@ We didn’t just build the CLI for robots; we built it for developers, too.
 
 The new CLI is available now for Windows, macOS (including Apple Silicon), and Linux.
 
-1.  **Download:** Head over to our [Downloads page](/downloads) to get the binary for your platform.
+1.  **Download:** Enter your email on the [Downloads page](/downloads) and we'll send you the download links — the CLI binaries are listed alongside the desktop app.
 2.  **Install:** It's a single, self-contained executable. Just drop it in your `PATH`.
 3.  **Initialize:** Run `pgc config init` to create a starter configuration file.
 4.  **Compare:** Try your first comparison: `pgc diff @dev @staging`.
