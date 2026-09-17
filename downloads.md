@@ -12,7 +12,7 @@ description: "Download PostgresCompare and start comparing PostgreSQL schemas in
 <section class="downloads-section" style="padding: 3rem 2rem; max-width: 900px; margin: 0 auto; text-align: center;">
   <div class="whatsnew">
     <div class="bar">postgrescompare {{ site.app_version }}</div>
-    <p>MCP server integration for AI agents (<code>pgc mcp serve</code>), redesigned data comparison with overview dashboard and script generation, CLI license activation, and partition detection fixes. <a href="/release-notes">View all release notes &rarr;</a></p>
+    <p>Pipelines with a visual diagram, official Linux builds, a multi-language interface, live progress on every comparison and deployment, and more reliable dependency ordering in generated scripts. <a href="/release-notes">View all release notes &rarr;</a></p>
   </div>
 
   <p style="font-size: 1.125rem; color: var(--ink-soft); margin-bottom: 2.5rem;">

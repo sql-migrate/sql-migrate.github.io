@@ -5,7 +5,7 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 
 <section class="page-hero">
   <p class="hunk">@@ <b>changelog</b> @@</p>
-  <h1>Release <span>notes</span></h1>
+  <h1>Change<span>log</span></h1>
   <p>Track the evolution of PostgresCompare with detailed release notes and version history.</p>
 </section>
 
@@ -13,8 +13,71 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
 
 <div class="release latest">
   <div class="release-bar">
-    <span class="release-cmd">git show v1.2.2</span>
+    <span class="release-cmd">git show v2.2.0</span>
     <span class="latest-badge">Latest</span>
+  </div>
+  <div class="release-header">
+    <h2>Version 2.2.0</h2>
+    <p class="release-date">Released August 21st, 2026</p>
+  </div>
+  <div class="change-section new-features">
+    <span class="change-tag">+ added</span>
+    <h3>Pipelines</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Multi-stage comparison pipelines</strong> — Chain comparisons together and run them as a single pipeline, with results streaming in live as each stage completes.</li>
+      <li class="change-item"><strong>Visual pipeline diagram</strong> — View a pipeline as an interactive graph. Each connection between stages shows a summary of what changed, and you can re-run a single stage directly from its diagram edge without restarting the whole pipeline.</li>
+    </ul>
+  </div>
+  <div class="change-section new-features">
+    <span class="change-tag">+ added</span>
+    <h3>New Features</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Multi-language interface</strong> — PostgresCompare is now available in Chinese, Hindi, Spanish, French and German, with a language switcher in the sidebar.</li>
+      <li class="change-item"><strong>Linux support</strong> — PostgresCompare is now available as an official Linux build, alongside Windows and macOS.</li>
+      <li class="change-item"><strong>Parallel connections per project</strong> — Run schema and data comparisons against multiple connections in parallel within the same project.</li>
+      <li class="change-item"><strong>"Used by" on connections</strong> — See which projects, data projects and pipelines depend on a connection before you edit or delete it.</li>
+      <li class="change-item"><strong>Diagnostic logging</strong> — Turn on verbose logging and open the log folder directly from the app menu, making it faster to get support when something goes wrong.</li>
+    </ul>
+  </div>
+  <div class="change-section improvements">
+    <span class="change-tag">~ changed</span>
+    <h3>Improvements</h3>
+    <ul class="change-list">
+      <li class="change-item"><strong>Refreshed interface</strong> — A modernized theme, spotlight search, and restyled modals, buttons, sidebar and script windows across the app. "Environments" has been renamed to "Connections" throughout.</li>
+      <li class="change-item"><strong>Redesigned comparison views</strong> — The schema comparison view, data comparison view, and Data Projects section have all been modernized for clarity.</li>
+      <li class="change-item"><strong>Live progress everywhere</strong> — Comparisons, pipeline runs and deployments now show live progress as they happen instead of refreshing periodically, for smoother and more immediate feedback.</li>
+      <li class="change-item"><strong>More reliable deployment ordering</strong> — Deployment scripts now correctly order many more object types relative to each other, including collations, exclusion constraints, operators, casts, event triggers, publications and extensions.</li>
+      <li class="change-item"><strong>Faster comparisons</strong> — Script generation and large schema comparisons complete noticeably faster.</li>
+    </ul>
+  </div>
+  <div class="change-section bug-fixes">
+    <span class="change-tag">- fixed</span>
+    <h3>Bug Fixes</h3>
+    <ul class="change-list">
+      <li class="change-item">Fixed array-column data comparisons producing incorrect results on wide tables</li>
+      <li class="change-item">Fixed incorrect argument type rendering in generated CREATE FUNCTION statements</li>
+      <li class="change-item">Fixed index sort direction (DESC / NULLS ordering) not being preserved when scripted</li>
+      <li class="change-item">Fixed the licence dialog overflowing on long licence keys</li>
+      <li class="change-item">Fixed an error (SQLSTATE 42704) when deploying changes to array-typed columns</li>
+      <li class="change-item">Fixed a blank "New script" window appearing when a comparison had no changes</li>
+      <li class="change-item">Fixed SQL-file comparison sources not generating deployable DDL</li>
+      <li class="change-item">Fixed materialized view drop ordering when other objects depended on it</li>
+      <li class="change-item">Fixed functions and tables incorrectly reported as missing due to a catalog identifier collision</li>
+      <li class="change-item">Fixed "Create scripts folder" hanging on objects with symbol characters in their names</li>
+    </ul>
+  </div>
+  <a href="/downloads" class="download-link">
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Download Version 2.2.0
+  </a>
+</div>
+
+<div class="release">
+  <div class="release-bar">
+    <span class="release-cmd">git show v1.2.2</span>
   </div>
   <div class="release-header">
     <h2>Version 1.2.2</h2>
@@ -60,13 +123,6 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
       <li class="change-item">Fixed excessive Sentry error logging in both CLI and desktop builds</li>
     </ul>
   </div>
-  <a href="/downloads" class="download-link">
-    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    Download Version 1.2.2
-  </a>
 </div>
 
 <div class="release">
@@ -143,13 +199,6 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
       <li class="change-item"><strong>Scrollable deployment progress log</strong> — The deployment progress log in the Run Script modal is now a scrollable, multi-line display that accumulates <code>RAISE NOTICE</code> output as each statement executes. The progress logging preference is saved per project in local storage</li>
     </ul>
   </div>
-  <a href="/downloads" class="download-link">
-    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    Download Version 1.2.0
-  </a>
 </div>
 
 <div class="release">
@@ -178,13 +227,6 @@ description: "See what's new in PostgresCompare. Detailed changelog covering new
       <li class="change-item"><strong>Cleaner object list</strong> — Value columns have been removed from the comparison list and the schema column is collapsed by default, giving more room for object names and making the list easier to scan</li>
     </ul>
   </div>
-  <a href="/downloads" class="download-link">
-    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-      <path d="M10 3v10m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M3 13v3a2 2 0 002 2h10a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    Download Version 1.1.107
-  </a>
 </div>
 
 <div class="release">

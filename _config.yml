@@ -5,11 +5,10 @@ title: PostgresCompare
 url: "https://www.postgrescompare.com"
 google_analytics_key: UA-43432786-3
 
-# Versions. app_version is what /downloads actually serves; marketing_version
-# is what the homepage and product schema claim. They differ while the v2 site
-# is live ahead of the v2 build — flipping them on release day is two edits.
-app_version: "1.2.2"
-marketing_version: "2.0"
+# Versions. app_version is what /downloads serves; marketing_version is what the
+# homepage and product schema claim. Both track the current release.
+app_version: "2.2.0"
+marketing_version: "2.2.0"
 disqus_shortname: https-www-postgrescompare-com
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
@@ -19,15 +18,6 @@ description: "PostgreSQL schema comparison tool. Compare databases, generate dep
 author:
   name: PostgresCompare
   email: neil@postgrescompare.com
-  twitter: postgrescompare # twitter username without the @ symbol
-social:
-  name: PostgresCompare
-  links:
-    - https://www.facebook.com/postgrescompare
-    - https://www.twitter.com/postgrescompare
-    - https://www.linkedin.com/company/postgres-compare
-    - https://www.google.com/+PostgresCompare
-    - https://github.com/PostgresCompare
 
 # -----
 # Build
@@ -143,17 +133,6 @@ exclude:
 
 # -----------
 # CloudCannon
-
-social_icons:
-  - Facebook
-  - Google Plus
-  - Instagram
-  - LinkedIn
-  - Pinterest
-  - Tumblr
-  - Twitter
-  - YouTube
-  - RSS
 
 _comments:
   map: Update the map location and display settings.
