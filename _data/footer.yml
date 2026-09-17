@@ -6,9 +6,6 @@
     link: /purchase
   - name: FAQ
     link: /faq
-  - name: Roadmap
-    link: https://trello.com/b/uApHpejD/postgres-compare-dev
-    new_window: true
 - title: Company
   links:
   - name: About
@@ -32,18 +29,4 @@
     new_window: true
   - name: SQLServerCompare
     link: https://www.sqlservercompare.com
-    new_window: true
-- title: Connect
-  links:
-  - name: Facebook
-    link: https://www.facebook.com/postgrescompare
-    new_window: true
-  - name: Twitter
-    link: https://www.twitter.com/postgrescompare
-    new_window: true
-  - name: YouTube
-    link: https://www.youtube.com/channel/UCRuo5SO6qXM48WUg3YNP-NQ
-    new_window: true
-  - name: LinkedIn
-    link: https://www.linkedin.com/company/postgres-compare
     new_window: true
