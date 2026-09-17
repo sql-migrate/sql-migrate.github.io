@@ -1,9 +1,7 @@
 ---
 title: "PostgresCompare pricing — free forever, Pro at $29.95/month"
-description: "Comparing, scripting and deploying are free forever. History, pipelines and the pgc CLI are what you pay for. Monthly or annual, cancel anytime."
+description: "Quick compare, scripting and deploying are free forever. Saved projects, history, pipelines and the pgc CLI are what you pay for. Monthly or annual, cancel anytime."
 ---
-
-<script src="https://js.stripe.com/v3"></script>
 
 <script type="application/ld+json">
 {
@@ -50,7 +48,7 @@ description: "Comparing, scripting and deploying are free forever. History, pipe
 <section class="page-hero">
   <p class="hunk">@@ <b>pricing</b> @@</p>
   <h1>Free to compare. <span>Paid to automate.</span></h1>
-  <p>Comparing, scripting and deploying are free forever. History, pipelines and the CLI are what you pay for.</p>
+  <p>Quick compare, scripting and deploying are free forever. Saved projects, history, pipelines and the CLI are what you pay for.</p>
 </section>
 
 <section class="dw" style="padding-bottom: 3rem;">
@@ -61,13 +59,13 @@ description: "Comparing, scripting and deploying are free forever. History, pipe
       <div class="amt">$0</div>
       <p class="note">Where your 14-day trial lands</p>
       <ul>
-        <li>Unlimited comparisons, all 40+ object types</li>
+        <li>Quick compare, all 40+ object types</li>
         <li>Live databases, pg_dump files, migration folders</li>
         <li>Dependency-ordered deployment scripts</li>
         <li>Deploy, with destructive-change safeguards</li>
-        <li>Data comparison, snapshots and exports</li>
-        <li class="na">Holds one comparison at a time</li>
-        <li class="na">No pipelines, no CLI</li>
+        <li>Your trial projects stay readable</li>
+        <li class="na">Comparisons aren't saved</li>
+        <li class="na">No data comparison, exports or CLI</li>
       </ul>
       <a href="/downloads" class="d-btn d-btn-quiet">Download free</a>
     </div>
@@ -78,17 +76,18 @@ description: "Comparing, scripting and deploying are free forever. History, pipe
       <p class="note">Or $299.95 a year &mdash; saves $59.45</p>
       <ul>
         <li>Everything in Free</li>
-        <li>Full comparison history and drift timelines</li>
-        <li>Pipelines</li>
-        <li>The pgc CLI, for CI and automation</li>
+        <li>Saved schema and data projects, re-run anytime</li>
+        <li>Comparison history and drift timelines</li>
+        <li>Pipelines and the pgc CLI</li>
+        <li>Reports, exports and scripts folders</li>
         <li>Parallel connections, include/exclude rules</li>
         <li>Pre- and post-deploy scripts</li>
         <li>Install on 2 machines per user</li>
         <li>Free upgrades while your subscription is active</li>
       </ul>
       <div class="buy-pair">
-        <button type="button" id="buy-annual" class="d-btn d-btn-primary">Subscribe yearly &mdash; $299.95</button>
-        <button type="button" id="buy-monthly" class="d-btn d-btn-quiet">Subscribe monthly &mdash; $29.95</button>
+        <a href="https://subscribe.postgrescompare.com/b/8x214ob1gfFK9MX1NI4Ja02" class="d-btn d-btn-primary">Subscribe yearly &mdash; $299.95</a>
+        <a href="https://subscribe.postgrescompare.com/b/bJe7sMfhw3X2f7h63Y4Ja01" class="d-btn d-btn-quiet">Subscribe monthly &mdash; $29.95</a>
       </div>
     </div>
 
@@ -99,7 +98,6 @@ description: "Comparing, scripting and deploying are free forever. History, pipe
       <ul>
         <li>Everything in Pro</li>
         <li>Volume discounts</li>
-        <li>Client-transferable licenses</li>
         <li>Invoice billing</li>
         <li>Priority support</li>
       </ul>
@@ -120,23 +118,19 @@ description: "Comparing, scripting and deploying are free forever. History, pipe
   <div class="d-grid">
     <div class="cell">
       <h3>What do I get without paying?</h3>
-      <p>Unlimited comparisons across all 40+ object types, the diff and DDL viewers, dependency-ordered deployment scripts, deploying those scripts, and data comparison with snapshots and exports. The free tier is a working tool, not a viewer.</p>
+      <p>Quick compare: pick any two databases, pg_dump files or migration folders and compare them across all 40+ object types, with the diff and DDL viewers, a dependency-ordered deployment script, and deploying it. The demo project stays fully usable too. The free tier is a working tool, not a viewer.</p>
     </div>
     <div class="cell">
-      <h3>What is the one-comparison limit?</h3>
-      <p>The free tier holds one comparison at a time per project. Running a new one asks you to delete the existing one first &mdash; nothing is replaced silently. Comparisons you created during your trial are kept and don't count against the limit.</p>
+      <h3>Quick compare or a project?</h3>
+      <p>Quick compare runs a one-off comparison and doesn't keep it &mdash; once you leave the result, it's gone. A project saves both sides and your options, so you can re-run the comparison anytime and keep its history. Projects are part of Pro.</p>
     </div>
     <div class="cell">
       <h3>What happens when my trial ends?</h3>
-      <p>Nothing stops working. After 14 days PostgresCompare becomes the free tier rather than expiring, and everything you made during the trial stays open and readable.</p>
+      <p>Nothing stops working. After 14 days PostgresCompare becomes the free tier rather than expiring. Quick compare, scripting and deploying carry on, and the projects and pipelines you made during the trial stay open and readable &mdash; re-running them needs Pro.</p>
     </div>
     <div class="cell">
       <h3>What does "2 machines per user" mean?</h3>
       <p>One subscription installs on two machines &mdash; a work laptop and a home desktop, say. If you reach the install limit, <a href="/contact">email us</a> and we'll reset your license key.</p>
-    </div>
-    <div class="cell">
-      <h3>Can I transfer a license to a client?</h3>
-      <p>On Team plans, yes. Consultancies buy in volume and hand a license to the client at the end of an engagement. <a href="/contact">Get in touch</a> and we'll set it up.</p>
     </div>
     <div class="cell">
       <h3>How do I cancel?</h3>
@@ -144,35 +138,6 @@ description: "Comparing, scripting and deploying are free forever. History, pipe
     </div>
   </div>
 </section>
-
-<script>
-  var stripe = Stripe('pk_live_WBgGhfOBShwMGAXipP1KHl7u');
-
-  function pgcCheckout(priceId) {
-    stripe.redirectToCheckout({
-      items: [{plan: priceId, quantity: 1}],
-      successUrl: 'https://www.postgrescompare.com/success',
-      cancelUrl: 'https://www.postgrescompare.com/purchase',
-      billingAddressCollection: 'required'
-    });
-  }
-
-  var monthlyButton = document.getElementById('buy-monthly');
-  if (monthlyButton) {
-    monthlyButton.addEventListener('click', function () {
-      pgcCheckout('price_1U2gmnKhvEuHFknZ7qYklVhI');
-      return false;
-    });
-  }
-
-  var annualButton = document.getElementById('buy-annual');
-  if (annualButton) {
-    annualButton.addEventListener('click', function () {
-      pgcCheckout('price_1U2gmSKhvEuHFknZrkJItaph');
-      return false;
-    });
-  }
-</script>
 
 <script type="application/ld+json">
 {
