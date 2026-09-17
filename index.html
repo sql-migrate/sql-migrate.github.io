@@ -18,27 +18,49 @@ description: "Find every difference between two PostgreSQL schemas, then generat
     <p class="trust"><span>runs 100% locally</span><span>no credit card</span><span>macOS &middot; Windows &middot; Linux</span></p>
   </div>
 
-  <div class="diff" role="img" aria-label="A schema comparison of the orders table between staging and production, showing an added currency column, an added index, and a removed legacy_ref column flagged as a destructive change.">
+  <div class="diff" role="img" aria-label="A side-by-side schema comparison of the orders table. Staging, on the left, has a currency column that production does not. Production, on the right, still has a legacy_ref column, flagged as a destructive change.">
     <div class="bar">
       <span class="dot"></span><span class="dot"></span><span class="dot"></span>
       <span class="ttl">orders &mdash; staging &rarr; production</span>
     </div>
     <div class="cols"><span>staging.public.orders</span><span>production.public.orders</span></div>
     <div class="body">
-      <span class="r h">@@ table: orders &middot; 3 differences @@</span>
-      <span class="r"><span class="n">12</span>  amount      numeric(10,2) NOT NULL,</span>
-      <span class="r a"><span class="n">13</span>+ currency    char(3) NOT NULL DEFAULT 'USD',</span>
-      <span class="r"><span class="n">14</span>  status      order_status DEFAULT 'pending',</span>
-      <span class="r d"><span class="n">15</span>- legacy_ref  varchar(64),</span>
-      <span class="r a"><span class="n">21</span>+ CREATE INDEX idx_orders_status ON orders (status);</span>
+      <span class="r h">@@ table: orders &middot; 2 differences @@</span>
+      <div class="split">
+        <div class="pane">
+          <span class="side">staging</span>
+          <span class="r"><span class="n">11</span>  CREATE TABLE orders (</span>
+          <span class="r"><span class="n">12</span>    amount numeric(10,2),</span>
+          <span class="r a"><span class="n">13</span>+   currency char(3),</span>
+          <span class="r"><span class="n">14</span>    status order_status,</span>
+          <span class="r gap"><span class="n">&nbsp;</span></span>
+          <span class="r"><span class="n">15</span>  );</span>
+        </div>
+        <div class="pane">
+          <span class="side">production</span>
+          <span class="r"><span class="n">11</span>  CREATE TABLE orders (</span>
+          <span class="r"><span class="n">12</span>    amount numeric(10,2),</span>
+          <span class="r gap"><span class="n">&nbsp;</span></span>
+          <span class="r"><span class="n">13</span>    status order_status,</span>
+          <span class="r d"><span class="n">14</span>-   legacy_ref varchar(64),</span>
+          <span class="r"><span class="n">15</span>  );</span>
+        </div>
+      </div>
     </div>
     <div class="warn">&#9888; <span><b>1 destructive change:</b> DROP COLUMN legacy_ref &mdash; review before deploying</span></div>
-    <div class="foot">
-      <span class="dp-btn">View history</span>
-      <span class="dp-btn primary">Generate deployment script</span>
-    </div>
   </div>
 </header>
+
+<section id="demo" class="d-section">
+  <div class="dw">
+    <p class="hunk">@@ <b>see it work</b> @@</p>
+    <h2 class="d-h2">Walk through a comparison first.</h2>
+
+    <div class="demo-frame">
+      <iframe src="https://demo.arcade.software/dekFe001RY15aE61OUt2?embed&amp;embed_mobile=tab&amp;embed_desktop=inline&amp;squared=true&amp;show_copy_link=true" title="PostgresCompare interactive demo" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;"></iframe>
+    </div>
+  </div>
+</section>
 
 <section id="features" class="d-section">
   <div class="dw">
@@ -58,7 +80,7 @@ description: "Find every difference between two PostgreSQL schemas, then generat
         <p>One click generates the SQL to bring two schemas in sync &mdash; in an order that actually runs, with destructive statements surfaced in red before anything else.</p>
       </div>
       <div class="cell">
-        <span class="tag">data</span>
+        <span class="tag">data <i>pro</i></span>
         <h3>Rows, not just structure</h3>
         <p>Compare the data itself, see which rows differ, and generate the INSERT, UPDATE and DELETE statements to reconcile them. Export any table's differences to CSV.</p>
       </div>
@@ -73,7 +95,7 @@ description: "Find every difference between two PostgreSQL schemas, then generat
         <p>Keep every comparison you run. Watch your schema evolve in a swimlane view, and catch drift between environments before it reaches an incident channel.</p>
       </div>
       <div class="cell">
-        <span class="tag">agents</span>
+        <span class="tag">agents <i>pro</i></span>
         <h3>Built for AI-assisted workflows</h3>
         <p>The bundled MCP server lets coding agents run comparisons and read the results. Read-only mode and environment allow-lists control exactly what an agent can reach.</p>
       </div>
@@ -101,26 +123,6 @@ description: "Find every difference between two PostgreSQL schemas, then generat
 └── production connection  <span class="ok">✓ read-only</span>
 
 the cloud                  <span class="no">receives your data</span></pre>
-  </div>
-</section>
-
-<section id="demo" class="d-section">
-  <div class="dw">
-    <p class="hunk">@@ <b>see it work</b> @@</p>
-    <h2 class="d-h2">Walk through a comparison first.</h2>
-    <p class="d-intro">No download, no database, no account &mdash; follow a real schema drift from the first difference to the deployment script.</p>
-
-    <div class="demo-frame">
-      <!-- DEMO EMBED GOES HERE.
-           Paste the provider's <iframe> below and delete .demo-pending.
-           The iframe needs no width/height attributes: .demo-frame holds a
-           16:10 box and any direct child is stretched to fill it.
-           Give the iframe a title="" for screen readers, and prefer
-           loading="lazy" so it does not block the rest of the page. -->
-      <div class="demo-pending">
-        <span>interactive demo &mdash; embed pending</span>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -156,7 +158,7 @@ the cloud                  <span class="no">receives your data</span></pre>
   <div class="dw">
     <p class="hunk">@@ <b>pricing</b> @@</p>
     <h2 class="d-h2">Free to compare. Paid to automate.</h2>
-    <p class="d-intro">Comparing, scripting and deploying are free forever. History, pipelines and the CLI are what you pay for.</p>
+    <p class="d-intro">Quick compare, scripting and deploying are free forever. Saved projects, history, pipelines and the CLI are what you pay for.</p>
 
     <div class="prices">
       <div class="price">
@@ -164,13 +166,13 @@ the cloud                  <span class="no">receives your data</span></pre>
         <div class="amt">$0</div>
         <p class="note">Where your 14-day trial lands</p>
         <ul>
-          <li>Unlimited comparisons, all 40+ object types</li>
+          <li>Quick compare, all 40+ object types</li>
           <li>Live databases, pg_dump files, migration folders</li>
           <li>Dependency-ordered deployment scripts</li>
           <li>Deploy, with destructive-change safeguards</li>
-          <li>Data comparison, snapshots and exports</li>
-          <li class="na">Holds one comparison at a time</li>
-          <li class="na">No pipelines, no CLI</li>
+          <li>Your trial projects stay readable</li>
+          <li class="na">Comparisons aren't saved</li>
+          <li class="na">No data comparison, exports or CLI</li>
         </ul>
         <a href="/downloads" class="d-btn d-btn-quiet">Download free</a>
       </div>
@@ -180,9 +182,10 @@ the cloud                  <span class="no">receives your data</span></pre>
         <p class="note">Or $299.95 a year &mdash; saves $59.45</p>
         <ul>
           <li>Everything in Free</li>
-          <li>Full comparison history and drift timelines</li>
-          <li>Pipelines</li>
-          <li>The pgc CLI, for CI and automation</li>
+          <li>Saved schema and data projects, re-run anytime</li>
+          <li>Comparison history and drift timelines</li>
+          <li>Pipelines and the pgc CLI</li>
+          <li>Reports, exports and scripts folders</li>
           <li>Parallel connections, include/exclude rules</li>
           <li>Pre- and post-deploy scripts</li>
         </ul>
@@ -195,7 +198,6 @@ the cloud                  <span class="no">receives your data</span></pre>
         <ul>
           <li>Everything in Pro</li>
           <li>Volume discounts</li>
-          <li>Client-transferable licenses</li>
           <li>Invoice billing</li>
           <li>Priority support</li>
         </ul>

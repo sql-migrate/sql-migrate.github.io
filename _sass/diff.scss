@@ -253,15 +253,6 @@
 		overflow-x: auto;
 	}
 
-	.foot {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-end;
-		gap: 10px;
-		padding: 12px 14px;
-		border-top: 1px solid var(--line);
-		background: var(--panel-2);
-	}
 }
 
 // A diff row. The +/- prefix carries the meaning as well as the colour.
@@ -294,6 +285,63 @@
 	}
 }
 
+// Side-by-side panes: source on the left, target on the right, the way the
+// product's split view shows a difference. Each pane scrolls on its own so a
+// long line never widens the panel.
+.diff .split {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1px;
+	background: var(--line);
+
+	// Each side gets half the panel, so the gutter, padding and type all tighten
+	// up: at the full-width sizes a column definition overflows into a scrollbar.
+	font-size: 0.74rem;
+
+	.r {
+		padding: 0 10px;
+	}
+
+	.n {
+		width: 1.8em;
+	}
+}
+
+.diff .pane {
+	background: var(--panel);
+	min-width: 0;
+	overflow-x: auto;
+}
+
+// Names the side. Only needed once the panes stack, where left and right stop
+// saying which is which. Always in the DOM so the row stagger below counts the
+// same children at every width.
+.diff .side {
+	display: none;
+	padding: 7px 10px 1px;
+	font-size: 0.68rem;
+	color: var(--gutter);
+}
+
+// A column definition needs about 210px; below this the panes are narrower than
+// that and every line scrolls. Stack them full width instead of shrinking the
+// type past legibility.
+@media (max-width: 520px) {
+	.diff .split {
+		grid-template-columns: 1fr;
+	}
+
+	.diff .side {
+		display: block;
+	}
+}
+
+// A line that exists only on the other side. Keeps the two panes aligned
+// row-for-row, so the eye reads across.
+.r.gap {
+	background: var(--panel-2);
+}
+
 .warn {
 	display: flex;
 	align-items: center;
@@ -312,25 +360,6 @@
 	}
 }
 
-.dp-btn {
-	font-family: var(--sans);
-	font-size: 0.78rem;
-	font-weight: 600;
-	padding: 8px 15px;
-	border-radius: 6px;
-	border: 1px solid var(--line);
-	background: var(--panel);
-	color: var(--ink-soft);
-	cursor: pointer;
-	white-space: nowrap;
-
-	&.primary {
-		background: var(--blue);
-		border-color: var(--blue);
-		color: #fff;
-	}
-}
-
 // --- 6. Motion ------------------------------------------------------------
 // The one orchestrated animation on the site.
 
@@ -342,6 +371,9 @@
 		animation: d-rise 0.4s ease forwards;
 	}
 
+	// Counted within each parent: the hunk header is the first child of .body,
+	// and inside a pane the label span is first, so rows are children two to
+	// seven. Both sides rise in step, which is the point of a side-by-side view.
 	.diff .body .r:nth-child(1) { animation-delay: 0.15s; }
 	.diff .body .r:nth-child(2) { animation-delay: 0.3s; }
 	.diff .body .r:nth-child(3) { animation-delay: 0.45s; }
@@ -349,7 +381,7 @@
 	.diff .body .r:nth-child(5) { animation-delay: 0.75s; }
 	.diff .body .r:nth-child(6) { animation-delay: 0.9s; }
 	.diff .body .r:nth-child(7) { animation-delay: 1.05s; }
-	.diff .warn { animation-delay: 1.3s; }
+	.diff .warn { animation-delay: 1.2s; }
 
 	@keyframes d-rise {
 		to { opacity: 1; transform: none; }
@@ -796,7 +828,8 @@
 
 // Green is semantic: these are things you get.
 .flow .ok,
-.trust-list .ok {
+.trust-list .ok,
+.trial-features .ok {
 	color: var(--add);
 	font-style: normal;
 }
@@ -808,6 +841,12 @@
 }
 
 // --- Demo embed -----------------------------------------------------------
+
+// The demo is the hero's proof, not a separate pitch, so it sits closer than a
+// normal section break. The hero's own 76px bottom padding does the rest.
+#demo {
+	padding-top: 28px;
+}
 
 // Framed like the hero diff panel so a third-party embed reads as part of the
 // product rather than a bolted-on widget. Holds a 16:10 box and stretches any
@@ -844,16 +883,6 @@
 			padding-bottom: 75%;
 		}
 	}
-}
-
-.demo-pending {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: var(--panel-2);
-	font-family: var(--mono);
-	font-size: 0.76rem;
-	color: var(--gutter);
 }
 
 // --- 404 ------------------------------------------------------------------
