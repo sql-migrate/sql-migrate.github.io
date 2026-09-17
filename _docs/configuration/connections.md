@@ -1,26 +1,27 @@
 ---
-title: Environments
-description: Configure database environments in PostgresCompare
+title: Connections
+description: Configure database connections in PostgresCompare
 category: configuration
 order: 13
 permalink: /docs/configuration/connections/
 ---
 
-PostgresCompare connects directly to PostgreSQL databases to read schema information. This guide covers environment configuration options.
+PostgresCompare connects directly to PostgreSQL databases to read schema information. This guide covers connection configuration options. Manage your connections from **Connections** in the sidebar.
 
-## Environment Settings
+## Connection Settings
 
 ### Basic Settings
 
-Each environment is configured using individual connection fields:
+Each connection is configured using individual connection fields:
 
 | Setting | Description | Example |
 |---------|-------------|---------|
+| Name | A name to recognise the connection by | `Staging` |
 | Host | Database server address | `localhost`, `db.example.com` |
 | Port | PostgreSQL port | `5432` (default) |
-| Database | Database name | `production` |
 | Username | Database user | `postgres` |
 | Password | User password | (stored securely) |
+| Default database | The database to connect to | `production` |
 
 ## SSL/TLS Configuration
 
@@ -39,7 +40,7 @@ Each environment is configured using individual connection fields:
 
 Connect through an SSH tunnel for secure remote access:
 
-1. In the environment dialog, enable **SSH Tunnel**
+1. In the connection dialog, enable **SSH Tunnel**
 2. Configure SSH settings:
    - **SSH Host**: Bastion/jump server
    - **SSH Port**: SSH port (default: 22)
@@ -60,7 +61,7 @@ For passwordless authentication:
 
 ## Connection Pooling
 
-PostgresCompare uses a single connection per database. For large schemas:
+PostgresCompare uses a single connection per database by default. For large schemas:
 
 - Connections may take longer to establish
 - Consider increasing `connect_timeout`
@@ -98,7 +99,7 @@ GRANT SELECT ON pg_auth_members TO pgcompare_readonly;
 
 ### Amazon RDS
 
-Configure your environment with:
+Configure your connection with:
 
 | Setting | Value |
 |---------|-------|
@@ -119,7 +120,7 @@ Configure your environment with:
 
 ### Google Cloud SQL
 
-Use the Cloud SQL Auth Proxy for secure connections, or configure SSL certificates directly in the environment settings.
+Use the Cloud SQL Auth Proxy for secure connections, or configure SSL certificates directly in the connection settings.
 
 ### Heroku Postgres
 
@@ -134,11 +135,11 @@ Use the Cloud SQL Auth Proxy for secure connections, or configure SSL certificat
 
 PostgresCompare can create a new PostgreSQL database directly from within the app. To create a database:
 
-1. Open an environment and click **Create database**
-2. Enter the new database name
-3. Click **Create**
+1. In the **New project** dialog, open the **Database** dropdown for the source or target
+2. Choose **+ Create new database...**
+3. Enter the new database name and create it
 
-The database is created on the server the environment connects to. This is useful when setting up a new comparison target — for example, creating a blank staging database before deploying a schema to it.
+The database is created on the server the selected connection points to. This is useful when setting up a new comparison target — for example, creating a blank staging database before deploying a schema to it.
 
 ## Troubleshooting Connections
 

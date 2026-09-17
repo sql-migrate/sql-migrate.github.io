@@ -83,8 +83,8 @@ Toggle which object types are included in the comparison. Each type can be indep
 
 | Option | Description |
 |--------|-------------|
-| X Schema to Compare | Schema to compare from the X environment |
-| Y Schema to Compare | Schema to compare from the Y environment |
+| Source schema | Schema to compare from the source connection |
+| Target schema | Schema to compare from the target connection |
 
 ## Script Options
 
@@ -98,5 +98,5 @@ Deployment scripts can be wrapped in a transaction block (BEGIN/COMMIT) so that 
 
 ## Next Steps
 
-- [Environments](/docs/configuration/connections/) - Environment configuration
+- [Connections](/docs/configuration/connections/) - Connection configuration
 - [Comparing Databases](/docs/guides/comparing-databases/) - Comparison techniques

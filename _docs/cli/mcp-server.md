@@ -8,6 +8,10 @@ permalink: /docs/cli/mcp-server/
 
 PostgresCompare includes a built-in MCP (Model Context Protocol) server that allows AI coding assistants to interact with your PostgreSQL databases for schema exploration, comparison, and migration generation.
 
+<div class="note">
+<strong>Part of Pro.</strong> The MCP server runs through the <code>pgc</code> CLI, which requires a Pro subscription and is included in your 14-day trial. <a href="/purchase">See pricing</a>.
+</div>
+
 ## Quick Start
 
 Start the MCP server:

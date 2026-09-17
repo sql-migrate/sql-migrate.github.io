@@ -227,31 +227,18 @@ The license key you entered is not valid. Please check and try again.
 2. Remove any extra spaces
 3. Verify all characters are correct
 
-### "License has expired"
+### "License expired"
 
-```
-Your license has expired. Please renew to continue using PostgresCompare.
-```
+The license dialog shows **License expired** with the date your trial or subscription ended.
 
-**Cause:** License subscription has ended.
+**Cause:** Your 14-day trial or your Pro subscription has ended.
 
-**Solution:**
-1. Renew license at postgrescompare.com
-2. Enter new license key
-3. Contact sales for extension
-
-### "License server unreachable"
-
-```
-Could not connect to license server. Please check your internet connection.
-```
-
-**Cause:** Cannot reach license validation server.
+**What still works:** PostgresCompare keeps working on the free tier. You can still use Quick compare, generate deployment scripts and deploy them. Projects you created stay readable, but creating or re-running projects, comparison history, pipelines and the `pgc` CLI need Pro.
 
 **Solution:**
-1. Check internet connection
-2. Check firewall/proxy settings
-3. Try again later
+1. [Buy or renew a subscription](/purchase)
+2. Open the license dialog and enter your license key
+3. Pro features unlock straight away
 
 ## File Errors
 
@@ -265,7 +252,7 @@ The project file appears to be corrupted and cannot be opened.
 
 **Solution:**
 1. Try opening a backup of the project
-2. Create a new project and reconfigure your environments
+2. Create a new project and reconfigure your connections
 3. Contact support with details of the issue
 
 ### "Cannot write to file"

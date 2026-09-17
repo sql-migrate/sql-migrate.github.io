@@ -235,8 +235,8 @@ This page covers common issues users encounter with PostgresCompare and their so
    - Ensure no extra spaces
 
 2. **Check license status**
-   - Visit your account at postgrescompare.com
-   - Verify license hasn't expired
+   - Open the license dialog to see your license type and expiry date
+   - When a trial or subscription ends, PostgresCompare keeps working on the free tier; enter a new key to unlock Pro again
 
 3. **Internet connectivity**
    - License validation requires internet access

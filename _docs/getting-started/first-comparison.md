@@ -6,7 +6,7 @@ order: 3
 permalink: /docs/getting-started/first-comparison/
 ---
 
-After running a comparison, PostgresCompare presents a detailed view of all differences between your X and Y databases. This guide explains how to interpret and work with these results.
+After running a comparison, PostgresCompare presents a detailed view of all differences between your source and target databases. This guide explains how to interpret and work with these results.
 
 ## The Results View
 
@@ -20,9 +20,9 @@ The comparison results are displayed in a tree structure, organized by object ty
 
 | Status | Meaning | Action |
 |--------|---------|--------|
-| New | Exists only in X environment | Will be created in Y |
-| Dropped | Exists only in Y environment | Will be dropped from Y |
-| Different | Different between X and Y | Will be altered to match X |
+| New | Exists only in the source | Will be created in the target |
+| Dropped | Exists only in the target | Will be dropped from the target |
+| Different | Different between source and target | Will be altered to match the source |
 | Identical | Same in both databases | No action needed |
 
 ## The Overview Tab
@@ -48,13 +48,13 @@ Click on any object to see its details in the right panel. PostgresCompare uses 
 - Lists dependent objects that may be affected
 
 ### For different objects
-- Shows a side-by-side comparison of X vs. Y definitions
+- Shows a side-by-side comparison of the source and target definitions
 - Highlights specific differences (columns added/removed, type changes, etc.)
 - Shows the ALTER statements needed to make the changes
 
 ### Changes tab
 
-The **Changes tab** provides a human-readable summary of what changed between the X and Y definitions. Instead of reading raw DDL, you see a structured breakdown: which columns were added or removed, which constraints changed, and so on. Switch between the Changes tab and the SQL diff tab depending on whether you want a plain-English summary or the full DDL comparison.
+The **Changes tab** provides a human-readable summary of what changed between the source and target definitions. Instead of reading raw DDL, you see a structured breakdown: which columns were added or removed, which constraints changed, and so on. Switch between the Changes tab and the SQL diff tab depending on whether you want a plain-English summary or the full DDL comparison.
 
 ### Diff editor navigation
 
@@ -86,6 +86,10 @@ This makes it straightforward to trace the impact of a change — for example, c
 
 ## Object History
 
+<div class="note">
+<strong>Pro feature.</strong> Comparison history requires a Pro subscription and is included in your 14-day trial. On the free tier, Quick compare results aren't saved. <a href="/purchase">See pricing</a>.
+</div>
+
 PostgresCompare tracks the history of each object across comparisons. Use the object history viewer to see how an object has changed over time, providing a development history for your database schema.
 
 ## Filtering Results
@@ -106,7 +110,7 @@ Not every difference needs to be deployed. You can selectively include or exclud
 ### Common Scenarios
 
 **Deploying only new features:**
-- Include objects that exist only in X
+- Include objects that exist only in the source
 - Exclude objects that would be dropped
 
 **Syncing a development database:**

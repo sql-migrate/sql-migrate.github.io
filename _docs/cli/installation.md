@@ -8,6 +8,10 @@ permalink: /docs/cli/installation/
 
 The PostgresCompare command-line interface (`pgc`) is available for Windows, macOS, and Linux. The download is a single self-contained executable — no runtime or installer required.
 
+<div class="note">
+<strong>Part of Pro.</strong> The <code>pgc</code> CLI requires a Pro subscription and is included in your 14-day trial. <a href="/purchase">See pricing</a>.
+</div>
+
 ## Supported Platforms
 
 | Platform | Architecture | Binary |
@@ -19,7 +23,7 @@ The PostgresCompare command-line interface (`pgc`) is available for Windows, mac
 
 ## Download
 
-Download the `pgc` binary for your platform from the [Downloads page](/downloads/).
+Download the `pgc` binary for your platform from the [Downloads page](/downloads).
 
 ## Installation
 

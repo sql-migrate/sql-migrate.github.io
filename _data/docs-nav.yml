@@ -12,10 +12,10 @@
     - title: Quick Start
       url: /docs/getting-started/quick-start/
       subitems:
-        - title: Creating a New Project
-          url: /docs/getting-started/quick-start/#creating-a-new-project
         - title: Connecting to Databases
           url: /docs/getting-started/quick-start/#connecting-to-databases
+        - title: Creating a New Project
+          url: /docs/getting-started/quick-start/#creating-a-new-project
         - title: Running Your First Comparison
           url: /docs/getting-started/quick-start/#running-your-first-comparison
         - title: Understanding the Results
@@ -96,8 +96,6 @@
           url: /docs/guides/deployment-scripts/#transaction-wrapping
         - title: Direct Deployment
           url: /docs/guides/deployment-scripts/#direct-deployment
-        - title: Deployment History
-          url: /docs/guides/deployment-scripts/#deployment-history
         - title: Handling Data Migrations
           url: /docs/guides/deployment-scripts/#handling-data-migrations
         - title: Version Control
@@ -124,11 +122,11 @@
 
 - title: Configuration
   items:
-    - title: Environments
+    - title: Connections
       url: /docs/configuration/connections/
       subitems:
-        - title: Environment Settings
-          url: /docs/configuration/connections/#environment-settings
+        - title: Connection Settings
+          url: /docs/configuration/connections/#connection-settings
         - title: SSL/TLS Configuration
           url: /docs/configuration/connections/#ssltls-configuration
         - title: SSH Tunnel

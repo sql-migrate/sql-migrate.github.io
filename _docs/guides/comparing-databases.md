@@ -25,7 +25,7 @@ Instead of connecting to two live databases, you can use a pg_dump SQL file or a
 
 ### Setting up a file-based comparison
 
-When creating a new project, select **SQL File** or **Folder** as the source type for either side instead of choosing an environment. Browse to a `.sql` file exported by `pg_dump`, or to a folder containing multiple SQL files.
+When creating a new project, select **SQL File** or **Folder** as the source type for either side instead of choosing a live database. Browse to a `.sql` file exported by `pg_dump`, or to a folder containing multiple SQL files.
 
 PostgresCompare accepts:
 
@@ -43,10 +43,10 @@ By default, PostgresCompare compares all schemas. To focus on specific schemas, 
 
 | Option | Description |
 |--------|-------------|
-| X Schema to Compare | The schema to compare from the X environment |
-| Y Schema to Compare | The schema to compare from the Y environment |
+| Source schema | The schema to compare from the source connection |
+| Target schema | The schema to compare from the target connection |
 
-This also allows cross-schema comparison — comparing a schema named `dev` in X against `prod` in Y.
+This also allows cross-schema comparison — comparing a schema named `dev` in the source against `prod` in the target.
 
 ## Object Type Filtering
 
@@ -92,7 +92,7 @@ This is useful for pinning the comparisons you return to regularly — for examp
 
 ## Global Search
 
-Use the global search bar to find projects, environments, and comparison objects from anywhere in the app. Results are grouped by type and update as you type.
+Use the global search bar to find projects, connections, and comparison objects from anywhere in the app. Results are grouped by type and update as you type.
 
 ## Keyboard Navigation
 
@@ -115,7 +115,11 @@ The export options modal lets you choose which status categories to include. **I
 
 ## Data Comparison
 
-In addition to schema comparison, PostgresCompare supports data comparison between databases. This allows you to identify row-level differences in table data between your X and Y environments.
+<div class="note">
+<strong>Pro feature.</strong> Data comparison runs in data projects, which require a Pro subscription and are included in your 14-day trial. <a href="/purchase">See pricing</a>.
+</div>
+
+In addition to schema comparison, PostgresCompare supports data comparison between databases. This allows you to identify row-level differences in table data between your source and target databases.
 
 ## Comparing Large Databases
 
@@ -136,6 +140,10 @@ The **Re-run comparison** button in the comparison toolbar starts a fresh compar
 - If you navigate to a different comparison while a re-run is in progress, polling is cancelled automatically
 
 ## Tracking Schema Changes Over Time
+
+<div class="note">
+<strong>Pro feature.</strong> Comparison history, the schema changes view and the object history viewer require a Pro subscription and are included in your 14-day trial. On the free tier, Quick compare results aren't saved. <a href="/purchase">See pricing</a>.
+</div>
 
 PostgresCompare records every comparison, letting you see how your schema has evolved across runs. To view schema changes between two snapshots:
 

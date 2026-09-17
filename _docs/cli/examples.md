@@ -103,7 +103,7 @@ jobs:
       - name: Install pgc
         run: |
           # Download pgc from your CI secret or artifact storage
-          # See https://www.postgrescompare.com/downloads/ to get the binary
+          # See https://www.postgrescompare.com/downloads to get the binary
           chmod +x pgc
           sudo mv pgc /usr/local/bin/
 

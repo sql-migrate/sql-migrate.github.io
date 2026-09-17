@@ -276,10 +276,6 @@ Hover over any row in the statement list to see a floating diff popover with the
 
 Use the **Deploy** button to apply changes directly to the target database. PostgresCompare logs each statement as it executes, showing a real-time progress list with the result of each step. If a statement fails, you can see immediately which one caused the issue and what the error was.
 
-### Deployment History
-
-PostgresCompare tracks all deployments within the project, creating an audit trail of what was changed and when.
-
 ### Post-Deployment Recompare
 
 After deploying, run a new comparison to verify the deployment was successful. This confirms the target database matches the expected state and catches any issues immediately.

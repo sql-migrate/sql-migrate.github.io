@@ -1,12 +1,16 @@
 ---
 title: CLI Commands
-description: Command-line interface reference for PostgresCompare CLI v1.2.2
+description: Command-line interface reference for the PostgresCompare CLI (pgc)
 category: cli
 order: 8
 permalink: /docs/cli/commands/
 ---
 
 The PostgresCompare command-line interface (CLI), `pgc`, provides a powerful set of tools for schema comparison, script generation, and database management from your terminal. It's designed for both interactive use and integration into CI/CD pipelines.
+
+<div class="note">
+<strong>Part of Pro.</strong> The <code>pgc</code> CLI requires a Pro subscription and is included in your 14-day trial. <a href="/purchase">See pricing</a>.
+</div>
 
 ## Global Options
 

@@ -139,7 +139,8 @@ layout: default
     {% if current_index != nil %}
     <nav class="docs-pagination">
       {% if current_index > 0 %}
-        {% assign prev_doc = docs[current_index | minus: 1] %}
+        {% assign prev_index = current_index | minus: 1 %}
+        {% assign prev_doc = docs[prev_index] %}
         <a href="{{ prev_doc.url | relative_url }}" class="docs-pagination-prev">
           <span class="docs-pagination-label">Previous</span>
           <span class="docs-pagination-title">{{ prev_doc.title }}</span>

@@ -29,9 +29,9 @@ Generated scripts include a header with metadata followed by statements grouped 
 
 ```sql
 -- PostgresCompare Deployment Script
--- Version: 1.2.0
--- X: production-db
--- Y: staging-db
+-- Version: x.y.z
+-- Source: staging-db
+-- Target: production-db
 -- Generated: 2026-02-18 10:30:00
 
 BEGIN;
@@ -121,6 +121,10 @@ Hover over any row in the statement list to see a floating diff popover showing 
 
 ## Pre/Post Deploy Scripts
 
+<div class="note">
+<strong>Pro feature.</strong> Pre- and post-deploy scripts require a Pro subscription and are included in your 14-day trial. <a href="/purchase">See pricing</a>.
+</div>
+
 You can attach custom SQL to run before or after the generated deployment script. This is useful for pre-flight checks, disabling triggers, setting session variables, or post-deployment verification steps.
 
 To add pre/post deploy SQL, open the project and use the **Pre-Deploy** and **Post-Deploy** script editors on the Scripts tab. Both editors use Monaco with full SQL syntax highlighting. The scripts are saved with the project and included in the generated output.
@@ -132,9 +136,9 @@ Pre and post deploy scripts also appear as entries in the **statement list** alo
 SET lock_timeout = '5s';
 
 -- PostgresCompare Deployment Script
--- Version: 1.2.0
--- X: production-db
--- Y: staging-db
+-- Version: x.y.z
+-- Source: staging-db
+-- Target: production-db
 -- ...
 BEGIN;
   -- generated statements --
@@ -168,10 +172,6 @@ In addition to generating SQL scripts, PostgresCompare can deploy changes direct
 6. Review the deployment results
 
 Direct deployment provides real-time progress tracking with per-statement logging — each statement is listed as it executes, with its result. This makes it straightforward to see exactly where a deployment is, and to identify which statement caused a failure if something goes wrong.
-
-## Deployment History
-
-PostgresCompare tracks deployment history within the project. You can review past deployments to see what was changed and when, providing an audit trail for your database changes.
 
 ## Post-Deployment Comparison
 

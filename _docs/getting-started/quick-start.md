@@ -1,36 +1,34 @@
 ---
 title: Quick Start
-description: Create your first project and run a database comparison
+description: Connect to your databases and run your first schema comparison
 category: getting-started
 order: 2
 permalink: /docs/getting-started/quick-start/
 ---
 
-This guide walks you through creating your first PostgresCompare project and running a database comparison.
+This guide walks you through connecting to your databases, creating a project and running your first schema comparison.
 
-## Creating a New Project
-
-1. Launch PostgresCompare
-2. Click **New Project** on the welcome screen
-3. Name your project
-
-Projects store your environment settings, comparison options, and results, making it easy to repeat comparisons.
+Want to look around first? Click **Try the demo** on the welcome screen to open a sample comparison — no database needed.
 
 ## Connecting to Databases
 
-PostgresCompare compares two databases referred to as the **X environment** and **Y environment**.
+PostgresCompare compares two databases: the **Source** and the **Target**. Each side uses a saved connection.
 
-### Adding an Environment
+### Adding a Connection
 
-1. In the project window, go to the **Environments** tab
-2. Enter your connection details:
+1. Click **Connections** in the sidebar
+2. Click **New connection**
+3. Enter your connection details:
+   - **Name**: A name to recognise this connection by
    - **Host**: Database server address (e.g., `localhost` or `db.example.com`)
    - **Port**: PostgreSQL port (default: `5432`)
-   - **Database**: Name of the database
    - **Username**: Database user
    - **Password**: User password
-3. Click **Test Connection** to verify
-4. Click **Save**
+   - **Default database**: The database to connect to
+4. Click **Test** to verify the connection
+5. Click **Save**
+
+If PostgresCompare finds PostgreSQL connections already set up on your machine, click **Import from environment** to add them in one step.
 
 ### Connection Tips
 
@@ -38,11 +36,25 @@ PostgresCompare compares two databases referred to as the **X environment** and 
 - For remote databases, ensure your firewall allows connections on the PostgreSQL port
 - Consider using SSH tunneling for secure remote access
 
+## Creating a New Project
+
+<div class="note">
+<strong>Pro feature.</strong> Projects require a Pro subscription and are included in your 14-day trial. On the free tier, use <strong>Quick compare</strong> in the sidebar to compare two databases without a project. <a href="/purchase">See pricing</a>.
+</div>
+
+1. Click **Schema projects** in the sidebar
+2. Click **New project**
+3. Name your project
+4. Under **Source** and **Target**, choose the connection, database and schema for each side
+5. Save the project
+
+Projects store your connections, comparison options, and results, making it easy to repeat comparisons.
+
 ## Running Your First Comparison
 
-With both X and Y environments configured:
+With the project's source and target set:
 
-1. Click **Compare** in the toolbar
+1. Open the project and click **Compare**
 2. Wait for the comparison to complete
 
 <figure class="doc-shot">
@@ -51,9 +63,13 @@ With both X and Y environments configured:
 </figure>
 
 The comparison reads the schema from both databases and identifies:
-- Objects that exist only in the X environment (new)
-- Objects that exist only in the Y environment (dropped)
-- Objects that differ between X and Y environments (different)
+- Objects that exist only in the source (new)
+- Objects that exist only in the target (dropped)
+- Objects that differ between source and target (different)
+
+<div class="note">
+<strong>On the free tier</strong>, use <strong>Quick compare</strong> in the sidebar instead of a project. It runs the same comparison and lets you generate and deploy the script, but the result isn't saved. Saved projects and their history are part of Pro. <a href="/faq">Read the FAQ</a>.
+</div>
 
 ## Understanding the Results
 
@@ -104,9 +120,9 @@ The comparison results show a tree view of all database objects organized by typ
 - **Settings** - Configuration settings
 
 Each object shows a status indicating its comparison result:
-- **New** - Exists only in the X environment
-- **Dropped** - Exists only in the Y environment
-- **Different** - Different between X and Y environments
+- **New** - Exists only in the source
+- **Dropped** - Exists only in the target
+- **Different** - Different between source and target
 - **Identical** - Same in both databases (no action needed)
 
 ## Generating a Deployment Script
@@ -114,8 +130,8 @@ Each object shows a status indicating its comparison result:
 To create a SQL script that synchronizes the differences:
 
 1. Review the differences and select which changes to include using the checkboxes
-2. Click **Generate Script** in the toolbar
-4. Review the generated SQL before executing
+2. Click **Generate deployment script…**
+3. Review the generated SQL before running it
 
 <div class="warning">
 <strong>Important:</strong> Always review the generated script before running it against your database. Consider testing on a non-production database first.
