@@ -5,4 +5,7 @@
 		</span>
 	{% endfor %}
 	<span class="post-date">{{ include.post.date | date: "%B %d, %Y" }}</span>
+	{% if include.post.last_modified_at %}
+		<span class="post-date">&middot; updated {{ include.post.last_modified_at | date: "%B %d, %Y" }}</span>
+	{% endif %}
 </p>
