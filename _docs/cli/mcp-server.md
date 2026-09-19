@@ -2,7 +2,7 @@
 title: MCP Server for AI Agents
 description: Integrate PostgresCompare with AI coding assistants like Claude Desktop and Claude Code using the Model Context Protocol (MCP).
 category: cli
-order: 12
+order: 13
 permalink: /docs/cli/mcp-server/
 ---
 

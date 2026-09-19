@@ -2,7 +2,7 @@
 title: CLI Commands
 description: Command-line interface reference for the PostgresCompare CLI (pgc)
 category: cli
-order: 8
+order: 9
 permalink: /docs/cli/commands/
 ---
 

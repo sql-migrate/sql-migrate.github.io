@@ -2,7 +2,7 @@
 title: CLI Examples
 description: Practical examples and CI/CD integration for the PostgresCompare CLI
 category: cli
-order: 11
+order: 12
 permalink: /docs/cli/examples/
 ---
 

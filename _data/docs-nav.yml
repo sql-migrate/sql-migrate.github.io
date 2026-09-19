@@ -119,6 +119,31 @@
           url: /docs/guides/safe-deployments/#monitoring-deployments
         - title: Deploy Confirmation Dialog
           url: /docs/guides/safe-deployments/#deploy-confirmation-dialog
+    - title: Pipelines
+      url: /docs/guides/pipelines/
+      subitems:
+        - title: Stages and Comparisons
+          url: /docs/guides/pipelines/#stages-and-comparisons
+        - title: Creating a Pipeline
+          url: /docs/guides/pipelines/#creating-a-pipeline
+        - title: Choosing What to Compare
+          url: /docs/guides/pipelines/#choosing-which-stages-to-compare
+        - title: Comparison Options
+          url: /docs/guides/pipelines/#comparison-options
+        - title: Running a Pipeline
+          url: /docs/guides/pipelines/#running-a-pipeline
+        - title: Reading the Results
+          url: /docs/guides/pipelines/#reading-the-results
+        - title: Re-running a Comparison
+          url: /docs/guides/pipelines/#re-running-a-single-comparison
+        - title: Deploying a Change
+          url: /docs/guides/pipelines/#deploying-a-change
+        - title: Run History
+          url: /docs/guides/pipelines/#run-history
+        - title: Editing and Deleting
+          url: /docs/guides/pipelines/#editing-and-deleting
+        - title: On the Free Tier
+          url: /docs/guides/pipelines/#on-the-free-tier
 
 - title: Configuration
   items:

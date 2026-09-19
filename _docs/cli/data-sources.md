@@ -2,7 +2,7 @@
 title: Data Sources
 description: Supported data sources for the PostgresCompare CLI
 category: cli
-order: 9
+order: 10
 permalink: /docs/cli/data-sources/
 ---
 

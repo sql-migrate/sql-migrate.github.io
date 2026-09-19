@@ -2,7 +2,7 @@
 title: Common Issues
 description: Solutions to frequently encountered problems
 category: troubleshooting
-order: 15
+order: 16
 permalink: /docs/troubleshooting/common-issues/
 ---
 

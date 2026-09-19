@@ -2,7 +2,7 @@
 title: Connections
 description: Configure database connections in PostgresCompare
 category: configuration
-order: 13
+order: 14
 permalink: /docs/configuration/connections/
 ---
 

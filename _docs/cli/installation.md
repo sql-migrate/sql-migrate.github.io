@@ -2,7 +2,7 @@
 title: CLI Installation
 description: How to install the PostgresCompare command-line interface
 category: cli
-order: 7
+order: 8
 permalink: /docs/cli/installation/
 ---
 

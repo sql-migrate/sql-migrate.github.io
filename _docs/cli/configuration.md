@@ -2,7 +2,7 @@
 title: Configuration
 description: Configuring the PostgresCompare CLI with pgc.yaml
 category: cli
-order: 10
+order: 11
 permalink: /docs/cli/configuration/
 ---
 
