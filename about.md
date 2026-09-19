@@ -1,5 +1,5 @@
 ---
-title: About PostgresCompare
+title: About
 description: Learn about PostgresCompare and the team behind the reliable PostgreSQL schema comparison tool.
 ---
 

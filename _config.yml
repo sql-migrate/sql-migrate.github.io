@@ -31,8 +31,6 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-paginate: 10
-paginate_path: "/blog/:num/"
 # permalink: pretty
 
 defaults:
@@ -122,7 +120,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
-  - jekyll-paginate
 
 exclude:
   - Gemfile

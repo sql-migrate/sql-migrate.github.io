@@ -1,5 +1,5 @@
 ---
-title: "PostgresCompare FAQ — Common Questions Answered"
+title: "Frequently Asked Questions"
 description: "How does PostgresCompare work? What PostgreSQL versions are supported? Is my data secure? Answers to frequently asked questions."
 ---
 

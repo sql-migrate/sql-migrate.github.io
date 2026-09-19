@@ -1,5 +1,5 @@
 ---
-title: "PostgresCompare Release Notes — Latest Updates & Features"
+title: "Release Notes and Changelog"
 description: "See what's new in PostgresCompare. Detailed changelog covering new features, improvements, and bug fixes for every release."
 ---
 

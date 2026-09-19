@@ -1,5 +1,5 @@
 ---
-title: "Download PostgresCompare for Windows, Mac and Linux"
+title: "Download for Windows, Mac and Linux"
 description: "Download PostgresCompare and start comparing PostgreSQL schemas in minutes. 14 days of Pro, then the free tier — no expiry, no credit card. Works with PostgreSQL 9.2 through 18."
 permalink: /get
 sitemap: false

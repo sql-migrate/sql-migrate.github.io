@@ -1,5 +1,5 @@
 ---
-title: "PostgresCompare pricing — free forever, Pro at $29.95/month"
+title: "Pricing — free tier, Pro at $29.95/month"
 description: "Quick compare, scripting and deploying are free forever. Saved projects, history, pipelines and the pgc CLI are what you pay for. Monthly or annual, cancel anytime."
 ---
 
