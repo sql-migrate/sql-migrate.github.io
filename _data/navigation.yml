@@ -10,6 +10,10 @@
   link: /docs
   new_window: false
   highlight: false
+- name: Articles
+  link: /articles
+  new_window: false
+  highlight: false
 - name: Changelog
   link: /release-notes
   new_window: false

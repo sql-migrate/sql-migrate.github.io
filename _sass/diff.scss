@@ -1003,6 +1003,33 @@
 	}
 }
 
+// --- Latest writing, on the homepage ------------------------------------
+
+// Three across, and the whole cell is the link - the same treatment the docs
+// landing grid gets.
+.writing-grid {
+	grid-template-columns: repeat(3, 1fr);
+
+	@media (max-width: 980px) {
+		grid-template-columns: 1fr;
+	}
+
+	a.cell {
+		color: inherit;
+		text-decoration: none;
+		transition: background 0.15s ease;
+
+		&:hover {
+			background: var(--panel-2);
+			text-decoration: none;
+		}
+
+		h3 {
+			color: var(--blue);
+		}
+	}
+}
+
 .docs-quick-hunk {
 	margin-top: 56px;
 }

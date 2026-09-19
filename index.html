@@ -207,6 +207,25 @@ the cloud                  <span class="no">receives your data</span></pre>
   </div>
 </section>
 
+<section class="d-section">
+  <div class="dw">
+    <p class="hunk">@@ <b>writing</b> @@</p>
+    <h2 class="d-h2">Notes from building it.</h2>
+
+    <div class="d-grid writing-grid">
+      {% for post in site.posts limit: 3 %}
+      <a class="cell" href="{{ post.url | relative_url }}">
+        <span class="tag">{{ post.date | date: "%b %Y" | downcase }}</span>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 130 }}</p>
+      </a>
+      {% endfor %}
+    </div>
+
+    <p class="read-more"><a href="{{ site.baseurl }}/articles">All articles &rarr;</a></p>
+  </div>
+</section>
+
 <section class="final">
   <div class="dw">
     <h2 class="d-h2">See what changed. In the next five minutes.</h2>
