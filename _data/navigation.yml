@@ -7,11 +7,11 @@
   new_window: false
   highlight: false
 - name: Docs
-  link: /docs
+  link: /docs/
   new_window: false
   highlight: false
 - name: Articles
-  link: /articles
+  link: /articles/
   new_window: false
   highlight: false
 - name: Changelog

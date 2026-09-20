@@ -263,7 +263,7 @@ This page covers common issues users encounter with PostgresCompare and their so
 If you can't resolve your issue:
 
 1. **Check the FAQ** - [FAQ page](/faq)
-2. **Search articles** - [Articles page](/articles)
+2. **Search articles** - [Articles page](/articles/)
 3. **Contact support** - [Contact page](/contact)
 
 When contacting support, include:
