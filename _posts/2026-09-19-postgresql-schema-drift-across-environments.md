@@ -47,7 +47,8 @@ limited to a chain, so you can point any environment at any other — a hub for
 drift, a linear chain for a release path, or both in separate pipelines.
 
 The [pipelines guide](/docs/guides/pipelines/) covers setting one up
-step by step.
+step by step, and [Introducing Pipelines](/2026/10/02/introducing-pipelines.html)
+walks through the release-path case.
 
 ## Reading a drift run
 
